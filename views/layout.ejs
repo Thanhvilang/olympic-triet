@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= typeof title !== 'undefined' ? title: "Olympic" %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <style>
+    body {
+      background: url("/images/bg2.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="mx-auto" style="max-width: 900px">
+      <header class="text-align-left custom-header text-center mt-2">
+        <img src="/images/logo2.png" alt="logo" width="150" />
+        <h5>Trường Cao đẳng kĩ thuật PK-KQ</h5>
+      </header>
+      <main><%- body %></main>
+    </div>
+  </body>
+</html>

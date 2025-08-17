@@ -1,0 +1,214 @@
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #b22222;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+  .timers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .timer-box {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  .time {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  .blink {
+    animation: blink 1s step-start infinite;
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .start-btn {
+    background: #3b82f6;
+    color: white;
+  }
+  .pause-btn {
+    background: #facc15;
+    color: #111827;
+  }
+  .pause-btn:disabled,
+  .start-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+</style>
+
+<div class="container">
+  <h1>Phần thi hùng biện theo chủ đề</h1>
+  <p>
+    Các đội lựa chọn chủ đề cho Ban giám khảo xác định, báo cáo chủ đề 30 phút
+    trước khi thi.<br />
+    Thời gian chuẩn bị: 05 phút. Thời gian hùng biện: 05 phút.
+  </p>
+
+  <div class="timers">
+    <!-- Cột 1: Thời gian chuẩn bị -->
+    <div class="timer-box">
+      <h2>Thời gian chuẩn bị</h2>
+      <div id="timer" class="time text-center">05:00</div>
+      <div class="text-center">
+        <button id="startBtn" class="start-btn">Bắt đầu</button>
+        <button id="pauseBtn" class="pause-btn" disabled>Dừng</button>
+      </div>
+    </div>
+
+    <!-- Cột 2: Thời gian thi -->
+    <div class="timer-box">
+      <h2>Thời gian thi</h2>
+      <div id="timer" class="time text-center">05:00</div>
+      <div class="text-center">
+        <button id="startBtn" class="start-btn">Bắt đầu</button>
+        <button id="pauseBtn" class="pause-btn" disabled>Dừng</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+  <a href="/test" class="btn btn-success mt-3" id="btnBack">
+    Về trang phần thi
+  </a>
+</div>
+
+<!-- <script>
+  let timers = {
+    prep: {
+      duration: 300,
+      remaining: 300,
+      interval: null,
+      displayId: "prepTime",
+    },
+    debate: {
+      duration: 300,
+      remaining: 300,
+      interval: null,
+      displayId: "debateTime",
+    },
+  };
+
+  function updateDisplay(timerName) {
+    let time = timers[timerName].remaining;
+    let minutes = String(Math.floor(time / 60)).padStart(2, "0");
+    let seconds = String(time % 60).padStart(2, "0");
+    document.getElementById(
+      timers[timerName].displayId
+    ).innerText = `${minutes}:${seconds}`;
+  }
+
+  function startTimer(timerName) {
+    stopTimer(timerName);
+    timers[timerName].interval = setInterval(() => {
+      if (timers[timerName].remaining > 0) {
+        timers[timerName].remaining--;
+        updateDisplay(timerName);
+      } else {
+        clearInterval(timers[timerName].interval);
+        alert(`Hết thời gian ${timerName === "prep" ? "chuẩn bị" : "thi"}!`);
+      }
+    }, 1000);
+  }
+
+  function stopTimer(timerName) {
+    clearInterval(timers[timerName].interval);
+  }
+</script> -->
+<script>
+  let totalTime = 300; // 5 phút
+  let timeLeft = totalTime;
+  let timerInterval = null;
+  let isRunning = false;
+
+  const timerDisplay = document.getElementById("timer");
+  const startBtn = document.getElementById("startBtn");
+  const pauseBtn = document.getElementById("pauseBtn");
+
+  function updateDisplay() {
+    const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
+    const seconds = String(timeLeft % 60).padStart(2, "0");
+    timerDisplay.textContent = `${minutes}:${seconds}`;
+  }
+
+  function startTimer() {
+    if (!isRunning) {
+      timerInterval = setInterval(() => {
+        if (timeLeft > 0) {
+          timeLeft--;
+          updateDisplay();
+
+          if (timeLeft <= 10) {
+            timerDisplay.classList.add("blink");
+          }
+
+          if (timeLeft === 0) {
+            clearInterval(timerInterval);
+            timerDisplay.textContent = "Hết giờ";
+            pauseBtn.disabled = true;
+          }
+        }
+      }, 1000);
+      isRunning = true;
+    }
+  }
+
+  function pauseTimer() {
+    clearInterval(timerInterval);
+    isRunning = false;
+  }
+
+  startBtn.addEventListener("click", () => {
+    startTimer();
+    startBtn.disabled = true;
+    pauseBtn.disabled = false;
+  });
+
+  pauseBtn.addEventListener("click", () => {
+    if (isRunning) {
+      pauseTimer();
+      pauseBtn.textContent = "Tiếp tục";
+    } else {
+      startTimer();
+      pauseBtn.textContent = "Dừng";
+    }
+  });
+
+  updateDisplay();
+</script>

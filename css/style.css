@@ -1,0 +1,58 @@
+/* General Body Style */
+body {
+  background-color: #2b0c0c; /* Dark red background from image */
+  font-family: "Roboto", sans-serif;
+}
+
+/* Main container for the rules section */
+.rules-container {
+  background-color: #783d3d; /* Maroon color for the container */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #c9a878; /* Gold border */
+}
+
+/* Style for the left navigation buttons */
+.rules-nav .nav-link {
+  background-color: #783d3d; /* Maroon button background */
+  border: 2px solid #c9a878; /* Gold border */
+  color: #c9a878; /* Gold text */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style for the hovered navigation button */
+.rules-nav .nav-link:hover {
+  background-color: #c9a878; /* Gold background on hover */
+  color: #2b0c0c; /* Dark red text on hover */
+  border-color: #c9a878;
+}
+
+/* Style for the active/selected navigation button */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #c9a878; /* Gold background for active */
+  color: #2b0c0c; /* Dark red text for active */
+  border-color: #c9a878;
+}
+
+/* Style for the right content panel */
+.rules-content {
+  background-color: #f3eade; /* Light beige content background */
+  color: #333; /* Dark text for readability */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.rules-content h4 {
+  color: #783d3d;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #c9a878;
+  padding-bottom: 0.5rem;
+}

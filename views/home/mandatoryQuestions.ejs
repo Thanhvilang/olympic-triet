@@ -1,0 +1,269 @@
+<style>
+  .timer {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+    color: red;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  .matrix-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+</style>
+
+<div class="container">
+  <h2 class="mt-4 text-center">Phần thi Câu hỏi tự luận bắt buộc</h2>
+  <div class="row mb-3">
+    <!-- Câu hỏi -->
+    <div class="col-md-8">
+      <div
+        class="p-3 border rounded bg-light"
+        style="min-height: 128px"
+        id="questionBox"
+      >
+        <h4>Chọn câu hỏi để bắt đầu</h4>
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="col-md-4 text-center">
+      <div id="timerBox" class="p-3 border rounded bg-light">
+        <div id="timerDisplay" class="timer">01:00</div>
+        <button
+          id="startBtn"
+          class="btn btn-primary mt-2"
+          onclick="startTimer()"
+        >
+          Bắt đầu
+        </button>
+        <button
+          id="pauseBtn"
+          class="btn btn-warning mt-2"
+          onclick="togglePause()"
+        >
+          Dừng
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Ma trận câu hỏi -->
+    <div class="col-md-8">
+      <!-- <div class="d-flex flex-wrap gap-2">
+        <script>
+          for (let i = 1; i <= 30; i++) {
+            document.write(
+              `<button class="btn btn-outline-primary matrix-btn" onclick="selectQuestion(${i})" id="q${i}">${i}</button>`
+            );
+          }
+        </script>
+      </div> -->
+      <div class="p-3 border rounded bg-white">
+        <div class="d-flex flex-wrap gap-2">
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(
+                `<button class="btn btn-outline-primary matrix-btn" onclick="selectQuestion(${i})" id="q${i}">${i}</button>`
+              );
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lượt thi -->
+    <div class="col-md-4">
+      <div class="p-3 border rounded bg-light">
+        <h5 id="turnInfo">Thí sinh 1 - Đội 1</h5>
+        <button class="btn btn-info" onclick="nextTurn()">
+          Lượt tiếp theo
+        </button>
+      </div>
+      <div class="mt-4 text-center">
+        <a href="/test" class="btn btn-success">Về trang phần thi</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let totalTime = 60; // giây
+  let timeLeft = totalTime;
+  let timerInterval;
+  let isPaused = false;
+
+  // let questions = []; // chứa 30 câu hỏi từ API
+
+  // Load dữ liệu từ API một lần khi mở trang
+  // async function loadQuestions() {
+  //   try {
+  //     const res = await fetch(
+  //       "https://opentdb.com/api.php?amount=30&type=multiple"
+  //     );
+  //     const data = await res.json();
+  //     if (data.results && data.results.length > 0) {
+  //       questions = data.results.map((q, idx) => ({
+  //         number: idx + 1,
+  //         category: q.category,
+  //         question: decodeHTMLEntities(q.question),
+  //         answers: shuffle(
+  //           [q.correct_answer, ...q.incorrect_answers].map((a) =>
+  //             decodeHTMLEntities(a)
+  //           )
+  //         ),
+  //         correct: decodeHTMLEntities(q.correct_answer),
+  //       }));
+  //       document.getElementById(
+  //         "questionBox"
+  //       ).innerHTML = `<h4>Chọn số câu hỏi để bắt đầu</h4>`;
+  //     } else {
+  //       document.getElementById(
+  //         "questionBox"
+  //       ).innerHTML = `<p>Không lấy được dữ liệu câu hỏi</p>`;
+  //     }
+  //   } catch (e) {
+  //     document.getElementById(
+  //       "questionBox"
+  //     ).innerHTML = `<p>Lỗi tải câu hỏi: ${e}</p>`;
+  //   }
+  // }
+  let questions = JSON.parse('<%- JSON.stringify(questionsData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
+
+  function loadQuestions() {
+    const questionBox = document.getElementById("questionBox");
+    console.log(shuffle(questions));
+
+    if (Array.isArray(questions) && questions.length > 0) {
+      // Shuffle để random thứ tự câu hỏi
+      questions = shuffle(questions).map((q, idx) => ({
+        id: idx + 1,
+        question: decodeHTMLEntities(q.question),
+        answer: decodeHTMLEntities(q.answer),
+      }));
+
+      questionBox.innerHTML = `<h4>Chọn số câu hỏi để bắt đầu</h4>`;
+    } else {
+      questionBox.innerHTML = `<p>Không lấy được dữ liệu câu hỏi</p>`;
+    }
+  }
+  function selectQuestion(num) {
+    const btn = document.getElementById(`q${num}`);
+    btn.disabled = true;
+    btn.classList.remove("btn-outline-primary");
+    btn.classList.add("btn-secondary");
+
+    let q = questions[num - 1];
+    console.log(q);
+
+    let html = `
+      <h5>Câu ${q.id}</h5>
+      <p>${q.question}</p>
+    `;
+    document.getElementById("questionBox").innerHTML = html;
+
+    // Reset lại timer mỗi khi chọn câu hỏi mới
+    clearInterval(timerInterval);
+    timeLeft = totalTime;
+    updateTimerDisplay();
+    document.getElementById("timerDisplay").classList.remove("blink");
+    document.getElementById("startBtn").disabled = false;
+    document.getElementById("pauseBtn").disabled = false;
+  }
+
+  function decodeHTMLEntities(text) {
+    let txt = document.createElement("textarea");
+    txt.innerHTML = text;
+    return txt.value;
+  }
+
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  function startTimer() {
+    document.getElementById("startBtn").disabled = true;
+    timeLeft = totalTime;
+    updateTimerDisplay();
+    document.getElementById("timerDisplay").classList.remove("blink");
+    timerInterval = setInterval(countdown, 1000);
+  }
+
+  function countdown() {
+    if (!isPaused) {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 10)
+        document.getElementById("timerDisplay").classList.add("blink");
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        document.getElementById("timerDisplay").textContent = "Hết giờ";
+        document.getElementById("timerDisplay").classList.remove("blink");
+        // Disable cả hai nút khi hết giờ
+        document.getElementById("startBtn").disabled = true;
+        document.getElementById("pauseBtn").disabled = true;
+      }
+    }
+  }
+
+  function updateTimerDisplay() {
+    let m = String(Math.floor(timeLeft / 60)).padStart(2, "0");
+    let s = String(timeLeft % 60).padStart(2, "0");
+    document.getElementById("timerDisplay").textContent = `${m}:${s}`;
+  }
+
+  function togglePause() {
+    isPaused = !isPaused;
+    document.getElementById("pauseBtn").textContent = isPaused
+      ? "Tiếp tục"
+      : "Dừng";
+  }
+
+  let teams = 3;
+  let players = 5;
+  let currentPlayer = 1;
+  let currentTeam = 1;
+
+  function nextTurn() {
+    currentTeam++;
+    if (currentTeam > teams) {
+      currentTeam = 1;
+      currentPlayer++;
+      if (currentPlayer > players) {
+        currentPlayer = 1;
+      }
+    }
+
+    // Reset lại timer mỗi khi sang lượt mới
+    clearInterval(timerInterval);
+    timeLeft = totalTime;
+    updateTimerDisplay();
+    document.getElementById("timerDisplay").classList.remove("blink");
+    document.getElementById("startBtn").disabled = false;
+    document.getElementById("pauseBtn").disabled = false;
+
+    if (currentTeam === 1 && currentPlayer === 1) {
+      document.getElementById("turnInfo").textContent = "Phần thi kết thúc";
+      // Disable nút lượt tiếp theo
+      const btn = document.querySelector('button[onclick="nextTurn()"]');
+      if (btn) btn.disabled = true;
+    } else {
+      document.getElementById(
+        "turnInfo"
+      ).textContent = `Thí sinh ${currentPlayer} - Đội ${currentTeam}`;
+    }
+  }
+
+  // Gọi hàm load câu hỏi khi tải trang
+  loadQuestions();
+</script>

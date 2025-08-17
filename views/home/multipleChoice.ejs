@@ -1,0 +1,673 @@
+<style>
+  .quiz-shell {
+    max-width: 980px;
+    margin: 24px auto;
+  }
+  .header-bar {
+    background: #e9eef9;
+    border-radius: 12px 12px 0 0;
+    padding: 8px 16px;
+    text-align: center;
+    font-weight: 700;
+    color: #2f4fa1;
+  }
+  .question-box {
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    min-height: 120px;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Khối đáp án kiểu thẻ màu như ảnh */
+  .answers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .answer-card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+    min-height: 72px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.05s ease, box-shadow 0.2s ease,
+      border-color 0.2s ease;
+    user-select: none;
+  }
+  .answer-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+  }
+  .answer-label {
+    width: 56px;
+    min-width: 56px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .answer-text {
+    padding: 10px 14px;
+    font-weight: 600;
+    color: #333;
+    flex: 1;
+  }
+  .answer-A .answer-label {
+    background: #2d7ef7;
+  } /* blue */
+  .answer-B .answer-label {
+    background: #f0ad4e;
+  } /* orange */
+  .answer-C .answer-label {
+    background: #5cb85c;
+  } /* green */
+  .answer-D .answer-label {
+    background: #d9534f;
+  } /* red   */
+
+  /* Trạng thái sau khi chọn/chấm */
+  .selected {
+    border-color: #6c63ff;
+  }
+  .correct {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.15);
+  }
+  .wrong {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.12);
+  }
+
+  .control-panel {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+  .timer {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #333;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    text-align: center;
+  }
+  .blink {
+    animation: blink 1s infinite;
+    color: #d9534f;
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .result-banner {
+    margin-top: 12px;
+    font-weight: 700;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+  .muted {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .footer-note {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 6px;
+  }
+</style>
+<h2 class="mt-3 text-center">Câu hỏi trắc nghiệm bắt buộc</h2>
+<div class="quiz-shell">
+  <!-- Thanh tiêu đề câu hiện tại -->
+  <div class="header-bar fs-4" id="headerBar">Câu hỏi số 1</div>
+
+  <!-- Hộp câu hỏi -->
+  <div class="question-box" id="questionBox">
+    Nhấn "Bắt đầu" để lấy ngẫu nhiên 9 câu hỏi từ ngân hàng.
+  </div>
+
+  <!-- 4 đáp án -->
+  <div class="answers-grid mt-3" id="answersGrid">
+    <!-- sẽ render động -->
+  </div>
+
+  <!-- Điều khiển & timer -->
+  <div class="control-panel">
+    <div class="d-flex gap-2">
+      <button id="btnStart" class="btn btn-primary">Bắt đầu</button>
+      <button id="btnNext" class="btn btn-success" disabled>Câu tiếp ▶</button>
+      <button id="btnReveal" class="btn btn-outline-secondary" disabled>
+        Hiện đáp án
+      </button>
+      <a href="/test" class="btn btn-warning" id="btnBack">
+        Về trang phần thi
+      </a>
+    </div>
+    <div class="d-flex flex-column align-items-end">
+      <div id="timer" class="timer">15</div>
+      <div id="banner" class="result-banner text-secondary"></div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Thời gian suy nghĩ: tối đa 15 giây/câu. Không chọn trong thời gian quy định
+    sẽ tính sai.
+  </div>
+
+  <!-- Kết quả tổng kết -->
+  <div id="summaryWrap" class="mt-4 hidden">
+    <h4>Kết quả 9 câu</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Câu hỏi</th>
+            <th>Kết quả</th>
+            <th>Thời gian (s)</th>
+          </tr>
+        </thead>
+        <tbody id="summaryBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* =======================
+   1) DATABASE CÂU HỎI
+   ======================= */
+  // const QUESTION_DB = [
+  //   {
+  //     q: "Một trong những dạng cơ bản của thực tiễn là gì?",
+  //     o: [
+  //       "Truyền bá khoa học",
+  //       "Trao đổi khoa học",
+  //       "Thực nghiệm khoa học",
+  //       "Sản xuất vật chất",
+  //     ],
+  //     a: 3,
+  //   },
+  //   {
+  //     q: "Tư duy phản ánh hiện thực khách quan dưới hình thức nào?",
+  //     o: [
+  //       "Trực tiếp cảm tính",
+  //       "Gián tiếp, trừu tượng",
+  //       "Chủ quan",
+  //       "Bẩm sinh",
+  //     ],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Phương thức sản xuất gồm hai mặt là gì?",
+  //     o: [
+  //       "Lực lượng sản xuất và quan hệ sản xuất",
+  //       "Cơ sở hạ tầng và kiến trúc thượng tầng",
+  //       "Khoa học và công nghệ",
+  //       "Sản xuất và lưu thông",
+  //     ],
+  //     a: 0,
+  //   },
+  //   {
+  //     q: "Giá trị thặng dư do ai tạo ra?",
+  //     o: ["Tư bản", "Công nhân", "Nhà nước", "Thị trường"],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Vai trò của thực tiễn đối với nhận thức là gì?",
+  //     o: [
+  //       "Mục đích",
+  //       "Động lực, tiêu chuẩn kiểm tra",
+  //       "Phương tiện",
+  //       "Kết quả",
+  //     ],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Trong logic trừu tượng đến cụ thể, 'cụ thể' là gì?",
+  //     o: ["Đơn giản", "Đa dạng, phong phú", "Ít thuộc tính", "Tách rời"],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Lý luận chỉ có ý nghĩa khi nào?",
+  //     o: [
+  //       "Khi độc lập với thực tiễn",
+  //       "Khi gắn liền với thực tiễn",
+  //       "Khi phổ biến đại trà",
+  //       "Khi khó hiểu",
+  //     ],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Cơ sở kinh tế của nhà nước là gì?",
+  //     o: [
+  //       "Kiến trúc thượng tầng",
+  //       "Quan hệ sản xuất",
+  //       "Lực lượng sản xuất",
+  //       "Văn hóa",
+  //     ],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Khoa học tự nhiên nghiên cứu đối tượng gì?",
+  //     o: [
+  //       "Quy luật xã hội",
+  //       "Quy luật tự nhiên",
+  //       "Quy luật tư duy",
+  //       "Quy luật lịch sử",
+  //     ],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Chủ nghĩa duy vật lịch sử nhấn mạnh vai trò quyết định của?",
+  //     o: ["Ý thức xã hội", "Tâm lý xã hội", "Tồn tại xã hội", "Cá nhân"],
+  //     a: 2,
+  //   },
+  //   {
+  //     q: "Hàng hóa có hai thuộc tính là gì?",
+  //     o: [
+  //       "Giá trị sử dụng và giá trị",
+  //       "Cung và cầu",
+  //       "Lợi nhuận và chi phí",
+  //       "Giá cả và giá trị",
+  //     ],
+  //     a: 0,
+  //   },
+  //   {
+  //     q: "Quy luật giá trị yêu cầu sản xuất dựa trên?",
+  //     o: [
+  //       "Giá cả thị trường",
+  //       "Giá trị xã hội cần thiết",
+  //       "Giá trị cá biệt",
+  //       "Lợi nhuận tối đa",
+  //     ],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Lực lượng sản xuất gồm?",
+  //     o: [
+  //       "Người lao động và tư liệu sản xuất",
+  //       "Quan hệ sở hữu",
+  //       "Thị trường",
+  //       "Vốn",
+  //     ],
+  //     a: 0,
+  //   },
+  //   {
+  //     q: "Nhà nước là công cụ của?",
+  //     o: [
+  //       "Giai cấp thống trị",
+  //       "Nhân dân lao động",
+  //       "Tư sản và vô sản",
+  //       "Tôn giáo",
+  //     ],
+  //     a: 0,
+  //   },
+  //   {
+  //     q: "C.Mác là tác giả của tác phẩm nào?",
+  //     o: [
+  //       "Tư bản",
+  //       "Chống Đuy-rinh",
+  //       "Chủ nghĩa xã hội không tưởng",
+  //       "Bàn về tự do",
+  //     ],
+  //     a: 0,
+  //   },
+  //   {
+  //     q: "Phương pháp biện chứng duy vật coi sự vật?",
+  //     o: ["Bất biến", "Cô lập", "Luôn vận động, phát triển", "Ngẫu nhiên"],
+  //     a: 2,
+  //   },
+  //   {
+  //     q: "Giá trị sử dụng là?",
+  //     o: ["Công dụng của hàng hóa", "Giá bán", "Lợi nhuận", "Tiền lương"],
+  //     a: 0,
+  //   },
+  //   {
+  //     q: "Nguồn gốc của lợi nhuận theo Mác là?",
+  //     o: ["Do lưu thông", "Do bán đắt", "Do giá trị thặng dư", "Do may mắn"],
+  //     a: 2,
+  //   },
+  //   {
+  //     q: "Quy luật mâu thuẫn nói rằng phát triển là?",
+  //     o: [
+  //       "Đi thẳng",
+  //       "Ngẫu nhiên",
+  //       "Kết quả đấu tranh giữa các mặt đối lập",
+  //       "Dừng lại",
+  //     ],
+  //     a: 2,
+  //   },
+  //   {
+  //     q: "Cơ sở hạ tầng gồm?",
+  //     o: [
+  //       "Quan hệ sản xuất",
+  //       "Lực lượng sản xuất",
+  //       "Kiến trúc thượng tầng",
+  //       "Tự nhiên",
+  //     ],
+  //     a: 0,
+  //   },
+  //   {
+  //     q: "Ý thức xã hội có tính?",
+  //     o: [
+  //       "Tự phát hoàn toàn",
+  //       "Phụ thuộc tuyệt đối tồn tại xã hội",
+  //       "Độc lập tương đối",
+  //       "Không liên quan",
+  //     ],
+  //     a: 2,
+  //   },
+  //   {
+  //     q: "Tiền tệ ra đời từ?",
+  //     o: [
+  //       "Trao đổi trực tiếp",
+  //       "Trao đổi hàng hóa phát triển",
+  //       "Nhà nước ấn định",
+  //       "Tín dụng",
+  //     ],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Lao động trừu tượng tạo?",
+  //     o: ["Giá trị sử dụng", "Giá trị", "Giá cả", "Lợi nhuận"],
+  //     a: 1,
+  //   },
+  //   {
+  //     q: "Tồn tại xã hội quyết định?",
+  //     o: ["Ý thức xã hội", "Khoa học tự nhiên", "Tự nhiên", "Công nghệ"],
+  //     a: 0,
+  //   },
+  // ];
+  let QUESTION_DB = JSON.parse('<%- JSON.stringify(multipleData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
+  // console.log("Loaded questions:", QUESTION_DB);
+
+
+  /* =======================
+   2) TRẠNG THÁI & TIỆN ÍCH
+   ======================= */
+  const TOTAL_PICK = 9;
+  const TIME_LIMIT = 15.0;
+
+  let picked = []; // 9 câu đã chọn (mảng object)
+  let idx = 0; // câu hiện tại (0..8)
+  let running = false;
+  let timerId = null;
+  let startTs = 0; // timestamp khi câu hiện lên
+  let answered = false; // đã chọn đáp án hay chưa
+  let userChoice = null; // Thêm biến lưu đáp án người dùng chọn
+
+  // Kết quả: [{no, question, correct(boolean), time(number seconds), chosenIndex, correctIndex}]
+  let results = [];
+
+  const headerBar = document.getElementById("headerBar");
+  const questionBox = document.getElementById("questionBox");
+  const answersGrid = document.getElementById("answersGrid");
+  const timerEl = document.getElementById("timer");
+  const bannerEl = document.getElementById("banner");
+  const btnStart = document.getElementById("btnStart");
+  const btnNext = document.getElementById("btnNext");
+  const btnReveal = document.getElementById("btnReveal");
+  const summaryWrap = document.getElementById("summaryWrap");
+  const summaryBody = document.getElementById("summaryBody");
+
+  function shuffle(arr) {
+    return arr
+      .map((v) => [Math.random(), v])
+      .sort((a, b) => a[0] - b[0])
+      .map((p) => p[1]);
+  }
+  // console.log(QUESTION_DB);
+
+  function pickRandom9() {
+    picked = shuffle(QUESTION_DB).slice(0, TOTAL_PICK);
+    console.log(picked);
+
+  }
+
+
+  /* =======================
+   3) RENDER CÂU HỎI
+   ======================= */
+  function renderQuestion() {
+    if (idx >= picked.length) return showSummary();
+
+    const q = picked[idx];
+    headerBar.textContent = `Câu hỏi số ${idx + 1}`;
+    questionBox.textContent = q.q;
+
+    // tạo đáp án với label A-D
+    const labels = ["A", "B", "C", "D"];
+    answersGrid.innerHTML = "";
+    q.o.forEach((opt, i) => {
+      const card = document.createElement("div");
+      card.className = `answer-card answer-${labels[i]}`;
+      card.dataset.index = i;
+
+      const lab = document.createElement("div");
+      lab.className = "answer-label";
+      lab.textContent = labels[i];
+
+      const txt = document.createElement("div");
+      txt.className = "answer-text";
+      txt.textContent = opt;
+
+      card.appendChild(lab);
+      card.appendChild(txt);
+      card.addEventListener("click", () => onChoose(i, card));
+      answersGrid.appendChild(card);
+    });
+
+    // reset trạng thái
+    answered = false;
+    userChoice = null;
+    bannerEl.textContent = "";
+    btnNext.disabled = true;
+    btnReveal.disabled = false; // Cho phép bấm hiện đáp án
+    unlockAnswers();
+
+    // chạy timer
+    startTimer();
+  }
+
+  function lockAnswers() {
+    document.querySelectorAll(".answer-card").forEach((c) => {
+      c.classList.add("muted");
+      c.style.pointerEvents = "none";
+    });
+  }
+  function unlockAnswers() {
+    document.querySelectorAll(".answer-card").forEach((c) => {
+      c.classList.remove("muted");
+      c.style.pointerEvents = "auto";
+    });
+  }
+
+  /* =======================
+   4) TIMER 15 GIÂY
+   ======================= */
+  function startTimer() {
+    clearInterval(timerId);
+    running = true;
+    timerEl.classList.remove("blink");
+    timerEl.textContent = Math.round(TIME_LIMIT);
+    startTs = performance.now();
+    unlockAnswers();
+
+    timerId = setInterval(() => {
+      const elapsed = (performance.now() - startTs) / 1000;
+      const remain = Math.max(0, TIME_LIMIT - elapsed);
+      timerEl.textContent = Math.ceil(remain);
+      if (remain <= 10) timerEl.classList.add("blink");
+      if (remain <= 0) {
+        clearInterval(timerId);
+        running = false;
+        timerEl.classList.remove("blink");
+        lockAnswers();
+        btnReveal.disabled = false; // Cho phép hiện đáp án khi hết giờ
+      }
+    }, 100);
+  }
+
+  /* =======================
+   5) CHỌN ĐÁP ÁN
+   ======================= */
+  function onChoose(choiceIndex, cardEl) {
+    if (!running || answered) return;
+    // Chỉ lưu lựa chọn, chưa chấm điểm
+    userChoice = choiceIndex;
+    // Tô đậm lựa chọn
+    document
+      .querySelectorAll(".answer-card")
+      .forEach((c) => c.classList.remove("selected"));
+    cardEl.classList.add("selected");
+    // Không gọi finalize ở đây
+  }
+
+  /* =======================
+   6) HIỆN ĐÁP ÁN & CÂU TIẾP
+   ======================= */
+  btnReveal.addEventListener("click", () => {
+    if (answered) return; // Đã hiện đáp án rồi thì không làm lại
+    answered = true;
+    const q = picked[idx];
+    // Nếu chưa chọn đáp án thì coi như sai và không chọn gì
+    let isCorrect = false;
+    let timeTakenSec = Math.min(
+      TIME_LIMIT,
+      (performance.now() - startTs) / 1000
+    );
+    if (userChoice !== null) {
+      isCorrect = userChoice === q.a;
+    }
+    // Hiển thị đúng/sai
+    const all = document.querySelectorAll(".answer-card");
+    all.forEach((el) => {
+      const i = +el.dataset.index;
+      if (i === q.a) el.classList.add("correct");
+      if (userChoice !== null && i === userChoice && i !== q.a)
+        el.classList.add("wrong");
+    });
+
+    bannerEl.textContent =
+      userChoice === null
+        ? "⏰ Hết giờ! Trả lời sai."
+        : isCorrect
+        ? `✅ Chính xác! Thời gian: ${timeTakenSec.toFixed(2)}s`
+        : "❌ Sai rồi!";
+
+    // Lưu kết quả
+    results.push({
+      no: idx + 1,
+      question: q.q,
+      correct: isCorrect,
+      time: userChoice === null ? TIME_LIMIT : +timeTakenSec.toFixed(2),
+      chosenIndex: userChoice,
+      correctIndex: q.a,
+    });
+
+    btnNext.disabled = false;
+    btnReveal.disabled = true;
+  });
+
+  btnNext.addEventListener("click", () => {
+    idx++;
+    // reset class trạng thái cũ
+    answersGrid.querySelectorAll(".answer-card").forEach((c) => {
+      c.classList.remove("selected", "correct", "wrong", "muted");
+    });
+    timerEl.classList.remove("blink");
+    if (idx < picked.length - 1) {
+      renderQuestion();
+      // Nếu là câu cuối cùng tiếp theo, đổi nút thành "Tổng kết"
+      if (idx === picked.length - 1) {
+        btnNext.textContent = "Tổng kết";
+      } else {
+        btnNext.textContent = "Câu tiếp ▶";
+      }
+    } else if (idx === picked.length - 1) {
+      // Đang ở câu cuối cùng, bấm sẽ tổng kết
+      renderQuestion();
+      btnNext.textContent = "Tổng kết";
+    } else {
+      showSummary();
+      btnNext.textContent = "Câu tiếp ▶";
+    }
+  });
+
+  /* =======================
+   7) KHỞI TẠO
+   ======================= */
+  btnStart.addEventListener("click", () => {
+    // reset mọi thứ cho phiên thi mới
+    results = [];
+    idx = 0;
+    pickRandom9();
+    summaryWrap.classList.add("hidden");
+    btnStart.disabled = true; // khóa nút bắt đầu tới khi xong bài
+    // Hiện lại timer + banner
+    timerEl.parentElement.style.visibility = "visible";
+    renderQuestion();
+  });
+
+  function showSummary() {
+    clearInterval(timerId);
+    running = false;
+    btnNext.disabled = true;
+    btnReveal.disabled = true;
+    btnStart.disabled = false;
+
+    // Ẩn timer và banner khi tổng kết
+    timerEl.parentElement.style.visibility = "hidden";
+
+    // Đếm số câu đúng
+    const correctCount = results.filter((r) => r.correct).length;
+    headerBar.textContent = "Hoàn thành 9 câu";
+    questionBox.textContent = `Đã hoàn thành hết 9 câu. Số câu trả lời đúng: ${correctCount}/9.`;
+    answersGrid.innerHTML = "";
+
+    summaryBody.innerHTML = "";
+    results.forEach((r) => {
+      const tr = document.createElement("tr");
+      const tdNo = document.createElement("td");
+      tdNo.textContent = r.no;
+      const tdQ = document.createElement("td");
+      tdQ.textContent = r.question;
+      const tdR = document.createElement("td");
+      const tdT = document.createElement("td");
+      tdT.textContent = r.time.toFixed(2);
+
+      tdR.innerHTML = r.correct
+        ? '<span class="badge text-bg-success">Đúng</span>'
+        : '<span class="badge text-bg-danger">Sai</span>';
+
+      tr.appendChild(tdNo);
+      tr.appendChild(tdQ);
+      tr.appendChild(tdR);
+      tr.appendChild(tdT);
+      summaryBody.appendChild(tr);
+    });
+    summaryWrap.classList.remove("hidden");
+  }
+  window.addEventListener("DOMContentLoaded", async () => {
+    await loadQuestions();
+    btnStart.disabled = false;
+  });
+</script>

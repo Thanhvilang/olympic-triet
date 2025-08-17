@@ -1,0 +1,362 @@
+<style>
+  :root {
+    --cell-size: 44px; /* kích thước 1 ô */
+    --cell-gap: 6px; /* khoảng trống giữa các ô */
+  }
+
+  .shell {
+    max-width: 1100px;
+    margin: 24px auto;
+  }
+
+  /* Matrix hàng ngang */
+  .row-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .row-number {
+    width: 44px;
+    min-width: 44px;
+    text-align: center;
+    font-weight: 800;
+    color: #2f4fa1;
+  }
+  .row-track {
+    display: flex;
+    gap: var(--cell-gap);
+    align-items: center;
+    position: relative;
+  }
+
+  /* Ô dạng thẻ lật */
+  .cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    perspective: 1000px;
+    display: inline-block;
+  }
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .flipped {
+    transform: rotateY(180deg);
+  }
+  .front,
+  .back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    font-weight: 800;
+    border: 1.5px solid #222;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+  .front {
+    background: #2d7ef7;
+    color: #fff;
+  }
+  .back {
+    background: #fff;
+    transform: rotateY(180deg);
+    color: #111;
+  }
+  .keyword-letter {
+    color: #ffbf00;
+    font-weight: 900;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Panel & timer */
+  .panel {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .hint {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 72px;
+  }
+  #timer {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  #timer.red {
+    color: #d9534f;
+  }
+
+  /* Nút chọn hàng */
+  .btn-row {
+    margin: 4px;
+  }
+  .btn-row.active {
+    pointer-events: none; /* tránh bấm lại trong lúc đang chạy */
+    border-width: 2px;
+  }
+
+  /* Tiện ích */
+  .hidden {
+    display: none !important;
+  }
+</style>
+
+<div class="shell container-fluid">
+  <h3 class="text-center mb-3">Phần thi giải ô chữ</h3>
+
+  <!-- Hàng 1: Matrix (trái) + Nút Đúng / Từ khoá (phải) -->
+  <div class="row g-3 mb-3">
+    <div class="col-lg-9">
+      <div id="board" class="panel">
+        <!-- Ma trận hàng ngang sẽ render ở đây -->
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <!-- <div class="panel d-flex flex-column gap-2">
+        <button id="btnCorrect" class="btn btn-success hidden">
+          Đúng (mở hàng đang chọn)
+        </button>
+        <button id="btnKeyword" class="btn btn-danger">Từ khoá</button>
+      </div> -->
+      <div class="panel">
+        <div id="timer">20</div>
+      </div>
+      <!-- Gợi ý cho người chơi -->
+      <div id="hintBox" class="hint mb-2 mt-3">
+        Chọn một hàng ngang để bắt đầu đếm 20 giây…
+      </div>
+      <!-- <div id="rowButtons" class="d-flex flex-wrap"></div> -->
+    </div>
+  </div>
+
+  <!-- Hàng 2: Gợi ý + nút chọn hàng (trái) / Timer (phải) -->
+  <div class="row g-3">
+    <div class="col-lg-9">
+      <!-- <div id="hintBox" class="hint mb-2">
+        Chọn một hàng ngang để bắt đầu đếm 20 giây…
+      </div> -->
+      <div
+        id="rowButtons"
+        class="d-flex flex-wrap p-3 border rounded bg-white"
+      ></div>
+    </div>
+    <div class="col-lg-3">
+      <!-- <div class="panel">
+        <div id="timer">20</div>
+      </div> -->
+      <div class="panel d-flex flex-column gap-2">
+        <button id="btnCorrect" class="btn btn-success hidden">
+          Đúng (mở hàng đang chọn)
+        </button>
+        <button id="btnKeyword" class="btn btn-danger">Từ khoá</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+  <a href="/test" class="btn btn-success mt-1" id="btnBack">
+    Về trang phần thi
+  </a>
+</div>
+<script>
+  /* ========= 1) JSON có sẵn =========
+   Mỗi hàng: answer, hint, keywordIndex (vị trí ký tự khóa trong answer).
+   Lưu ý: answer có thể rất ngắn (2 ký tự) → chỉ render đúng 2 thẻ (không vẽ ô trống).
+   Các ký tự khóa được canh cùng cột bằng margin-left theo chênh lệch keywordIndex. */
+  const crosswordData = [
+    { answer: "AI", hint: "Trí tuệ nhân tạo", keywordIndex: 0 },
+    { answer: "ROBOT", hint: "Máy hoạt động tự động", keywordIndex: 2 },
+    { answer: "DATA", hint: "Dữ liệu", keywordIndex: 1 },
+    { answer: "CODE", hint: "Lệnh lập trình", keywordIndex: 2 },
+    { answer: "BRAIN", hint: "Bộ não", keywordIndex: 3 },
+    { answer: "OS", hint: "Hệ điều hành (viết tắt)", keywordIndex: 1 },
+    { answer: "ARRAY", hint: "Cấu trúc dữ liệu mảng", keywordIndex: 0 },
+  ];
+
+  /* Tính cột chung của ký tự khóa */
+  const keywordColumn = Math.max(...crosswordData.map((r) => r.keywordIndex));
+  /* Ghép từ khóa chính từ các ký tự khóa */
+  const KEYWORD = crosswordData.map((r) => r.answer[r.keywordIndex]).join("");
+
+  /* Trạng thái */
+  let currentRow = null; // index hàng đang thi
+  let inProgress = false; // đang chạy timer cho hàng nào đó
+  let timerId = null;
+  let timeLeft = 20;
+  const rowLocked = Array(crosswordData.length).fill(false); // hết giờ → true
+
+  /* DOM refs */
+  const boardEl = document.getElementById("board");
+  const rowButtons = document.getElementById("rowButtons");
+  const hintBox = document.getElementById("hintBox");
+  const timerEl = document.getElementById("timer");
+  const btnCorrect = document.getElementById("btnCorrect");
+  const btnKeyword = document.getElementById("btnKeyword");
+
+  /* ========= 2) Render ma trận ========= */
+  function renderBoard() {
+    boardEl.innerHTML = "";
+    const pxPerUnit =
+      parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--cell-size"
+        )
+      ) +
+      parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--cell-gap"
+        )
+      );
+
+    crosswordData.forEach((row, idx) => {
+      const line = document.createElement("div");
+      line.className = "row-line";
+      line.dataset.row = idx;
+
+      // Số thứ tự
+      const num = document.createElement("div");
+      num.className = "row-number";
+      num.textContent = idx + 1;
+      line.appendChild(num);
+
+      // “Đẩy” hàng sang phải để cột ký tự khóa thẳng hàng
+      const track = document.createElement("div");
+      track.className = "row-track";
+      const emptyOffset = keywordColumn - row.keywordIndex;
+      track.style.marginLeft = emptyOffset * pxPerUnit + "px";
+
+      // Render đúng số thẻ theo độ dài answer (không vẽ ô trống)
+      [...row.answer].forEach((ch, i) => {
+        const cell = document.createElement("div");
+        cell.className = "cell";
+        const inner = document.createElement("div");
+        inner.className = "inner";
+        inner.innerHTML = `
+        <div class="front"></div>
+        <div class="back ${
+          i === row.keywordIndex ? "keyword-letter" : ""
+        }">${ch}</div>
+      `;
+        cell.appendChild(inner);
+        track.appendChild(cell);
+      });
+
+      line.appendChild(track);
+      boardEl.appendChild(line);
+    });
+  }
+
+  /* ========= 3) Render nút chọn hàng ========= */
+  function renderRowButtons() {
+    rowButtons.innerHTML = "";
+    crosswordData.forEach((_, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "btn btn-outline-primary btn-row";
+      btn.id = `row-btn-${idx}`;
+      btn.textContent = `Hàng ${idx + 1}`;
+      btn.disabled = rowLocked[idx]; // nếu đã hết giờ → khóa
+      btn.addEventListener("click", () => onPickRow(idx));
+      rowButtons.appendChild(btn);
+    });
+  }
+
+  /* ========= 4) Chọn hàng & giữ trạng thái active ========= */
+  function onPickRow(idx) {
+    // Nếu đang có hàng đang chạy timer → không cho chuyển hàng khác
+    if (inProgress) return;
+
+    // Nếu hàng này đã hết giờ → bỏ qua
+    if (rowLocked[idx]) return;
+
+    // Gán active cho đúng nút hàng đang chọn
+    document
+      .querySelectorAll(".btn-row")
+      .forEach((b) => b.classList.remove("active", "btn-primary"));
+    const curBtn = document.getElementById(`row-btn-${idx}`);
+    if (curBtn) {
+      curBtn.classList.add("active", "btn-primary"); // giữ active cho tới khi hết giờ
+      curBtn.classList.remove("btn-outline-primary");
+    }
+
+    currentRow = idx;
+    hintBox.textContent = crosswordData[idx].hint;
+
+    // Ẩn nút "Đúng" khi vừa chọn hàng
+    btnCorrect.classList.add("hidden");
+
+    // Khởi động timer 20s
+    startTimer();
+  }
+
+  /* ========= 5) Timer ========= */
+  function startTimer() {
+    clearInterval(timerId);
+    timeLeft = 20;
+    timerEl.textContent = timeLeft;
+    timerEl.classList.remove("red");
+    inProgress = true;
+
+    timerId = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 5) timerEl.classList.add("red");
+      timerEl.textContent = timeLeft;
+
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        inProgress = false;
+        timerEl.textContent = "Hết giờ";
+        timerEl.classList.add("red");
+
+        // Hết giờ → hiện nút “Đúng”, disable nút hàng và bỏ active
+        if (currentRow !== null) {
+          const btn = document.getElementById(`row-btn-${currentRow}`);
+          if (btn) {
+            btn.disabled = true;
+            btn.classList.remove("active", "btn-primary");
+            btn.classList.add("btn-outline-secondary");
+          }
+          rowLocked[currentRow] = true;
+        }
+        btnCorrect.classList.remove("hidden");
+      }
+    }, 1000);
+  }
+
+  /* ========= 6) Nút “Đúng” & “Từ khoá” ========= */
+  btnCorrect.addEventListener("click", () => {
+    if (currentRow === null) return;
+    const line = boardEl.querySelector(`.row-line[data-row="${currentRow}"]`);
+    if (!line) return;
+    line
+      .querySelectorAll(".inner")
+      .forEach((el) => el.classList.add("flipped"));
+    // Ẩn nút sau khi lật để tránh bấm lại
+    btnCorrect.classList.add("hidden");
+  });
+
+  btnKeyword.addEventListener("click", () => {
+    // Lật toàn bộ bảng
+    boardEl
+      .querySelectorAll(".inner")
+      .forEach((el) => el.classList.add("flipped"));
+    // Hiện từ khoá chính
+    alert(`Từ khoá: ${KEYWORD}`);
+  });
+
+  /* ========= 7) Khởi tạo ========= */
+  renderBoard();
+  renderRowButtons();
+</script>

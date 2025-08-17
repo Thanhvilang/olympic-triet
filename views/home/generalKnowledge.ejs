@@ -1,0 +1,153 @@
+<h2 class="mb-4 mt-4 text-center">Phần thi Kiến thức chung</h2>
+
+<div class="row">
+  <!-- Phần thi trắc nghiệm -->
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-dark fs-3 fw-bold">
+        Phần thi trắc nghiệm
+      </div>
+      <div class="card-body">
+        <p>Học viên trả lời 40 câu hỏi trắc nghiệm.</p>
+        <p>Thời gian: <b>30 phút</b>.</p>
+
+        <div id="timer1" class="timer text-center">30:00</div>
+        <div class="mt-4 text-center">
+          <button
+            id="startBtn1"
+            class="btn btn-primary"
+            onclick="startTimer(1, 30*60)"
+          >
+            Bắt đầu
+          </button>
+          <button
+            id="pauseBtn1"
+            class="btn btn-warning"
+            onclick="togglePause(1)"
+            disabled
+          >
+            Dừng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phần thi tự luận -->
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-header bg-info text-dark fs-3 fw-bold">
+        Phần thi tự luận
+      </div>
+      <div class="card-body">
+        <p>Học viên viết 01 câu tự luận.</p>
+        <p>Thời gian: <b>60 phút</b>.</p>
+        <div id="timer2" class="timer text-center">60:00</div>
+        <div class="mt-4 text-center">
+          <button
+            id="startBtn2"
+            class="btn btn-primary"
+            onclick="startTimer(2, 60*60)"
+          >
+            Bắt đầu
+          </button>
+          <button
+            id="pauseBtn2"
+            class="btn btn-warning"
+            onclick="togglePause(2)"
+            disabled
+          >
+            Dừng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-4 text-center">
+  <a href="/test" class="btn btn-success">Về trang phần thi</a>
+</div>
+<!-- Âm thanh cảnh báo -->
+<audio id="beep" src="/audio/kitchen-timer.mp3" preload="auto"></audio>
+<style>
+  /* .timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dc3545;
+  } */
+  .timer {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #1f2937;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .blink-red {
+    animation: blink-red 1s infinite;
+  }
+
+  @keyframes blink-red {
+    0% {
+      color: #dc3545;
+    }
+    50% {
+      color: transparent;
+    }
+    100% {
+      color: #dc3545;
+    }
+  }
+</style>
+
+<script>
+  let timers = {
+    1: { remaining: 0, interval: null, paused: false },
+    2: { remaining: 0, interval: null, paused: false },
+  };
+
+  function startTimer(id, duration) {
+    let timerEl = document.getElementById(`timer${id}`);
+    let startBtn = document.getElementById(`startBtn${id}`);
+    let pauseBtn = document.getElementById(`pauseBtn${id}`);
+
+    timers[id].remaining = duration;
+    startBtn.disabled = true;
+    pauseBtn.disabled = false;
+    updateDisplay(id);
+
+    timers[id].interval = setInterval(() => {
+      if (!timers[id].paused) {
+        timers[id].remaining--;
+
+        if (timers[id].remaining <= 10) {
+          timerEl.classList.add("blink-red");
+        }
+
+        updateDisplay(id);
+
+        if (timers[id].remaining <= 0) {
+          clearInterval(timers[id].interval);
+          timerEl.textContent = "Hết giờ";
+          pauseBtn.disabled = true;
+          pauseBtn.textContent = "Dừng";
+          timerEl.classList.remove("blink-red");
+        }
+      }
+    }, 1000);
+  }
+
+  function updateDisplay(id) {
+    let timerEl = document.getElementById(`timer${id}`);
+    let minutes = Math.floor(timers[id].remaining / 60);
+    let seconds = timers[id].remaining % 60;
+    timerEl.textContent = `${String(minutes).padStart(2, "0")}:${String(
+      seconds
+    ).padStart(2, "0")}`;
+  }
+
+  function togglePause(id) {
+    let pauseBtn = document.getElementById(`pauseBtn${id}`);
+    timers[id].paused = !timers[id].paused;
+    pauseBtn.textContent = timers[id].paused ? "Tiếp tục" : "Dừng";
+  }
+</script>

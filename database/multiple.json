@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "q": "Một trong những dạng cơ bản của thực tiễn là gì?",
+    "o": ["Truyền bá khoa học", "Trao đổi khoa học", "Thực nghiệm khoa học", "Sản xuất vật chất"],
+    "a": 3
+  },
+  {
+    "id": 2,
+    "q": "Tư duy phản ánh hiện thực khách quan dưới hình thức nào?",
+    "o": ["Trực tiếp cảm tính", "Gián tiếp, trừu tượng", "Chủ quan", "Bẩm sinh"],
+    "a": 1
+  },
+  {
+    "id": 3,
+    "q": "Phương thức sản xuất gồm hai mặt là gì?",
+    "o": ["Lực lượng sản xuất và quan hệ sản xuất", "Cơ sở hạ tầng và kiến trúc thượng tầng", "Khoa học và công nghệ", "Sản xuất và lưu thông"],
+    "a": 0
+  },
+  {
+    "id": 4,
+    "q": "Giá trị thặng dư do ai tạo ra?",
+    "o": ["Tư bản", "Công nhân", "Nhà nước", "Thị trường"],
+    "a": 1
+  },
+  {
+    "id": 5,
+    "q": "Vai trò của thực tiễn đối với nhận thức là gì?",
+    "o": ["Mục đích", "Động lực, tiêu chuẩn kiểm tra", "Phương tiện", "Kết quả"],
+    "a": 1
+  },
+  {
+    "id": 6,
+    "q": "Trong logic trừu tượng đến cụ thể, 'cụ thể' là gì?",
+    "o": ["Đơn giản", "Đa dạng, phong phú", "Ít thuộc tính", "Tách rời"],
+    "a": 1
+  },
+  {
+    "id": 7,
+    "q": "Lý luận chỉ có ý nghĩa khi nào?",
+    "o": ["Khi độc lập với thực tiễn", "Khi gắn liền với thực tiễn", "Khi phổ biến đại trà", "Khi khó hiểu"],
+    "a": 1
+  },
+  {
+    "id": 8,
+    "q": "Cơ sở kinh tế của nhà nước là gì?",
+    "o": ["Kiến trúc thượng tầng", "Quan hệ sản xuất", "Lực lượng sản xuất", "Văn hóa"],
+    "a": 1
+  },
+  {
+    "id": 9,
+    "q": "Khoa học tự nhiên nghiên cứu đối tượng gì?",
+    "o": ["Quy luật xã hội", "Quy luật tự nhiên", "Quy luật tư duy", "Quy luật lịch sử"],
+    "a": 1
+  },
+  {
+    "id": 10,
+    "q": "Chủ nghĩa duy vật lịch sử nhấn mạnh vai trò quyết định của?",
+    "o": ["Ý thức xã hội", "Tâm lý xã hội", "Tồn tại xã hội", "Cá nhân"],
+    "a": 2
+  },
+  {
+    "id": 11,
+    "q": "Hàng hóa có hai thuộc tính là gì?",
+    "o": ["Giá trị sử dụng và giá trị", "Cung và cầu", "Lợi nhuận và chi phí", "Giá cả và giá trị"],
+    "a": 0
+  },
+  {
+    "id": 12,
+    "q": "Quy luật giá trị yêu cầu sản xuất dựa trên?",
+    "o": ["Giá cả thị trường", "Giá trị xã hội cần thiết", "Giá trị cá biệt", "Lợi nhuận tối đa"],
+    "a": 1
+  },
+  {
+    "id": 13,
+    "q": "Lực lượng sản xuất gồm?",
+    "o": ["Người lao động và tư liệu sản xuất", "Quan hệ sở hữu", "Thị trường", "Vốn"],
+    "a": 0
+  },
+  {
+    "id": 14,
+    "q": "Nhà nước là công cụ của?",
+    "o": ["Giai cấp thống trị", "Nhân dân lao động", "Tư sản và vô sản", "Tôn giáo"],
+    "a": 0
+  },
+  {
+    "id": 15,
+    "q": "C.Mác là tác giả của tác phẩm nào?",
+    "o": ["Tư bản", "Chống Đuy-rinh", "Chủ nghĩa xã hội không tưởng", "Bàn về tự do"],
+    "a": 0
+  },
+  {
+    "id": 16,
+    "q": "Phương pháp biện chứng duy vật coi sự vật?",
+    "o": ["Bất biến", "Cô lập", "Luôn vận động, phát triển", "Ngẫu nhiên"],
+    "a": 2
+  },
+  {
+    "id": 17,
+    "q": "Giá trị sử dụng là?",
+    "o": ["Công dụng của hàng hóa", "Giá bán", "Lợi nhuận", "Tiền lương"],
+    "a": 0
+  },
+  {
+    "id": 18,
+    "q": "Nguồn gốc của lợi nhuận theo Mác là?",
+    "o": ["Do lưu thông", "Do bán đắt", "Do giá trị thặng dư", "Do may mắn"],
+    "a": 2
+  },
+  {
+    "id": 19,
+    "q": "Quy luật mâu thuẫn nói rằng phát triển là?",
+    "o": ["Đi thẳng", "Ngẫu nhiên", "Kết quả đấu tranh giữa các mặt đối lập", "Dừng lại"],
+    "a": 2
+  },
+  {
+    "id": 20,
+    "q": "Cơ sở hạ tầng gồm?",
+    "o": ["Quan hệ sản xuất", "Lực lượng sản xuất", "Kiến trúc thượng tầng", "Tự nhiên"],
+    "a": 0
+  },
+  {
+    "id": 21,
+    "q": "Ý thức xã hội có tính?",
+    "o": ["Tự phát hoàn toàn", "Phụ thuộc tuyệt đối tồn tại xã hội", "Độc lập tương đối", "Không liên quan"],
+    "a": 2
+  },
+  {
+    "id": 22,
+    "q": "Tiền tệ ra đời từ?",
+    "o": ["Trao đổi trực tiếp", "Trao đổi hàng hóa phát triển", "Nhà nước ấn định", "Tín dụng"],
+    "a": 1
+  },
+  {
+    "id": 23,
+    "q": "Lao động trừu tượng tạo?",
+    "o": ["Giá trị sử dụng", "Giá trị", "Giá cả", "Lợi nhuận"],
+    "a": 1
+  },
+  {
+    "id": 24,
+    "q": "Tồn tại xã hội quyết định?",
+    "o": ["Ý thức xã hội", "Khoa học tự nhiên", "Tự nhiên", "Công nghệ"],
+    "a": 0
+  }
+]

@@ -1,0 +1,303 @@
+[
+  { "id": 1, "question": "Trình bày khái niệm vật chất theo Lênin.", "answer": "Vật chất là thực tại khách quan, tồn tại không phụ thuộc vào cảm giác con người." },
+  { "id": 2, "question": "Nguyên lý cơ bản của phép biện chứng duy vật là gì?", "answer": "Nguyên lý mối liên hệ phổ biến và nguyên lý phát triển." },
+  { "id": 3, "question": "Thế nào là mối liên hệ phổ biến?", "answer": "Sự ràng buộc, tác động qua lại giữa các sự vật, hiện tượng." },
+  { "id": 4, "question": "Nêu các cặp phạm trù cơ bản của phép biện chứng.", "answer": "Nguyên nhân–kết quả, tất nhiên–ngẫu nhiên, nội dung–hình thức, khả năng–hiện thực." },
+  { "id": 5, "question": "Quy luật thống nhất và đấu tranh của các mặt đối lập là gì?", "answer": "Quy luật phản ánh nguồn gốc, động lực của phát triển." },
+  { "id": 6, "question": "Nội dung quy luật lượng – chất?", "answer": "Lượng đổi đến giới hạn sẽ dẫn tới sự thay đổi về chất." },
+  { "id": 7, "question": "Quy luật phủ định của phủ định là gì?", "answer": "Sự phát triển diễn ra qua các lần phủ định biện chứng, tạo ra cái mới cao hơn." },
+  { "id": 8, "question": "Vai trò của thực tiễn đối với nhận thức?", "answer": "Cơ sở, động lực, mục đích và tiêu chuẩn của chân lý." },
+  { "id": 9, "question": "Hình thái kinh tế – xã hội là gì?", "answer": "Xã hội ở một giai đoạn lịch sử với kiểu quan hệ sản xuất đặc trưng." },
+  { "id": 10, "question": "Khái niệm lực lượng sản xuất?", "answer": "Sự kết hợp người lao động và tư liệu sản xuất." },
+  { "id": 11, "question": "Các yếu tố của quan hệ sản xuất?", "answer": "Quan hệ sở hữu, quan hệ tổ chức–quản lý, quan hệ phân phối." },
+  { "id": 12, "question": "Cơ sở hạ tầng và kiến trúc thượng tầng là gì?", "answer": "Cơ sở hạ tầng là toàn bộ quan hệ sản xuất, kiến trúc thượng tầng là toàn bộ quan điểm, thiết chế xã hội." },
+  { "id": 13, "question": "Nguyên nhân cuối cùng của biến đổi xã hội?", "answer": "Sự phát triển của lực lượng sản xuất." },
+  { "id": 14, "question": "Định nghĩa giai cấp theo Mác – Lênin?", "answer": "Tập đoàn người khác nhau về vị trí trong sản xuất, sở hữu, phân phối." },
+  { "id": 15, "question": "Sứ mệnh lịch sử của giai cấp công nhân?", "answer": "Xóa bỏ chế độ tư bản, xây dựng CNXH và CNCS." },
+  { "id": 16, "question": "Nguồn gốc giá trị thặng dư theo Mác?", "answer": "Do lao động không công của công nhân tạo ra cho nhà tư bản." },
+  { "id": 17, "question": "Khái niệm giá trị hàng hóa?", "answer": "Lao động xã hội kết tinh trong hàng hóa." },
+  { "id": 18, "question": "Hai thuộc tính của hàng hóa?", "answer": "Giá trị sử dụng và giá trị." },
+  { "id": 19, "question": "Tiền tệ ra đời từ đâu?", "answer": "Từ phát triển trao đổi hàng hóa và hình thái giá trị." },
+  { "id": 20, "question": "Chủ nghĩa xã hội khoa học nghiên cứu gì?", "answer": "Quy luật, điều kiện, hình thức, con đường xây dựng CNXH và CNCS." },
+  { "id": 21, "question": "Đặc trưng cơ bản của CNXH?", "answer": "Công hữu, quản lý khoa học, lực lượng sản xuất cao, công bằng xã hội." },
+  { "id": 22, "question": "Nguyên tắc phân phối trong CNXH?", "answer": "Làm theo năng lực, hưởng theo lao động." },
+  { "id": 23, "question": "Bản chất của nhà nước XHCN?", "answer": "Nhà nước của nhân dân lao động do giai cấp công nhân lãnh đạo." },
+  { "id": 24, "question": "Đặc điểm thời kỳ quá độ lên CNXH?", "answer": "Tồn tại đan xen nhiều yếu tố kinh tế – xã hội." },
+  { "id": 25, "question": "Khái niệm tư tưởng Hồ Chí Minh?", "answer": "Hệ thống quan điểm toàn diện, sâu sắc về cách mạng Việt Nam." },
+  { "id": 26, "question": "Nguồn gốc tư tưởng Hồ Chí Minh?", "answer": "Truyền thống dân tộc, tinh hoa văn hóa nhân loại, chủ nghĩa Mác – Lênin." },
+  { "id": 27, "question": "Mục tiêu độc lập dân tộc gắn CNXH của Hồ Chí Minh?", "answer": "Giải phóng dân tộc, xây dựng đất nước giàu mạnh, nhân dân hạnh phúc." },
+  { "id": 28, "question": "Quan điểm Hồ Chí Minh về sức mạnh nhân dân?", "answer": "Dân là gốc của nước, cách mạng là sự nghiệp quần chúng." },
+  { "id": 29, "question": "Nguyên tắc đoàn kết quốc tế của Hồ Chí Minh?", "answer": "Đoàn kết trên cơ sở mục tiêu chung, tôn trọng độc lập, chủ quyền." },
+  { "id": 30, "question": "Đặc điểm đạo đức Hồ Chí Minh?", "answer": "Cần, kiệm, liêm, chính, chí công vô tư." },
+  { "id": 31, "question": "Phương pháp luận duy vật biện chứng là gì?", "answer": "Cách tiếp cận hiện tượng trên cơ sở mối liên hệ và phát triển." },
+  { "id": 32, "question": "Nguyên nhân và điều kiện của cách mạng xã hội?", "answer": "Mâu thuẫn gay gắt giữa lực lượng sản xuất và quan hệ sản xuất." },
+  { "id": 33, "question": "Bản chất của ý thức theo Mác – Lênin?", "answer": "Hình ảnh chủ quan của thế giới khách quan." },
+  { "id": 34, "question": "Các trình độ nhận thức?", "answer": "Nhận thức cảm tính và nhận thức lý tính." },
+  { "id": 35, "question": "Vai trò của đấu tranh giai cấp trong lịch sử?", "answer": "Động lực trực tiếp thúc đẩy sự phát triển xã hội có giai cấp." },
+  { "id": 36, "question": "Mục tiêu cuối cùng của CNXH?", "answer": "Xây dựng xã hội không có áp bức, bóc lột, mọi người phát triển tự do." },
+  { "id": 37, "question": "Bản chất của dân chủ XHCN?", "answer": "Quyền lực thuộc về nhân dân, do nhân dân và vì nhân dân." },
+  { "id": 38, "question": "Khái niệm công nghiệp hóa XHCN?", "answer": "Quá trình chuyển đổi nền kinh tế từ thủ công sang cơ khí hiện đại." },
+  { "id": 39, "question": "Vai trò của khoa học – công nghệ trong CNXH?", "answer": "Lực lượng sản xuất hàng đầu thúc đẩy phát triển kinh tế – xã hội." },
+  { "id": 40, "question": "Quan điểm Hồ Chí Minh về xây dựng Đảng?", "answer": "Xây dựng Đảng vững mạnh về chính trị, tư tưởng, tổ chức, đạo đức." },
+  { "id": 41, "question": "Nguyên tắc tập trung dân chủ trong Đảng?", "answer": "Tập trung trên cơ sở dân chủ, dân chủ dưới sự lãnh đạo tập trung." },
+  { "id": 42, "question": "Vai trò của cán bộ theo Hồ Chí Minh?", "answer": "Cán bộ là cái gốc của mọi công việc." },
+  { "id": 43, "question": "Khái niệm kinh tế thị trường định hướng XHCN?", "answer": "Nền kinh tế vận hành theo cơ chế thị trường có sự quản lý của Nhà nước XHCN." },
+  { "id": 44, "question": "Mục tiêu công bằng xã hội trong CNXH?", "answer": "Bảo đảm mọi người có cơ hội và điều kiện phát triển." },
+  { "id": 45, "question": "Vai trò của giáo dục – đào tạo trong CNXH?", "answer": "Quốc sách hàng đầu, đào tạo con người toàn diện." },
+  { "id": 46, "question": "Quan điểm Hồ Chí Minh về đại đoàn kết dân tộc?", "answer": "Đoàn kết toàn dân, không phân biệt giai cấp, tôn giáo." },
+  { "id": 47, "question": "Mục tiêu chống tham nhũng theo Hồ Chí Minh?", "answer": "Xây dựng bộ máy trong sạch, liêm chính, vì dân phục vụ." },
+  { "id": 48, "question": "Quan điểm Hồ Chí Minh về văn hóa?", "answer": "Văn hóa là nền tảng tinh thần của xã hội." },
+  { "id": 49, "question": "Đặc điểm của kinh tế tập thể trong CNXH?", "answer": "Dựa trên sở hữu tập thể về tư liệu sản xuất." },
+  { "id": 50, "question": "Khái niệm sở hữu toàn dân?", "answer": "Chế độ sở hữu mà tư liệu sản xuất thuộc toàn dân, do Nhà nước quản lý." },
+  {
+    "id": 51,
+    "question": "Vai trò của kinh tế tập thể trong thời kỳ quá độ lên CNXH ở Việt Nam.",
+    "answer": "Kinh tế tập thể là nền tảng cùng với kinh tế nhà nước, góp phần bảo đảm công bằng, ổn định xã hội."
+  },
+  {
+    "id": 52,
+    "question": "Quan điểm của Hồ Chí Minh về mối quan hệ giữa độc lập dân tộc và CNXH.",
+    "answer": "Độc lập dân tộc gắn liền với CNXH, độc lập dân tộc là điều kiện để xây dựng CNXH và CNXH bảo đảm vững chắc độc lập dân tộc."
+  },
+  {
+    "id": 53,
+    "question": "Khái niệm về cơ sở hạ tầng trong chủ nghĩa duy vật lịch sử.",
+    "answer": "Cơ sở hạ tầng là toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội."
+  },
+  {
+    "id": 54,
+    "question": "Nguyên tắc phân phối chủ yếu trong CNXH.",
+    "answer": "Phân phối theo lao động."
+  },
+  {
+    "id": 55,
+    "question": "Theo Mác, đặc trưng của nhà nước vô sản là gì?",
+    "answer": "Nhà nước vô sản là công cụ của giai cấp công nhân nhằm trấn áp giai cấp bị lật đổ và xây dựng CNXH."
+  },
+  {
+    "id": 56,
+    "question": "Tư tưởng Hồ Chí Minh về đạo đức cách mạng.",
+    "answer": "Cần, kiệm, liêm, chính, chí công vô tư."
+  },
+  {
+    "id": 57,
+    "question": "Nguyên nhân chủ yếu dẫn tới khủng hoảng kinh tế trong CNTB theo Mác.",
+    "answer": "Mâu thuẫn giữa tính chất xã hội hóa của sản xuất và hình thức chiếm hữu tư nhân tư bản chủ nghĩa."
+  },
+  {
+    "id": 58,
+    "question": "Khái niệm lực lượng sản xuất.",
+    "answer": "Lực lượng sản xuất là tổng hợp năng lực của con người và tư liệu sản xuất trong quá trình sản xuất."
+  },
+  {
+    "id": 59,
+    "question": "Quan điểm của Hồ Chí Minh về vai trò của nhân dân.",
+    "answer": "Nhân dân là gốc của nước, là chủ thể sáng tạo lịch sử."
+  },
+  {
+    "id": 60,
+    "question": "Khái niệm hình thái kinh tế - xã hội.",
+    "answer": "Hình thái kinh tế - xã hội là một xã hội ở từng giai đoạn lịch sử với lực lượng sản xuất, quan hệ sản xuất và kiến trúc thượng tầng tương ứng."
+  },
+  {
+    "id": 61,
+    "question": "Chủ nghĩa duy vật lịch sử coi yếu tố nào quyết định sự phát triển xã hội?",
+    "answer": "Sản xuất vật chất."
+  },
+  {
+    "id": 62,
+    "question": "Vai trò của cách mạng khoa học - công nghệ hiện đại trong CNXH.",
+    "answer": "Là động lực quan trọng thúc đẩy lực lượng sản xuất và nâng cao đời sống nhân dân."
+  },
+  {
+    "id": 63,
+    "question": "Theo Hồ Chí Minh, cán bộ là gì?",
+    "answer": "Cán bộ là cái gốc của mọi công việc."
+  },
+  {
+    "id": 64,
+    "question": "Nguyên tắc tập trung dân chủ trong Đảng Cộng sản.",
+    "answer": "Tập trung trên cơ sở dân chủ, dân chủ dưới sự lãnh đạo tập trung."
+  },
+  {
+    "id": 65,
+    "question": "Mối quan hệ giữa tồn tại xã hội và ý thức xã hội.",
+    "answer": "Tồn tại xã hội quyết định ý thức xã hội, nhưng ý thức xã hội có tính độc lập tương đối."
+  },
+  {
+    "id": 66,
+    "question": "Theo Mác, bản chất của tôn giáo.",
+    "answer": "Tôn giáo là sự phản ánh hư ảo của hiện thực khách quan, bắt nguồn từ những điều kiện kinh tế - xã hội."
+  },
+  {
+    "id": 67,
+    "question": "Tư tưởng Hồ Chí Minh về chiến tranh nhân dân.",
+    "answer": "Chiến tranh nhân dân là toàn dân đánh giặc, lấy sức mạnh tổng hợp của toàn dân để giành thắng lợi."
+  },
+  {
+    "id": 68,
+    "question": "Khái niệm cách mạng xã hội chủ nghĩa.",
+    "answer": "Cách mạng xã hội chủ nghĩa là sự thay thế chế độ tư bản chủ nghĩa bằng chế độ xã hội chủ nghĩa."
+  },
+  {
+    "id": 69,
+    "question": "Vai trò của liên minh công - nông - trí thức trong CNXH.",
+    "answer": "Là nền tảng chính trị - xã hội vững chắc của nhà nước XHCN."
+  },
+  {
+    "id": 70,
+    "question": "Nguyên tắc hoạt động của Mặt trận Tổ quốc Việt Nam.",
+    "answer": "Hiệp thương dân chủ, phối hợp và thống nhất hành động."
+  },
+  {
+    "id": 71,
+    "question": "Khái niệm giá trị thặng dư tuyệt đối.",
+    "answer": "Giá trị thặng dư do kéo dài thời gian lao động trong ngày làm việc."
+  },
+  {
+    "id": 72,
+    "question": "Giá trị thặng dư tương đối là gì?",
+    "answer": "Giá trị thặng dư do rút ngắn thời gian lao động tất yếu nhờ nâng cao năng suất lao động."
+  },
+  {
+    "id": 73,
+    "question": "Quan điểm của Hồ Chí Minh về tự học.",
+    "answer": "Tự học là con đường quan trọng để nâng cao trình độ, phải kiên trì và chủ động."
+  },
+  {
+    "id": 74,
+    "question": "Theo Mác, mục đích cuối cùng của sản xuất tư bản chủ nghĩa.",
+    "answer": "Tối đa hóa giá trị thặng dư."
+  },
+  {
+    "id": 75,
+    "question": "Khái niệm đấu tranh giai cấp.",
+    "answer": "Đấu tranh giữa các giai cấp có lợi ích kinh tế đối lập."
+  },
+  {
+    "id": 76,
+    "question": "Tư tưởng Hồ Chí Minh về đoàn kết quốc tế.",
+    "answer": "Đoàn kết quốc tế là sức mạnh để bảo vệ độc lập dân tộc và xây dựng CNXH."
+  },
+  {
+    "id": 77,
+    "question": "Vai trò của giáo dục trong CNXH.",
+    "answer": "Là quốc sách hàng đầu, đào tạo con người phát triển toàn diện."
+  },
+  {
+    "id": 78,
+    "question": "Nguyên tắc hoạt động đối ngoại của Việt Nam.",
+    "answer": "Độc lập, tự chủ, hòa bình, hợp tác và phát triển."
+  },
+  {
+    "id": 79,
+    "question": "Theo Mác, bản chất của tiền lương trong CNTB.",
+    "answer": "Tiền lương là giá cả của sức lao động."
+  },
+  {
+    "id": 80,
+    "question": "Khái niệm địa tô tư bản chủ nghĩa.",
+    "answer": "Phần giá trị thặng dư siêu ngạch do sử dụng đất đai mang lại."
+  },
+  {
+    "id": 81,
+    "question": "Vai trò của kinh tế nhà nước trong CNXH.",
+    "answer": "Giữ vai trò chủ đạo trong nền kinh tế."
+  },
+  {
+    "id": 82,
+    "question": "Nguyên tắc tự phê bình và phê bình của Đảng.",
+    "answer": "Thẳng thắn, trung thực, xây dựng."
+  },
+  {
+    "id": 83,
+    "question": "Quan điểm của Hồ Chí Minh về cần kiệm.",
+    "answer": "Cần lao động siêng năng, kiệm tiết kiệm sức người, của cải."
+  },
+  {
+    "id": 84,
+    "question": "Khái niệm cơ chế thị trường định hướng XHCN.",
+    "answer": "Là cơ chế vận hành nền kinh tế theo quy luật thị trường có sự quản lý của Nhà nước XHCN."
+  },
+  {
+    "id": 85,
+    "question": "Theo Mác, nguyên nhân sâu xa của cách mạng xã hội.",
+    "answer": "Mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất."
+  },
+  {
+    "id": 86,
+    "question": "Vai trò của văn hóa trong CNXH.",
+    "answer": "Là nền tảng tinh thần của xã hội."
+  },
+  {
+    "id": 87,
+    "question": "Tư tưởng Hồ Chí Minh về cán bộ và công tác cán bộ.",
+    "answer": "Cán bộ là cái gốc, phải vừa có đức vừa có tài."
+  },
+  {
+    "id": 88,
+    "question": "Khái niệm giá trị sử dụng.",
+    "answer": "Là công dụng của hàng hóa thỏa mãn nhu cầu nào đó."
+  },
+  {
+    "id": 89,
+    "question": "Khái niệm giá trị của hàng hóa.",
+    "answer": "Là lao động xã hội cần thiết kết tinh trong hàng hóa."
+  },
+  {
+    "id": 90,
+    "question": "Vai trò của giai cấp công nhân trong cách mạng XHCN.",
+    "answer": "Là lực lượng lãnh đạo cách mạng."
+  },
+  {
+    "id": 91,
+    "question": "Nguyên tắc bình đẳng, đoàn kết giữa các dân tộc.",
+    "answer": "Các dân tộc bình đẳng, đoàn kết, tôn trọng và giúp nhau cùng phát triển."
+  },
+  {
+    "id": 92,
+    "question": "Theo Mác, quy luật giá trị điều tiết điều gì?",
+    "answer": "Điều tiết sản xuất và lưu thông hàng hóa."
+  },
+  {
+    "id": 93,
+    "question": "Khái niệm công nghiệp hóa, hiện đại hóa.",
+    "answer": "Quá trình chuyển đổi từ nền kinh tế nông nghiệp sang nền kinh tế công nghiệp hiện đại."
+  },
+  {
+    "id": 94,
+    "question": "Vai trò của thanh niên trong sự nghiệp CNH-HĐH.",
+    "answer": "Lực lượng xung kích, sáng tạo."
+  },
+  {
+    "id": 95,
+    "question": "Quan điểm của Hồ Chí Minh về học đi đôi với hành.",
+    "answer": "Học để làm việc, làm người, làm cán bộ."
+  },
+  {
+    "id": 96,
+    "question": "Theo Mác, tư bản bất biến là gì?",
+    "answer": "Phần tư bản đầu tư vào tư liệu sản xuất."
+  },
+  {
+    "id": 97,
+    "question": "Tư bản khả biến là gì?",
+    "answer": "Phần tư bản đầu tư vào sức lao động."
+  },
+  {
+    "id": 98,
+    "question": "Nguyên tắc quản lý kinh tế trong CNXH.",
+    "answer": "Kết hợp kế hoạch với thị trường."
+  },
+  {
+    "id": 99,
+    "question": "Vai trò của Đảng Cộng sản Việt Nam.",
+    "answer": "Là lực lượng lãnh đạo Nhà nước và xã hội."
+  },
+  {
+    "id": 100,
+    "question": "Khái niệm dân chủ XHCN.",
+    "answer": "Nền dân chủ bảo đảm quyền lực thuộc về nhân dân dưới sự lãnh đạo của Đảng."
+  }
+]
+

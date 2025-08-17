@@ -1,0 +1,162 @@
+<div class="container py-5">
+  <h2 class="text-center">Thể lệ cuộc thi</h2>
+  <div class="row">
+    <!-- Menu bên trái -->
+    <div
+      class="col-md-4 left-menu d-flex flex-column gap-2 p-3 rounded-3"
+      style="background: #fff; border: 2px solid #333; min-height: 350px"
+    >
+      <button class="btn btn-outline-primary active" onclick="showRule(0)">
+        Kiến thức chung
+      </button>
+      <button class="btn btn-outline-success" onclick="showRule(1)">
+        Tự giới thiệu về trường
+      </button>
+      <button class="btn btn-outline-warning" onclick="showRule(2)">
+        Trả lời câu hỏi bắt buộc
+      </button>
+      <button class="btn btn-outline-info" onclick="showRule(3)">
+        Trả lời câu hỏi trắc nghiệm
+      </button>
+      <button class="btn btn-outline-danger" onclick="showRule(4)">
+        Thi hùng biện theo chủ đề
+      </button>
+      <button class="btn btn-outline-dark" onclick="showRule(5)">
+        Phần thi giải ô chữ
+      </button>
+    </div>
+
+    <!-- Nội dung bên phải -->
+    <div class="col-md-8">
+      <div
+        class="right-content rounded-3 border position-relative"
+        style="
+          border-width: 2px;
+          border-top: 6px solid #ffe066;
+          min-height: 350px;
+          background: #ffe066;
+        "
+      >
+        <div id="ruleContent" class="p-4">
+          <h4>Kiến thức chung</h4>
+          <p>
+            <b>- Tổ chức, thứ tự thi:</b><br />
+            + Tổ chức: 01 phòng thi.<br />
+            + Thứ tự thi: Thi trắc nghiệm trước, thi tự luận sau.<br />
+            <b>- Thi trắc nghiệm:</b><br />
+            + Hình thức: Học viên trả lời 40 câu hỏi trắc nghiệm.<br />
+            + Thời gian: 30 phút.<br />
+            <b>- Thi tự luận:</b><br />
+            + Hình thức: Học viên viết 01 câu tự luận.<br />
+            + Thời gian: 60 phút.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center gap-2 mt-4">
+    <a href="/" class="btn btn-lg btn-primary"> Về trang chủ </a>
+    <a href="/test" class="btn btn-lg btn-success"> Vào thi</a>
+  </div>
+</div>
+
+<style>
+  .left-menu {
+    color: #fff;
+  }
+  .left-menu .btn.active,
+  .left-menu .btn:focus {
+    color: #fff !important;
+    background: #0d6efd !important;
+    border-color: #0d6efd !important;
+  }
+  .left-menu .btn:not(.active):hover {
+    opacity: 0.85;
+  }
+  .right-content {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+</style>
+
+<script>
+  const rules = [
+    {
+      title: "Kiến thức chung",
+      content: `
+        <b>- Tổ chức, thứ tự thi:</b><br>
+        + Tổ chức: 01 phòng thi.<br>
+        + Thứ tự thi: Thi trắc nghiệm trước, thi tự luận sau.<br>
+        <b>- Thi trắc nghiệm:</b><br>
+        + Hình thức: Học viên trả lời 40 câu hỏi trắc nghiệm.<br>
+        + Thời gian: 30 phút.<br>        
+        <b>- Thi tự luận:</b><br>
+        + Hình thức: Học viên viết 01 câu tự luận.<br>
+        + Thời gian: 60 phút.
+      `,
+    },
+    {
+      title: "Tự giới thiệu về trường",
+      content: `
+        - Các thí sinh lựa chọn hình thức thể hiện; nội dung giới thiệu về trường và đội của mình; 
+        khái quát nội dung chính, những vấn đề có ý nghĩa thiết thực trong nghiên cứu, 
+        học tập chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh và nhận thức chính trị - xã hội.<br>
+        - Thành phần tham gia thi của các đội là 06 học viên trong đội tuyển 
+        (không sử dụng các lực lượng khác tham gia).<br>
+        - <b>Thời gian:</b> Không quá 05 phút (300 giây).
+      `,
+    },
+    {
+      title: "Trả lời câu hỏi tự luận bắt buộc",
+      content: `
+        - Trên màn hình hiện các ô số tương ứng với các câu hỏi. 
+        Mỗi đội được quyền trả lời 10 câu; các đội xếp thứ tự thí sinh từ 1 đến 5, 
+        lần lượt các thí sinh của mỗi đội được quyền chọn và trả lời 2 câu hỏi.<br>
+        - Trong mỗi lượt thi chỉ có 03 (hoặc 04) thí sinh tương ứng của 3 (hoặc 4) đội đứng trong bục thi; 
+        các thí sinh còn lại của mỗi đội ở bên ngoài khu vực thi chờ đến lượt thi của mình.<br>
+        - <b>Thứ tự thi:</b> Thí sinh 1 - đội 1, thí sinh 1 - đội 2, thí sinh 1 - đội 3, thí sinh 1 - đội 4..., 
+        và tiếp tục đến thí sinh thứ 5 của 3 (hoặc 4) đội.<br>
+        - <b>Thời gian suy nghĩ và trả lời:</b> 40 giây cho mỗi câu hỏi.
+      `,
+    },
+    {
+      title: "Trả lời câu hỏi trắc nghiệm",
+      content: `
+        - Trên màn hình sẽ hiện 09 (hoặc 12) số tương ứng với 09 (hoặc 12) câu hỏi, các đội cùng chọn đáp án.<br>
+        - Nếu các đội cùng chọn đúng đáp án thì đội trả lời nhanh nhất được 10 điểm, đội thứ hai 9 điểm, đội thứ ba 8 điểm, đội thứ tư 7 điểm.<br>
+        - Chọn đáp án sai: Không được điểm.<br>
+        - <b>Thời gian suy nghĩ và trả lời:</b> Không quá 15 giây cho mỗi câu hỏi.
+      `,
+    },
+    {
+      title: "Thi hùng biện theo chủ đề",
+      content: `
+        - Các đội lựa chọn chủ đề hùng biện trong các chủ đề do Ban Giám khảo xác định, 
+        báo cáo chủ đề lựa chọn với Ban Giám khảo 30 phút trước khi thi.<br>
+        - <b>Thời gian chuẩn bị:</b> 05 phút.<br>
+        - <b>Thời gian hùng biện:</b> Không quá 05 phút (300 giây).
+      `,
+    },
+    {
+      title: "Phần thi giải ô chữ",
+      content: `
+        - Gồm các ô chữ theo hàng ngang; các đội lần lượt chọn và giải các ô chữ theo gợi ý cho trước.<br>
+        - <b>Thời gian suy nghĩ và trả lời:</b> 20 giây cho mỗi ô chữ.<br>
+        - Mỗi ô chữ được mở sẽ được cộng điểm và xuất hiện từ khóa.<br>
+        - Các đội có quyền trả lời từ khóa phần thi bằng cách nhấn chuông.<br>
+        - Nếu trả lời sai: Bị loại khỏi phần thi.<br>
+        - Nếu trả lời đúng: Được cộng điểm và phần thi kết thúc.
+      `,
+    },
+  ];
+
+  function showRule(index) {
+    const menuButtons = document.querySelectorAll(".left-menu .btn");
+    menuButtons.forEach((btn) => btn.classList.remove("active"));
+    menuButtons[index].classList.add("active");
+
+    document.getElementById("ruleContent").innerHTML = `
+      <h4>${rules[index].title}</h4>
+      <p>${rules[index].content}</p>
+    `;
+  }
+</script>
