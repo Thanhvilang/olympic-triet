@@ -17,7 +17,8 @@ const hostname = "localhost";
 app.use(express.static(path.join(__dirname, "public")));
 // thư mục views là nơi chứa các file view
 // template engine
-app.set("views", "./views");
+// app.set("views", "./views");
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 //Layout
