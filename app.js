@@ -10,8 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 8080;
-const hostname = "localhost";
+// const port = 8080;
+// const hostname = "localhost";
 
 // thư mục public là nơi chứa file tĩnh
 app.use(express.static(path.join(__dirname, "public")));
@@ -27,6 +27,7 @@ app.use(expressLayouts);
 //routes
 app.use("/", indexRouter);
 
-app.listen(port, hostname, () => {
-  console.log(`Server is running at http://${hostname}:${port}/`);
-});
+// app.listen(port, hostname, () => {
+//   console.log(`Server is running at http://${hostname}:${port}/`);
+// });
+module.exports = app;
