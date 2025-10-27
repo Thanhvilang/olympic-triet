@@ -14,8 +14,8 @@
     }
   }
   .matrix-btn {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     font-size: 18px;
     font-weight: bold;
   }
@@ -33,6 +33,13 @@
       >
         <h4>Chọn câu hỏi để bắt đầu</h4>
       </div>
+
+      <!-- answer box: hiển thị đáp án khi bấm nút "Đáp án" -->
+      <div
+        id="answerBox"
+        class="mt-2 p-2 border rounded bg-white"
+        style="display: none"
+      ></div>
     </div>
 
     <!-- Timer -->
@@ -86,9 +93,19 @@
     <div class="col-md-4">
       <div class="p-3 border rounded bg-light">
         <h5 id="turnInfo">Thí sinh 1 - Đội 1</h5>
-        <button class="btn btn-info" onclick="nextTurn()">
-          Lượt tiếp theo
-        </button>
+        <div class="d-flex gap-2">
+          <button class="btn btn-info" onclick="nextTurn()" id="nextTurnBtn">
+            Lượt tiếp theo
+          </button>
+          <button
+            class="btn btn-secondary"
+            id="showAnswerBtn"
+            onclick="showAnswer()"
+            disabled
+          >
+            Đáp án
+          </button>
+        </div>
       </div>
       <div class="mt-4 text-center">
         <a href="/test" class="btn btn-success">Về trang phần thi</a>
@@ -102,6 +119,7 @@
   let timeLeft = totalTime;
   let timerInterval;
   let isPaused = false;
+  let currentQuestionNum = null; // số câu hiện tại (1-based)
 
   // let questions = []; // chứa 30 câu hỏi từ API
 
@@ -163,6 +181,8 @@
     btn.classList.remove("btn-outline-primary");
     btn.classList.add("btn-secondary");
 
+    currentQuestionNum = num; // lưu câu hiện tại
+
     let q = questions[num - 1];
     console.log(q);
 
@@ -171,6 +191,15 @@
       <p>${q.question}</p>
     `;
     document.getElementById("questionBox").innerHTML = html;
+
+    // reset vùng đáp án
+    const answerBox = document.getElementById("answerBox");
+    answerBox.style.display = "none";
+    answerBox.innerHTML = "";
+
+    // enable nút Đáp án
+    const showBtn = document.getElementById("showAnswerBtn");
+    if (showBtn) showBtn.disabled = false;
 
     // Reset lại timer mỗi khi chọn câu hỏi mới
     clearInterval(timerInterval);
@@ -262,6 +291,17 @@
         "turnInfo"
       ).textContent = `Thí sinh ${currentPlayer} - Đội ${currentTeam}`;
     }
+  }
+
+  function showAnswer() {
+    if (!currentQuestionNum) return;
+    const q = questions[currentQuestionNum - 1];
+    if (!q) return;
+    const answerBox = document.getElementById("answerBox");
+    answerBox.innerHTML = `<h6>Đáp án:</h6><pre style="white-space:pre-wrap;margin:0">${q.answer}</pre>`;
+    answerBox.style.display = "block";
+    // Optionally disable the button after showing
+    document.getElementById("showAnswerBtn").disabled = true;
   }
 
   // Gọi hàm load câu hỏi khi tải trang
