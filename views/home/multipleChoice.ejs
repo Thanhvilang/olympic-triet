@@ -532,7 +532,7 @@
   function onChoose(choiceIndex, cardEl) {
     if (!running || answered) return;
     // Chỉ lưu lựa chọn, chưa chấm điểm
-    userChoice = choiceIndex;
+    userChoice = choiceIndex + 1;
     // Tô đậm lựa chọn
     document
       .querySelectorAll(".answer-card")
