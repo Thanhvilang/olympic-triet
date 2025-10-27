@@ -114,6 +114,26 @@
     }
   }
 
+  /* timer container */
+  .timer-box {
+    background: #ffffff;
+    padding: 0.6rem 0.85rem;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    min-width: 140px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  }
+  .timer-box .timer {
+    margin: 0;
+  }
+  .timer-box .result-banner {
+    margin-top: 6px;
+    color: #6c757d;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
   .result-banner {
     margin-top: 12px;
     font-weight: 700;
@@ -160,9 +180,12 @@
         Về trang phần thi
       </a>
     </div>
+
     <div class="d-flex flex-column align-items-end">
-      <div id="timer" class="timer">15</div>
-      <div id="banner" class="result-banner text-secondary"></div>
+      <div class="timer-box">
+        <div id="timer" class="timer">15</div>
+        <div id="banner" class="result-banner text-secondary"></div>
+      </div>
     </div>
   </div>
 
