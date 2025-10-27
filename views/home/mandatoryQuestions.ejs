@@ -16,7 +16,7 @@
   .matrix-btn {
     width: 40px;
     height: 40px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
   }
 </style>
@@ -98,7 +98,7 @@
             Lượt tiếp theo
           </button>
           <button
-            class="btn btn-secondary"
+            class="btn btn-success"
             id="showAnswerBtn"
             onclick="showAnswer()"
             disabled
@@ -298,7 +298,7 @@
     const q = questions[currentQuestionNum - 1];
     if (!q) return;
     const answerBox = document.getElementById("answerBox");
-    answerBox.innerHTML = `<h6>Đáp án:</h6><pre style="white-space:pre-wrap;margin:0">${q.answer}</pre>`;
+    answerBox.innerHTML = `<h6>Đáp án:</h6><pre style="white-space:pre-wrap;margin:0;font-style:italic;color:blue;">${q.answer}</pre>`;
     answerBox.style.display = "block";
     // Optionally disable the button after showing
     document.getElementById("showAnswerBtn").disabled = true;
