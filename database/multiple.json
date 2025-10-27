@@ -1,146 +1,992 @@
 [
   {
     "id": 1,
-    "q": "Một trong những dạng cơ bản của thực tiễn là gì?",
-    "o": ["Truyền bá khoa học", "Trao đổi khoa học", "Thực nghiệm khoa học", "Sản xuất vật chất"],
-    "a": 3
+    "q": "Câu nói \"Vấn đề cơ bản lớn của mọi triết học, đặc biệt là của triết học hiện đại, là vấn đề quan hệ giữa tư duy và tồn tại” là của ai?",
+    "o": [
+      "C. Mác",
+      "Ph. Ăngghen",
+      "V. I. Lênin",
+      "L. Phoiơbắc"
+    ],
+    "a": 2
   },
   {
     "id": 2,
-    "q": "Tư duy phản ánh hiện thực khách quan dưới hình thức nào?",
-    "o": ["Trực tiếp cảm tính", "Gián tiếp, trừu tượng", "Chủ quan", "Bẩm sinh"],
-    "a": 1
+    "q": "Dựa trên những thành tựu khoa học, Ph. Ăngnghen đã phân chia vận động thành 5 hình thức cơ bản nào?",
+    "o": [
+      "Vận động phản xạ; vận động vật lý; vận động hóa học; vận động cơ bản; vận động xã hội",
+      "Vận động có ý thức; vận động vật lý; vận động hóa học; vận động sinh học; vận động thô",
+      "Vận động quần chúng; vận động vật lý; vận động cách mạng; vận động sinh học; vận động xã hội",
+      "Vận động cơ học; vận động vật lý; vận động hóa học; vận động sinh học; vận động xã hội"
+    ],
+    "a": 4
   },
   {
     "id": 3,
-    "q": "Phương thức sản xuất gồm hai mặt là gì?",
-    "o": ["Lực lượng sản xuất và quan hệ sản xuất", "Cơ sở hạ tầng và kiến trúc thượng tầng", "Khoa học và công nghệ", "Sản xuất và lưu thông"],
-    "a": 0
+    "q": "Khẳng định \"Bản chất của thế giới là vật chất, thế giới thống nhất ở tính vật chất” là của?",
+    "o": [
+      "Hêghen",
+      "L. Phoiơbắc",
+      "Chủ nghĩa duy vật biện chứng",
+      "Chủ nghĩa duy tâm"
+    ],
+    "a": 3
   },
   {
     "id": 4,
-    "q": "Giá trị thặng dư do ai tạo ra?",
-    "o": ["Tư bản", "Công nhân", "Nhà nước", "Thị trường"],
-    "a": 1
+    "q": "Nguồn gốc tự nhiên của ý thức là gì?",
+    "o": [
+      "Là cơ thể con người, đặc biệt các bộ phận trong đầu con người",
+      "Là bộ não người và sự tác động của thế giới khách quan vào não người thông qua các giác quan",
+      "Là bộ não người và cơ thể con người",
+      "Là bộ não người và các bộ phận khác của con người"
+    ],
+    "a": 2
   },
   {
     "id": 5,
-    "q": "Vai trò của thực tiễn đối với nhận thức là gì?",
-    "o": ["Mục đích", "Động lực, tiêu chuẩn kiểm tra", "Phương tiện", "Kết quả"],
+    "q": "Theo chủ nghĩa duy vật biện chứng, bản chất của ý thức là gì?",
+    "o": [
+      "Là sự phản ánh hiện thực khách quan vào trong bộ óc con người một cách năng động, sáng tạo. Là hình ảnh chủ quan của thế giới khách quan",
+      "Là sự phản ánh thế giới khách quan vào trong não người, không phụ thuộc vào chủ ý con người",
+      "Là sự phản ánh thế giới khách quan vào con người thông qua các giác quan. Là hình ảnh khách quan của thế giới chủ quan",
+      "Là con người tự ý thức được thế giới thông qua các giác quan và bộ não của mình"
+    ],
     "a": 1
   },
   {
     "id": 6,
-    "q": "Trong logic trừu tượng đến cụ thể, 'cụ thể' là gì?",
-    "o": ["Đơn giản", "Đa dạng, phong phú", "Ít thuộc tính", "Tách rời"],
-    "a": 1
+    "q": "Theo quan điểm của chủ nghĩa duy vật biện chứng, mối liên hệ có mấy tính chất cơ bản? Là những tính chất nào?",
+    "o": [
+      "Có 02 tính chất cơ bản, gồm: Tính chủ quan và tính phổ biến",
+      "Có 03 tính chất cơ bản, gồm: Tính khách quan, tính phổ biến và tính đa dạng, phong phú",
+      "Có 04 tính chất cơ bản, gồm: Tính chủ quan, tính khách quan, tính phổ biến và tính đa dạng, phong phú",
+      "Có 05 tính chất cơ bản, gồm: Tính chủ quan, tính khách quan, tính phổ biến, tính bao quát và tính đa dạng, phong phú"
+    ],
+    "a": 2
   },
   {
     "id": 7,
-    "q": "Lý luận chỉ có ý nghĩa khi nào?",
-    "o": ["Khi độc lập với thực tiễn", "Khi gắn liền với thực tiễn", "Khi phổ biến đại trà", "Khi khó hiểu"],
-    "a": 1
+    "q": "Câu \"Có thể định nghĩa vắn tắt phép biện chứng là học thuyết về sự thống nhất và đấu tranh của các mặt đối lập. Như thế là nắm được hạt nhân của phép biện chứng, nhưng điều đó đòi hỏi phải có những sự giải thích và một sự phát triển thêm” là của ai?",
+    "o": [
+      "Hêraclít",
+      "Đêmôcrít",
+      "Xôcrát",
+      "V. I. Lênin"
+    ],
+    "a": 4
   },
   {
     "id": 8,
-    "q": "Cơ sở kinh tế của nhà nước là gì?",
-    "o": ["Kiến trúc thượng tầng", "Quan hệ sản xuất", "Lực lượng sản xuất", "Văn hóa"],
-    "a": 1
+    "q": "Sự tự thay thế sự vật này bằng sự vật kia không phụ thuộc vào ý thức con người trong phép biện chứng duy vật được gọi là gì?",
+    "o": [
+      "Vận động",
+      "Phủ định",
+      "Phủ định biện chứng",
+      "Phủ định của phủ định"
+    ],
+    "a": 3
   },
   {
     "id": 9,
-    "q": "Khoa học tự nhiên nghiên cứu đối tượng gì?",
-    "o": ["Quy luật xã hội", "Quy luật tự nhiên", "Quy luật tư duy", "Quy luật lịch sử"],
-    "a": 1
+    "q": "Thêm cụm từ thích hợp vào chỗ trống của câu sau để được định nghĩa phạm trù thực tiễn: \"Thực tiễn là toàn bộ những........... của con người nhằm cải tạo tự nhiên và xã hội\"?",
+    "o": [
+      "Hoạt động",
+      "Hoạt động vật chất",
+      "Hoạt động có mục đích",
+      "Hoạt động vật chất có mục đích, mang tính lịch sử - xã hội"
+    ],
+    "a": 4
   },
   {
     "id": 10,
-    "q": "Chủ nghĩa duy vật lịch sử nhấn mạnh vai trò quyết định của?",
-    "o": ["Ý thức xã hội", "Tâm lý xã hội", "Tồn tại xã hội", "Cá nhân"],
+    "q": "Thực chất của quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng là gì?",
+    "o": [
+      "Quan hệ giữa đời sống vật chất và đời sống tinh thần của xã hội",
+      "Quan hệ giữa kinh tế và chính trị",
+      "Quan hệ giữa vật chất và tinh thần",
+      "Quan hệ giữa tồn tại xã hội với ý thức xã hội"
+    ],
     "a": 2
   },
   {
     "id": 11,
-    "q": "Hàng hóa có hai thuộc tính là gì?",
-    "o": ["Giá trị sử dụng và giá trị", "Cung và cầu", "Lợi nhuận và chi phí", "Giá cả và giá trị"],
-    "a": 0
+    "q": "Mục đích cuối cùng của đấu tranh giai cấp của giai cấp vô sản là gì?",
+    "o": [
+      "Nhằm thay đổi địa vị thống trị xã hội",
+      "Nhằm chiếm lấy quyền lực nhà nước",
+      "Xoá bỏ giai cấp",
+      "Nhằm thay đổi hiện thực xã hội"
+    ],
+    "a": 3
   },
   {
     "id": 12,
-    "q": "Quy luật giá trị yêu cầu sản xuất dựa trên?",
-    "o": ["Giá cả thị trường", "Giá trị xã hội cần thiết", "Giá trị cá biệt", "Lợi nhuận tối đa"],
-    "a": 1
+    "q": "Theo quan điểm của chủ nghĩa duy vật lịch sử, nguồn gốc trực tiếp ra đời của nhà nước là gì?",
+    "o": [
+      "Xuất hiện chế độ chiếm hữu tư nhân về tư liệu sản xuất",
+      "Xuất hiện giai cấp và mâu thuẫn giai cấp không thể điều hoà được",
+      "Mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất",
+      "Do mâu thuẫn giữa các dân tộc"
+    ],
+    "a": 2
   },
   {
     "id": 13,
-    "q": "Lực lượng sản xuất gồm?",
-    "o": ["Người lao động và tư liệu sản xuất", "Quan hệ sở hữu", "Thị trường", "Vốn"],
-    "a": 0
+    "q": "Yếu tố nào giữ vai trò quyết định nhất đối với sự tồn tại và phát triển của xã hội",
+    "o": [
+      "Môi trường tự nhiên",
+      "Điều kiện dân số",
+      "Phương thức sản xuất",
+      "Điều kiện khoa học"
+    ],
+    "a": 3
   },
   {
     "id": 14,
-    "q": "Nhà nước là công cụ của?",
-    "o": ["Giai cấp thống trị", "Nhân dân lao động", "Tư sản và vô sản", "Tôn giáo"],
-    "a": 0
+    "q": "Thêm cụm từ thích hợp vào chỗ trống của câu sau để được khái niệm về con người “Con người là một thực thể sinh vật - xã hội………, biết lao động và có ngôn ngữ”?",
+    "o": [
+      "Được học tập",
+      "Có quan hệ",
+      "Có giao lưu",
+      "Có ý thức"
+    ],
+    "a": 4
   },
   {
     "id": 15,
-    "q": "C.Mác là tác giả của tác phẩm nào?",
-    "o": ["Tư bản", "Chống Đuy-rinh", "Chủ nghĩa xã hội không tưởng", "Bàn về tự do"],
-    "a": 0
+    "q": "Nguyên sâu xa của cách mạng xã hội là gì?",
+    "o": [
+      "Là mâu thuẫn giữa lực lượng sản xuất và quan hệ sản xuất",
+      "Là mâu thuẫn giữa cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Là mâu thuẫn giữa lực lượng cách mạng và lực lượng phản cách mạng",
+      "Là mâu thuẫn giữa giai cấp thống trị và giai cấp bị trị"
+    ],
+    "a": 1
   },
   {
     "id": 16,
-    "q": "Phương pháp biện chứng duy vật coi sự vật?",
-    "o": ["Bất biến", "Cô lập", "Luôn vận động, phát triển", "Ngẫu nhiên"],
+    "q": "Thực chất công nghiệp hóa, hiện đại hóa ở nước ta là gì?",
+    "o": [
+      "Là có nền một nền đại công nghiệp hiện đại gắn với kinh tế tri thức",
+      "Là tiến hành cách mạng khoa học - công nghệ trong toàn bộ nền kinh tế nhằm tạo ra cơ sở vật chất, kỹ thuật cho chủ nghĩa xã hội",
+      "Là có một nền công nghiệp hiện đại, có một số ngành mũi nhọn",
+      "Là có một nền công nghiệp hiện đại, công nghệ thông tin, điện tử viễn thông phát triển mạnh mẽ"
+    ],
     "a": 2
   },
   {
     "id": 17,
-    "q": "Giá trị sử dụng là?",
-    "o": ["Công dụng của hàng hóa", "Giá bán", "Lợi nhuận", "Tiền lương"],
-    "a": 0
+    "q": "Bổ sung cụm từ thích hợp vào chỗ trống của câu sau để được khái niệm về kinh tế thị trường “Kinh tế thị trường là trình độ phát triển cao của ……., trong đó toàn bộ các yếu tố “đầu vào” và “đầu ra” của nền sản xuất đều thông qua thị trường?",
+    "o": [
+      "Sản xuất nông nghiệp",
+      "Sản xuất công nghiệp",
+      "Kinh tế hàng hóa",
+      "Kinh tế tri thức"
+    ],
+    "a": 3
   },
   {
     "id": 18,
-    "q": "Nguồn gốc của lợi nhuận theo Mác là?",
-    "o": ["Do lưu thông", "Do bán đắt", "Do giá trị thặng dư", "Do may mắn"],
-    "a": 2
+    "q": "Chủ trương \"Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước\" được đề ra ở Đại hội nào của Đảng ta?",
+    "o": [
+      "Đại hội VI",
+      "Đại hội VII",
+      "Đại hội VIII",
+      "Đại hội IX"
+    ],
+    "a": 3
   },
   {
     "id": 19,
-    "q": "Quy luật mâu thuẫn nói rằng phát triển là?",
-    "o": ["Đi thẳng", "Ngẫu nhiên", "Kết quả đấu tranh giữa các mặt đối lập", "Dừng lại"],
-    "a": 2
+    "q": "Một trong những đặc trưng của nền kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam?",
+    "o": [
+      "Nền kinh tế dựa trên nhiều hình thức sở hữu, nhiều thành phần kinh tế, trong đó kinh tế cá thể giữ vai trò chủ đạo",
+      "Nền kinh tế dựa trên nhiều thành phần kinh tế, trong đó kinh tế công nghiệp giữ vai trò chủ đạo",
+      "Nền kinh tế dựa trên nhiều thành phần kinh tế, trong đó kinh tế nông nghiệp giữ vai trò chủ đạo",
+      "Nền kinh tế dựa trên nhiều hình thức sở hữu, nhiều thành phần kinh tế, trong đó kinh tế nhà nước giữ vai trò chủ đạo"
+    ],
+    "a": 4
   },
   {
     "id": 20,
-    "q": "Cơ sở hạ tầng gồm?",
-    "o": ["Quan hệ sản xuất", "Lực lượng sản xuất", "Kiến trúc thượng tầng", "Tự nhiên"],
-    "a": 0
+    "q": "Một trong những giải pháp chủ yếu phát triển kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam?",
+    "o": [
+      "Xây dựng nhà nước pháp quyền xã hội chủ nghĩa",
+      "Nâng cao chất lượng quản trị doanh nghiệp",
+      "Xây dựng chính sách pháp luật xã hội chủ nghĩa chặt chẽ",
+      "Nâng cao hiệu lực, hiệu quả quản lý kinh tế của Nhà nước"
+    ],
+    "a": 4
   },
   {
     "id": 21,
-    "q": "Ý thức xã hội có tính?",
-    "o": ["Tự phát hoàn toàn", "Phụ thuộc tuyệt đối tồn tại xã hội", "Độc lập tương đối", "Không liên quan"],
-    "a": 2
+    "q": "Theo C. Mác và Ph. Ăngghen có hai tiêu chí cơ bản để phân biệt người công nhân với những người lao động khác là gì?",
+    "o": [
+      "Về nghề nghiệp và vị trí trong quan hệ sản xuất",
+      "Về quan hệ sản xuất và tư liệu sản xuất",
+      "Về cơ sở hạ tầng và kiến trúc thượng tầng",
+      "Về trình độ, năng lực và phẩm chất đạo đức của con người"
+    ],
+    "a": 1
   },
   {
     "id": 22,
-    "q": "Tiền tệ ra đời từ?",
-    "o": ["Trao đổi trực tiếp", "Trao đổi hàng hóa phát triển", "Nhà nước ấn định", "Tín dụng"],
-    "a": 1
+    "q": "Cơ sở khách quan quy định sứ mệnh lịch sử thế giới của giai cấp công nhân là gì?",
+    "o": [
+      "Tình hình thế giới, khu vực và trong nước",
+      "Thực tiễn lịch sử thế giới; địa vị kinh tế - xã hội và đặc điểm, khả năng cách mạng của giai cấp công nhân",
+      "Phong trào công nhân thế giới và thực tiễn cách mạng trong nước",
+      "Đảng lãnh đạo đủ năng lực và uy tín lãnh đạo cách mạng"
+    ],
+    "a": 2
   },
   {
     "id": 23,
-    "q": "Lao động trừu tượng tạo?",
-    "o": ["Giá trị sử dụng", "Giá trị", "Giá cả", "Lợi nhuận"],
-    "a": 1
+    "q": "Thực chất quá độ lên chủ nghĩa xã hội ở Việt Nam là gì?",
+    "o": [
+      "Là bỏ qua việc xác lập vị trí thống trị của chế độ chiếm hữu nô lệ",
+      "Là bỏ qua việc xác lập vị trí thống trị của chế độ phong kiến",
+      "Là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa...",
+      "Cả a, b và c"
+    ],
+    "a": 3
   },
   {
     "id": 24,
-    "q": "Tồn tại xã hội quyết định?",
-    "o": ["Ý thức xã hội", "Khoa học tự nhiên", "Tự nhiên", "Công nghệ"],
-    "a": 0
+    "q": "Giai cấp công nhân nước ta có sứ mệnh lịch sử to lớn là giai cấp lãnh đạo cách mạng thông qua đội tiền phong nào?",
+    "o": [
+      "Đoàn Thanh niên Cộng sản Hồ Chí Minh",
+      "Mặt trận Tổ quốc Việt Nam",
+      "Hội Phụ nữ Việt Nam",
+      "Đảng Cộng sản Việt Nam"
+    ],
+    "a": 4
+  },
+  {
+    "id": 25,
+    "q": "Phương hướng “Xây dựng giai cấp công nhân hiện đại, lớn mạnh; nâng cao bản lĩnh chính trị, trình độ học vấn, chuyên môn, kỹ năng nghề nghiệp, tác phong công nghiệp, kỷ luật lao động thích ứng với cuộc Cách mạng công nghiệp lần thứ tư” được xác định trong văn kiện nào?",
+    "o": [
+      "Văn kiện Đại hội đại biểu toàn quốc lần thứ X của Đảng",
+      "Văn kiện Đại hội đại biểu toàn quốc lần thứ XI của Đảng",
+      "Văn kiện Đại hội đại biểu toàn quốc lần thứ XII của Đảng",
+      "Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII của Đảng"
+    ],
+    "a": 4
+  },
+  {
+    "id": 26,
+    "q": "Quân đội nhân dân Việt Nam mang bản chất của giai cấp nào?",
+    "o": [
+      "Giai cấp nông dân",
+      "Giai cấp công nhân",
+      "Giai cấp tư sản",
+      "Tầng lớp trí thức"
+    ],
+    "a": 2
+  },
+  {
+    "id": 27,
+    "q": "Giai đoạn đầu của hình thái kinh tế - xã hội cộng sản chủ nghĩa là gì?",
+    "o": [
+      "Chế độ phong kiến",
+      "Thời kỳ tiền tư bản chủ nghĩa",
+      "Thời kỳ quá độ lên chủ nghĩa xã hội",
+      "Thời kỳ tư bản chủ nghĩa"
+    ],
+    "a": 3
+  },
+  {
+    "id": 28,
+    "q": "Nước ta quá độ lên chủ nghĩa xã hội như thế nào?",
+    "o": [
+      "Đất nước ổn định, có nền kinh tế phát triển",
+      "Bỏ qua chế độ tư bản chủ nghĩa từ một nước nửa thuộc địa, nửa phong kiến, lực lượng sản xuất thấp...",
+      "Bỏ qua chế độ phong kiến lạc hậu, đi lên chủ nghĩa xã hội",
+      "Đất nước không có chiến tranh, lực lượng sản xuất cao"
+    ],
+    "a": 2
+  },
+  {
+    "id": 29,
+    "q": "Về hình thức quá độ lên chủ nghĩa xã hội, chủ nghĩa Mác - Lênin chỉ rõ: Có quá độ trực tiếp và quá độ gián tiếp. Vậy quá độ trực tiếp là như thế nào?",
+    "o": [
+      "Là những nước từ chủ nghĩa tư bản phát triển quá độ lên chủ nghĩa xã hội",
+      "Là những nước từ chế độ phong kiến phát triển quá độ lên chủ nghĩa xã hội",
+      "Là những nước từ chủ nghĩa đế quốc phát triển quá độ lên chủ nghĩa xã hội",
+      "Là những nước từ chủ nghĩa phát xít phát triển quá độ lên chủ nghĩa xã hội"
+    ],
+    "a": 1
+  },
+  {
+    "id": 30,
+    "q": "Về hình thức quá độ lên chủ nghĩa xã hội, chủ nghĩa Mác - Lênin chỉ rõ: Có quá độ trực tiếp và quá độ gián tiếp. Vậy quá độ gián tiếp là như thế nào?",
+    "o": [
+      "Là những nước từ chủ nghĩa tư bản phát triển quá độ lên chủ nghĩa xã hội",
+      "Là những nước từ xã hội tiền tư bản quá độ lên chủ nghĩa xã hội",
+      "Là những nước từ chủ nghĩa đế quốc phát triển quá độ lên chủ nghĩa xã hội",
+      "Là những nước từ xã hội phong kiến phát triển quá độ lên chủ nghĩa xã hội"
+    ],
+    "a": 2
+  },
+  {
+    "id": 31,
+    "q": "Nội dung cơ bản nhất mà nhờ đó chủ nghĩa xã hội từ không tưởng trở thành khoa học?",
+    "o": [
+      "Lên án mạnh mẽ chủ nghĩa tư bản",
+      "Phản ánh đúng khát vọng của nhân dân lao động bị áp bức",
+      "Phát hiện ra giai cấp công nhân là lực lượng xã hội có thể thủ tiêu chủ nghĩa tư bản, xây dựng chủ nghĩa xã hội",
+      "Chỉ ra sự cần thiết phải thay thế chủ nghĩa tư bản bằng chủ nghĩa xã hội"
+    ],
+    "a": 3
+  },
+  {
+    "id": 32,
+    "q": "Vì sao chủ nghĩa xã hội khoa học theo nghĩa rộng là chủ nghĩa Mác - Lênin?",
+    "o": [
+      "Vì chủ nghĩa xã hội khoa học đã phác thảo ra mô hình chủ nghĩa xã hội và chủ nghĩa cộng sản",
+      "Vì chủ nghĩa xã hội khoa học đã luận chứng về sứ mệnh lịch sử của giai cấp công nhân hiện đại",
+      "Vì chủ nghĩa xã hội khoa học dựa vào triết học, kinh tế chính trị để lý giải tính tất yếu lịch sử của cách mạng xã hội chủ nghĩa và Hình thái kinh tế - xã hội cộng sản chủ nghĩa gắn liền với vai trò lãnh đạo của giai cấp công nhân",
+      "Cả a, b và c"
+    ],
+    "a": 3
+  },
+  {
+    "id": 33,
+    "q": "Giai cấp công nhân là giai cấp triệt để cách mạng, bởi vì?",
+    "o": [
+      "Xoá bỏ chủ nghĩa tư bản và xây dựng chủ nghĩa xã hội",
+      "Là giai cấp không có tư liệu sản xuất",
+      "Là giai cấp cùng khổ nhất trong xã hội",
+      "Là giai cấp thực hiện xoá bỏ mọi chế độ tư hữu"
+    ],
+    "a": 4
+  },
+  {
+    "id": 34,
+    "q": "Một trong những phương hướng xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam?",
+    "o": [
+      "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước gắn với phát triển kinh tế tri thức, bảo vệ tài nguyên, môi trường",
+      "Xây dựng xã hội học tập và học tập suốt đời",
+      "Nâng cao dân trí, bồi dưỡng nhân lực và đào tạo nhân tài",
+      "Tích cực đổi mới phương pháp làm việc, nâng cao hiệu năng, hiệu lực, hiệu quả làm việc"
+    ],
+    "a": 1
+  },
+  {
+    "id": 35,
+    "q": "Một trong những phương hướng xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam?",
+    "o": [
+      "Xây dựng xã hội học tập và học tập suốt đời",
+      "Nâng cao dân trí, bồi dưỡng nhân lực và đào tạo nhân tài",
+      "Tích cực đổi mới phương pháp làm việc, nâng cao hiệu năng, hiệu lực, hiệu quả làm việc",
+      "Hoàn thiện toàn diện, đồng bộ thể chế kinh tế thị trường định hướng xã hội chủ nghĩa; giải quyết tốt quan hệ giữa Nhà nước với thị trường"
+    ],
+    "a": 4
+  },
+  {
+    "id": 36,
+    "q": "Vua Hàm Nghi bị thực dân Pháp bắt vào ngày, tháng, năm nào?",
+    "o": [
+      "01/11/1888",
+      "01/11/1890",
+      "01/11/1895",
+      "01/12/1895"
+    ],
+    "a": 1
+  },
+  {
+    "id": 37,
+    "q": "Cuộc khởi nghĩa Yên thế kết thúc khi nào?",
+    "o": [
+      "Khi quân Pháp bị đánh bại",
+      "Khi đất nước giành được độc lập",
+      "Sau khi Hoàng Hoa Thám mất",
+      "Sau khi chế độ phong kiến bị lật đổ"
+    ],
+    "a": 3
+  },
+  {
+    "id": 38,
+    "q": "Trước khi có Đảng, mục đích đấu tranh của phong trào yêu nước theo hệ tư tưởng phong kiến là gì?",
+    "o": [
+      "Đánh đuổi quân xâm lược, tiến lên chủ nghĩa xã hội",
+      "Đánh đuổi quân xâm lược, đi theo con đường tư bản chủ nghĩa",
+      "Đấu tranh giành độc lập dân tộc, đi lên chủ nghĩa xã hội",
+      "Đấu tranh giành độc lập dân tộc, thiết lập lại chế độ phong kiến"
+    ],
+    "a": 4
+  },
+  {
+    "id": 39,
+    "q": "Mục tiêu đấu tranh theo khuynh hướng bạo động của Phan Bội Châu là gì?",
+    "o": [
+      "Đấu tranh giành độc lập dân tộc, thiết lập lại chế độ phong kiến",
+      "Giành độc lập dân tộc, phát triển đất nước theo con đường tư bản chủ nghĩa",
+      "Đấu tranh giành độc lập dân tộc, đi lên chủ nghĩa xã hội",
+      "Đánh đuổi quân xâm lược, tiến lên chủ nghĩa xã hội"
+    ],
+    "a": 2
+  },
+  {
+    "id": 40,
+    "q": "Quốc tế Cộng sản (Quốc tế III) ra đời năm nào ?",
+    "o": [
+      "Tháng 3/1919",
+      "Tháng 3/1920",
+      "Tháng 5/1921",
+      "Tháng 6/1925"
+    ],
+    "a": 1
+  },
+  {
+    "id": 41,
+    "q": "Chiến tranh thế giới lần thứ nhất kết thúc, các nước thắng trận họp Hội nghị hòa bình ở Véc xây (Pháp). Thay mặt Hội những người Việt Nam yêu nước, Nguyễn Ái Quốc gửi đến Hội nghị cái gì?",
+    "o": [
+      "Báo cáo về tình hình các nước thuộc địa ở Đông Dương",
+      "Báo cáo về tình hình Việt Nam bị thực dân Pháp áp bức bóc lột",
+      "Bản “yêu sách” 8 điểm của nhân dân An Nam, đòi pháp và chủ nghĩa thực dân phải thừa nhận quyền tự do, bình đẳng của nhân dân An Nam",
+      "Bản “yêu sách” 8 điểm của nhân dân Đông Dương, đòi pháp và chủ nghĩa thực dân phải thừa nhận quyền tự do, bình đẳng của nhân dân Đông Dương"
+    ],
+    "a": 3
+  },
+  {
+    "id": 42,
+    "q": "Nguyễn Ái Quốc từng bước phác thảo đường lối cứu nước từ sau năm 1920, thể hiện trong tập bài giảng của Người cho những cán bộ cốt cán của Hội Việt Nam Cách mạng Thanh niên tại Quảng Châu (Trung Quốc). Năm 1927 được in thành sách lấy tên là gì?",
+    "o": [
+      "Bản án chế độ thực dân Pháp",
+      "Đường Kách mệnh",
+      "Nhật ký trong tù",
+      "Sửa đổi lối làm việc"
+    ],
+    "a": 2
+  },
+  {
+    "id": 43,
+    "q": "Để chuẩn bị về tổ chức, từ năm 1925 trở đi, Nguyễn Ái Quốc tập trung vào những vấn đề lớn có ý nghĩa quyết định là gì?",
+    "o": [
+      "Tập hợp lực lượng toàn dân, đánh đuổi đế quốc Mỹ",
+      "Tập hợp lực lượng toàn dân, đánh đuổi phát xít Nhật",
+      "Tập hợp dân quân tự vệ, đánh đuổi thực dân Pháp",
+      "Là huấn luyện, đào tạo cán bộ cách mạng, lực lượng nòng cốt để hình thành tổ chức tiền thân của Đảng"
+    ],
+    "a": 4
+  },
+  {
+    "id": 44,
+    "q": "Tại Hội nghị thành lập Đảng (1930) ở bán đảo Cửu Long (Trung Quốc), do Nguyễn Ái Quốc chủ trì có mấy đại biểu của Đông Dương Cộng sản Đảng tham gia?",
+    "o": [
+      "01 đại biểu",
+      "02 đại biểu",
+      "03 đại biểu",
+      "10 đại biểu"
+    ],
+    "a": 1
+  },
+  {
+    "id": 45,
+    "q": "Tại Hội nghị thành lập Đảng (1930) ở bán đảo Cửu Long (Trung Quốc), do Nguyễn Ái Quốc chủ trì có mấy đại biểu của An Nam Cộng sản Đảng tham gia?",
+    "o": [
+      "01 đại biểu",
+      "02 đại biểu",
+      "05 đại biểu",
+      "15 đại biểu"
+    ],
+    "a": 2
+  },
+  {
+    "id": 46,
+    "q": "Phong trào công nhân Việt Nam hoàn toàn trở thành một phong trào tự giác vào thời gian nào?",
+    "o": [
+      "Năm 1920 (tổ chức công hội ở Sài Gòn được thành lập)",
+      "Năm 1925 (cuộc bãi công Ba Son)",
+      "Năm 1929 (sự ra đời ba tổ chức cộng sản)",
+      "Năm 1930 (Đảng Cộng sản Việt Nam ra đời)"
+    ],
+    "a": 4
+  },
+  {
+    "id": 47,
+    "q": "Tổ chức cộng sản nào ra đời đầu tiên ở Việt Nam?",
+    "o": [
+      "Hội Việt Nam Cách mạng Thanh niên",
+      "Đông Dương cộng sản Đảng",
+      "An Nam cộng sản Đảng",
+      "Đông Dương cộng sản Liên đoàn"
+    ],
+    "a": 2
+  },
+  {
+    "id": 48,
+    "q": "Hội nghị Ban Chấp hành Trung ương lần thứ nhất họp vào ngày nào? ở đâu và do ai chủ trì?",
+    "o": [
+      "Họp từ ngày 03-07/2/1930 ở Cửu Long (Trung Quốc) do đồng chí Nguyễn Ái Quốc chủ trì",
+      "Họp từ ngày 10-15/3/1930 ở Cửu Long (Trung Quốc) do đồng chí Nguyễn Ái Quốc chủ trì",
+      "Họp từ ngày 15-20/5/1930 ở Cửu Long (Trung Quốc) do đồng chí Nguyễn Ái Quốc chủ trì",
+      "Họp từ ngày 14-30/10/1930 ở Hương Cảng (Trung Quốc) do đồng chí Trần Phú chủ trì"
+    ],
+    "a": 4
+  },
+  {
+    "id": 49,
+    "q": "Đại hội đại biểu toàn quốc lần thứ nhất của Đảng diễn ra vào ngày, tháng, năm nào? ở đâu?",
+    "o": [
+      "Họp từ ngày 12-19/10/1930 ở Hương Cảng (Trung Quốc)",
+      "Họp từ ngày 18-23/5/1930 ở Cửu Long (Trung Quốc)",
+      "Từ ngày 27-31/3/1935 tại Ma Cao (Trung Quốc)",
+      "Họp từ ngày 05-10/5/1935 ở Hương Cảng (Trung Quốc)"
+    ],
+    "a": 3
+  },
+  {
+    "id": 50,
+    "q": "Bản Chỉ thị “Nhật, Pháp bắn nhau và hành động của chúng ta” phản ánh nội dung của Hội nghị nào?",
+    "o": [
+      "Hội nghị Ban chấp hành Trung ương Đảng họp tháng 5/1941",
+      "Hội nghị Ban Thường vụ Trung ương Đảng họp tháng 2/1943",
+      "Hội nghị mở rộng của Ban Thường vụ Trung ương Đảng họp tháng 3/1945",
+      "Hội nghị Quân sự cách mạng Bắc kỳ họp tháng 4/1945"
+    ],
+    "a": 3
+  },
+  {
+    "id": 51,
+    "q": "Đường lối chiến lược của cách mạng Việt Nam được xác định trong Cương lĩnh chính trị đầu tiên của Đảng là gì?",
+    "o": [
+      "Đánh đổ phát xít để giải phóng dân tộc",
+      "Tập hợp lực lượng đánh đuổi quân xâm lược",
+      "Khôi phục triều đại phong kiến đánh đuổi thực dân Pháp",
+      "Tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản"
+    ],
+    "a": 4
+  },
+  {
+    "id": 52,
+    "q": "Phương pháp cách mạng được xác định trong Cương lĩnh chính trị đầu tiên của Đảng là gì?",
+    "o": [
+      "Sử dụng lực lượng cách mạng để đánh đuổi lực lượng phản cách mạng",
+      "Sử dụng sức mạnh tổng hợp của quần chúng để lật đổ ách thống trị của đế quốc, tay sai, lập nên chính phủ công nông",
+      "Huy động sức mạnh ở bên ngoài nước để đánh đuổi quân xâm lược trong nước",
+      "Khôi phục quân đội của triều đại phong kiến để đánh đuổi thực dân Pháp"
+    ],
+    "a": 2
+  },
+  {
+    "id": 53,
+    "q": "Tính chất cách mạng Đông Dương được xác định trong Luận cương chính trị (tháng 10/1930) là gì?",
+    "o": [
+      "Là cuộc cách mạng dân chủ nhân dân do giai cấp nông dân lãnh đạo",
+      "Là cuộc cách mạng dân tộc dân chủ nhân dân do tầng lớp trí thức lãnh đạo",
+      "Là cách mạng tư sản dân quyền do giai cấp công nhân lãnh đạo, tiến thẳng lên chủ nghĩa xã hội, bỏ qua thời kỳ phát triển tư bản chủ nghĩa",
+      "Là cuộc cách mạng đánh đuổi quân xâm lược tiến thẳng lên chủ nghĩa cộng sản bỏ qua thời kỳ quá độ"
+    ],
+    "a": 3
+  },
+  {
+    "id": 54,
+    "q": "Đầu năm 1940, đồng chí Nguyễn Ái Quốc bắt liên lạc với Đảng và chuẩn bị về nước. Ngày 28/01/1941, Người trở về Tổ quốc và ngày, tháng, năm nào Người về đến Pắc Pó (Cao Bằng)?",
+    "o": [
+      "08/02/1941",
+      "08/3/1941",
+      "10/3/1941",
+      "22/12/1941"
+    ],
+    "a": 1
+  },
+  {
+    "id": 55,
+    "q": "Ngày 19/8/1945, khởi nghĩa ở đâu thành công có ý nghĩa quyết định đối với cả nước?",
+    "o": [
+      "Cao Bằng",
+      "Điện Biên",
+      "Tuyên Quang",
+      "Hà Nội"
+    ],
+    "a": 4
+  },
+  {
+    "id": 56,
+    "q": "“Dân ta có một lòng nồng nàn yêu nước. Đó là một truyền thống quý báu của ta. Từ xưa đến nay, mỗi khi Tổ quốc bị xâm lăng, thì tinh thần ấy lại sôi nổi, nó kết thành một làn sóng vô cùng mạnh mẽ, to lớn, nó lướt qua mọi sự nguy hiểm, khó khăn, nó nhấn chìm tất cả lũ bán nước và lũ cướp nước” là câu nói của ai?",
+    "o": [
+      "Nguyễn Trãi",
+      "Lý Thường Kiệt",
+      "Hồ Chí Minh",
+      "Võ Nguyên Giáp"
+    ],
+    "a": 3
+  },
+  {
+    "id": 57,
+    "q": "Ngày 05/6/1911, Bác Hồ ra đi tìm đường cứu nước. Cuộc hành trình hoạt động cách mạng của Người đã qua mấy đại dương và mấy châu lục?",
+    "o": [
+      "2 đại dương - 3 châu lục",
+      "3 đại dương - 4 châu lục",
+      "4 đại dương - 5 châu lục",
+      "5 đại dương - 6 châu lục"
+    ],
+    "a": 2
+  },
+  {
+    "id": 58,
+    "q": "Tháng 5/1941, Hội nghị lần thứ tám, Ban Chấp hành Trung ương Đảng họp, Hồ Chí Minh đã viết gì để kêu gọi mọi người dân Việt Nam đứng lên chống thực dân Pháp, giải phóng dân tộc?",
+    "o": [
+      "Lời kêu gọi toàn quốc kháng chiến",
+      "Di chúc",
+      "Viết thư Kính cáo đồng bào",
+      "Viết lời kêu gọi toàn dân nhất tề đứng lên đánh đuổi thực dân Pháp"
+    ],
+    "a": 3
+  },
+  {
+    "id": 59,
+    "q": "Giữa năm 1923, Hồ Chí Minh đến Liên Xô, lần đầu tiên được biết đến tính ưu việt trong cái gì của V.I. Lênin đã thể hiện những thành tựu vượt bậc cả về kinh tế - xã hội lẫn quốc phòng, an ninh…?",
+    "o": [
+      "Chính sách quốc phòng, an ninh",
+      "Chính sách quốc phòng, an ninh và kinh tế",
+      "Chính sách gắn quốc phòng, an ninh với kinh tế và văn hóa - xã hội",
+      "Chính sách kinh tế mới"
+    ],
+    "a": 4
+  },
+  {
+    "id": 60,
+    "q": "Trung thành với lý luận chủ nghĩa Mác - Lênin, nắm vững thực tiễn đặc điểm Việt Nam, Hồ Chí Minh khẳng định tính tất yếu của thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam là gì?",
+    "o": [
+      "Đó là thời kỳ cải biến cách mạng từ xã hội thuộc địa sang xã hội xã hội chủ nghĩa",
+      "Đó là thời kỳ cải biến cách mạng từ xã hội thuộc địa nửa phong kiến sang xã hội xã hội chủ nghĩa",
+      "Đó là thời kỳ cải biến cách mạng từ xã hội phong kiến sang xã hội xã hội chủ nghĩa",
+      "Đó là thời kỳ cải biến cách mạng từ đánh đuổi quân xâm lược đi thẳng lên xã hội cộng sản"
+    ],
+    "a": 2
+  },
+  {
+    "id": 61,
+    "q": "Mục đích của đại đoàn kết dân tộc trong tư tưởng Hồ Chí Minh là gì?",
+    "o": [
+      "Là huy động và tập hợp mọi lực lượng, phát huy vai trò của tất cả các lực lượng cách mạng tạo thành sức mạnh to lớn để thực hiện mục tiêu chiến lược của cách mạng Việt Nam",
+      "Là huy động và tập hợp một số lực lượng, phát huy vai trò của một số lực lượng cách mạng tạo thành sức mạnh to lớn để thực hiện mục tiêu chiến lược của cách mạng Việt Nam",
+      "Là tập hợp cơ bản một số lực lượng, phát huy vai trò của một vài lực lượng cách mạng tạo thành sức mạnh to lớn để thực hiện mục tiêu chiến lược của cách mạng Việt Nam",
+      "Là tập hợp mọi lực lượng kết hợp với huy động và kêu gọi kẻ thù đầu hàng, phát huy vai trò của tất cả các lực lượng đó để đánh bại quân xâm lược"
+    ],
+    "a": 1
+  },
+  {
+    "id": 62,
+    "q": "Trong những năm hoạt động tại Pháp, Hồ Chí Minh đã thành lập Hội Liên hiệp thuộc địa vào năm nào?",
+    "o": [
+      "1918",
+      "1919",
+      "1920",
+      "1921"
+    ],
+    "a": 4
+  },
+  {
+    "id": 63,
+    "q": "Năm 1925, Hồ Chí Minh đã thành lập Hội gì tại Trung Quốc?",
+    "o": [
+      "Hội Thanh niên cứu quốc",
+      "Hội những người khốn khổ",
+      "Hội Liên hiệp các dân tộc bị áp bức Á Đông",
+      "Hội cứu quốc quân"
+    ],
+    "a": 3
+  },
+  {
+    "id": 64,
+    "q": "Bổ sung cụm từ thích hợp vào chỗ trống của câu sau để được câu hoàn chỉnh: “Hồ Chí Minh khẳng định chủ nghĩa Mác - Lênin kết hợp với …….. và phong trào yêu nước đã dẫn đến việc thành lập Đảng Cộng sản Việt Nam vào ngày 03/02/1930”?",
+    "o": [
+      "Phong trào cách mạng Việt Nam",
+      "Hoạt động thực tiễn",
+      "Phong trào cách mạng thế giới",
+      "Phong trào công nhân"
+    ],
+    "a": 4
+  },
+  {
+    "id": 65,
+    "q": "Hồ Chí Minh viết “Đảng ta vĩ đại, vì ngoài lợi ích của giai cấp, của nhân dân, của dân tộc, Đảng ta không có lợi ích gì khác” ở đâu và vào năm nào?",
+    "o": [
+      "Tổng kết thực tiễn 10 năm hoạt động của Đảng (1940)",
+      "Tổng kết thực tiễn 20 năm hoạt động của Đảng (1950)",
+      "Tổng kết thực tiễn 30 năm hoạt động của Đảng (1960)",
+      "Tổng kết thực tiễn 35 năm hoạt động của Đảng (1965)"
+    ],
+    "a": 3
+  },
+  {
+    "id": 66,
+    "q": "Tên gọi thời kỳ Phục Hưng ở Tây Âu có nghĩa là gì?",
+    "o": [
+      "Khôi phục chủ nghĩa duy vật thời kỳ cổ đại",
+      "Khôi phục triết học thời kỳ cổ đại",
+      "Khôi phục nền văn hoá cổ đại",
+      "Khôi phục phục biện chứng tự phát thời kỳ cổ đại"
+    ],
+    "a": 3
+  },
+  {
+    "id": 67,
+    "q": "Khái niệm “giới” được hiểu như thế nào?",
+    "o": [
+      "Là khái niệm để chỉ sự khác biệt giữa nam và nữ về mặt xã hội",
+      "Là khái niệm để chỉ sự khác biệt giữa nam và nữ về mặt di truyền",
+      "Là khái niệm để chỉ sự khác biệt giữa nam và nữ về mặt giới tính",
+      "Là khái niệm để chỉ sự khác biệt giữa nam và nữ về mặt giới tính và di truyền"
+    ],
+    "a": 1
+  },
+  {
+    "id": 68,
+    "q": "Yếu tố đầu tiên đảm bảo cho sự tồn tại của con người là gì?",
+    "o": [
+      "Làm khoa học",
+      "Sáng tạo nghệ thuật",
+      "Lao động",
+      "Làm chính trị"
+    ],
+    "a": 3
+  },
+  {
+    "id": 69,
+    "q": "Quan hệ nào được coi là quan hệ cơ bản nhất trong gia đ́ình?",
+    "o": [
+      "Quan hệ hôn nhân",
+      "Quan hệ hôn nhân và huyết thống",
+      "Quan hệ quần tụ trong một không gian sinh tồn",
+      "Quan hệ nuôi dưỡng"
+    ],
+    "a": 2
+  },
+  {
+    "id": 70,
+    "q": "Kể tên bốn trung tâm văn minh lớn của Phương Đông cổ đại?",
+    "o": [
+      "Ấn Độ, Trung Quốc, Nhật Bản, Đông Nam Á",
+      "Trung Quốc, Lưỡng Hà, Nhật Bản, Ai cập",
+      "Trung Quốc, Lưỡng Hà, Ấn Độ, Ai Cập",
+      "Nhật Bản, Lưỡng Hà, Đông Nam Á, Ấn Độ"
+    ],
+    "a": 3
+  },
+  {
+    "id": 71,
+    "q": "Trong Hệ thống chính trị XHCN Việt Nam, Mật trận Tổ quốc được xác định là gì?",
+    "o": [
+      "Một tổ chức hành chính trị đặc biệt",
+      "Một tổ chức đặc biệt của quyền lực chính trị",
+      "Một tổ chức chính trị - xã hội",
+      "Một tổ chức xã hội tự quản"
+    ],
+    "a": 3
+  },
+  {
+    "id": 72,
+    "q": "Vùng biển Việt Nam tiếp giáp với vùng biển của bao nhiêu quốc gia?",
+    "o": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "a": 2
+  },
+  {
+    "id": 73,
+    "q": "Hiệp định thương mại tự do Việt Nam - Liên minh Châu Âu (EVFTA) có hiệu lực từ ngày nào?",
+    "o": [
+      "1/7/2020",
+      "1/9/2020",
+      "1/8/2020",
+      "1/10/2020"
+    ],
+    "a": 3
+  },
+  {
+    "id": 74,
+    "q": "Đất liền Việt Nam có biên giới trên bộ tiếp giáp với bao nhiêu quốc gia?",
+    "o": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "a": 2
+  },
+  {
+    "id": 75,
+    "q": "Từ ngày 01/7/2025, Việt Nam còn bao nhiêu đơn vị hành chính cấp xã?",
+    "o": [
+      "3.318",
+      "3.319",
+      "3.320",
+      "3.321"
+    ],
+    "a": 4
+  },
+  {
+    "id": 76,
+    "q": "Điểm mới so với Đại hội XII về phương châm thực hiện phát huy dân chủ XHCN mà Đại hội XIII của Đảng xác định đó là gì?",
+    "o": [
+      "Dân giám sát, dân thụ hưởng",
+      "Dân làm, dân kiểm tra, dân giám sát, dân thụ hưởng",
+      "Dân biết, dân bàn, dân làm, dân thụ hưởng",
+      "Cả a, b và c đều sai"
+    ],
+    "a": 1
+  },
+  {
+    "id": 77,
+    "q": "Một trong những nhiệm vụ, giải pháp chủ yếu trong Nghị quyết số 21-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5, khóa XIII?",
+    "o": [
+      "Nâng cao chất lượng tổ chức đảng và đảng viên",
+      "Nâng cao chất lượng đội ngũ đảng viên",
+      "Đổi mới nội dung sinh hoạt của các chi bộ, đảng bộ",
+      "Nâng cao bản lĩnh chính trị, năng lực lãnh đạo, kỹ năng và nghiệp vụ công tác đảng cho đảng viên cơ sở"
+    ],
+    "a": 2
+  },
+  {
+    "id": 78,
+    "q": "Trong Chiến lược phát triển kinh tế - xã hội 10 năm 2021-2030, xác định đến năm 2030 phấn đấu cả nước ta hoàn thành bao nhiêu km đường bộ cao tốc?",
+    "o": [
+      "Đến năm 2030, phấn đấu cả nước có khoảng 5.000km đường bộ cao tốc",
+      "Đến năm 2030, phấn đấu cả nước có khoảng 10.000km đường bộ cao tốc",
+      "Đến năm 2030, phấn đấu cả nước có khoảng 15.000km đường bộ cao tốc",
+      "Đến năm 2030, phấn đấu cả nước có khoảng 20.000km đường bộ cao tốc"
+    ],
+    "a": 1
+  },
+  {
+    "id": 79,
+    "q": "Kết luận số 01-KL/TW ngày 18/5/2021 của Bộ Chính trị là Kết luận về nội dung gì?",
+    "o": [
+      "Về tiếp tục đẩy mạnh thực hiện Cuộc vận động “Phát huy truyền thống, cống hiến tài năng, xứng danh Bộ đội Cụ Hồ” thời kỳ mới",
+      "Về tiếp tục thực hiện Chỉ thị số 05-CT/TW của Bộ Chính trị “Về đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh” thời kỳ mới",
+      "Về tiếp tục thực hiện Chỉ thị số 05-CT/TW của Bộ Chính trị “Về học tập và làm theo tư tưởng, đạo đức Hồ Chí Minh”",
+      "Về tiếp tục thực hiện Chỉ thị số 05-CT/TW của Bộ Chính trị “Về đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh”"
+    ],
+    "a": 4
+  },
+  {
+    "id": 80,
+    "q": "Một trong những nhiệm vụ và giải pháp chủ yếu được xác định trong Kết luận số 21-KL/TW ngày 25/10/2021, Hội nghị lần thứ 4, BCH Trung ương Đảng khóa XIII?",
+    "o": [
+      "Thường xuyên đổi mới, nâng cao chất lượng công tác giáo dục chính trị",
+      "Nâng cao chất lượng tổ chức cơ sở đảng và đội ngũ cán bộ, đảng viên",
+      "Tập trung xây dựng đội ngũ cán bộ các cấp, nhất là cấp chiến lược và người đứng đầu gắn với đổi mới, sắp xếp tổ chức bộ máy của hệ thống chính trị tinh gọn, hoạt động hiệu lực, hiệu quả",
+      "Phát huy trách nhiệm của các tổ chức, các lực lượng trong cơ quan, đơn vị"
+    ],
+    "a": 3
+  },
+  {
+    "id": 81,
+    "q": "Một trong những phương châm chỉ đạo được xác định trong Nghị quyết số 44-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII về Chiến lược bảo vệ Tổ quốc trong tình hình mới là gì?",
+    "o": [
+      "Xây dựng, chỉnh đốn Đảng và hệ thống chính trị",
+      "Tăng cường sức mạnh đại đoàn kết dân tộc",
+      "Xây dựng và phát huy giá trị văn hóa, sức mạnh con người Việt Nam trong sự nghiệp xây dựng và bảo vệ Tổ quốc",
+      "Bảo vệ đất nước từ sớm, từ xa, giữ nước từ khi nước chưa nguy; chủ động phòng ngừa; ngăn ngừa nguy cơ xung đột, chiến tranh, làm thất bại âm mưu và hoạt động “diễn biến hòa bình” của các thế lực thù địch"
+    ],
+    "a": 4
+  },
+  {
+    "id": 82,
+    "q": "Một trong những nhiệm vụ, giải pháp chủ yếu được xác định trong Nghị quyết số 19-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5, khóa XIII là gì?",
+    "o": [
+      "Tăng cường sự lãnh đạo của Đảng, nâng cao hiệu lực, hiệu quả quản lý của Nhà nước",
+      "Thường xuyên giáo dục nâng cao vị thế, từng bước cải thiện toàn diện đời sống vật chất, tinh thần của nông dân và cư dân nông thôn",
+      "Phát triển nền nông nghiệp hiệu quả, bền vững theo hướng sinh thái, ứng dụng khoa học - công nghệ tiên tiến, nâng cao chất lượng, giá trị gia tăng",
+      "Tăng cường quốc phòng, an ninh, bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa"
+    ],
+    "a": 3
+  },
+  {
+    "id": 83,
+    "q": "Một trong những nhiệm vụ và giải pháp được xác định trong Nghị quyết số 27-NQ/TW ngày 09/11/2022 của Hội nghị Trung ương 6, khóa XIII là gì?",
+    "o": [
+      "Đổi mới và nâng cao chất lượng quy hoạch, kế hoạch sử dụng đất",
+      "Bảo đảm quyền làm chủ của Nhân dân, thượng tôn Hiến pháp và pháp luật, tôn trọng, bảo đảm và bảo vệ quyền con người, quyền công dân",
+      "Xây dựng các quy định pháp luật đối với quản lý và sử dụng đất",
+      "Triển khai đồng bộ, sáng tạo, hiệu quả hoạt động đối ngoại"
+    ],
+    "a": 2
+  },
+  {
+    "id": 84,
+    "q": "Một trong những nội dung quan trọng của Điều 1, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị về chuẩn mực đạo đức cách mạng của cán bộ, đảng viên trong giai đoạn mới",
+    "o": [
+      "Đặt lợi ích quốc gia - dân tộc, lợi ích chung của Đảng, Nhà nước và của Nhân dân lên trên hết, trước hết; kiên quyết, kiên trì đấu tranh với mọi hành vi gây phương hại đến lợi ích quốc gia - dân tộc, lợi ích của Đảng, Nhà nước và của Nhân dân",
+      "Khơi dậy mạnh mẽ tinh thần yêu nước, phát huy giá trị văn hoá tốt đẹp, truyền thống dựng nước, giữ nước",
+      "Phát hiện sớm, xử lý kịp thời, hiệu quả những yếu tố bất lợi, nguy cơ gây đột biến, thách thức an ninh phi truyền thống",
+      "Tập trung xây dựng, chỉnh đốn Đảng toàn diện về chính trị, tư tưởng, đạo đức, tổ chức và cán bộ"
+    ],
+    "a": 1
+  },
+  {
+    "id": 85,
+    "q": "Một trong những nội dung quan trọng của Điều 2, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị về chuẩn mực đạo đức cách mạng của cán bộ, đảng viên trong giai đoạn mới",
+    "o": [
+      "Trung thực, thẳng thắn, khách quan",
+      "Nâng cao hiệu quả cơ chế dân chủ trực tiếp, dân chủ đại diện, chú trọng dân chủ ở cơ sở.",
+      "Nêu cao tinh thần độc lập, tự chủ, tự lực, tự cường, ý chí vươn lên, cống hiến cho sự nghiệp xây dựng và bảo vệ Tổ quốc, góp phần phát triển đất nước, địa phương, cơ quan, đơn vị",
+      "Bảo đảm an ninh kinh tế"
+    ],
+    "a": 3
+  },
+  {
+    "id": 86,
+    "q": "Một trong những chuẩn mực cơ bản được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
+    "o": [
+      "Phát huy truyền thống đoàn kết quân-dân, thực hiện quân với dân một ý chí",
+      "Trung với Đảng, hiếu với dân, sẵn sàng chiến đấu hy sinh vì độc lập, tự do của Tổ quốc, vì CNXH",
+      "Có bản lĩnh chính trị vững vàng, động cơ trong sáng, trách nhiệm cao",
+      "Tích cực học tập nâng cao trình độ chính trị, kinh tế, văn hóa, xã hội"
+    ],
+    "a": 3
+  },
+  {
+    "id": 87,
+    "q": "Một trong những biểu hiện của chủ nghĩa cá nhân được xác định ở Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
+    "o": [
+      "Coi thường lý luận, xa rời thực tiễn, lười học tập, rèn luyện, thích tự do, vô kỷ luật; hoang mang, dao động, hoài nghi về chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh, phụ họa theo những nhận thức lệch lạc, quan điểm sai trái",
+      "Nhận thức sai lệch về ý nghĩa, tầm quan trọng của lý luận và học tập lý luận chính trị",
+      "Lười học, ngại học tập lý luận chính trị hoặc học một cách thụ động, học đối phó, học né tránh, sợ học lý luận chính trị",
+      "Công tác quán triệt, tuyên truyền, học tập Nghị quyết còn hạn chế, bất cập, chưa thường xuyên, liên tục"
+    ],
+    "a": 1
+  },
+  {
+    "id": 88,
+    "q": "Một trong những vị trí, vai trò của công tác giáo dục KHXH&NV được xác định tại Điều 2, Quy chế vông tác giáo dục KHXH&NV trong nhà trường QĐND Việt Nam là gì?",
+    "o": [
+      "Là một trong những nhiệm vụ chính trị của cấp ủy, chỉ huy các cấp",
+      "Là nội dung quan trọng trong công tác tư tưởng - văn hóa của Đảng; hoạt động cơ bản của CTĐ, CTCT trong QĐND Việt Nam; một nội dung cơ bản, trọng yếu trong chương trình đào tạo ở nhà trường Quân đội",
+      "Quyết định đến chất lượng, xây dựng đội ngũ cán bộ, nhân viên chuyên môn kỹ thuật",
+      "Xây dựng đội ngũ cán bộ, nhân viên chuyên môn kỹ thuật, góp phần xây dựng Quân đội “tinh nhuệ về chính trị”"
+    ],
+    "a": 2
+  },
+  {
+    "id": 89,
+    "q": "Quyết định số 775/QĐ-CT ngày 12/5/2022 của Chủ nhiệm TCCT Quân đội nhân dân Việt Nam ban hành nội dung gì?",
+    "o": [
+      "Quy chế quản lý tư tưởng quân nhân; nắm và định hướng dư luận trong Quân đội nhân dân Việt Nam",
+      "Quy chế quản lý tư tưởng quân nhân; nắm và định hướng dư luận xã hội trong Quân đội nhân dân Việt Nam",
+      "Quy chế quản lý tư tưởng quân nhân; nắm và định hướng dư luận trong Quân đội",
+      "Quy chế công tác giáo dục KHXH&NV trong nhà trường Quân đội nhân dân Việt Nam"
+    ],
+    "a": 1
+  },
+  {
+    "id": 90,
+    "q": "Theo Quy chế quản lý tư tưởng quân nhân; nắm và định hướng dư luận trong Quân đội nhân dân Việt Nam, chủ thể lãnh đạo, chỉ đạo, tiến hành công tác quản lý tư tưởng; nắm và định hướng dư luận trong quân đội là gì?",
+    "o": [
+      "Chính ủy, chính trị viên, người chỉ huy, cơ quan chính trị, cán bộ chính trị và hội đồng quân nhân",
+      "Cấp ủy, tổ chức đảng, chính ủy, chính trị viên (bí thư), người chỉ huy, cơ quan chính trị, cán bộ chính trị các cấp",
+      "Cấp ủy, tổ chức đảng ở cơ sở và cán bộ chính trị cấp cơ sở",
+      "Cấp ủy, tổ chức đảng, chính ủy, chính trị viên (bí thư), cơ quan chính trị và cán bộ đoàn viên thanh niên"
+    ],
+    "a": 2
   }
 ]
