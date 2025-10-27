@@ -561,7 +561,7 @@
     const all = document.querySelectorAll(".answer-card");
     console.log("User choice:", q.a, userChoice);
     all.forEach((el) => {
-      const i = +el.dataset.index;
+      const i = +el.dataset.index + 1;
       if (i === q.a) el.classList.add("correct");
       if (userChoice !== null && i === userChoice && i !== q.a)
         el.classList.add("wrong");
