@@ -219,7 +219,7 @@
             Quay lại
           </button>
           <button
-            class="btn btn-control"
+            class="btn btn-control btn-primary"
             id="nextBtn"
             style="background: #667eea; color: white"
           >
@@ -309,6 +309,7 @@
   // Khởi tạo lưới câu hỏi
   function initQuestionGrid() {
     const grid = document.getElementById("questionGrid");
+    grid.innerHTML = "";
     for (let i = 1; i <= 50; i++) {
       const btn = document.createElement("button");
       btn.className = "question-btn";
