@@ -414,13 +414,11 @@
   }
 
   // Nộp bài
-  document.getElementById("submitBtn").onclick = function () {
-    if (confirm("Bạn có chắc muốn nộp bài?")) {
-      submitTest();
-    }
-  };
-
   function submitTest() {
+    if (!confirm("Bạn có chắc muốn nộp bài?")) {
+      return; // Nếu không xác nhận thì return luôn
+    }
+
     isSubmitted = true;
     clearInterval(timerInterval);
 
@@ -439,12 +437,14 @@
     document.getElementById("scoreInfo").style.display = "block";
     document.getElementById("submitBtn").style.display = "none";
 
-    // Chuyển nút "Bắt đầu" thành "Làm lại"
-    const startBtn = document.getElementById("startBtn");
-    startBtn.textContent = "Làm lại";
-    startBtn.disabled = false;
-    startBtn.onclick = resetTest;
+    // Hiện thêm nút làm lại
+    const restartBtn = document.createElement("button");
+    restartBtn.className = "btn btn-primary btn-control w-100 mt-3";
+    restartBtn.textContent = "Làm lại";
+    restartBtn.onclick = resetTest;
+    document.querySelector(".timer-box").appendChild(restartBtn);
 
+    // Hiển thị lại câu hỏi với đáp án
     displayQuestion();
   }
 
