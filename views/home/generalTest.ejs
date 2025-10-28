@@ -140,6 +140,7 @@
     background-color: #7f28a7;
     border: #5370f0;
     scale: calc(1.1);
+    color: #ffffff;
   }
   h1 {
     /* color: white; */
@@ -161,9 +162,6 @@
           <div>Số câu đúng: <span id="correctCount">0</span>/50</div>
           <div>Tổng điểm: <span id="totalScore">0.0</span>/10</div>
         </div>
-        <button class="btn btn-control btn-start w-100 mt-3" id="startBtn">
-          Bắt đầu
-        </button>
         <button
           class="btn btn-control btn-submit w-100 mt-3"
           id="submitBtn"
@@ -291,7 +289,6 @@
   let userAnswers = new Array(50).fill(null);
   let timerInterval = null;
   let timeLeft = 1800; // 30 phút
-  let isTestStarted = false;
   let isSubmitted = false;
 
   // Khởi tạo lưới câu hỏi
@@ -416,16 +413,6 @@
     }, 1000);
   }
 
-  // Bắt đầu bài thi
-  document.getElementById("startBtn").onclick = function () {
-    if (!isTestStarted) {
-      isTestStarted = true;
-      this.textContent = "Đang làm bài...";
-      this.disabled = true;
-      startTimer();
-    }
-  };
-
   // Nộp bài
   document.getElementById("submitBtn").onclick = function () {
     if (confirm("Bạn có chắc muốn nộp bài?")) {
@@ -452,7 +439,35 @@
     document.getElementById("scoreInfo").style.display = "block";
     document.getElementById("submitBtn").style.display = "none";
 
+    // Chuyển nút "Bắt đầu" thành "Làm lại"
+    const startBtn = document.getElementById("startBtn");
+    startBtn.textContent = "Làm lại";
+    startBtn.disabled = false;
+    startBtn.onclick = resetTest;
+
     displayQuestion();
+  }
+
+  // Thêm hàm reset test
+  function resetTest() {
+    // Reset các biến trạng thái
+    currentQuestion = 0;
+    userAnswers = new Array(50).fill(null);
+    timeLeft = 1800;
+    isSubmitted = false;
+
+    // Reset UI
+    document.getElementById("timer").textContent = "30:00";
+    document.getElementById("timer").classList.remove("warning");
+    document.getElementById("scoreInfo").style.display = "none";
+    document.getElementById("submitBtn").style.display = "none";
+
+    // Reset grid và hiển thị câu hỏi
+    initQuestionGrid();
+    displayQuestion();
+
+    // Bắt đầu timer mới
+    startTimer();
   }
 
   // Nút điều hướng
@@ -473,4 +488,5 @@
   // Khởi tạo
   initQuestionGrid();
   displayQuestion();
+  startTimer();
 </script>
