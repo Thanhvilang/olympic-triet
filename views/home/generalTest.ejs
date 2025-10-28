@@ -1,0 +1,211 @@
+<style>
+  .question-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a55ef;
+  }
+  .matrix-btn {
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    font-weight: 500;
+  }
+  .blink {
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    50% {
+      color: red;
+    }
+  }
+  .correct {
+    background-color: #b4f2b0 !important;
+  }
+  .incorrect {
+    background-color: #f8b0b0 !important;
+  }
+</style>
+
+<div class="container">
+  <h2 class="fw-bold text-center mb-4 text-primary">Bài thi Trắc Nghiệm</h2>
+
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      <div class="card p-3 mb-3 text-center">
+        <div id="timer" class="timer mb-2">30:00</div>
+        <div id="score" class="fw-bold mb-3 text-success"></div>
+        <button id="startBtn" class="btn btn-primary w-100 mb-2">
+          Bắt đầu làm bài
+        </button>
+        <button id="submitBtn" class="btn btn-secondary w-100" disabled>
+          Nộp bài
+        </button>
+      </div>
+
+      <div class="card p-3 text-center">
+        <div
+          id="questionMatrix"
+          class="d-flex flex-wrap justify-content-center"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Main question area -->
+    <div class="col-md-9">
+      <div class="question-box">
+        <h5 id="questionText"></h5>
+        <div id="options" class="mt-3"></div>
+
+        <div class="d-flex justify-content-between mt-4">
+          <button id="prevBtn" class="btn btn-outline-secondary">
+            Quay lại
+          </button>
+          <button id="nextBtn" class="btn btn-outline-primary">Tiếp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ======= MOCK DATA ========
+  const questions = Array.from({ length: 50 }, (_, i) => ({
+    id: i + 1,
+    text: `Câu ${i + 1}: Đây là câu hỏi ví dụ số ${
+      i + 1
+    }. Thủ đô của Việt Nam là gì?`,
+    options: ["A. Hà Nội", "B. Đà Nẵng", "C. TP. Hồ Chí Minh", "D. Hải Phòng"],
+    answer: "A. Hà Nội",
+  }));
+
+  // ======= VARIABLES ========
+  let current = 0;
+  let answers = {};
+  let score = 0;
+  let timerInterval;
+  let timeLeft = 30 * 60; // 30 phút
+  let started = false;
+  let submitted = false;
+
+  const timerEl = document.getElementById("timer");
+  const startBtn = document.getElementById("startBtn");
+  const submitBtn = document.getElementById("submitBtn");
+  const questionText = document.getElementById("questionText");
+  const optionsEl = document.getElementById("options");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const questionMatrix = document.getElementById("questionMatrix");
+  const scoreEl = document.getElementById("score");
+
+  // ======= INITIALIZE ========
+  questions.forEach((_, i) => {
+    const btn = document.createElement("button");
+    btn.className = "btn btn-outline-secondary matrix-btn";
+    btn.textContent = i + 1;
+    btn.addEventListener("click", () => showQuestion(i));
+    questionMatrix.appendChild(btn);
+  });
+
+  function updateMatrixColors() {
+    [...questionMatrix.children].forEach((btn, i) => {
+      btn.classList.remove(
+        "btn-outline-secondary",
+        "btn-success",
+        "btn-danger"
+      );
+      if (submitted) {
+        const q = questions[i];
+        if (answers[q.id] === q.answer) btn.classList.add("btn-success");
+        else btn.classList.add("btn-danger");
+      } else if (answers[questions[i].id]) {
+        btn.classList.add("btn-primary");
+      } else {
+        btn.classList.add("btn-outline-secondary");
+      }
+    });
+  }
+
+  function showQuestion(index) {
+    current = index;
+    const q = questions[index];
+    questionText.textContent = q.text;
+    optionsEl.innerHTML = "";
+    q.options.forEach((opt) => {
+      const div = document.createElement("div");
+      div.className = "form-check mb-2";
+      div.innerHTML = `
+          <input class="form-check-input" type="radio" name="q${q.id}" id="${q.id}-${opt}" value="${opt}">
+          <label class="form-check-label" for="${q.id}-${opt}">${opt}</label>
+        `;
+      const input = div.querySelector("input");
+      if (answers[q.id] === opt) input.checked = true;
+      if (submitted) {
+        if (opt === q.answer) div.classList.add("correct");
+        else if (answers[q.id] === opt) div.classList.add("incorrect");
+        input.disabled = true;
+      }
+      input.addEventListener("change", () => {
+        answers[q.id] = opt;
+        updateMatrixColors();
+        if (Object.keys(answers).length === 50 && !submitted)
+          submitBtn.disabled = false;
+      });
+      optionsEl.appendChild(div);
+    });
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === questions.length - 1;
+    updateMatrixColors();
+  }
+
+  showQuestion(0);
+
+  // ======= TIMER ========
+  function startTimer() {
+    if (started) return;
+    started = true;
+    startBtn.textContent = "Đang làm bài...";
+    startBtn.disabled = true;
+    timerInterval = setInterval(() => {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerEl.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+      if (timeLeft <= 10) timerEl.classList.add("blink");
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        timerEl.textContent = "Hết giờ!";
+        submitExam();
+      }
+      timeLeft--;
+    }, 1000);
+  }
+
+  // ======= SUBMIT ========
+  function submitExam() {
+    submitted = true;
+    let correct = 0;
+    questions.forEach((q) => {
+      if (answers[q.id] === q.answer) correct++;
+    });
+    score = correct * 0.2;
+    scoreEl.textContent = `Kết quả: ${correct}/50 câu — ${score.toFixed(
+      1
+    )} điểm`;
+    submitBtn.disabled = true;
+    showQuestion(current);
+    updateMatrixColors();
+    clearInterval(timerInterval);
+  }
+
+  // ======= EVENTS ========
+  startBtn.addEventListener("click", startTimer);
+  submitBtn.addEventListener("click", submitExam);
+  nextBtn.addEventListener("click", () => showQuestion(current + 1));
+  prevBtn.addEventListener("click", () => showQuestion(current - 1));
+</script>

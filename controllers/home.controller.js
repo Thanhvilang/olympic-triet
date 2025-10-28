@@ -38,6 +38,12 @@ const homeController = {
       message: "Đây là phần kiến thức chung",
     });
   },
+  generalTest: (req, res) => {
+    res.render("home/generalTest", {
+      title: "Trắc nghiệm kiến thức chung",
+      message: "Đây là phần trắc nghiệm kiến thức chung",
+    });
+  },
   introduction: (req, res) => {
     res.render("home/introduction", {
       title: "Giới thiệu",
