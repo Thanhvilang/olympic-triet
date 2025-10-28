@@ -330,7 +330,7 @@
   function displayQuestion() {
     const q = questions[currentQuestion];
     document.getElementById("questionTitle").textContent = `Câu ${
-        currentQuestion + 1
+      currentQuestion + 1
     }: ${q.q}`;
 
     const container = document.getElementById("answersContainer");
@@ -338,62 +338,36 @@
 
     const letters = ["A", "B", "C", "D"];
     q.answers.forEach((answer, index) => {
-        const div = document.createElement("div");
-        div.className = "answer-option";
-        div.setAttribute("data-answer", letters[index]);
+      const div = document.createElement("div");
+      div.className = "answer-option";
+      div.setAttribute("data-answer", letters[index]);
+      div.innerHTML = `<strong>${letters[index]}.</strong> ${answer}`;
 
-        // Add checkmark/x-mark for submitted state
-        let statusIcon = "";
-        if (isSubmitted) {
-            if (letters[index] === q.correct) {
-                statusIcon = '<span class="float-end text-success">✓</span>';
-            } else if (userAnswers[currentQuestion] === letters[index]) {
-                statusIcon = '<span class="float-end text-danger">✗</span>';
-            }
-        }
+      if (!isSubmitted) {
+        div.onclick = () => selectAnswer(letters[index]);
+      }
 
-        div.innerHTML = `<strong>${letters[index]}.</strong> ${answer} ${statusIcon}`;
+      if (userAnswers[currentQuestion] === letters[index]) {
+        div.classList.add("selected");
+      }
 
-        if (!isSubmitted) {
-            div.onclick = () => selectAnswer(letters[index]);
-        }
-
-        // Add appropriate classes for submitted state
-        if (isSubmitted) {
-            if (letters[index] === q.correct) {
-                div.classList.add("correct-answer");
-            } else if (userAnswers[currentQuestion] === letters[index]) {
-                div.classList.add("wrong-answer");
-            }
+      if (isSubmitted) {
+        if (letters[index] === q.correct) {
+          div.classList.add("correct-answer");
         } else if (userAnswers[currentQuestion] === letters[index]) {
-            div.classList.add("selected");
+          div.classList.add("wrong-answer");
         }
+      }
 
-        container.appendChild(div);
+      container.appendChild(div);
     });
 
-    // Add explanation after submission
-    if (isSubmitted) {
-        const explanation = document.createElement("div");
-        explanation.className = "mt-3 p-3 border rounded bg-light";
-        explanation.innerHTML = `
-            <p class="mb-2"><strong>Đáp án đúng: ${q.correct}</strong></p>
-            <p class="mb-0 ${userAnswers[currentQuestion] === q.correct ? 'text-success' : 'text-danger'}">
-                ${userAnswers[currentQuestion] === q.correct ? 
-                    '✓ Bạn đã trả lời đúng!' : 
-                    `✗ Bạn đã chọn: ${userAnswers[currentQuestion] || 'Chưa chọn'}`
-                }
-            </p>
-        `;
-        container.appendChild(explanation);
-    }
-
-    // Update navigation buttons
+    // Cập nhật nút điều hướng
     document.getElementById("prevBtn").disabled = currentQuestion === 0;
     document.getElementById("nextBtn").disabled = currentQuestion === 49;
 
     updateQuestionGrid();
-}
+  }
 
   // Chọn đáp án
   function selectAnswer(answer) {
@@ -440,19 +414,22 @@
   }
 
   // Nộp bài
-  function submitTest() {
-    if (!confirm("Bạn có chắc muốn nộp bài?")) {
-      return;
+  document.getElementById("submitBtn").onclick = function () {
+    if (confirm("Bạn có chắc muốn nộp bài?")) {
+      submitTest();
     }
+  };
 
+  function submitTest() {
     isSubmitted = true;
     clearInterval(timerInterval);
 
+    // Tính điểm
     let correctCount = 0;
     userAnswers.forEach((answer, index) => {
-        if (answer === questions[index].correct) {
-            correctCount++;
-        }
+      if (answer === questions[index].correct) {
+        correctCount++;
+      }
     });
 
     const totalScore = (correctCount * 0.2).toFixed(1);
@@ -462,14 +439,12 @@
     document.getElementById("scoreInfo").style.display = "block";
     document.getElementById("submitBtn").style.display = "none";
 
-    // Thêm nút làm lại
-    const restartBtn = document.createElement("button");
-    restartBtn.className = "btn btn-primary btn-control w-100 mt-3";
-    restartBtn.textContent = "Làm lại";
-    restartBtn.onclick = resetTest;
-    document.querySelector(".timer-box").appendChild(restartBtn);
+    // Chuyển nút "Bắt đầu" thành "Làm lại"
+    const startBtn = document.getElementById("startBtn");
+    startBtn.textContent = "Làm lại";
+    startBtn.disabled = false;
+    startBtn.onclick = resetTest;
 
-    // Hiển thị đáp án và cập nhật giao diện
     displayQuestion();
   }
 
