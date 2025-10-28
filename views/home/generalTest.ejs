@@ -1,73 +1,107 @@
 <style>
-  .question-box {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
   .timer {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #4a55ef;
   }
-  .matrix-btn {
-    width: 45px;
-    height: 45px;
-    margin: 2px;
-    font-weight: 500;
-  }
-  .blink {
+  .blinking {
     animation: blink 1s infinite;
+    color: red !important;
   }
   @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
     50% {
-      color: red;
+      opacity: 0;
     }
   }
-  .correct {
-    background-color: #b4f2b0 !important;
+  .question-matrix .btn {
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    font-size: 0.9rem;
   }
-  .incorrect {
-    background-color: #f8b0b0 !important;
+  .answer-btn {
+    min-height: 50px;
+    text-align: left;
+  }
+  .answer-btn.selected {
+    background-color: #e7f3ff;
+    border: 2px solid #0d6efd;
+  }
+  .answer-btn.correct {
+    background-color: #d4edda;
+    border-color: #28a745;
+  }
+  .answer-btn.wrong {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+  }
+  .matrix-btn.answered {
+    background-color: #d1e7dd;
+  }
+  .matrix-btn.correct {
+    background-color: #28a745;
+    color: white;
+  }
+  .matrix-btn.wrong {
+    background-color: #dc3545;
+    color: white;
   }
 </style>
 
-<div class="container">
-  <h2 class="fw-bold text-center mb-4 text-primary">Bài thi Trắc Nghiệm</h2>
+<div class="container py-4">
+  <h2 class="text-center mb-4 text-primary">Bài thi Trắc Nghiệm</h2>
 
   <div class="row">
-    <!-- Sidebar -->
+    <!-- Cột trái: Matrix câu hỏi + Timer + Điểm -->
     <div class="col-md-3">
-      <div class="card p-3 mb-3 text-center">
-        <div id="timer" class="timer mb-2">30:00</div>
-        <div id="score" class="fw-bold mb-3 text-success"></div>
-        <button id="startBtn" class="btn btn-primary w-100 mb-2">
-          Bắt đầu làm bài
-        </button>
-        <button id="submitBtn" class="btn btn-secondary w-100" disabled>
-          Nộp bài
-        </button>
+      <div class="card shadow-sm mb-3">
+        <div class="card-body text-center">
+          <div id="timer" class="timer text-primary">30:00</div>
+          <button id="startBtn" class="btn btn-success mt-2">Bắt đầu</button>
+          <div
+            id="score"
+            class="mt-3 fw-bold text-success"
+            style="display: none"
+          ></div>
+        </div>
       </div>
 
-      <div class="card p-3 text-center">
-        <div
-          id="questionMatrix"
-          class="d-flex flex-wrap justify-content-center"
-        ></div>
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">Danh sách câu hỏi</div>
+        <div class="card-body p-2">
+          <div
+            id="questionMatrix"
+            class="d-flex flex-wrap justify-content-center question-matrix"
+          ></div>
+        </div>
       </div>
     </div>
 
-    <!-- Main question area -->
+    <!-- Cột phải: Câu hỏi + Đáp án + Nút điều hướng -->
     <div class="col-md-9">
-      <div class="question-box">
-        <h5 id="questionText"></h5>
-        <div id="options" class="mt-3"></div>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div id="questionContainer">
+            <h5 id="questionText" class="mb-4"></h5>
+            <div id="options" class="space-y-2"></div>
 
-        <div class="d-flex justify-content-between mt-4">
-          <button id="prevBtn" class="btn btn-outline-secondary">
-            Quay lại
-          </button>
-          <button id="nextBtn" class="btn btn-outline-primary">Tiếp</button>
+            <div class="d-flex justify-content-between mt-4">
+              <button id="prevBtn" class="btn btn-secondary" disabled>
+                Quay lại
+              </button>
+              <button
+                id="submitBtn"
+                class="btn btn-danger"
+                style="display: none"
+              >
+                Nộp bài
+              </button>
+              <button id="nextBtn" class="btn btn-primary">Tiếp</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -75,137 +109,199 @@
 </div>
 
 <script>
-  // ======= MOCK DATA ========
+  // Dữ liệu mẫu 50 câu (thay bằng dữ liệu thật từ server nếu cần)
   const questions = Array.from({ length: 50 }, (_, i) => ({
     id: i + 1,
     text: `Câu ${i + 1}: Đây là câu hỏi ví dụ số ${
       i + 1
     }. Thủ đô của Việt Nam là gì?`,
-    options: ["A. Hà Nội", "B. Đà Nẵng", "C. TP. Hồ Chí Minh", "D. Hải Phòng"],
-    answer: "A. Hà Nội",
+    options: [
+      { label: "A", text: i % 4 === 0 ? "TP. Hồ Chí Minh" : "Hà Nội" },
+      { label: "B", text: "Đà Nẵng" },
+      { label: "C", text: i % 4 === 0 ? "Hà Nội" : "TP. Hồ Chí Minh" },
+      { label: "D", text: "Hải Phòng" },
+    ],
+    correct: i % 4 === 0 ? "C" : "A", // Đáp án đúng luân phiên
   }));
 
-  // ======= VARIABLES ========
-  let current = 0;
-  let answers = {};
-  let score = 0;
-  let timerInterval;
+  let currentQuestion = 0;
+  let answers = {}; // Lưu đáp án người dùng: {1: 'A', 2: 'B', ...}
+  let timerInterval = null;
   let timeLeft = 30 * 60; // 30 phút
-  let started = false;
-  let submitted = false;
+  let isSubmitted = false;
 
   const timerEl = document.getElementById("timer");
   const startBtn = document.getElementById("startBtn");
-  const submitBtn = document.getElementById("submitBtn");
   const questionText = document.getElementById("questionText");
-  const optionsEl = document.getElementById("options");
+  const optionsContainer = document.getElementById("options");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
-  const questionMatrix = document.getElementById("questionMatrix");
+  const submitBtn = document.getElementById("submitBtn");
   const scoreEl = document.getElementById("score");
+  const matrixContainer = document.getElementById("questionMatrix");
 
-  // ======= INITIALIZE ========
-  questions.forEach((_, i) => {
-    const btn = document.createElement("button");
-    btn.className = "btn btn-outline-secondary matrix-btn";
-    btn.textContent = i + 1;
-    btn.addEventListener("click", () => showQuestion(i));
-    questionMatrix.appendChild(btn);
-  });
+  // Tạo matrix câu hỏi
+  function renderMatrix() {
+    matrixContainer.innerHTML = "";
+    questions.forEach((q, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "btn matrix-btn";
+      btn.textContent = idx + 1;
+      btn.onclick = () => goToQuestion(idx);
+      matrixContainer.appendChild(btn);
+    });
+  }
 
-  function updateMatrixColors() {
-    [...questionMatrix.children].forEach((btn, i) => {
-      btn.classList.remove(
-        "btn-outline-secondary",
-        "btn-success",
-        "btn-danger"
-      );
-      if (submitted) {
-        const q = questions[i];
-        if (answers[q.id] === q.answer) btn.classList.add("btn-success");
-        else btn.classList.add("btn-danger");
-      } else if (answers[questions[i].id]) {
+  // Cập nhật trạng thái matrix
+  function updateMatrix() {
+    const buttons = matrixContainer.querySelectorAll(".matrix-btn");
+    buttons.forEach((btn, idx) => {
+      const qid = idx + 1;
+      btn.classList.remove("answered", "correct", "wrong");
+      if (answers[qid]) {
+        btn.classList.add("answered");
+        if (isSubmitted) {
+          btn.classList.add(
+            answers[qid] === questions[idx].correct ? "correct" : "wrong"
+          );
+        }
+      }
+      if (currentQuestion === idx) {
         btn.classList.add("btn-primary");
       } else {
-        btn.classList.add("btn-outline-secondary");
+        btn.classList.remove("btn-primary");
       }
     });
   }
 
+  // Hiển thị câu hỏi
   function showQuestion(index) {
-    current = index;
     const q = questions[index];
     questionText.textContent = q.text;
-    optionsEl.innerHTML = "";
+    optionsContainer.innerHTML = "";
+
     q.options.forEach((opt) => {
-      const div = document.createElement("div");
-      div.className = "form-check mb-2";
-      div.innerHTML = `
-          <input class="form-check-input" type="radio" name="q${q.id}" id="${q.id}-${opt}" value="${opt}">
-          <label class="form-check-label" for="${q.id}-${opt}">${opt}</label>
-        `;
-      const input = div.querySelector("input");
-      if (answers[q.id] === opt) input.checked = true;
-      if (submitted) {
-        if (opt === q.answer) div.classList.add("correct");
-        else if (answers[q.id] === opt) div.classList.add("incorrect");
-        input.disabled = true;
+      const btn = document.createElement("button");
+      btn.className = "btn answer-btn w-100 mb-2";
+      btn.innerHTML = `<strong>${opt.label}.</strong> ${opt.text}`;
+      btn.onclick = () => selectAnswer(q.id, opt.label, btn);
+
+      // Nếu đã chọn hoặc đã nộp
+      if (answers[q.id] === opt.label) {
+        btn.classList.add("selected");
       }
-      input.addEventListener("change", () => {
-        answers[q.id] = opt;
-        updateMatrixColors();
-        if (Object.keys(answers).length === 50 && !submitted)
-          submitBtn.disabled = false;
-      });
-      optionsEl.appendChild(div);
+      if (isSubmitted) {
+        btn.disabled = true;
+        if (opt.label === q.correct) {
+          btn.classList.add("correct");
+        } else if (answers[q.id] === opt.label && opt.label !== q.correct) {
+          btn.classList.add("wrong");
+        }
+      }
+
+      optionsContainer.appendChild(btn);
     });
+
+    // Cập nhật nút điều hướng
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index === questions.length - 1;
-    updateMatrixColors();
+    submitBtn.style.display =
+      Object.keys(answers).length === 50 ? "block" : "none";
+
+    updateMatrix();
   }
 
-  showQuestion(0);
+  // Chọn đáp án
+  function selectAnswer(qid, choice, btn) {
+    if (isSubmitted) return;
+    answers[qid] = choice;
 
-  // ======= TIMER ========
+    // Cập nhật giao diện chọn
+    document.querySelectorAll(`#options .answer-btn`).forEach((b) => {
+      b.classList.remove("selected");
+    });
+    btn.classList.add("selected");
+
+    updateMatrix();
+    submitBtn.style.display =
+      Object.keys(answers).length === 50 ? "block" : "none";
+  }
+
+  // Chuyển câu
+  function goToQuestion(index) {
+    if (isSubmitted) return;
+    currentQuestion = index;
+    showQuestion(index);
+  }
+
+  // Timer
   function startTimer() {
-    if (started) return;
-    started = true;
-    startBtn.textContent = "Đang làm bài...";
-    startBtn.disabled = true;
     timerInterval = setInterval(() => {
-      const minutes = Math.floor(timeLeft / 60);
-      const seconds = timeLeft % 60;
-      timerEl.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
-      if (timeLeft <= 10) timerEl.classList.add("blink");
+      timeLeft--;
+      const mins = Math.floor(timeLeft / 60)
+        .toString()
+        .padStart(2, "0");
+      const secs = (timeLeft % 60).toString().padStart(2, "0");
+      timerEl.textContent = `${mins}:${secs}`;
+
+      // Nhấp nháy khi còn 10s
+      if (timeLeft <= 10) {
+        timerEl.classList.add("blinking");
+      }
+
+      // Hết giờ
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
-        timerEl.textContent = "Hết giờ!";
+        timerEl.textContent = "Hết giờ";
         submitExam();
       }
-      timeLeft--;
     }, 1000);
   }
 
-  // ======= SUBMIT ========
+  // Nộp bài
   function submitExam() {
-    submitted = true;
-    let correct = 0;
-    questions.forEach((q) => {
-      if (answers[q.id] === q.answer) correct++;
-    });
-    score = correct * 0.2;
-    scoreEl.textContent = `Kết quả: ${correct}/50 câu — ${score.toFixed(
-      1
-    )} điểm`;
-    submitBtn.disabled = true;
-    showQuestion(current);
-    updateMatrixColors();
     clearInterval(timerInterval);
+    isSubmitted = true;
+    startBtn.disabled = true;
+    submitBtn.style.display = "none";
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+
+    let correctCount = 0;
+    questions.forEach((q) => {
+      if (answers[q.id] === q.correct) correctCount++;
+    });
+
+    const score = (correctCount * 0.2).toFixed(1);
+    scoreEl.style.display = "block";
+    scoreEl.innerHTML = `
+      <div>Đúng: <strong>${correctCount}/50</strong> câu</div>
+      <div class="fs-4">Tổng điểm: <strong>${score}</strong></div>
+    `;
+
+    showQuestion(currentQuestion); // Cập nhật lại giao diện câu hiện tại
   }
 
-  // ======= EVENTS ========
-  startBtn.addEventListener("click", startTimer);
-  submitBtn.addEventListener("click", submitExam);
-  nextBtn.addEventListener("click", () => showQuestion(current + 1));
-  prevBtn.addEventListener("click", () => showQuestion(current - 1));
+  // Sự kiện nút
+  startBtn.onclick = () => {
+    startBtn.textContent = "Đang làm bài...";
+    startBtn.disabled = true;
+    startTimer();
+    renderMatrix();
+    showQuestion(0);
+  };
+
+  prevBtn.onclick = () => {
+    if (currentQuestion > 0) goToQuestion(currentQuestion - 1);
+  };
+
+  nextBtn.onclick = () => {
+    if (currentQuestion < questions.length - 1)
+      goToQuestion(currentQuestion + 1);
+  };
+
+  submitBtn.onclick = submitExam;
+
+  // Khởi tạo
+  renderMatrix();
 </script>
