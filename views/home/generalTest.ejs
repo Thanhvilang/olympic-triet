@@ -173,9 +173,9 @@
             Tổng điểm: <span id="totalScore">0.0</span>/10
           </div>
         </div>
-        <button class="btn btn-control btn-start w-100 mt-3" id="startBtn">
+        <!-- <button class="btn btn-control btn-start w-100 mt-3" id="startBtn">
           Bắt đầu
-        </button>
+        </button> -->
         <button
           class="btn btn-control btn-submit w-100 mt-3"
           id="submitBtn"
@@ -429,14 +429,14 @@
   }
 
   // Bắt đầu bài thi
-  document.getElementById("startBtn").onclick = function () {
-    if (!isTestStarted) {
-      isTestStarted = true;
-      this.textContent = "Đang làm bài...";
-      this.disabled = true;
-      startTimer();
-    }
-  };
+  //   document.getElementById("startBtn").onclick = function () {
+  //     if (!isTestStarted) {
+  //       isTestStarted = true;
+  //       this.textContent = "Đang làm bài...";
+  //       this.disabled = true;
+  //       startTimer();
+  //     }
+  //   };
 
   // Nộp bài
   document.getElementById("submitBtn").onclick = function () {
@@ -452,9 +452,9 @@
     // Tính điểm
     let correctCount = 0;
     userAnswers.forEach((answer, index) => {
-        if (answer === questions[index].correct) {
-            correctCount++;
-        }
+      if (answer === questions[index].correct) {
+        correctCount++;
+      }
     });
 
     const totalScore = (correctCount * 0.2).toFixed(1);
@@ -463,7 +463,7 @@
     document.getElementById("totalScore").textContent = totalScore;
     document.getElementById("scoreInfo").style.display = "block";
     document.getElementById("submitBtn").style.display = "none";
-    
+
     // Thêm nút làm lại
     const restartBtn = document.createElement("button");
     restartBtn.className = "btn btn-control btn-primary w-100 mt-3";
@@ -472,7 +472,7 @@
     document.querySelector(".timer-box").appendChild(restartBtn);
 
     displayQuestion();
-}
+  }
 
   // Thêm hàm reset test
   function resetTest() {
@@ -486,7 +486,7 @@
     document.getElementById("timer").textContent = "30:00";
     document.getElementById("timer").classList.remove("warning");
     document.getElementById("scoreInfo").style.display = "none";
-    
+
     // Xóa nút làm lại
     const restartBtn = document.querySelector(".timer-box button:last-child");
     if (restartBtn) restartBtn.remove();
@@ -494,10 +494,10 @@
     // Reset grid và hiển thị câu hỏi
     initQuestionGrid();
     displayQuestion();
-    
+
     // Bắt đầu timer mới
     startTimer();
-}
+  }
 
   // Nút điều hướng
   document.getElementById("prevBtn").onclick = () => {
