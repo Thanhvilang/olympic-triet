@@ -5,9 +5,9 @@
   .timer-box {
     background: white;
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .timer {
     font-size: 3rem;
@@ -46,6 +46,7 @@
     height: 42px;
     margin: 3px;
     /* border: 2px solid #dee2e6; */
+    padding: 0;
     border: none;
     border-radius: 8px;
     background: rgb(229 231 235);
@@ -64,8 +65,9 @@
     border-color: rgb(168 85 247);
   }
   .question-btn.answered {
-    background: #e3f2fd;
-    border-color: #2196f3;
+    background: #81c7e1;
+    /* border-color: #3bf0ab; */
+    color: #ffffff;
   }
   .question-btn.correct {
     background: #28a745;
@@ -80,7 +82,7 @@
   .question-box {
     background: white;
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
   .question-title {
@@ -93,7 +95,7 @@
     border: 2px solid #dee2e6;
     border-radius: 10px;
     padding: 15px 20px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     cursor: pointer;
     transition: all 0.3s;
     background: white;
@@ -117,8 +119,9 @@
     border-color: #dc3545;
     border-width: 3px;
   }
+
   .btn-control {
-    padding: 12px 30px;
+    padding: 6px 30px;
     font-size: 1.1rem;
     border-radius: 10px;
     font-weight: bold;
@@ -133,17 +136,22 @@
     color: white;
     border: none;
   }
+  .btn-submit:hover {
+    background-color: #7f28a7;
+    border: #5370f0;
+    scale: calc(1.1);
+  }
   h1 {
-    color: white;
+    /* color: white; */
     text-align: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 </style>
 
 <div class="container">
-  <h1>Bài thi Trắc Nghiệm</h1>
+  <h1>Bài thi Trắc Nghiệm Chung</h1>
 
   <div class="row">
     <div class="col-md-4">
