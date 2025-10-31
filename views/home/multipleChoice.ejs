@@ -219,7 +219,7 @@
     const TIME_LIMIT = 15.0;
 
     let QUESTION_DB = JSON.parse('<%- JSON.stringify(multipleData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
-
+    const newCorrectIndex = null;
     // Các phần tử UI
     const qInput = document.getElementById('qInput');
     const totalCountEl = document.getElementById('totalCount');
@@ -342,7 +342,7 @@
       console.log(q.o[originalCorrectIndex]);
 
       // Find new correct index after shuffle
-      const newCorrectIndex = shuffledOptions.findIndex(
+      newCorrectIndex = shuffledOptions.findIndex(
         (opt, idx) => opt === q.o[originalCorrectIndex]
       );
       console.log("newCorrectIndex:", newCorrectIndex);
@@ -451,16 +451,16 @@
       // // console.log("newCorrectIndex:", newCorrectIndex);
 
       const q = QUESTION_DB[currentIndex];
-      const correctIndex = getCorrectIndex(q);
-      console.log("correctIndex:", correctIndex);
+      // const correctIndex = getCorrectIndex(q);
+      console.log("newCorrectIndex:", newCorrectIndex);
 
 
       // Hiển thị đáp án đúng/sai
       document.querySelectorAll('.answer-card').forEach(el => {
-        console.log(el.dataset.index, correctIndex, userChoice);
+        console.log(el.dataset.index, newCorrectIndex, userChoice);
         const i = Number(el.dataset.index);
-        if (i === correctIndex) el.classList.add('correct');
-        if (userChoice !== null && i === userChoice && i !== correctIndex) el.classList.add('wrong');
+        if (i === newCorrectIndex) el.classList.add('correct');
+        if (userChoice !== null && i === userChoice && i !== newCorrectIndex) el.classList.add('wrong');
         // vô hiệu hóa tương tác
         el.style.pointerEvents = 'none';
       });
@@ -468,7 +468,7 @@
       // banner
       if (userChoice === null) {
         resultBanner.textContent = '⏰ Hết giờ hoặc chưa chọn. Trả lời sai.';
-      } else if (userChoice === correctIndex) {
+      } else if (userChoice === newCorrectIndex) {
         resultBanner.textContent = `✅ Chính xác! Thời gian: ${timeTaken.toFixed(2)}s`;
       } else {
         resultBanner.textContent = `❌ Sai! Thời gian: ${timeTaken.toFixed(2)}s`;
