@@ -340,8 +340,9 @@
       const originalCorrectIndex = getCorrectIndex(q) - 1 ;
       // console.log("originalCorrectIndex:", originalCorrectIndex);
       console.log(q.o[originalCorrectIndex],0);
-      console.log("newCorrectIndex:", newCorrectIndex);
-      // Find new correct index after shuffle
+
+      console.log(shuffledOptions)
+         // Find new correct index after shuffle
       newCorrectIndex = shuffledOptions.findIndex(
         (opt, idx) => opt === q.o[originalCorrectIndex]
       );
