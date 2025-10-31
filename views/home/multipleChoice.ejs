@@ -246,7 +246,7 @@
     // Hỗ trợ nhiều dạng dữ liệu: q.a (0-based) hoặc q.correct ("A"/"B"/"C"/"D")
     if (typeof q.a !== 'undefined') return Number(q.a);
     if (typeof q.correct === 'string') {
-      const map = { 'A':0,'B':1,'C':2,'D':3 };
+      const map = { 'A':1,'B':2,'C':3,'D':4 };
       const up = q.correct.trim().toUpperCase();
       return map[up] ?? 0;
     }
