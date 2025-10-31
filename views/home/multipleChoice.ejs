@@ -237,7 +237,7 @@
     const questionBox = document.getElementById('questionBox');
     const answersGrid = document.getElementById('answersGrid');
     const timerEl = document.getElementById('timer');
-    const userTimeEl = document.getElementById('userTime');
+    // const userTimeEl = document.getElementById('userTime');
     const btnConfirm = document.getElementById('btnConfirm');
     const resultBanner = document.getElementById('resultBanner');
 
@@ -453,7 +453,7 @@
       } else {
         timeTaken = Math.min(TIME_LIMIT, (performance.now() - startTs) / 1000);
       }
-      userTimeEl.textContent = `Thời gian trả lời: ${timeTaken.toFixed(2)}s`;
+      // userTimeEl.textContent = `Thời gian trả lời: ${timeTaken.toFixed(2)}s`;
 
 
       // // Find new correct index after shuffle
