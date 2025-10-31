@@ -327,16 +327,34 @@
   }
 
   // xử lý Enter trên input
-  qInput.addEventListener('keydown', (ev) => {
-    if (ev.key === 'Enter') {
-      const val = Number(qInput.value);
-      if (!Number.isInteger(val) || val < 1 || val > QUESTION_DB.length) {
-        alert('Số câu không hợp lệ');
-        return;
-      }
-      // load câu tương ứng (1-based -> 0-based)
-      renderQuestionByIndex(val - 1);
+  function handleQInputSubmit(valRaw) {
+    const valNum = Number(String(valRaw).trim());
+    if (!Number.isInteger(valNum) || valNum < 1 || valNum > QUESTION_DB.length) {
+      alert('Số câu không hợp lệ');
+      return;
     }
+    // load câu tương ứng (1-based -> 0-based)
+    renderQuestionByIndex(valNum - 1);
+  }
+
+  // bắt cả keydown và keyup để chắc chắn bắt Enter trên mọi trình duyệt
+  qInput.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Enter' || ev.keyCode === 13) {
+      ev.preventDefault();
+      handleQInputSubmit(qInput.value);
+    }
+  });
+  qInput.addEventListener('keyup', (ev) => {
+    if (ev.key === 'Enter' || ev.keyCode === 13) {
+      ev.preventDefault();
+      handleQInputSubmit(qInput.value);
+    }
+  });
+
+  // optional: xử lý khi thay đổi ô input (nhấn tab hoặc blur)
+  qInput.addEventListener('change', () => {
+    // nếu muốn tự động load khi thay đổi, bỏ comment dòng dưới
+    // handleQInputSubmit(qInput.value);
   });
 
   btnConfirm.addEventListener('click', () => {
