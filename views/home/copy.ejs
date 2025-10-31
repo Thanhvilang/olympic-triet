@@ -239,74 +239,70 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 <script>
   // Dữ liệu câu hỏi mẫu (50 câu)
-  // const questions = [
-  //   {
-  //     q: "Đây là câu hỏi ví dụ số 1. Thủ đô của Việt Nam là gì?",
-  //     answers: ["Hà Nội", "Đà Nẵng", "TP. Hồ Chí Minh", "Hải Phòng"],
-  //     correct: "A",
-  //   },
-  //   {
-  //     q: "Đây là câu hỏi ví dụ số 2. Thủ đô của Việt Nam là gì?",
-  //     answers: ["Hà Nội", "Đà Nẵng", "TP. Hồ Chí Minh", "Hải Phòng"],
-  //     correct: "A",
-  //   },
-  //   {
-  //     q: "Sông dài nhất Việt Nam là?",
-  //     answers: ["Sông Hồng", "Sông Mekong", "Sông Đồng Nai", "Sông Cửu Long"],
-  //     correct: "B",
-  //   },
-  //   {
-  //     q: "Việt Nam có bao nhiêu tỉnh thành?",
-  //     answers: ["61", "62", "63", "64"],
-  //     correct: "C",
-  //   },
-  //   {
-  //     q: "Quốc hoa của Việt Nam là?",
-  //     answers: ["Hoa sen", "Hoa đào", "Hoa mai", "Hoa cúc"],
-  //     correct: "A",
-  //   },
-  //   {
-  //     q: "Việt Nam nằm ở khu vực nào?",
-  //     answers: ["Đông Nam Á", "Đông Á", "Nam Á", "Tây Á"],
-  //     correct: "A",
-  //   },
-  //   {
-  //     q: "Diện tích Việt Nam là?",
-  //     answers: ["331.212 km²", "329.241 km²", "330.967 km²", "332.698 km²"],
-  //     correct: "C",
-  //   },
-  //   {
-  //     q: "Việt Nam có bờ biển dài?",
-  //     answers: ["3.200 km", "3.260 km", "3.444 km", "3.500 km"],
-  //     correct: "C",
-  //   },
-  //   {
-  //     q: "Núi cao nhất Việt Nam là?",
-  //     answers: ["Phan Xi Păng", "Ngọc Linh", "Bạch Mã", "Tây Côn Lĩnh"],
-  //     correct: "A",
-  //   },
-  //   {
-  //     q: "Việt Nam giành độc lập năm nào?",
-  //     answers: ["1945", "1954", "1975", "1976"],
-  //     correct: "A",
-  //   },
-  // ];
+  const questions = [
+    {
+      q: "Đây là câu hỏi ví dụ số 1. Thủ đô của Việt Nam là gì?",
+      answers: ["Hà Nội", "Đà Nẵng", "TP. Hồ Chí Minh", "Hải Phòng"],
+      correct: "A",
+    },
+    {
+      q: "Đây là câu hỏi ví dụ số 2. Thủ đô của Việt Nam là gì?",
+      answers: ["Hà Nội", "Đà Nẵng", "TP. Hồ Chí Minh", "Hải Phòng"],
+      correct: "A",
+    },
+    {
+      q: "Sông dài nhất Việt Nam là?",
+      answers: ["Sông Hồng", "Sông Mekong", "Sông Đồng Nai", "Sông Cửu Long"],
+      correct: "B",
+    },
+    {
+      q: "Việt Nam có bao nhiêu tỉnh thành?",
+      answers: ["61", "62", "63", "64"],
+      correct: "C",
+    },
+    {
+      q: "Quốc hoa của Việt Nam là?",
+      answers: ["Hoa sen", "Hoa đào", "Hoa mai", "Hoa cúc"],
+      correct: "A",
+    },
+    {
+      q: "Việt Nam nằm ở khu vực nào?",
+      answers: ["Đông Nam Á", "Đông Á", "Nam Á", "Tây Á"],
+      correct: "A",
+    },
+    {
+      q: "Diện tích Việt Nam là?",
+      answers: ["331.212 km²", "329.241 km²", "330.967 km²", "332.698 km²"],
+      correct: "C",
+    },
+    {
+      q: "Việt Nam có bờ biển dài?",
+      answers: ["3.200 km", "3.260 km", "3.444 km", "3.500 km"],
+      correct: "C",
+    },
+    {
+      q: "Núi cao nhất Việt Nam là?",
+      answers: ["Phan Xi Păng", "Ngọc Linh", "Bạch Mã", "Tây Côn Lĩnh"],
+      correct: "A",
+    },
+    {
+      q: "Việt Nam giành độc lập năm nào?",
+      answers: ["1945", "1954", "1975", "1976"],
+      correct: "A",
+    },
+  ];
 
   // Tạo đủ 50 câu (lặp lại các câu có sẵn)
-  // while (questions.length < 50) {
-  //   questions.push({
-  //     ...questions[questions.length % 10],
-  //     q:
-  //       `Câu ${questions.length + 1}: ` +
-  //       questions[questions.length % 10].q.substring(
-  //         questions[questions.length % 10].q.indexOf(":") + 2
-  //       ),
-  //   });
-  // }
-
-  let questions = JSON.parse('<%- JSON.stringify(generalTest).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
-
-
+  while (questions.length < 50) {
+    questions.push({
+      ...questions[questions.length % 10],
+      q:
+        `Câu ${questions.length + 1}: ` +
+        questions[questions.length % 10].q.substring(
+          questions[questions.length % 10].q.indexOf(":") + 2
+        ),
+    });
+  }
 
   let currentQuestion = 0;
   let userAnswers = new Array(50).fill(null);

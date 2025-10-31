@@ -13,6 +13,11 @@ const questionsData = JSON.parse(
 const multipleData = JSON.parse(
   fs.readFileSync(path.join(__dirname, "database", "multiple.json"), "utf8")
 );
+
+const generalTest = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "database", "general.json"), "utf8")
+);
+
 const homeController = {
   index: (req, res) => {
     res.render("home/index", {
@@ -42,6 +47,7 @@ const homeController = {
     res.render("home/generalTest", {
       title: "Trắc nghiệm kiến thức chung",
       message: "Đây là phần trắc nghiệm kiến thức chung",
+      generalTest,
     });
   },
   introduction: (req, res) => {
