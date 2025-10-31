@@ -338,7 +338,7 @@
         // tô lựa chọn (chưa chấm)
         document.querySelectorAll('.answer-card').forEach(c => c.classList.remove('selected'));
         card.classList.add('selected');
-        userChoice = idx;
+        userChoice = idx + 1;
       });
 
       answersGrid.appendChild(card);
@@ -398,7 +398,7 @@
 
     // Hiển thị đáp án đúng/sai
     document.querySelectorAll('.answer-card').forEach(el => {
-      console.log(el.dataset.index, correctIndex, userChoice);
+      // console.log(el.dataset.index, correctIndex, userChoice);
       const i = Number(el.dataset.index);
       if (i === correctIndex) el.classList.add('correct');
       if (userChoice !== null && i === userChoice && i !== correctIndex) el.classList.add('wrong');
