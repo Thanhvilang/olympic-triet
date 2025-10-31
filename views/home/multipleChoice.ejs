@@ -159,8 +159,16 @@
 <div class="quiz-shell">
   <!-- input chọn số câu -->
   <div class="mb-3">
-    <label for="qInput" class="form-label">Nhập số thứ tự câu hỏi (1 - <span id="totalCount">9</span>)</label>
-    <input id="qInput" type="number" min="1" class="form-control" placeholder="Nhập số và Enter để load câu" />
+    <label for="qInput" class="form-label"
+      >Nhập số thứ tự câu hỏi (1 - <span id="totalCount">9</span>)</label
+    >
+    <input
+      id="qInput"
+      type="number"
+      min="1"
+      class="form-control"
+      placeholder="Nhập số và Enter để load câu"
+    />
   </div>
 
   <div class="row g-3">
@@ -175,7 +183,9 @@
       </div>
 
       <div class="mt-3">
-        <button id="btnConfirm" class="btn btn-primary" disabled>Xác nhận trả lời</button>
+        <button id="btnConfirm" class="btn btn-primary" disabled>
+          Xác nhận trả lời
+        </button>
         <div id="resultBanner" class="result-banner mt-2"></div>
       </div>
     </div>
@@ -184,19 +194,24 @@
     <div class="col-md-4">
       <div class="timer-box p-3">
         <div id="timer" class="timer">15</div>
-        <div id="userTime" class="result-banner text-secondary mt-2">Thời gian trả lời: -</div>
+        <div id="userTime" class="result-banner text-secondary mt-2">
+          Thời gian trả lời: -
+        </div>
       </div>
     </div>
   </div>
 
   <div class="footer-note mt-3">
-    Thời gian tối đa 15 giây. Khi còn 5 giây đèn sẽ nhấp nháy đỏ. Hết giờ sẽ hiển thị "Hết giờ".
+    Thời gian tối đa 15 giây. Khi còn 5 giây đèn sẽ nhấp nháy đỏ. Hết giờ sẽ
+    hiển thị "Hết giờ".
   </div>
 </div>
 
 <script>
-  const TOTAL_PICK = 9; // giữ nguyên bộ câu hỏi đang load (QUESTION_DB)
+  const TOTAL_PICK = 90; // giữ nguyên bộ câu hỏi đang load (QUESTION_DB)
   const TIME_LIMIT = 15.0;
+
+  let QUESTION_DB = JSON.parse('<%- JSON.stringify(multipleData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
 
   // Các phần tử UI
   const qInput = document.getElementById('qInput');
