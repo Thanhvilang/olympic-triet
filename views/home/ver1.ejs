@@ -215,215 +215,275 @@
 </div>
 
 <script>
-  const TOTAL_PICK = 90; // giữ nguyên bộ câu hỏi đang load (QUESTION_DB)
-  const TIME_LIMIT = 15.0;
+    const TOTAL_PICK = 90; // giữ nguyên bộ câu hỏi đang load (QUESTION_DB)
+    const TIME_LIMIT = 15.0;
 
-  let QUESTION_DB = JSON.parse('<%- JSON.stringify(multipleData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
+    let QUESTION_DB = JSON.parse('<%- JSON.stringify(multipleData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
+    let newCorrectIndex = null;
+    // Các phần tử UI
+    const qInput = document.getElementById('qInput');
+    const totalCountEl = document.getElementById('totalCount');
+    const questionBox = document.getElementById('questionBox');
+    const answersGrid = document.getElementById('answersGrid');
+    const timerEl = document.getElementById('timer');
+    const userTimeEl = document.getElementById('userTime');
+    const btnConfirm = document.getElementById('btnConfirm');
+    const resultBanner = document.getElementById('resultBanner');
 
-  // Các phần tử UI
-  const qInput = document.getElementById('qInput');
-  const totalCountEl = document.getElementById('totalCount');
-  const questionBox = document.getElementById('questionBox');
-  const answersGrid = document.getElementById('answersGrid');
-  const timerEl = document.getElementById('timer');
-  const userTimeEl = document.getElementById('userTime');
-  const btnConfirm = document.getElementById('btnConfirm');
-  const resultBanner = document.getElementById('resultBanner');
+    // trạng thái
+    let currentIndex = null; // index trong QUESTION_DB (0-based)
+    let timerId = null;
+    let startTs = 0;
+    let running = false;
+    let userChoice = null; // 0..3
+    let answeredShown = false;
 
-  // trạng thái
-  let currentIndex = null; // index trong QUESTION_DB (0-based)
-  let timerId = null;
-  let startTs = 0;
-  let running = false;
-  let userChoice = null; // 0..3
-  let answeredShown = false;
+    // đảm bảo QUESTION_DB được load (biến sẵn trong file)
+    // hiển thị số câu tối đa
+    totalCountEl.textContent = QUESTION_DB.length || TOTAL_PICK;
 
-  // đảm bảo QUESTION_DB được load (biến sẵn trong file)
-  // hiển thị số câu tối đa
-  totalCountEl.textContent = QUESTION_DB.length || TOTAL_PICK;
-
-  function getCorrectIndex(q) {
-    // Hỗ trợ nhiều dạng dữ liệu: q.a (0-based) hoặc q.correct ("A"/"B"/"C"/"D")
-    if (typeof q.a !== 'undefined') return Number(q.a);
-    if (typeof q.correct === 'string') {
-      const map = { 'A':0,'B':1,'C':2,'D':3 };
-      const up = q.correct.trim().toUpperCase();
-      return map[up] ?? 0;
+    function getCorrectIndex(q) {
+      // Hỗ trợ nhiều dạng dữ liệu: q.a (0-based) hoặc q.correct ("A"/"B"/"C"/"D")
+      if (typeof q.a !== 'undefined') return Number(q.a);
+      if (typeof q.correct === 'string') {
+        const map = { 'A':0,'B':1,'C':2,'D':3 };
+        const up = q.correct.trim().toUpperCase();
+        return map[up] ?? 0;
+      }
+      return 0;
     }
-    return 0;
-  }
 
-  function lockAnswers() {
-    document.querySelectorAll('.answer-card').forEach(c => {
-      c.classList.add('muted');
-      c.style.pointerEvents = 'none';
-    });
-  }
-  function unlockAnswers() {
-    document.querySelectorAll('.answer-card').forEach(c => {
-      c.classList.remove('muted');
-      c.style.pointerEvents = 'auto';
-    });
-  }
+    function lockAnswers() {
+      document.querySelectorAll('.answer-card').forEach(c => {
+        c.classList.add('muted');
+        c.style.pointerEvents = 'none';
+      });
+    }
+    function unlockAnswers() {
+      document.querySelectorAll('.answer-card').forEach(c => {
+        c.classList.remove('muted');
+        c.style.pointerEvents = 'auto';
+      });
+    }
 
-  function startTimer() {
-    clearInterval(timerId);
-    running = true;
-    timerEl.classList.remove('blink');
-    timerEl.classList.remove('text-danger');
-    timerEl.textContent = Math.round(TIME_LIMIT);
-    startTs = performance.now();
-    unlockAnswers();
-    btnConfirm.disabled = false;
-    answeredShown = false;
-    userTimeEl.textContent = 'Thời gian trả lời: -';
+    function startTimer() {
+      clearInterval(timerId);
+      running = true;
+      timerEl.classList.remove('blink');
+      timerEl.classList.remove('text-danger');
+      timerEl.textContent = Math.round(TIME_LIMIT);
+      startTs = performance.now();
+      unlockAnswers();
+      btnConfirm.disabled = false;
+      answeredShown = false;
+      userTimeEl.textContent = 'Thời gian trả lời: -';
 
-    timerId = setInterval(() => {
-      const elapsed = (performance.now() - startTs) / 1000;
-      const remain = Math.max(0, TIME_LIMIT - elapsed);
-      timerEl.textContent = Math.ceil(remain);
-      if (remain <= 5 && remain > 0) {
-        timerEl.classList.add('blink');
-        timerEl.classList.add('text-danger');
-      } else {
-        timerEl.classList.remove('blink');
-        timerEl.classList.remove('text-danger');
+      timerId = setInterval(() => {
+        const elapsed = (performance.now() - startTs) / 1000;
+        const remain = Math.max(0, TIME_LIMIT - elapsed);
+        timerEl.textContent = Math.ceil(remain);
+        if (remain <= 5 && remain > 0) {
+          timerEl.classList.add('blink');
+          timerEl.classList.add('text-danger');
+        } else {
+          timerEl.classList.remove('blink');
+          timerEl.classList.remove('text-danger');
+        }
+        if (remain <= 0) {
+          clearInterval(timerId);
+          running = false;
+          timerEl.textContent = 'Hết giờ';
+          lockAnswers();
+          btnConfirm.disabled = false; // cho phép bấm xác nhận sau khi hết giờ
+        }
+      }, 100);
+    }
+
+    // Add this shuffle function at the top of your script
+  function shuffleArray(array, keepLastIfStartsWith) {
+    if (!array || array.length <= 1) return array;
+
+    if (keepLastIfStartsWith && array[3]?.toLowerCase().startsWith("cả a")) {
+      // Only shuffle first 3 elements if last answer starts with "cả a"
+      for (let i = 2; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
       }
-      if (remain <= 0) {
-        clearInterval(timerId);
-        running = false;
-        timerEl.textContent = 'Hết giờ';
-        lockAnswers();
-        btnConfirm.disabled = false; // cho phép bấm xác nhận sau khi hết giờ
+    } else {
+      // Shuffle all elements
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
       }
-    }, 100);
+    }
+    return array;
   }
 
-  function renderQuestionByIndex(i) {
-    const q = QUESTION_DB[i];
-    if (!q) return;
-    currentIndex = i;
-    userChoice = null;
-    resultBanner.textContent = '';
-    // Hiển thị câu hỏi
-    questionBox.textContent = q.q ?? q.question ?? '(Không có nội dung)';
-    // tạo đáp án
-    const labels = ['A','B','C','D'];
-    answersGrid.innerHTML = '';
-    (q.o || q.o || []).forEach((opt, idx) => {
-      const card = document.createElement('div');
-      card.className = `answer-card answer-${labels[idx]}`;
-      card.dataset.index = idx;
-      card.style.display = 'flex';
-      card.style.marginBottom = '8px';
-      card.style.padding = '10px';
-      card.style.borderRadius = '8px';
+  // Modify the renderQuestionByIndex function
+    function renderQuestionByIndex(i) {
+      const q = QUESTION_DB[i];
+      if (!q) return;
+      currentIndex = i;
+      userChoice = null;
+      resultBanner.textContent = '';
 
-      const lab = document.createElement('div');
-      lab.className = 'answer-label';
-      lab.textContent = labels[idx];
-      lab.style.minWidth = '56px';
-      lab.style.background = ''; // màu đã có css via classes
+      // Hiển thị câu hỏi
+      questionBox.textContent = q.q ?? q.question ?? '(Không có nội dung)';
 
-      const txt = document.createElement('div');
-      txt.className = 'answer-text';
-      txt.textContent = opt;
+      // Clone options array to avoid modifying original data
+      const options = [...(q.o || [])];
 
-      card.appendChild(lab);
-      card.appendChild(txt);
+      // Shuffle options with special condition
+      const shuffledOptions = shuffleArray(options, true);
 
-      card.addEventListener('click', () => {
-        if (!running && timerEl.textContent !== 'Hết giờ') return; // chưa bắt đầu
-        if (answeredShown) return;
-        // tô lựa chọn (chưa chấm)
-        document.querySelectorAll('.answer-card').forEach(c => c.classList.remove('selected'));
-        card.classList.add('selected');
-        userChoice = idx;
+      // Get the original correct answer index before shuffle
+      const originalCorrectIndex = getCorrectIndex(q) - 1 ;
+      // console.log("originalCorrectIndex:", originalCorrectIndex);
+      console.log(q.o[originalCorrectIndex],0);
+
+      console.log(shuffledOptions)
+         // Find new correct index after shuffle
+      newCorrectIndex = shuffledOptions.findIndex(
+        (opt, idx) => opt === q.o[originalCorrectIndex]
+      );
+      console.log("newCorrectIndex:", newCorrectIndex);
+
+      // Update correct answer index
+      // if (typeof q.a !== 'undefined') {
+      //   q.a = newCorrectIndex;
+      // } else if (typeof q.correct === 'string') {
+      //   q.correct = ['A','B','C','D'][newCorrectIndex];
+      // }
+      // console.log("q",q);
+
+
+      // tạo đáp án
+      const labels = ['A','B','C','D'];
+      answersGrid.innerHTML = '';
+
+      shuffledOptions.forEach((opt, idx) => {
+        const card = document.createElement('div');
+        card.className = `answer-card answer-${labels[idx]}`;
+        card.dataset.index = idx;
+        card.style.display = 'flex';
+        card.style.marginBottom = '8px';
+        card.style.padding = '10px';
+        card.style.borderRadius = '8px';
+
+        const lab = document.createElement('div');
+        lab.className = 'answer-label';
+        lab.textContent = labels[idx];
+        lab.style.minWidth = '56px';
+        lab.style.background = ''; // màu đã có css via classes
+
+        const txt = document.createElement('div');
+        txt.className = 'answer-text';
+        txt.textContent = opt;
+
+        card.appendChild(lab);
+        card.appendChild(txt);
+
+        card.addEventListener('click', () => {
+          if (!running && timerEl.textContent !== 'Hết giờ') return; // chưa bắt đầu
+          if (answeredShown) return;
+          // tô lựa chọn (chưa chấm)
+          document.querySelectorAll('.answer-card').forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          userChoice = idx;
+        });
+
+        answersGrid.appendChild(card);
       });
 
-      answersGrid.appendChild(card);
+      // bắt đầu timer
+      startTimer();
+    }
+
+    // xử lý Enter trên input
+    function handleQInputSubmit(valRaw) {
+      const valNum = Number(String(valRaw).trim());
+      if (!Number.isInteger(valNum) || valNum < 1 || valNum > QUESTION_DB.length) {
+        alert('Số câu không hợp lệ');
+        return;
+      }
+      // load câu tương ứng (1-based -> 0-based)
+      renderQuestionByIndex(valNum - 1);
+    }
+
+    // bắt cả keydown và keyup để chắc chắn bắt Enter trên mọi trình duyệt
+    qInput.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.keyCode === 13) {
+        ev.preventDefault();
+        handleQInputSubmit(qInput.value);
+      }
+    });
+    // qInput.addEventListener('keyup', (ev) => {
+    //   if (ev.key === 'Enter' || ev.keyCode === 13) {
+    //     ev.preventDefault();
+    //     handleQInputSubmit(qInput.value);
+    //   }
+    // });
+
+    // optional: xử lý khi thay đổi ô input (nhấn tab hoặc blur)
+    qInput.addEventListener('change', () => {
+      // nếu muốn tự động load khi thay đổi, bỏ comment dòng dưới
+      // handleQInputSubmit(qInput.value);
     });
 
-    // bắt đầu timer
-    startTimer();
-  }
+    btnConfirm.addEventListener('click', () => {
+      if (currentIndex === null) return;
+      if (answeredShown) return;
+      // dừng timer và tính thời gian trả lời
+      clearInterval(timerId);
+      running = false;
+      let timeTaken = TIME_LIMIT;
+      if (timerEl.textContent === 'Hết giờ') {
+        timeTaken = TIME_LIMIT;
+      } else {
+        timeTaken = Math.min(TIME_LIMIT, (performance.now() - startTs) / 1000);
+      }
+      userTimeEl.textContent = `Thời gian trả lời: ${timeTaken.toFixed(2)}s`;
 
-  // xử lý Enter trên input
-  function handleQInputSubmit(valRaw) {
-    const valNum = Number(String(valRaw).trim());
-    if (!Number.isInteger(valNum) || valNum < 1 || valNum > QUESTION_DB.length) {
-      alert('Số câu không hợp lệ');
-      return;
-    }
-    // load câu tương ứng (1-based -> 0-based)
-    renderQuestionByIndex(valNum - 1);
-  }
 
-  // bắt cả keydown và keyup để chắc chắn bắt Enter trên mọi trình duyệt
-  qInput.addEventListener('keydown', (ev) => {
-    if (ev.key === 'Enter' || ev.keyCode === 13) {
-      ev.preventDefault();
-      handleQInputSubmit(qInput.value);
-    }
-  });
-  qInput.addEventListener('keyup', (ev) => {
-    if (ev.key === 'Enter' || ev.keyCode === 13) {
-      ev.preventDefault();
-      handleQInputSubmit(qInput.value);
-    }
-  });
+      // // Find new correct index after shuffle
+      // const newCorrectIndex = shuffledOptions.findIndex(
+      //   (opt, idx) => opt === q.o[originalCorrectIndex]
+      // );
+      // // console.log("newCorrectIndex:", newCorrectIndex);
 
-  // optional: xử lý khi thay đổi ô input (nhấn tab hoặc blur)
-  qInput.addEventListener('change', () => {
-    // nếu muốn tự động load khi thay đổi, bỏ comment dòng dưới
-    // handleQInputSubmit(qInput.value);
-  });
+      const q = QUESTION_DB[currentIndex];
+      // const correctIndex = getCorrectIndex(q);
+      console.log("newCorrectIndex:", newCorrectIndex);
 
-  btnConfirm.addEventListener('click', () => {
-    if (currentIndex === null) return;
-    if (answeredShown) return;
-    // dừng timer và tính thời gian trả lời
-    clearInterval(timerId);
-    running = false;
-    let timeTaken = TIME_LIMIT;
-    if (timerEl.textContent === 'Hết giờ') {
-      timeTaken = TIME_LIMIT;
-    } else {
-      timeTaken = Math.min(TIME_LIMIT, (performance.now() - startTs) / 1000);
-    }
-    userTimeEl.textContent = `Thời gian trả lời: ${timeTaken.toFixed(2)}s`;
 
-    const q = QUESTION_DB[currentIndex];
-    const correctIndex = getCorrectIndex(q) - 1 ;
+      // Hiển thị đáp án đúng/sai
+      document.querySelectorAll('.answer-card').forEach(el => {
+        console.log(el.dataset.index, newCorrectIndex, userChoice);
+        const i = Number(el.dataset.index);
+        if (i === newCorrectIndex) el.classList.add('correct');
+        if (userChoice !== null && i === userChoice && i !== newCorrectIndex) el.classList.add('wrong');
+        // vô hiệu hóa tương tác
+        el.style.pointerEvents = 'none';
+      });
 
-    // Hiển thị đáp án đúng/sai
-    document.querySelectorAll('.answer-card').forEach(el => {
-      console.log(el.dataset.index, correctIndex, userChoice);
-      const i = Number(el.dataset.index);
-      if (i === correctIndex) el.classList.add('correct');
-      if (userChoice !== null && i === userChoice && i !== correctIndex) el.classList.add('wrong');
-      // vô hiệu hóa tương tác
-      el.style.pointerEvents = 'none';
+      // banner
+      if (userChoice === null) {
+        resultBanner.textContent = '⏰ Hết giờ hoặc chưa chọn. Trả lời sai.';
+      } else if (userChoice === newCorrectIndex) {
+        resultBanner.textContent = `✅ Chính xác! Thời gian: ${timeTaken.toFixed(2)}s`;
+      } else {
+        resultBanner.textContent = `❌ Sai! Thời gian: ${timeTaken.toFixed(2)}s`;
+      }
+
+      btnConfirm.disabled = true;
+      answeredShown = true;
     });
 
-    // banner
-    if (userChoice === null) {
-      resultBanner.textContent = '⏰ Hết giờ hoặc chưa chọn. Trả lời sai.';
-    } else if (userChoice === correctIndex) {
-      resultBanner.textContent = `✅ Chính xác! Thời gian: ${timeTaken.toFixed(2)}s`;
+    // helper: nếu QUESTION_DB chưa có, disable input
+    if (!Array.isArray(QUESTION_DB) || QUESTION_DB.length === 0) {
+      qInput.disabled = true;
+      qInput.placeholder = 'Không có dữ liệu câu hỏi';
     } else {
-      resultBanner.textContent = `❌ Sai! Thời gian: ${timeTaken.toFixed(2)}s`;
+      totalCountEl.textContent = QUESTION_DB.length;
     }
-
-    btnConfirm.disabled = true;
-    answeredShown = true;
-  });
-
-  // helper: nếu QUESTION_DB chưa có, disable input
-  if (!Array.isArray(QUESTION_DB) || QUESTION_DB.length === 0) {
-    qInput.disabled = true;
-    qInput.placeholder = 'Không có dữ liệu câu hỏi';
-  } else {
-    totalCountEl.textContent = QUESTION_DB.length;
-  }
 </script>
