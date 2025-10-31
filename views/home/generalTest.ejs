@@ -303,7 +303,14 @@
   //       ),
   //   });
   // }
-
+  // Xao trộn câu hỏi
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // hoán đổi vị trí
+    }
+    return array;
+  }
   let questions = JSON.parse('<%- JSON.stringify(generalTest).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
   questions = shuffle(questions);
   console.log(questions);
@@ -414,14 +421,14 @@
     currentQuestion = index;
     displayQuestion();
   }
-  // Xao trộn câu hỏi
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]]; // hoán đổi vị trí
-    }
-    return array;
-  }
+  // // Xao trộn câu hỏi
+  // function shuffle(array) {
+  //   for (let i = array.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [array[i], array[j]] = [array[j], array[i]]; // hoán đổi vị trí
+  //   }
+  //   return array;
+  // }
   // Timer
   function startTimer() {
     timerInterval = setInterval(() => {
