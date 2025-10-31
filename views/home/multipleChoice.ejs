@@ -219,7 +219,7 @@
     const TIME_LIMIT = 15.0;
 
     let QUESTION_DB = JSON.parse('<%- JSON.stringify(multipleData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
-    const newCorrectIndex = null;
+    let newCorrectIndex = null;
     // Các phần tử UI
     const qInput = document.getElementById('qInput');
     const totalCountEl = document.getElementById('totalCount');
