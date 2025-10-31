@@ -443,17 +443,17 @@
       }
       userTimeEl.textContent = `Thời gian trả lời: ${timeTaken.toFixed(2)}s`;
 
-      const q = QUESTION_DB[currentIndex];
-      const correctIndex = getCorrectIndex(q);
-      console.log("correctIndex:", correctIndex);
+      // const q = QUESTION_DB[currentIndex];
+      // const correctIndex = getCorrectIndex(q);
+      // console.log("correctIndex:", correctIndex);
 
 
       // Hiển thị đáp án đúng/sai
       document.querySelectorAll('.answer-card').forEach(el => {
-        console.log(el.dataset.index, correctIndex, userChoice);
+        console.log(el.dataset.index, newCorrectIndex, userChoice);
         const i = Number(el.dataset.index);
-        if (i === correctIndex) el.classList.add('correct');
-        if (userChoice !== null && i === userChoice && i !== correctIndex) el.classList.add('wrong');
+        if (i === newCorrectIndex) el.classList.add('correct');
+        if (userChoice !== null && i === userChoice && i !== newCorrectIndex) el.classList.add('wrong');
         // vô hiệu hóa tương tác
         el.style.pointerEvents = 'none';
       });
