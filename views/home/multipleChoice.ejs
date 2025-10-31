@@ -339,13 +339,13 @@
       // Get the original correct answer index before shuffle
       const originalCorrectIndex = getCorrectIndex(q) - 1 ;
       // console.log("originalCorrectIndex:", originalCorrectIndex);
-      console.log(q.o[originalCorrectIndex]);
+      // console.log(q.o[originalCorrectIndex]);
 
       // Find new correct index after shuffle
       const newCorrectIndex = shuffledOptions.findIndex(
         (opt, idx) => opt === q.o[originalCorrectIndex]
       );
-      console.log("newCorrectIndex:", newCoqrrectIndex);
+      console.log("newCorrectIndex:", newCorrectIndex);
 
       // Update correct answer index
       if (typeof q.a !== 'undefined') {
