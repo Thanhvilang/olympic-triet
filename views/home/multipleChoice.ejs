@@ -394,7 +394,7 @@
     userTimeEl.textContent = `Thời gian trả lời: ${timeTaken.toFixed(2)}s`;
 
     const q = QUESTION_DB[currentIndex];
-    const correctIndex = getCorrectIndex(q);
+    const correctIndex = getCorrectIndex(q) - 1 ;
 
     // Hiển thị đáp án đúng/sai
     document.querySelectorAll('.answer-card').forEach(el => {
