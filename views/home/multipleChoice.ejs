@@ -416,12 +416,12 @@
         handleQInputSubmit(qInput.value);
       }
     });
-    qInput.addEventListener('keyup', (ev) => {
-      if (ev.key === 'Enter' || ev.keyCode === 13) {
-        ev.preventDefault();
-        handleQInputSubmit(qInput.value);
-      }
-    });
+    // qInput.addEventListener('keyup', (ev) => {
+    //   if (ev.key === 'Enter' || ev.keyCode === 13) {
+    //     ev.preventDefault();
+    //     handleQInputSubmit(qInput.value);
+    //   }
+    // });
 
     // optional: xử lý khi thay đổi ô input (nhấn tab hoặc blur)
     qInput.addEventListener('change', () => {
