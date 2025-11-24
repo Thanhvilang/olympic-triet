@@ -167,11 +167,11 @@
 
     if (Array.isArray(questions) && questions.length > 0) {
       // Shuffle để random thứ tự câu hỏi
-      questions = shuffle(questions).map((q, idx) => ({
-        id: idx + 1,
-        question: decodeHTMLEntities(q.question),
-        answer: decodeHTMLEntities(q.answer),
-      }));
+      // questions = shuffle(questions).map((q, idx) => ({
+      //   id: idx + 1,
+      //   question: decodeHTMLEntities(q.question),
+      //   answer: decodeHTMLEntities(q.answer),
+      // }));
 
       questionBox.innerHTML = `<h4>Chọn số câu hỏi để bắt đầu</h4>`;
     } else {
