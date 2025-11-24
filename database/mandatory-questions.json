@@ -1,1102 +1,1454 @@
+// [
+//   {
+//     "id": 1,
+//     "question": "Chủ nghĩa Mác - Lênin là gì?",
+//     "answer": "- Là hệ thống những quan điểm và học thuyết khoa học của C. Mác, Ph.Ăngghen và sự phát triển của V.I.Lênin\n- Là sự kế thừa và phát triển những giá trị của lịch sử tư tưởng nhân loại, trên cơ sở thực tiễn của thời đại\n- Là khoa học về giải phóng giai cấp công nhân, giải phóng nhân dân lao động và giải phóng con người\n- Là thế giới quan và phương pháp luận phổ biến của nhận thức khoa học."
+//   },
+//   {
+//     "id": 2,
+//     "question": "Ba bộ phận lý luận cấu thành chủ nghĩa Mác - Lênin là gì?",
+//     "answer": "- Triết học Mác - Lênin\n- Kinh tế chính trị học Mác - Lênin \n- Chủ nghĩa xã hội khoa học"
+//   },
+//   {
+//     "id": 3,
+//     "question": "Triết học Mác - Lênin là gì?",
+//     "answer": "- Là hệ thống thế giới quan, phương pháp luận khoa học và cách mạng\n- Vũ khí tinh thần của giai cấp công nhân, nhân dân lao động trong nhận thức và cải tạo thế giới"
+//   },
+//   {
+//     "id": 4,
+//     "question": "Đối tượng nghiên cứu của Triết học Mác - Lênin là gì?",
+//     "answer": "- Mối quan hệ giữa vật chất và ý thức trên lập trường duy vật biện chứng\n- Các quy luật vận động, phát triển chung nhất của tự nhiên, xã hội và tư duy"
+//   },
+//   {
+//     "id": 5,
+//     "question": "Đặc điểm của Triết học Mác - Lênin?",
+//     "answer": "- Triết học Mác - Lênin có sự thống nhất chặt chẽ giữa tính đảng và tính khoa học\n- Triết học Mác - Lênin luôn gắn bó chặt chẽ giữa lý luận và thực tiễn\n- Triết học Mác - Lênin có tính sáng tạo"
+//   },
+//   {
+//     "id": 6,
+//     "question": "Chức năng của Triết học Mác - Lênin?",
+//     "answer": "- Chức năng nhận thức\n- Chức năng dự báo\n- Chức năng giáo dục\n- Chức năng thế giới quan\n- Chức năng phương pháp luận"
+//   },
+//   {
+//     "id": 7,
+//     "question": "Định nghĩa vật chất của Lênin",
+//     "answer": "- Vật chất là một phạm trù triết học dùng để chỉ thực tại khách quan được đem lại cho con người trong cảm giác\n- Được cảm giác của chúng ta chép lại, chụp lại, phản ánh và tồn tại không lệ thuộc vào cảm giác"
+//   },
+//   {
+//     "id": 8,
+//     "question": "Các hình thức tồn tại của vật chất là gì?",
+//     "answer": "- Vận động của vật chất\n- Không gian và thời gian"
+//   },
+//   {
+//     "id": 9,
+//     "question": "Nguồn gốc của ý thức?",
+//     "answer": "- Nguồn gốc tự nhiên\n- Nguồn gốc xã hội"
+//   },
+//   {
+//     "id": 10,
+//     "question": "Ý thức là gì?",
+//     "answer": "- Là sự phản ánh hiện thực khách quan vào trong bộ óc con người một cách năng động, sáng tạo\n- Là hình ảnh chủ quan của thế giới khách quan"
+//   },
+//   {
+//     "id": 11,
+//     "question": "Kết cấu của ý thức theo chiều ngang gồm những yếu tố nào?",
+//     "answer": "- Tri thức\n- Tình cảm\n- Niềm tin\n- Lý trí\n- Ý chí"
+//   },
+//   {
+//     "id": 12,
+//     "question": "Kết cấu của ý thức theo chiều dọc gồm những yếu tố nào?",
+//     "answer": "- Tự ý thức\n- Tiềm thức\n- Vô thức"
+//   },
+//   {
+//     "id": 13,
+//     "question": "Phép biện chứng duy vật bao gồm những nguyên lý cơ bản nào?",
+//     "answer": "- Nguyên lý về mối liên hệ phổ biến\n- Nguyên lý về sự phát triển"
+//   },
+//   {
+//     "id": 14,
+//     "question": "Tính chất của hai nguyên lý cơ bản của phép biện chứng duy vật là gì?",
+//     "answer": "- Tính khách quan\n- Tính phổ biến\n- Tính đa dạng, phong phú"
+//   },
+//   {
+//     "id": 15,
+//     "question": "Phép biện chứng duy vật bao gồm những quy luật cơ bản nào?",
+//     "answer": "- Quy luật chuyển hóa từ những thay đổi về lượng thành những thay đổi về chất và ngược lại\n- Quy luật thống nhất và đấu tranh của các mặt đối lập\n- Quy luật phủ định của phủ định"
+//   },
+//   {
+//     "id": 16,
+//     "question": "Sản xuất vật chất là gì?",
+//     "answer": "- Là quá trình con người sử dụng công cụ lao động tác động vào tự nhiên, cải biến các dạng vật chất của giới tự nhiên\n- Để tạo ra của cải xã hội, nhằm thỏa mãn nhu cầu tồn tại và phát triển của con người"
+//   },
+//   {
+//     "id": 17,
+//     "question": "Phương thức sản xuất là gì?",
+//     "answer": "Là cách thức con người sản xuất ra của cải vật chất ở những giai đoạn lịch sử nhất định"
+//   },
+//   {
+//     "id": 18,
+//     "question": "Lực lượng sản xuất là gì?",
+//     "answer": "- Là năng lực thực tiễn cải biến giới tự nhiên của con người nhằm đáp ứng nhu cầu đời sống của mình\n- Là sự thống nhất hữu cơ giữa người lao động và tư liệu sản xuất, mà trước hết là công cụ lao động"
+//   },
+//   {
+//     "id": 19,
+//     "question": "Tư liệu sản xuất là gì?",
+//     "answer": "Là tổng thể những yếu tố vật chất của quá trình lao động bao gồm đối tượng lao động và tư liệu lao động"
+//   },
+//   {
+//     "id": 20,
+//     "question": "Quan hệ sản xuất là gì?",
+//     "answer": "Là quan hệ giữa người với người trong quá trình sản xuất ở những giai đoạn lịch sử nhất định"
+//   },
+//   {
+//     "id": 21,
+//     "question": "Nội dung quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng sản xuất?",
+//     "answer": "Lực lượng sản xuất và quan hệ sản xuất là hai mặt hợp thành của phương thức sản xuất, thống nhất biện chứng; trong đó, lực lượng sản xuất quyết định quan hệ sản xuất, quan hệ sản xuất tác động trở lại to lớn đối với lực lượng sản xuất"
+//   },
+//   {
+//     "id": 22,
+//     "question": "Cơ sở hạ tầng là gì?",
+//     "answer": "Cơ sở hạ tầng là toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế của một xã hội nhất định"
+//   },
+//   {
+//     "id": 23,
+//     "question": "Kiến trúc thượng tầng là gì?",
+//     "answer": "- Là toàn bộ những quan điểm chính trị, pháp quyền, đạo đức, tôn giáo, nghệ thuật, triết học... cùng với các thiết chế xã hội tương ứng của nó như nhà nước, đảng phái, giáo hội, các đoàn thể xã hội...\n- Được hình thành, xây dựng trên những cơ sở hạ tầng nhất định"
+//   },
+//   {
+//     "id": 24,
+//     "question": "Mối quan hệ giữa cơ sở hạ tầng và kiến trúc thượng tầng?",
+//     "answer": "- Cơ sở hạ tầng và kiến trúc thượng tầng là hai mặt thống nhất biện chứng trong một hình thái kinh tế - xã hội nhất định\n- Trong sự tác động biện chứng của nó, cơ sở hạ tầng quyết định kiến trúc thượng tầng và kiến trúc thượng tầng có tác động to lớn, mạnh mẽ lại cơ sở hạ tầng"
+//   },
+//   {
+//     "id": 25,
+//     "question": "Vai trò quyết định của cơ sở hạ tầng đối với kiến trúc thượng tầng được thể hiện như thế nào?",
+//     "answer": "- Cơ sở hạ tầng quyết định sự ra đời của kiến trúc thượng tầng.\n- Cơ sở hạ tầng quyết định nội dung phản ánh của kiến trúc thượng tầng. \n- Cơ sở hạ tầng quyết định sự vận động và biến đổi của kiến trúc thượng tầng."
+//   },
+//   {
+//     "id": 26,
+//     "question": "Các hình thái ý thức xã hội bao gồm những gì?",
+//     "answer": "- Ý thức chính trị\n- Ý thức pháp quyền\n- Ý thức đạo đức\n- Ý thức thẩm mỹ\n- Ý thức tôn giáo"
+//   },
+//   {
+//     "id": 27,
+//     "question": "Ý thức chính trị là gì?",
+//     "answer": "- Là hình thái ý thức xã hội chỉ xuất hiện và tồn tại trong các xã hội có giai cấp và nhà nước\n- Nó phản ánh các quan hệ chính trị, kinh tế - xã hội giữa các giai cấp, các dân tộc và các quốc gia\n- Cũng như thái độ của các giai cấp đối với quyền lực nhà nước"
+//   },
+//   {
+//     "id": 28,
+//     "question": "Ý thức pháp quyền là gì?",
+//     "answer": "- Là toàn bộ các tư tưởng, quan điểm của một giai cấp về bản chất và vai trò của pháp luật\n- Về quyền và nghĩa vụ của nhà nước, các tổ chức xã hội và công dân\n- Về tính hợp pháp và không hợp pháp của hành vi con người trong xã hội"
+//   },
+//   {
+//     "id": 29,
+//     "question": "Ý thức đạo đức là gì?",
+//     "answer": "- Là toàn bộ những quan niệm về thiện, ác, tốt, xấu, lương tâm, trách nhiệm, hạnh phúc, công bằng...\n- Và về những quy tắc đánh giá, điều chỉnh hành vi ứng xử giữa cá nhân với xã hội, giữa cá nhân với cá nhân trong xã hội"
+//   },
+//   {
+//     "id": 30,
+//     "question": "Ý thức thẩm mỹ là gì?",
+//     "answer": "- Là sự nhận thức, đánh giá của con người đối với hiện thực trong cảm thụ và sáng tạo cái đẹp\n- Là sự phản ánh hiện thực khách quan bằng hình tượng trực tiếp, cụ thể, cảm tính hình thành cảm xúc về cái đẹp"
+//   },
+//   {
+//     "id": 31,
+//     "question": "Công nghiệp hóa, hiện đại hóa là gì?",
+//     "answer": "- Là quá trình chuyển đổi căn bản, toàn diện các hoạt động sản xuất, kinh doanh, dịch vụ và quản lý kinh tế, xã hội từ sử dụng sức lao động thủ công là chính sang sử dụng một cách phổ biến sức lao động với công nghệ, phương tiện và phương pháp tiên tiến, hiện đại\n- Dựa trên sự phát triển của công nghiệp và tiến bộ khoa học công nghệ, tạo ra năng suất lao động xã hội cao"
+//   },
+//   {
+//     "id": 32,
+//     "question": "Sự cần thiết phải tiến hành công nghiệp hóa, hiện đại hóa?",
+//     "answer": "- Từ yêu cầu xây dựng cơ sở vật chất, kỹ thuật cho chủ nghĩa xã hội\n- Từ yêu cầu xây dựng quan hệ sản xuất mới xã hội chủ nghĩa\n- Từ vai trò của công nghiệp hóa, hiện đại hóa"
+//   },
+//   {
+//     "id": 33,
+//     "question": "Nội dung công nghiệp hóa, hiện đại hóa trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam",
+//     "answer": "- Đổi mới, nâng cao trình độ kỹ thuật - công nghệ của nền kinh tế theo hướng hiện đại\n- Xây dựng cơ cấu kinh tế theo hướng hiện đại, hợp lý và hiệu quả"
+//   },
+//   {
+//     "id": 34,
+//     "question": "Giải pháp đẩy mạnh công nghiệp hóa, hiện đại hóa trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam",
+//     "answer": "- Tăng cường sự lãnh đạo của Đảng, hiệu lực quản lý của Nhà nước, phát huy quyền làm chủ của nhân dân giữ vững sự ổn định về chính trị - xã hội\n- Huy động và sử dụng có hiệu quả các nguồn vốn\n- Phát triển nguồn nhân lực\n- Đổi mới và nâng cao trình độ khoa học, công nghệ\n- Mở rộng và nâng cao hiệu quả quan hệ kinh tế đối ngoại"
+//   },
+//   {
+//     "id": 35,
+//     "question": "Kinh tế thị trường là gì?",
+//     "answer": "Là trình độ phát triển cao của kinh tế hàng hóa; trong đó, toàn bộ các yếu tố “đầu vào” và “đầu ra” của nền sản xuất đều thông qua thị trường"
+//   },
+//   {
+//     "id": 36,
+//     "question": "Các giai đoạn phát triển kinh tế thị trường?",
+//     "answer": "- Kinh tế thị trường sơ khai\n- Kinh tế thị trường tự do\n- Kinh tế thị trường hiện đại"
+//   },
+//   {
+//     "id": 37,
+//     "question": "Đặc trưng của kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam?",
+//     "answer": "- Nền kinh tế có mục đích là phát triển lực lượng sản xuất, xây dựng cơ sở vật chất, kỹ thuật cho chủ nghĩa xã hội vì mục tiêu “dân giàu, nước mạnh, dân chủ, công bằng, văn minh”\n- Nền kinh tế dựa trên nhiều hình thức sở hữu, nhiều thành phần kinh tế, trong đó kinh tế nhà nước giữ vai trò chủ đạo\n- Nền kinh tế vận hành theo cơ chế thị trường có sự quản lý của Nhà nước xã hội chủ nghĩa, do Đảng Cộng sản Việt Nam lãnh đạo\n- Nền kinh tế thực hiện nhiều hình thức phân phối thu nhập, trong đó phân phối theo lao động và hiệu quả kinh tế là chủ yếu\n- Nền kinh tế có tính hiện đại và hội nhập"
+//   },
+//   {
+//     "id": 38,
+//     "question": "Để đẩy mạnh công nghiệp hoá, hiện đại hoá cần tạo ra nguồn vốn lớn. Ở nước ta hiện nay có thể huy động các nguồn vốn nào? Vai trò của các nguồn vốn đó là gì?",
+//     "answer": "- Vốn trong nước và vốn ngoài nước.\n- Vốn trong nước là quyết định, vốn ngoài nước là rất quan trọng."
+//   },
+//   {
+//     "id": 39,
+//     "question": "Trong lịch sử thế giới, công nghiệp hóa đã được tiến hành theo những mô hình nào?",
+//     "answer": "- Thứ nhất, mô hình công nghiệp hóa theo hướng thay thế nhập khẩu (hay gọi là mô hình công nghiệp hóa hướng nội)\n- Thứ hai, mô hình công nghiệp hóa theo hướng xuất khẩu (hay gọi là mô hình công nghiệp hóa hướng ngoại)"
+//   },
+//   {
+//     "id": 40,
+//     "question": "Trong thời kỳ quá độ lên chủ nghĩa xã hội ở nước ta phải thực hiện những nhiệm vụ kinh tế cơ bản nào?",
+//     "answer": "- Phát triển lực lượng sản xuất, công nghiệp hoá, hiện đại hoá đất nước.\n- Xây dựng quan hệ sản xuất mới theo định hướng xã hội chủ nghĩa.\n- Mở rộng và nâng cao hiệu quả kinh tế đối ngoại."
+//   },
+//   {
+//     "id": 41,
+//     "question": "Để công nghiệp hoá, hiện đại hoá thành công cần có những tiền đề gì?",
+//     "answer": "- Huy động và sử dụng vốn có hiệu quả.\n- Đào tạo nguồn nhân lực.\n- Phát triển khoa học và công nghệ.\n- Mở rộng quan hệ kinh tế đối ngoại.\n- Tăng cường sự lãnh đạo của Đảng và quản lý của nhà nước."
+//   },
+//   {
+//     "id": 42,
+//     "question": "Đại hội XI của Đảng xác định vai trò của thành phần kinh tế nhà nước và kinh tế tập thể như thế nào?",
+//     "answer": "- Kinh tế nhà nước giữ vai trò chủ đạo. \n- Kinh tế nhà nước cùng với kinh tế tập thể ngày càng trở thành nền tảng vững chắc của nền kinh tế quốc dân."
+//   },
+//   {
+//     "id": 43,
+//     "question": "Nêu tên các nhóm quy luật chính trị xã hội của quá trình hình thành phát triển hình thái kinh tế xã hội cộng sản chủ nghĩa ?",
+//     "answer": "- Nhóm 1: Quy luật về mối quan hệ biện chứng giữa lực lượng sản xuất và quan hệ sản xuất\n- Nhóm 2: Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng."
+//   },
+//   {
+//     "id": 44,
+//     "question": "Tại sao nói sự ra đời của sản xuất hàng hoá là quá trình lịch sử - tự nhiên?",
+//     "answer": "Vì các điều kiện ra đời của sản xuất hàng hoá xuất hiện không do ý muốn chủ quan của con người."
+//   },
+//   {
+//     "id": 45,
+//     "question": "Tiêu chí nào là cơ bản nhất để phân biệt các thời đại kinh tế?",
+//     "answer": "Trình độ của công cụ sản xuất"
+//   },
+//   {
+//     "id": 46,
+//     "question": "Tiêu chí nào là cơ bản nhất để phân biệt các hình thái kinh tế - xã hội?",
+//     "answer": "Quan hệ sản xuất"
+//   },
+//   {
+//     "id": 47,
+//     "question": "Tiêu chí nào là quan trọng nhất, tổng hợp nhất để đánh giá hiệu quả kinh tế?",
+//     "answer": "Năng suất lao động"
+//   },
+//   {
+//     "id": 48,
+//     "question": "Tiêu chuẩn cơ bản để đánh giá tính đúng đắn của xã hội hoá sản xuất là gì?",
+//     "answer": "Năng suất lao động và hiệu quả kinh tế tăng lên"
+//   },
+//   {
+//     "id": 49,
+//     "question": "Thế nào là tăng trưởng kinh tế bền vững?",
+//     "answer": "Tốc độ tăng trưởng tương đối cao, ổn định trong một thời gian tương đối dài, gắn liền với bảo vệ môi trường và tiến bộ xã hội."
+//   },
+//   {
+//     "id": 50,
+//     "question": "Vì sao nói con người là nhân tố cơ bản nhất của tăng trưởng kinh tế bền vững?",
+//     "answer": "Vì con người là nhân tố sáng tạo; con người có khả năng tạo ra và sử dụng hợp lý, có hiệu quả các nhân tố tăng trưởng kinh tế khác."
+//   },
+//   {
+//     "id": 51,
+//     "question": "Giai cấp công nhân là gì?",
+//     "answer": "Là giai cấp những người lao động hoạt động sản xuất trong các ngành công nghiệp thuộc các trình độ kỹ thuật khác nhau, mà địa vị kinh tế - xã hội tùy thuộc vào chế độ xã hội đương thời"
+//   },
+//   {
+//     "id": 52,
+//     "question": "Đặc điểm giai cấp công nhân Việt Nam được Đảng ta xác định tại Hội nghị lần thứ sáu của Ban Chấp hành Trung ương Đảng khóa X là gì?",
+//     "answer": "Là một lượng xã hội to lớn, đang phát triển, bao gồm những người lao động chân tay và trí óc, làm công hưởng lương trong các loại hình sản xuất kinh doanh và dịch vụ công nghiệp, hoặc sản xuất kinh doanh và dịch vụ có tính chất công nghiệp"
+//   },
+//   {
+//     "id": 53,
+//     "question": "Giai cấp công nhân Việt Nam có sứ mệnh lịch sử như thế nào?",
+//     "answer": "- Là giai cấp lãnh đạo cách mạng thông qua đội tiền phong là Đảng Cộng sản Việt Nam, giai cấp đại diện cho phương thức sản xuất tiên tiến\n- Giai cấp tiên phong trong sự nghiệp xây dựng chủ nghĩa xã hội, lực lượng đi đầu trong sự nghiệp công nghiệp hóa, hiện đại hóa đất nước vì mục tiêu dân giàu, nước mạnh, dân chủ, công bằng, văn minh\n- Lực lượng nòng cốt trong liên minh giai cấp công nhân với giai cấp nông dân và đội ngũ trí thức dưới sự lãnh đạo của Đảng"
+//   },
+//   {
+//     "id": 54,
+//     "question": "Phương hướng xây dựng giai cấp công nhân Việt Nam hiện nay là gì?",
+//     "answer": "Xây dựng giai cấp công nhân hiện đại, lớn mạnh; nâng cao bản lĩnh chính trị, trình độ học vấn, chuyên môn, kỹ năng nghề nghiệp, tác phong công nghiệp, kỷ luật lao động thích ứng với cuộc Cách mạng công nghiệp lần thứ tư…"
+//   },
+//   {
+//     "id": 55,
+//     "question": "Thời kỳ quá độ lên chủ nghĩa xã hội là gì?",
+//     "answer": "Là thời kỳ cải biến cách mạng sâu sắc, toàn diện trên các lĩnh vực của đời sống xã hội, tạo ra những tiền đề vật chất và tinh thần, bảo đảm cho chủ nghĩa xã hội phát triển trên cơ sở của chính nó"
+//   },
+//   {
+//     "id": 56,
+//     "question": "Đặc điểm nổi bật của thời kỳ quá độ lên chủ nghĩa xã hội là gì?",
+//     "answer": "Là sự cùng tồn tại, đan xen, đấu tranh giữa những nhân tố của xã hội mới và những “dấu vết”, “tàn dư” của xã hội cũ trên mọi lĩnh vực của đời sống xã hội"
+//   },
+//   {
+//     "id": 57,
+//     "question": "Đặc điểm của thời kỳ quá độ lên chủ nghĩa xã hội trên lĩnh vực kinh tế là gì?",
+//     "answer": "Đó là sự tồn tại đan xen nhiều thành phần kinh tế, nhiều hình thức sở hữu và nhiều hình thức phân phối…"
+//   },
+//   {
+//     "id": 58,
+//     "question": "Đặc điểm của thời kỳ quá độ lên chủ nghĩa xã hội trên lĩnh vực chính trị - xã hội là gì?",
+//     "answer": "Đó là sự tồn tại của các giai cấp, tầng lớp xã hội khác nhau với lợi ích cơ bản khác nhau, thậm chí đối lập nhau, vừa liên minh, hợp tác, vừa đấu tranh chuyển hóa lẫn nhau…"
+//   },
+//   {
+//     "id": 59,
+//     "question": "Đặc điểm của thời kỳ quá độ lên chủ nghĩa xã hội trên lĩnh vực chính trị - xã hội là gì?",
+//     "answer": "Đó là sự tồn tại đan xen nhiều loại hình tư tưởng, văn hóa, tinh thần khác nhau, thậm chí đối lập, đấu tranh với nhau…"
+//   },
+//   {
+//     "id": 60,
+//     "question": "Hệ tư tưởng xã hội chủ nghĩa là gì?",
+//     "answer": "- Là hệ tư tưởng của giai cấp công nhân, được thể hiện trong hệ thống lý luận của chủ nghĩa Mác - Lênin, mang bản chất cách mạng và khoa học.\n- Là hệ tư tưởng tiên tiến nhất mà Đảng Cộng sản lấy đó làm nền tảng tư tưởng và kim chỉ nam cho hành động của mình..."
+//   },
+//   {
+//     "id": 61,
+//     "question": "Quan điểm của Mác - Ăng ghen về phân kỳ hình thái kinh tế - xã hội Cộng sản chủ nghĩa?",
+//     "answer": "- Giai đoạn thấp (hay giai đoạn đầu): Đây là thời kỳ quá độ chính trị, thời kỳ cải biến cách mạng từ chủ nghĩa tư bản lên chủ nghĩa cộng sản, vẫn còn mang những dấu vết của xã hội tư bản.\n- Giai đoạn cao của hình thái kinh tế-xã hội cộng sản chủ nghĩa: Là chủ nghĩa cộng sản. Chỉ đến giai đoạn này những nguyên tắc của chủ nghĩa cộng sản mới được thực hiện hoàn toàn."
+//   },
+//   {
+//     "id": 62,
+//     "question": "Sứ mệnh lịch sử của giai cấp công nhân?",
+//     "answer": "- Xóa bỏ chế độ tư bản chủ nghĩa.\n- Xóa bỏ chế độ người bóc lột người.\n- Giải phóng giai cấp công nhân, nhân dân lao động và toàn thể nhân loại khỏi sự áp bức, bóc lột, nghèo làn lạc hậu.\n- Xây dựng xã hội cộng sản chủ nghĩa văn minh."
+//   },
+//   {
+//     "id": 63,
+//     "question": "Vì sao trong xã hội xã hội chủ nghĩa, nguyên tắc phân phối theo lao động là nguyên tắc cơ bản nhất?",
+//     "answer": "- Nguyên tắc này biểu hiện kết quả mà người lao động cống hiến cho xã hội “làm nhiều hưởng nhiều, làm ít hưởng ít”.\n- Nguyên tắc này phù hợp với trình độ phát triển của lực lượng sản xuất ở giai đoạn thấp của Hình thái kinh tế - xã hội Cộng sản chủ nghĩa."
+//   },
+//   {
+//     "id": 64,
+//     "question": "Để thực hiện được sứ mệnh lich sử của mình, giai cấp công nhân phải làm gì?",
+//     "answer": "- Thông qua Đảng cộng sản tập hợp và lãnh đạo nhân dân lao động tiến hành cách mạng xã hội chủ nghĩa giành, giữ vững chính quyền.\n- Tiến hành cải tạo xã hội cũ, xây dựng và bảo vệ vững chắc Tổ quốc xã hội chủ nghĩa; thực hiện nhiệm vụ quốc tế cao cả của giai cấp công nhân."
+//   },
+//   {
+//     "id": 65,
+//     "question": "Bản chất của nền dân chủ xã hội chủ nghĩa là gì?",
+//     "answer": "- Là một chế độ xã hội trong đó toàn bộ quyền lực thuộc về nhân dân.\n- Là nên dân chủ mang bản chất giai cấp công nhân, tính nhân dân rộng rãi và tính dân tộc sâu sắc.\n- Do Đảng cộng sản lãnh đạo.\n- Dân chủ xã hội chủ nghĩa được thực hiện toàn diện trên mọi lĩnh vực của của đời sống xã hội: Về chính trị, về kinh tế và về văn hóa."
+//   },
+//   {
+//     "id": 66,
+//     "question": "Thời đại hiện nay là gì?",
+//     "answer": "- Là thời đại quá độ từ CNTB lên CNXH, CNCS trên phạm vi toàn thế giới, được mở đầu bằng thắng lợi của cuộc Cách mạng tháng mười Nga năm 1917 và kết thúc khi xây dựng thành công CNXH\n- Là thời đại đấu tranh cho hòa bình, độc lập dân tộc, dân chủ và CNXH gắn liền với cuộc cách mạng khoa học, công nghệ hiện đại"
+//   },
+//   {
+//     "id": 67,
+//     "question": "Những giai đoạn chính của thời đại hiện nay là gì?",
+//     "answer": "- Giai đoạn 1: Từ cuộc Cách mạng tháng mười Nga năm 1917 đến kết thúc chiến tranh thế giới lần thứ hai năm 1945\n- Giai đoạn 2: Từ năm 1946 đến giữa thập niên 70 của thế kỷ XX\n- Giai đoạn 3: Từ cuối thập niên 70 đến đầu thập niên 90 của thế kỷ XX\n- Giai đoạn 4: Từ giữa thập niên 90 của thế kỷ XX đến nay"
+//   },
+//   {
+//     "id": 68,
+//     "question": "Tính chất của thời đại hiện nay là gì?",
+//     "answer": "Là quá độ từ CNTB lên CNXH; đang diễn ra cuộc đấu tranh gay go, quyết liệt giữa CNXH và CNTB trên phạm vi toàn thế giới"
+//   },
+//   {
+//     "id": 69,
+//     "question": "Những mâu thuẫn cơ bản của thời đại hiện nay là gì?",
+//     "answer": "- Mâu thuẫn giữa CNXH và CNTB\n- Mâu thuẫn giữa tư bản và lao động\n- Mâu thuẫn giữa các nước chậm phát triển, đang phát triển với các nước phát triển, các nước lớn\n- Mâu thuẫn giữa các nước TBCN, các tập đoàn tư bản, các trung tâm kinh tế TBCN"
+//   },
+//   {
+//     "id": 70,
+//     "question": "Các xu thế vận động chủ đạo của thời đại trong giai đoạn hiện nay là gì?",
+//     "answer": "- Hòa bình, hợp tác và phát triển\n- Xu thế toàn cầu hóa và hội nhập quốc tế\n- Xu thế hợp tác và đấu tranh, liên kết và cạnh tranh\n- Xu thế các dân tộc nâng cao ý thức độc lập, tự chủ, tự lực, tự cường"
+//   },
+//   {
+//     "id": 71,
+//     "question": "Hành trang tư tưởng của Nguyễn Ái Quốc khi ra đi tìm đường cứu nước?",
+//     "answer": "- Lòng yêu nước nồng nàn, chí căm thù giặc sâu sắc.\n- Vốn học vấn uyên thâm, năng lực trí tuệ và nhãn quan chính trị nhạy bén, sắc sảo.\n- Khát vọng cháy bỏng tìm ra con đường đúng đắn để cứu nước, cứu dân thoát khỏi gông cùm nô lệ."
+//   },
+//   {
+//     "id": 72,
+//     "question": "Những tổ chức tiền thân của Đảng Cộng sản Việt Nam?",
+//     "answer": "- Hội Việt Nam Cách mạng Thanh niên\n- Tân Việt Cách mạng Đảng (Đảng Tân Việt)\n- Đông Dương Cộng sản Đảng\n- An Nam Cộng sản Đảng\n- Đông Dương Cộng sản Liên đoàn"
+//   },
+//   {
+//     "id": 73,
+//     "question": "Nguyên nhân thất bại của các phong trào yêu nước chống thực dân Pháp xâm lược cuối thế kỷ XIX đầu thế kỷ XX?",
+//     "answer": "- Thiếu một đường lối chính trị đúng đắn\n- Thiếu một tổ chức cách mạng lãnh đạo chặt chẽ\n- Thiếu lực lượng cách mạng"
+//   },
+//   {
+//     "id": 74,
+//     "question": "Tư tưởng cốt lõi của Cương lĩnh đầu tiên?",
+//     "answer": "Giải quyết đúng đắn, sáng tạo mối quan hệ giữa vấn đề dân tộc và giai cấp, độc lập dân tộc và chủ nghĩa xã hội, dân tộc và dân chủ, dân tộc và quốc tế trên lập trường giai cấp công nhân."
+//   },
+//   {
+//     "id": 75,
+//     "question": "Kể tên các văn kiện mang tính chất cương lĩnh của Đảng?",
+//     "answer": "- Chính cương vắn tắt, Sách lược vắn tắt, Điều lệ vắn tắt\n- Luận cương Chính trị của Đảng Cộng sản Đông Dương\n- Chính cương của Đảng Lao động Việt Nam\n- Cương lĩnh xây dựng đất nước trong thời kỳ qúa độ lên CNXH được thông qua tại Đại hội VII (6/1991) và được bổ sung, phát triển năm 2011 (Đại hội XI, 01/2011)"
+//   },
+//   {
+//     "id": 76,
+//     "question": "Kể tên Đảng ta qua các thời kỳ lịch sử của cách mạng Việt Nam?",
+//     "answer": "- Đảng Cộng sản Việt Nam (02/1930 - 10/1930).\n- Đảng Cộng sản Đông Dương (10/1930 - 02/1951).\n- Đảng Lao động Việt Nam (02/1951 - 12/1976).\n- Đảng Cộng sản Việt Nam (12/1976 - nay)."
+//   },
+//   {
+//     "id": 77,
+//     "question": "Những hoạt động của Nguyễn Ái Quốc ở Quảng Châu năm 1925?",
+//     "answer": "- Lập ra Hội Việt Nam cách mạng thanh niên\n- Ra tờ báo Thanh niên\n- Mở các lớp huấn luyện cán bộ đầu tiên của cách mạng Việt Nam"
+//   },
+//   {
+//     "id": 78,
+//     "question": "Cương lĩnh chính trị đầu tiên của Đảng Cộng sản Việt Nam?",
+//     "answer": "Chính cương vắn tắt, Sách lược vắn tắt của Đảng được thông qua tại Hội nghị thành lập Đảng xác định những vấn đề cơ bản về chiến lược và sách lược của cách mạng Việt Nam"
+//   },
+//   {
+//     "id": 79,
+//     "question": "Nội dung Chỉ thị Nhật - Pháp bắn nhau và hành động của chúng ta (12/3/1945) là gì?",
+//     "answer": "Chỉ thị nhận định tình hình sau khi Nhật lật đổ Pháp ở Đông Dương; xác định kẻ thù chính là phát xít Nhật, nhiệm vụ của Đảng là phát động và lãnh đạo cao trào kháng Nhật cứu nước; dự kiến thời cơ khởi nghĩa…"
+//   },
+//   {
+//     "id": 80,
+//     "question": "Ý nghĩa của Chỉ thị Nhật - Pháp bắn nhau và hành động của chúng ta (12/3/1945) là gì?",
+//     "answer": "Chỉ thị chứng tỏ sự nhạy bén, lãnh đạo sáng suốt, kiên quyết, kịp thời của Đảng ta. Đó là kim chỉ nam cho toàn Đảng, toàn dân ta trong cao trào chống Nhật, trực tiếp dẫn tới thắng lợi cách mạng tháng Tám."
+//   },
+//   {
+//     "id": 81,
+//     "question": "Tại sao sau khi giành được chính quyền, Đảng Cộng sản Đông Dương lại tuyên bố tự giải tán vào ngày 11/11/1945?",
+//     "answer": "Trước nguy cơ của giặc ngoại xâm và tránh mũi nhọn tiến công của kẻ thù, ngày 11/11/1945 Đảng ta đã tuyên bố tự giải tán, thực chất là rút vào hoạt động bí mật để làm mất mục tiêu chống phá của kẻ thù."
+//   },
+//   {
+//     "id": 82,
+//     "question": "Ý nghĩa của “Lời kêu gọi toàn quốc kháng chiến” của Chủ tịch Hồ Chí Minh là gì?",
+//     "answer": "- Chỉ rõ nguyên nhân chính nghĩa phải tiến hành cuộc kháng chiến toàn quốc; khẳng định quyết tâm kháng chiến; kêu gọi toàn dân đoàn kết, dùng mọi vũ khí chống quân thù; kháng chiến nhất định thắng lợi.\n- Đây là lời hịch cứu quốc khơi dậy lòng tự hào về truyền thống anh hùng bất khuất của dân tộc quyết chiến đấu, quyết tử cho tổ quốc quyết sinh."
+//   },
+//   {
+//     "id": 83,
+//     "question": "Hai nhiệm vụ lớn của cách mạng nước ta thời kỳ 1954-1975?",
+//     "answer": "- Tiến hành cách mạng xã hội chủ nghĩa ở miền Bắc, xây dựng miền Bắc thành căn cứ địa vững chắc của cả nước\n- Tiến hành cách mạng dân tộc dân chủ nhân dân ở miền Nam, chống đế quốc Mỹ xâm lược và tay sai, giải phóng miền Nam thống nhất đất nước"
+//   },
+//   {
+//     "id": 84,
+//     "question": "Các chiến lược chiến tranh của Mỹ đã sử dụng trong cuộc chiến tranh tại Việt Nam giai đoạn 1954-1975 là gì?",
+//     "answer": "- Chiến tranh đơn phương \n- Chiến tranh đặc biệt\n- Chiến tranh cục bộ\n- Việt Nam hoá chiến tranh"
+//   },
+//   {
+//     "id": 85,
+//     "question": "Nội dung cơ bản phong trào ba sẵn sàng trong kháng chiến chống Mỹ, cứu nước do Đoàn Thanh niên phát động là gì?",
+//     "answer": "- Sẵn sàng chiến đấu và phục vụ chiến đấu\n- Sẵn sàng đi bất cứ nơi nào và làm bất cứ việc gì mà Tổ quốc cần\n- Sẵn sàng tòng quân, lên đường diệt Mỹ"
+//   },
+//   {
+//     "id": 86,
+//     "question": "Chủ tịch Hồ Chí Minh ra lời kêu gọi đồng bào và cán bộ, chiến sĩ cả nước vào ngày 22/7/1954?",
+//     "answer": "Trung Nam Bắc đều là bờ cõi của ta, nước ta nhất định sẽ thống nhất, đồng bào cả nước nhất định được giải phóng"
+//   },
+//   {
+//     "id": 87,
+//     "question": "Nội dung bài thơ chúc Tết của Chủ tịch Hồ Chí Minh vào năm 1969 là gì?",
+//     "answer": "- Vì độc lập, vì tự do\n- Đánh cho Mỹ cút, đánh cho nguỵ nhào\n- Tiến lên chiến sĩ đồng bào\n- Bắc - Nam sum họp Xuân nào vui hơn"
+//   },
+//   {
+//     "id": 88,
+//     "question": "Năm 1954, Hội nghị Giơnevơ về Đông Dương họp từ ngày nào đến ngày nào? Có bao nhiêu phiên họp mở rộng và bao nhiêu phiên họp cấp trưởng đoàn?",
+//     "answer": "Hội nghị Giơnevơ bắt đầu họp từ ngày 08/5/1954 và kết thúc ngày 21/7/1954, trải qua 75 ngày thương lượng, có tất cả 8 phiên họp mở rộng và 23 phiên họp cấp trưởng đoàn."
+//   },
+//   {
+//     "id": 89,
+//     "question": "Đại hội đại biểu toàn quốc lần thứ III của Đảng diễn ra ở đâu? Vào ngày, tháng, năm nào? có bao nhiêu đại biểu chính thức và dự khuyết tham dự?",
+//     "answer": "- Đại hội đại biểu toàn quốc lần thứ III của Đảng họp tại Thủ đô Hà Nội, từ ngày 05 đến 10/9/1960. \n- Tham dự có 525 đại biểu chính thức và 51 đại biểu dự khuyết, thay mặt cho hơn 50 vạn đảng viên trong cả nước"
+//   },
+//   {
+//     "id": 90,
+//     "question": "Đại hội đại biểu toàn quốc lần thứ III của Đảng đã bầu Ban Chấp hành Trung ương mới gồm bao nhiêu ủy viên chính thức và bao nhiêu dự khuyết? Ban Chấp hành Trung ương bầu Bộ Chính trị gồm bao nhiêu ủy viên chính thức và bao nhiêu dự khuyết?",
+//     "answer": "- Đại hội đã bầu Ban Chấp hành Trung ương mới gồm 47 ủy viên chính thức và 31 ủy viên dự khuyết\n- Ban Chấp hành Trung ương bầu Bộ Chính trị gồm 11 ủy viên chính thức và 02 ủy viên dự khuyết"
+//   },
+//   {
+//     "id": 91,
+//     "question": "Về mục tiêu chiến lược chung được Đại hội đại biểu toàn quốc lần thứ III của Đảng xác định là gì?",
+//     "answer": "Đại hội cho rằng, cách mạng ở miền Bắc và cách mạng ở miền Nam thuộc hai chiến lược khác nhau, có mục tiêu cụ thể riêng, song trước mắt đều hướng vào mục tiêu chung là giải phóng miền Nam, hòa bình, thống nhất đất nước"
+//   },
+//   {
+//     "id": 92,
+//     "question": "Mục tiêu của kế hoạch 5 năm lần thứ nhất (1961-1965) ở miền Bắc được Đảng ta xác định là gì?",
+//     "answer": "- Phấn đấu xây dựng bước đầu cơ sở vật chất kỹ thuật của chủ nghĩa xã hội\n- Thực hiện một bước công nghiệp hóa xã hội chủ nghĩa và hoàn thành công cuộc cải tạo xã hội chủ nghĩa\n- Tiếp tục đưa miền Bắc tiến nhanh, tiến mạnh, tiến vững chắc lên chủ nghĩa xã hội"
+//   },
+//   {
+//     "id": 93,
+//     "question": "Tháng 10/1954 tại căn cứ U Minh Hạ, Hội nghị lập lại Xứ ủy Nam Bộ do đồng chí Lê Duẩn chủ trì đã nghiên cứu các nghị quyết của Trung ương và Bộ Chính trị về nhiệm vụ trong tình hình mới. Hội nghị nhận định tình hình lúc đó như thế nào?",
+//     "answer": "Hội nghị nhận định tình hình lúc đó có hai khả năng: Có thể Mỹ - Diệm buộc phải thi hành Hiệp định Giơnevơ và cũng có thể Mỹ - Diệm không thi hành hiệp định. Cách mạng miền Nam cần phải có kế hoạch ứng phó với cả hai tình huống"
+//   },
+//   {
+//     "id": 94,
+//     "question": "Tháng 12/1956, Hội nghị Xứ ủy Nam Bộ đề ra chủ trương lãnh đạo và chỉ đạo các địa phương ở Nam Bộ như thế nào?",
+//     "answer": "Tích cực tổ chức vũ trang tuyên truyền và vũ trang tự vệ để hỗ trợ cho đấu tranh chính trị của quần chúng, đồng thời chuẩn bị cho đấu tranh vũ trang ở hình thức cao hơn"
+//   },
+//   {
+//     "id": 95,
+//     "question": "Thực hiện Nghị quyết Hội nghị lần thứ 15, Ban Chấp hành Trung ương (khóa II), các Đảng bộ Nam Bộ và Liên khu V đã làm gì?",
+//     "answer": "Đã coi trọng việc đưa Nghị quyết xuống tận cơ sở và quần chúng cách mạng, làm dấy lên phong trào “Đồng khởi” trong toàn miền Nam"
+//   },
+//   {
+//     "id": 96,
+//     "question": "Tháng 9/1961, Bộ Chính trị thông qua đề án gì?",
+//     "answer": "Bộ Chính trị thông qua đề án tăng cường cho miền Nam từ 3 đến 4 vạn cán bộ, chiến sĩ đã được huấn luyện chính quy trên miền Bắc; tăng cường lực lượng, phương tiện cơ giới cho Đoàn vận tải quân sự 559"
+//   },
+//   {
+//     "id": 97,
+//     "question": "Tháng 2/1962, Mặt trận dân tộc giải phóng miền Nam họp Đại hội lần thứ nhất xác định và quyết định những gì?",
+//     "answer": "Xác định rõ nhiệm vụ chung của Mặt trận và công bố chủ trương cứu nước khẩn cấp. Đại hội quyết định thống nhất các lực lượng vũ trang miền Nam thành Quân giải phóng miền Nam Việt Nam"
+//   },
+//   {
+//     "id": 98,
+//     "question": "Trước âm mưu và thủ đoạn chiến tranh mới của đế quốc Mỹ, Ban Chấp hành Trung ương Đảng triệu tập Hội nghị lần thứ 11 (3/1965), quyết định nội dung gì?",
+//     "answer": "Chuyển toàn bộ hoạt động của miền Bắc từ thời bình sang thời chiến, tiếp tục sự nghiệp xây dựng chủ nghĩa xã hội trong điều kiện chiến tranh"
+//   },
+//   {
+//     "id": 99,
+//     "question": "Tháng 01/1970, Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 18, khóa III họp và chỉ rõ nhiệm vụ cơ bản của cách mạng miền Bắc là gì?",
+//     "answer": "Tranh thủ những thuận lợi mới trong hoàn cảnh không có chiến tranh phá hoại, khắc phục hậu quả chiến tranh, tăng cường lực lượng cho cách mạng miền Nam…"
+//   },
+//   {
+//     "id": 100,
+//     "question": "Nghị quyết Hội nghị lần thứ 21, Ban Chấp hành Trung ương Đảng, khóa III (13/10/1973) xác định nội dung gì?",
+//     "answer": "Miền Bắc một mặt phải tranh thủ những điều kiện thuận lợi hiện có, ra sức khôi phục và phát triển nền kinh tế quốc dân; đồng thời, phải tiếp tục làm tròn nhiệm vụ hậu phương lớn đối với cách mạng miền Nam và tích cực đấu tranh để Hiệp định Pari về Việt Nam được thi hành nghiêm chỉnh"
+//   },
+//   {
+//     "id": 101,
+//     "question": "Tư tưởng Hồ Chí Minh là gì?",
+//     "answer": "- Là một hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam\n- Kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta\n- Kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại\n- Là tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc ta, mãi mãi soi đường cho sự nghiệp cách mạng của nhân dân ta giành thắng lợi"
+//   },
+//   {
+//     "id": 102,
+//     "question": "Nguồn gốc tư tưởng Hồ Chí Minh bao gồm?",
+//     "answer": "- Nguồn gốc tư tưởng, lý luận\n- Nguồn gốc thực tiễn\n- Nhân tố chủ quan Hồ Chí Minh"
+//   },
+//   {
+//     "id": 103,
+//     "question": "Nêu nguồn gốc tư tưởng Hồ Chí Minh được hình thành từ tư tưởng - lý luận?",
+//     "answer": "- Giá trị văn hóa truyền thống Việt Nam\n- Tinh hoa văn hóa nhân loại\n- Chủ nghĩa Mác - Lênin"
+//   },
+//   {
+//     "id": 104,
+//     "question": "Nguồn gốc thực tiễn của tư tưởng Hồ Chí Minh được hình thành từ những yếu tố nào?",
+//     "answer": "- Thực tiễn cách mạng thế giới\n- Thực tiễn cách mạng Việt Nam\n- Thực tiễn hoạt động cách mạng của Hồ Chí Minh"
+//   },
+//   {
+//     "id": 105,
+//     "question": "Các giai đoạn hình thành và phát triển tư tưởng Hồ Chí Minh?",
+//     "answer": "- Giai đoạn hình thành tư tưởng yêu nước, thương dân và chí hướng hoạt động cách mạng (1890-1911)\n- Giai đoạn tìm tòi xác định con đường cách mạng Việt Nam (1911-1920)\n- Giai đoạn hình thành cơ bản tư tưởng về con đường cách mạng Việt Nam (1921-1930)\n- Giai đoạn Hồ Chí Minh vượt qua thử thách, kiên trì với con đường cách mạng Việt Nam (1930-1941)\n- Giai đoạn phát triển và hoàn thiện tư tưởng Hồ Chí Minh (1941-1969)"
+//   },
+//   {
+//     "id": 106,
+//     "question": "Vấn đề dân tộc trong tư tưởng Hồ Chí Minh thực chất là gì?",
+//     "answer": "Là việc đấu tranh giải phóng các dân tộc thuộc địa khỏi sự thống trị của chủ nghĩa thực dân, giành độc lập dân tộc, thực hiện quyền dân tộc tự quyết"
+//   },
+//   {
+//     "id": 107,
+//     "question": "Trong Chánh cương vắn tắt và Sách lược vắn tắt của Đảng do Hồ Chí Minh soạn thảo (1930) đã khẳng định cách mạng Việt Nam phải trải qua hai giai đoạn, đó là những giai đoạn nào?",
+//     "answer": "Làm tư sản dân quyền cách mạng và thổ địa cách mạng (tức là cách mạng dân tộc dân chủ) để đi tới xã hội cộng sản (tức là cách mạng xã hội chủ nghĩa)"
+//   },
+//   {
+//     "id": 108,
+//     "question": "Quan niệm của Hồ Chí Minh về những đặc trưng bản chất của chủ nghĩa xã hội?",
+//     "answer": "- CNXH là một chế độ do nhân dân làm chủ\n- CNXH có nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về các tư liệu sản xuất chủ yếu\n- CNXH là một xã hội phát triển cao về văn hóa, đạo đức\n- CNXH là một xã hội công bằng và hợp lý\n- CNXH là công trình tập thể của nhân dân, do nhân dân tự xây dựng, dưới sự lãnh đạo của Đảng"
+//   },
+//   {
+//     "id": 109,
+//     "question": "Theo Hồ Chí Minh, mục tiêu chung của chủ nghĩa xã hội là gì?",
+//     "answer": "Không ngừng nâng cao đời sống vật chất và tinh thần của nhân dân, trước hết là nhân dân lao động"
+//   },
+//   {
+//     "id": 110,
+//     "question": "Phương pháp, cách thức tiến hành xây dựng CNXH ở Việt Nam theo Hồ Chí Minh là gì?",
+//     "answer": "- Nêu cao tinh thần độc lập, tự chủ, sáng tạo, chống chủ nghĩa giáo điều\n- Kết hợp cải tạo với xây dựng, trong đó lấy xây dựng là chủ yếu…\n- Kết hợp chặt chẽ giữa hai nhiệm vụ chiến lược của cách mạng Việt Nam\n- Phải thực hiện kế hoạch hóa một cách dân chủ…\n- Đẩy mạnh tăng gia sản xuất, thực hành tiết kiệm"
+//   },
+//   {
+//     "id": 111,
+//     "question": "Mục đích của đại đoàn kết dân tộc trong tư tưởng Hồ Chí Minh là gì?",
+//     "answer": "Là huy động và tập hợp mọi lực lượng, phát huy vai trò của tất cả các lực lượng cách mạng tạo thành sức mạnh to lớn để thực hiện mục tiêu chiến lược của cách mạng Việt Nam"
+//   },
+//   {
+//     "id": 112,
+//     "question": "Đại đoàn kết theo Hồ Chí Minh tức là gì?",
+//     "answer": "Đại đoàn kết tức là trước hết phải đoàn kết đại đa số nhân dân, mà đại đa số nhân dân ta là công nhân, nông dân và các tầng lớp nhân dân lao động khác"
+//   },
+//   {
+//     "id": 113,
+//     "question": "Năm 1923, khi còn đang ở nước ngoài, trong một bức thư gửi các bạn cùng hoạt động ở Pháp, Hồ Chí Minh đã viết gì?",
+//     "answer": "Đối với tôi, câu trả lời đã rõ ràng: Trở về nước, đi vào quần chúng, thức tỉnh họ, tổ chức họ, đoàn kết họ, huấn luyện họ, đưa họ ra đấu tranh giành tự do độc lập"
+//   },
+//   {
+//     "id": 114,
+//     "question": "Ngày 03/3/1951, trong Lời kết thúc buổi ra mắt Đảng Lao động Việt Nam, Hồ Chí Minh đã thay mặt Đảng tuyên bố trước quốc dân đồng bào nội dung gì?",
+//     "answer": "Mục đích của Đảng Lao động Việt Nam có thể gồm trong 8 chữ là: Đoàn kết toàn dân, phụng sự Tổ quốc"
+//   },
+//   {
+//     "id": 115,
+//     "question": "Sức mạnh dân tộc là gì?",
+//     "answer": "Là sức mạnh của chủ nghĩa yêu nước chân chính, tinh thần đoàn kết, ý chí đấu tranh anh dũng, kiên cường cho độc lập, tự do của dân tộc; đó là ý thức tự lực tự cường của nhân dân ta"
+//   },
+//   {
+//     "id": 116,
+//     "question": "Sức mạnh thời đại là gì?",
+//     "answer": "Là sức mạnh của giai cấp vô sản, của cách mạng vô sản, là lý luận và phương pháp luận khoa học của chủ nghĩa Mác - Lênin, là sự phát triển của cách mạng khoa học công nghệ"
+//   },
+//   {
+//     "id": 117,
+//     "question": "Quan niệm của Hồ Chí Minh về kết hợp sức mạnh dân tộc với sức mạnh thời đại?",
+//     "answer": "Là kết hợp chủ nghĩa yêu nước chân chính với chủ nghĩa quốc tế vô sản, là xây dựng khối liên minh chiến đấu giữa vô sản ở chính quốc với lao động ở thuộc địa để cùng một lúc tiến công chủ nghĩa đế quốc ở cả hai đầu"
+//   },
+//   {
+//     "id": 118,
+//     "question": "Trong mối quan hệ với cách mạng thế giới để chống lại kẻ thù chung, Hồ Chí Minh đã đặt ra một số yêu cầu trong lãnh đạo, chỉ đạo cách mạng Việt Nam như thế nào?",
+//     "answer": "- Đảng Cộng sản, cán bộ, đảng viên của Đảng muốn hoàn thành nhiệm vụ cách mạng cần nắm chắc đặc điểm và xu thế phát triển của thời đại\n- Phải đặt cách mạng Việt Nam trong tiến trình chung của cách mạng thế giới"
+//   },
+//   {
+//     "id": 119,
+//     "question": "Tổng kết thực tiễn 30 năm hoạt động của Đảng (1960), Hồ Chí Minh đã viết nội dung gì?",
+//     "answer": "Đảng ta vĩ đại, vì ngoài lợi ích của giai cấp, của nhân dân, của dân tộc, Đảng ta không có lợi ích gì khác"
+//   },
+//   {
+//     "id": 120,
+//     "question": "Nhận thức đúng vị trí, vai trò to lớn của lý luận đối với đảng cách mạng, trong tác phẩm “Đường Kách mệnh” (1927), Hồ Chí Minh đã chỉ rõ nội dung gì?",
+//     "answer": "Đảng phải có chủ nghĩa làm cốt, trong đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy. Đảng mà không có chủ nghĩa cũng như người không có trí khôn, tàu không có bàn chỉ nam"
+//   },
+//   {
+//     "id": 121,
+//     "question": "Trong bài phát biểu tại cuộc họp đầu tiên của ủy ban nghiên cứu kế hoạch kiến quốc (10/1/1946), Hồ Chí Minh lưu ý cần phải thực hiện ngay những việc gì?",
+//     "answer": "- Làm cho dân có ăn\n- Làm cho dân có mặc\n- Làm cho dân có chỗ ở \n- Làm cho dân được học hành"
+//   },
+//   {
+//     "id": 122,
+//     "question": "Trong tư tưởng Hồ Chí Minh sức mạnh dân tộc bao gồm những yếu tố chủ yếu nào?",
+//     "answer": "- Chủ nghĩa yêu nước\n- Tinh thần đoàn kết\n- Ý chí đấu tranh anh hùng, bất khuất cho độc lập tự do\n- Ý thức tự lực, tự cường"
+//   },
+//   {
+//     "id": 123,
+//     "question": "Nêu những nhân tố bảo đảm thắng lợi của chủ nghĩa xã hội ở Việt Nam theo tư tưởng Hồ Chí Minh?",
+//     "answer": "- Giữ vững và tăng cường vai trò lãnh đạo của Đảng\n- Nâng cao vai trò quản lý của Nhà nước\n- Phát huy tính tích cực, chủ động của các tổ chức chính trị - xã hội\n- Xây dựng đội ngũ cán bộ có đủ đức và tài đáp ứng yêu cầu của cách mạng"
+//   },
+//   {
+//     "id": 124,
+//     "question": "Đồng chí cho biết những hoạt động chủ yếu của Hồ Chí Minh để tiến tới thành lập Đảng Cộng sản Việt Nam?",
+//     "answer": "- Nghiên cứu lý luận, tổng kết thực tiễn, truyền bá chủ nghĩa Mác-Lênin vào Việt Nam\n- Mở lớp đào tạo cán bộ nòng cốt cho cách mạng\n- Thành lập Hội Việt Nam cách mạng thanh niên để tuyên truyền chủ nghĩa Mác-Lênin và lãnh đạo phong trào công nhân\n- Chuẩn bị, triệu tập và chủ trì Hội nghị thành lập Đảng"
+//   },
+//   {
+//     "id": 125,
+//     "question": "Trong thư gửi Quân đội quốc gia Việt Nam nhân kỷ niệm Quốc khánh lần thứ II (ngày 02/9/1947), Hồ Chí Minh chỉ ra 3 yêu cầu đối với các cấp chỉ huy phải làm. Đồng chí cho biết đó là những yêu cầu gì?",
+//     "answer": "- Biết rõ bộ đội, chăm nom bộ đội.\n- Mỗi một cái mệnh lệnh đưa ra, thì cần phải mau chóng và chuyển khắp đến từng đội viên và phải thi hành triệt để. \n- Mỗi người chỉ huy về quân sự cũng như về chính trị, phải làm kiểu mẫu. Phải giữ đúng đạo đức của quân nhân."
+//   },
+//   {
+//     "id": 126,
+//     "question": "Đồng chí hãy nêu những nguyên tắc xây dựng Đảng Cộng sản Việt Nam theo tư tưởng Hồ Chí Minh?",
+//     "answer": "- Tập trung dân chủ\n- Tập thể lãnh đạo, cá nhân phụ trách\n- Tự phê bình và phê bình\n- Kỷ luật tự giác và nghiêm minh\n- Đoàn kết thống nhất trong Đảng"
+//   },
+//   {
+//     "id": 127,
+//     "question": "Trong bài phát biểu tại Hội nghị Tuyên giáo Miền núi (8/1963), Hồ Chí Minh chỉ rõ mục tiêu của công tác tuyên truyền là gì?",
+//     "answer": "Một là, đoàn kết\nHai là, xây dựng chủ nghĩa xã hội\nBa là, đấu tranh thống nhất nước nhà"
+//   },
+//   {
+//     "id": 128,
+//     "question": "Tác phẩm “Cần, kiệm, liêm, chính” của Hồ Chí Minh được đăng trên báo Cứu quốc bao gồm những bài báo nào, thời gian đăng các bài báo đó?",
+//     "answer": "- Thế nào là Cần (30-5-1949)\n- Thế nào là Kiệm (31-5-1949)\n- Thế nào là Liêm (1-6-1949)\n- Thế nào là Chính (2-6-1949)"
+//   },
+//   {
+//     "id": 129,
+//     "question": "Năm 1946, Hồ Chí Minh gửi thư cho các cháu thiếu nhi và khuyên các cháu thiếu nhi phải làm gì?",
+//     "answer": "- Phải siêng học\n- Phải giữ sạch sẽ\n- Phải giữ kỷ luật\n- Phải làm theo đời sống mới\n- Phải thương yêu giúp đỡ cha mẹ anh em"
+//   },
+//   {
+//     "id": 130,
+//     "question": "Theo Hồ Chí Minh bản chất giai cấp công nhân của Nhà nước ta được thể hiện như thế nào?",
+//     "answer": "- Nhà nước do Đảng của giai cấp công nhân lãnh đạo\n- Định hướng đưa đất nước đi lên chủ nghĩa xã hội\n- Nhà nước tổ chức hoạt động theo nguyên tắc tập trung dân chủ"
+//   },
+//   {
+//     "id": 131,
+//     "question": "Ở Việt Nam hiện nay có những di tích nào được UNESCO công nhận là Di sản văn hóa thế giới? Vào những năm nào?",
+//     "answer": "- Quần thể di tích Cố đô Huế, năm 1993\n- Phố Cổ Hội An, năm 1999\n- Thánh địa Mỹ Sơn, năm 1999\n- Khu trung tâm Hoàng thành Thăng Long, năm 2010\n- Thành nhà Hồ, năm 2011"
+//   },
+//   {
+//     "id": 132,
+//     "question": "Ở đồng bằng Bắc bộ Việt Nam có những di sản văn hóa phi vật thể nào được UNESCO công nhận là Di sản thế giới? Vào những năm nào?",
+//     "answer": "- Hát xoan, được công nhận ngày 24/11/2011\n- Hội Gióng tại đền Sóc và đền Phù Đổng, Hà Nội, được công nhận ngày 16/11/2010\n- Ca trù, được công nhận ngày 01/10/2009\n- Dân ca Quan họ, được công nhận ngày 30/9/2009"
+//   },
+//   {
+//     "id": 133,
+//     "question": "Ở Việt Nam hiện nay có những di tích nào được UNESCO công nhận là Di sản thiên nhiên thế giới? Vào những năm nào?",
+//     "answer": "- Vịnh Hạ Long, (năm 1994; 2000; 2011)\n- Vườn Quốc gia Phong Nha - Kẻ Bàng, năm 2003"
+//   },
+//   {
+//     "id": 134,
+//     "question": "Trong chế độ khoa cử Việt Nam thời phong kiến có đặt “Lệ Tam khôi”. Vậy “Lệ Tam khôi” là gì?",
+//     "answer": "Lệ Tam khôi là ba ngôi vị cao nhất trong kỳ thi Đình, theo thứ tự: Trạng nguyên, Bảng nhãn, Thám hoa"
+//   },
+//   {
+//     "id": 135,
+//     "question": "Thế nào là “Cục bách tác”? Thời gian, mục đích thành lập?",
+//     "answer": "- Cục bách tác là một hình thức tổ chức sản xuất thủ công nghiệp - xưởng thủ công do nhà nước phong kiến lập ra. Cục bách tác có thời Đinh - Tiền Lê, Lý - Trần.\n- Mục đích: Tập trung các thợ giỏi trong nước nhằm chuyên lo việc đúc tiền, rèn đúc vũ khí, đóng các loại thuyền chiến phục vụ quân đội, may mũ, áo cho vua quan, địa chủ, góp phần xây dựng các cung điện, dinh thự..."
+//   },
+//   {
+//     "id": 136,
+//     "question": "Tiền giấy đầu tiên ở Việt Nam ra đời vào thời kỳ nào? Có tên là gì?",
+//     "answer": "Việt Nam có đồng tiền giấy đầu tiên vào tháng 4/1369 do Hồ Quý Ly tổ chức phát hành, có tên gọi là Thông bảo hội sao"
+//   },
+//   {
+//     "id": 137,
+//     "question": "Kể tên hai hội nghị lớn họp bàn kế sách đánh giặc giữ nước trong cuộc kháng chiến chống quân xâm lược Nguyên - Mông thời Trần?",
+//     "answer": "- Hội nghị Bình Than (tháng 11 - 1282): Là hội nghị của các vương hầu quý tộc thời Trần để bàn kế đánh giặc\n- Hội nghị Diên Hồng (tháng Giêng năm 1285): Khi quân Mông - Nguyên xâm lược lần 2, vua Trần đã triệu tập các vị bô lão có uy tín trong nước để hỏi kế đánh giặc. Hội nghị đã thể hiện quyết tâm đánh thắng quân Mông - Nguyên xâm lược với lời thề “Quyết đánh”"
+//   },
+//   {
+//     "id": 138,
+//     "question": "Hai nhà toán học của Việt Nam thời phong kiến là ai? Kể tên tác phẩm tiêu biểu của hai ông?",
+//     "answer": "- Lương Thế Vinh với tác phẩm Dư thành toán pháp\n- Vũ Hữu với tác phẩm Lập thành toán pháp"
+//   },
+//   {
+//     "id": 139,
+//     "question": "\"\"Tháp Bút\"\" được xây dựng khi nào? Ở đâu? Trên tháp có đề chữ gì?",
+//     "answer": "- Xây năm 1865\n- Thuộc thời Nguyễn\n- Ở trước cổng cầu Thê Húc vào đền Ngọc Sơn, bên hồ Hoàn Kiếm. Trên có đề 3 chữ \"\"Tả Thanh Thiên\"\" (Viết lên trời xanh)"
+//   },
+//   {
+//     "id": 140,
+//     "question": "Nêu các thành phần kinh tế do Đại hội XI của Đảng xác định?",
+//     "answer": "- Kinh tế nhà nước \n- Kinh tế tập thể\n- Kinh tế tư nhân\n- Kinh tế có vốn đầu tư nước ngoài"
+//   },
+//   {
+//     "id": 141,
+//     "question": "Nghị quyết số 42-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề đến về vấn đề gì?",
+//     "answer": "Về tiếp tục đổi mới, nâng cao chất lượng chính sách xã hội, đáp ứng yêu cầu sự nghiệp xây dựng và bảo vệ Tổ quốc trong giai đoạn mới"
+//   },
+//   {
+//     "id": 142,
+//     "question": "Nghị quyết số 43-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề cập về vấn đề gì?",
+//     "answer": "Về tiếp tục phát huy truyền thống, sức mạnh đại đoàn kết toàn dân tộc, xây dựng đất nước ta ngày càng phồn vinh, hạnh phúc"
+//   },
+//   {
+//     "id": 143,
+//     "question": "Nghị quyết số 44-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề cập về vấn đề gì?",
+//     "answer": "Về Chiến lược bảo vệ Tổ quốc trong tình hình mới"
+//   },
+//   {
+//     "id": 144,
+//     "question": "Nghị quyết số 45-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề cập về vấn đề gì?",
+//     "answer": "Về tiếp tục xây dựng và phát huy vai trò của đội ngũ trí thức đáp ứng yêu cầu phát triển đất nước nhanh và bền vững trong giai đoạn mới"
+//   },
+//   {
+//     "id": 145,
+//     "question": "Nghị quyết số 18-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về tiếp tục đổi mới, hoàn thiện thể chế, chính sách, nâng cao hiệu lực, hiệu quả quản lý và sử dụng đất, tạo động lực đưa nước ta trở thành nước phát triển có thu nhập cao"
+//   },
+//   {
+//     "id": 146,
+//     "question": "Nghị quyết số 19-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về nông nghiệp, nông dân, nông thôn đến năm 2030, tầm nhìn đến năm 2045"
+//   },
+//   {
+//     "id": 147,
+//     "question": "Nghị quyết số 20-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về tiếp tục đổi mới, phát triển và nâng cao hiệu quả kinh tế tập thể trong giai đoạn mới"
+//   },
+//   {
+//     "id": 148,
+//     "question": "Nghị quyết số 21-NQ/TW, ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về tăng cường củng cố, xây dựng tổ chức cơ sở đảng và nâng cao chất lượng đội ngũ đảng viên trong giai đoạn mới"
+//   },
+//   {
+//     "id": 149,
+//     "question": "Nghị quyết số 27-NQ/TW ngày 09/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về tiếp tục xây dựng và hoàn thiện Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam trong giai đoạn mới"
+//   },
+//   {
+//     "id": 150,
+//     "question": "Nghị quyết số 28-NQ/TW ngày 17/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về tiếp tục đổi mới phương thức lãnh đạo, cầm quyền của Đảng đối với hệ thống chính trị trong giai đoạn mới"
+//   },
+//   {
+//     "id": 151,
+//     "question": "Nghị quyết số 29-NQ/TW ngày 17/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về tiếp tục đẩy mạnh công nghiệp hoá, hiện đại hoá đất nước đến năm 2030, tầm nhìn đến năm 2045"
+//   },
+//   {
+//     "id": 152,
+//     "question": "Kết luận số 45-KL/TW ngày 17/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
+//     "answer": "Về định hướng Quy hoạch tổng thể quốc gia thời kỳ 2021 - 2030, tầm nhìn đến năm 2050"
+//   },
+//   {
+//     "id": 153,
+//     "question": "Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị có tiêu đề là gì?",
+//     "answer": "Quy định chuẩn mực đạo đức cách mạng của cán bộ, đảng viên trong giai đoạn mới"
+//   },
+//   {
+//     "id": 154,
+//     "question": "Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị thể hiện 2 điểm mới, 2 điểm mới đó là gì?",
+//     "answer": "Một là,  xác định các chuẩn mực đạo đức cách mạng cùng các tiêu chí đánh giá việc thực hiện chuẩn mực \nHai là,  phù hợp với giai đoạn mới của sự nghiệp cách mạng nước ta"
+//   },
+//   {
+//     "id": 155,
+//     "question": "Điều 1, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Yêu nước, tôn trọng Nhân dân, tuyệt đối trung thành với Đảng, với Tổ quốc"
+//   },
+//   {
+//     "id": 156,
+//     "question": "Điều 2, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Bản lĩnh, đổi mới, sáng tạo, hội nhập"
+//   },
+//   {
+//     "id": 157,
+//     "question": "Điều 3, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Cần, kiệm, liêm, chính, chí công vô tư"
+//   },
+//   {
+//     "id": 158,
+//     "question": "Điều 4, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Đoàn kết, kỷ cương, tình thương, trách nhiệm"
+//   },
+//   {
+//     "id": 159,
+//     "question": "Điều 5, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Gương mẫu, khiêm tốn, tu dưỡng rèn luyện, học tập suốt đời"
+//   },
+//   {
+//     "id": 160,
+//     "question": "Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
+//     "answer": "Về đẩy mạnh xây dựng, chỉnh đốn đảng và hệ thống chính trị; kiên quyết ngăn chặn, đẩy lùi, xử lý nghiêm cán bộ, đảng viên suy thoái về tư tưởng chính trị, đạo đức, lối sống, biểu hiện \"\"tự diễn biến”, \"\"tự chuyển hóa”"
+//   },
+//   {
+//     "id": 161,
+//     "question": "Nhiệm vụ và giải pháp 1, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
+//     "answer": "Tiếp tục đổi mới, nâng cao chất lượng công tác chính trị, tư tưởng, tự phê bình và phê bình"
+//   },
+//   {
+//     "id": 162,
+//     "question": "Nhiệm vụ và giải pháp 2, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
+//     "answer": "Tập trung xây dựng đội ngũ cán bộ các cấp, nhất là cấp chiến lược và người đứng đầu gắn với đổi mới, sắp xếp tổ chức bộ máy của hệ thống chính trị tinh gọn, hoạt động hiệu lực, hiệu quả"
+//   },
+//   {
+//     "id": 163,
+//     "question": "Nhiệm vụ và giải pháp 4, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
+//     "answer": "Tăng cường công tác kiểm tra, giám sát, kỷ luật đảng; kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, tiêu cực; xử lý nghiêm cán bộ, đảng viên vi phạm"
+//   },
+//   {
+//     "id": 164,
+//     "question": "Nhiệm vụ và giải pháp 5, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
+//     "answer": "Phát huy vai trò, trách nhiệm của các cơ quan dân cử, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị - xã hội; thực sự dựa vào nhân dân để xây dựng, chỉnh đốn Đảng và hệ thống chính trị trong sạch, vững mạnh"
+//   },
+//   {
+//     "id": 165,
+//     "question": "Đồng chí hãy trình bày Điều 1, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Nói, viết, làm trái hoặc không thực hiện Cương lĩnh chính trị, Điều lệ Đảng, nghị quyết, chỉ thị, kết luận, quy định, quy chế, quyết định của Đảng; làm những việc mà pháp luật không cho phép"
+//   },
+//   {
+//     "id": 166,
+//     "question": "Đồng chí hãy trình bày Điều 2, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Không chấp hành các nguyên tắc tổ chức và hoạt động của Đảng; tự ứng cử, nhận đề cử và đề cử các chức danh của tổ chức nhà nước, Mặt trận Tổ quốc, các tổ chức chính trị - xã hội, các tổ chức quần chúng được Đảng, Nhà nước giao nhiệm vụ khi chưa được tổ chức đảng có thẩm quyền cho phép"
+//   },
+//   {
+//     "id": 167,
+//     "question": "Đồng chí hãy trình bày Điều 3, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Phản bác, phủ nhận, xuyên tạc chủ nghĩa Mác-Lênin, tư tưởng Hồ Chí Minh; không thực hiện trách nhiệm nêu gương\n- Chủ nghĩa cá nhân, cơ hội, vụ lợi; “tư duy nhiệm kỳ”, đoàn kết xuôi chiều, dân chủ hình thức, thấy đúng không bảo vệ, thấy sai không đấu tranh; độc đoán, chuyên quyền, quan liêu, xa rời quần chúng"
+//   },
+//   {
+//     "id": 168,
+//     "question": "Đồng chí hãy trình bày Điều 4, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Cung cấp, để lộ, làm mất hoặc viết bài, đăng những thông tin, tài liệu bí mật của Đảng và Nhà nước hoặc những việc chưa được phép công bố\n- Tàng trữ, tuyên truyền, tán phát hoặc xúi giục người khác tuyên truyền, tán phát thông tin, tài liệu dưới mọi hình thức để truyền bá những thông tin, quan điểm trái với chủ trương, đường lối của Đảng, chính sách, pháp luật của Nhà nước"
+//   },
+//   {
+//     "id": 169,
+//     "question": "Đồng chí hãy trình bày Điều 5, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Viết bài hoặc cung cấp tài liệu cho người khác viết, nói, cho đăng tải tin, bài sai sự thật, không đăng tải ý kiến phản hồi, cải chính theo quy định\n- Sáng tác, sản xuất, tàng trữ, tán phát các tác phẩm, công trình văn học, nghệ thuật không lành mạnh, trái thuần phong mỹ tục Việt Nam, mang tính kích động gây ảnh hưởng xấu trong xã hội; tán phát bài viết, bài nói, phỏng vấn, hồi ký, phim, ảnh không đúng quy định"
+//   },
+//   {
+//     "id": 170,
+//     "question": "Đồng chí hãy trình bày Điều 6, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Tố cáo có nội dung mang tính bịa đặt; cùng người khác viết, ký tên trong đơn tố cáo; viết đơn tố cáo giấu tên, mạo tên. Gửi hoặc tán phát đơn khiếu nại, tố cáo dưới mọi hình thức đến nơi không có thẩm quyền giải quyết\n- Đe doạ, trù dập, trả thù người khiếu nại, tố cáo; không thực hiện các quy định của Đảng và pháp luật về bảo vệ người tố cáo, phê bình, góp ý; kích động, xúi giục, mua chuộc, cưỡng ép người khác khiếu nại, tố cáo"
+//   },
+//   {
+//     "id": 171,
+//     "question": "Đồng chí hãy trình bày Điều 7, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Tổ chức, tham gia các tổ chức, hội trái quy định của Đảng, pháp luật của Nhà nước; biểu tình, tụ tập đông người gây mất trật tự, an ninh"
+//   },
+//   {
+//     "id": 172,
+//     "question": "Đồng chí hãy trình bày Điều 8, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Tổ chức, xúi giục, tham gia các hoạt động bè phái, cục bộ gây mất đoàn kết nội bộ\n- Lợi dụng việc phản ánh, góp ý kiến đối với Đảng, Nhà nước để đả kích, vu cáo, xúc phạm, nhận xét, đánh giá tùy tiện đối với tổ chức, cá nhân"
+//   },
+//   {
+//     "id": 173,
+//     "question": "Đồng chí hãy trình bày Điều 9, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Báo cáo, lập hồ sơ, kê khai lý lịch, kê khai tài sản, thu nhập không trung thực\n- Sử dụng văn bằng, chứng chỉ, chứng nhận giả, không hợp pháp; nhập quốc tịch, chuyển tiền, tài sản ra nước ngoài, mở tài khoản và mua bán tài sản ở nước ngoài trái quy định"
+//   },
+//   {
+//     "id": 174,
+//     "question": "Đồng chí hãy trình bày Điều 10, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Chủ trì, tham mưu ban hành văn bản có nội dung trái quy định của Đảng, pháp luật của Nhà nước\n- Thực hiện không đúng quy định trong quản lý đầu tư, xây dựng, sử dụng nhà, đất, tài nguyên, tài chính, tài sản của Đảng, Nhà nước"
+//   },
+//   {
+//     "id": 175,
+//     "question": "Đồng chí hãy trình bày Điều 14, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "- Tham ô, đưa, nhận, môi giới hối lộ hoặc lợi dụng vị trí công tác để môi giới, hối lộ dưới mọi hình thức\n- Tổ chức, tham gia hoặc tạo điều kiện thực hiện hoạt động rửa tiền, đi vay, cho vay trái quy định của pháp luật"
+//   },
+//   {
+//     "id": 176,
+//     "question": "Đồng chí hãy trình bày Điều 15, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Tặng, nhận quà dưới mọi hình thức để tác động đến tổ chức, người có trách nhiệm dẫn đến việc quyết định sai, có lợi riêng cho bản thân hoặc cá nhân, tổ chức, cơ quan, doanh nghiệp"
+//   },
+//   {
+//     "id": 177,
+//     "question": "Đồng chí hãy trình bày Điều 16, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Không thực hành tiết kiệm, để xảy ra thất thoát, lãng phí trong việc quản lý, sử dụng tài chính, tài sản công; mua sắm, quản lý, sử dụng tài sản công trái quy định"
+//   },
+//   {
+//     "id": 178,
+//     "question": "Đồng chí hãy trình bày Điều 19, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Mê tín, hoạt động mê tín; ủng hộ hoặc tham gia các tôn giáo bất hợp pháp hoặc lợi dụng các hoạt động tôn giáo, tín ngưỡng để trục lợi"
+//   },
+//   {
+//     "id": 179,
+//     "question": "Đồng chí hãy trình bày Điều 17, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Can thiệp, tác động để vợ (chồng), con, bố, mẹ, anh, chị, em ruột mình, bên vợ (chồng), bản thân và người khác đi du lịch, học tập, chữa bệnh bằng nguồn tài trợ của các tổ chức, cá nhân có liên quan đến ngành, lĩnh vực theo dõi, quản lý"
+//   },
+//   {
+//     "id": 180,
+//     "question": "Đồng chí hãy trình bày Điều 12, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
+//     "answer": "Có hành vi chạy chức, chạy quyền, bao che, tiếp tay, can thiệp, tác động dưới mọi hình thức đến tổ chức, cá nhân để bản thân hoặc người khác được tiếp nhận, tuyển dụng, quy hoạch, luân chuyển, bổ nhiệm, đề cử, ứng cử, khen thưởng, phong tặng danh hiệu, đi học, đi nước ngoài, thực hiện chế độ, chính sách cán bộ trái quy định"
+//   },
+//   {
+//     "id": 181,
+//     "question": "Kết luận số 01-KL/TW ngày 18/5/2021 của Bộ Chính trị đề cập nội dung gì?",
+//     "answer": "Về tiếp tục thực hiện Chỉ thị số 05-CT/TW của Bộ Chính trị \"\"về đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh\"\""
+//   },
+//   {
+//     "id": 182,
+//     "question": "Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia"
+//   },
+//   {
+//     "id": 183,
+//     "question": "Nghị quyết số 59-NQ/TW ngày 24/1/2025 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Về hội nhập quốc tế trong tình hình mới"
+//   },
+//   {
+//     "id": 184,
+//     "question": "Nghị quyết số 66-NQ/TW ngày 04/5/2025 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Về đổi mới công tác xây dựng và thi hành pháp luật đáp ứng yêu cầu phát triển đất nước trong kỷ nguyên mới"
+//   },
+//   {
+//     "id": 185,
+//     "question": "Nghị quyết số 68-NQ/TW ngày 04/5/2025 của Bộ Chính trị đề cập đến vấn đề gì?",
+//     "answer": "Về phát triển kinh tế tư nhân"
+//   },
+//   {
+//     "id": 186,
+//     "question": "Quan điểm chỉ đạo thứ nhất trong Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị là gì?",
+//     "answer": "Phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia là đột phá quan trọng hàng đầu, là động lực chính để phát triển nhanh lực lượng sản xuất hiện đại, hoàn thiện quan hệ sản xuất, đổi mới phương thức quản trị quốc gia, phát triển kinh tế - xã hội, ngăn chặn nguy cơ tụt hậu, đưa đất nước phát triển bứt phá, giàu mạnh trong kỷ nguyên mới"
+//   },
+//   {
+//     "id": 187,
+//     "question": "Quan điểm chỉ đạo thứ năm trong Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị là gì?",
+//     "answer": "Bảo đảm chủ quyền quốc gia trên không gian mạng; bảo đảm an ninh mạng, an ninh dữ liệu, an toàn thông tin của tổ chức và cá nhân là yêu cầu xuyên suốt, không thể tách rời trong quá trình phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia"
+//   },
+//   {
+//     "id": 188,
+//     "question": "Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương đề cập đến vấn đề gì?",
+//     "answer": "Về đổi mới công tác giáo dục và đào tạo đáp ứng yêu cầu nhiệm vụ xây dựng Quân đội trong tình hình mới"
+//   },
+//   {
+//     "id": 189,
+//     "question": "Đồng chí trình bày nhiệm vụ, giải pháp 1, Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương?",
+//     "answer": "Tăng cường sự lãnh đạo, chỉ đạo của cấp ủy, chỉ huy các cấp đối với đổi mới, nâng cao chất lượng giáo dục và đào tạo"
+//   },
+//   {
+//     "id": 190,
+//     "question": "Đồng chí trình bày nhiệm vụ, giải pháp 2, Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương?",
+//     "answer": "Xây dựng, hoàn thiện và thực hiện tốt cơ chế, chính sách đáp ứng yêu cầu đổi mới công tác giáo dục và đào tạo"
+//   },
+//   {
+//     "id": 191,
+//     "question": "Quan điểm chỉ đạo thứ tư được xác định trong Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương là gì?",
+//     "answer": "- Ứng dụng nhanh, hiệu quả thành tựu khoa học công nghệ trong đổi mới giáo dục và đào tạo\n- Gắn nghiên cứu khoa học với nâng cao chất lượng giáo dục và đào tạo, với thực tiễn\n- Chủ động, tích cực hội nhập quốc tế để phát triển giáo dục và đào tạo đáp ứng yêu cầu nhiệm vụ xây dựng Quân đội hiện đại"
+//   },
+//   {
+//     "id": 192,
+//     "question": "Đồng chí trình bày đặc trưng 1, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương?",
+//     "answer": "- Tuyệt đối trung thành với Tổ quốc, với Đảng, Nhà nước và nhân dân. Kiên định lập trường chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh, mục tiêu độc lập dân tộc và chủ nghĩa xã hội\n- Có ý chí quyết tâm chiến đấu cao, chấp nhận hy sinh, vượt qua khó khăn, gian khổ, sẵn sàng nhận và hoàn thành xuất sắc mọi nhiệm vụ được giao"
+//   },
+//   {
+//     "id": 193,
+//     "question": "Đồng chí trình bày đặc trưng 2, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương?",
+//     "answer": "- Có đạo đức cách mạng trong sáng, lối sống trung thực, khiêm tốn, giản dị, chân thành, lạc quan\n- Nói đi đôi với làm, luôn đặt lợi ích của tập thể lên trên lợi ích của cá nhân; không thỏa mãn với thành tích, không chùn bước trước khó khăn, hiểm nguy"
+//   },
+//   {
+//     "id": 194,
+//     "question": "Đồng chí trình bày đặc trưng 3, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương?",
+//     "answer": "- Tích cực huấn luyện, học tập, nghiên cứu nâng cao trình độ mọi mặt và kiến thức chuyên môn\n- Có phương pháp, tác phong công tác khoa học, nghiêm túc, trách nhiệm cao\n- Gương mẫu trong công tác, sinh hoạt\n- Kiên quyết đấu tranh với các biểu hiện suy thoái, tham nhũng, lãng phí, tiêu cực"
+//   },
+//   {
+//     "id": 195,
+//     "question": "Biểu hiện của chủ nghĩa cá nhân thứ nhất trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
+//     "answer": "Không quan tâm đến lợi ích chung, làm việc gì cũng chỉ mưu cầu cho lợi ích cá nhân; sống ích kỷ, thực dụng, cơ hội, vụ lợi; ganh ghét, đố kị, so bì, tị nạnh, không muốn người khác hơn mình"
+//   },
+//   {
+//     "id": 196,
+//     "question": "Biểu hiện của chủ nghĩa cá nhân thứ sáu trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
+//     "answer": "- Lợi dụng chức vụ, quyền hạn để tham ô, nhận hối lộ hoặc để người thân lợi dụng chức vụ, quyền hạn của mình trục lợi\n- Cố ý làm trái các quy chế, quy định, dung túng, bao che, tiếp tay cho tham nhũng, lãng phí, tiêu cực; kê khai tài sản, thu nhập không trung thực"
+//   },
+//   {
+//     "id": 197,
+//     "question": "Quan điểm thứ nhất trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
+//     "answer": "- Phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân là nhiệm vụ chính trị quan trọng, vừa cấp bách, vừa thường xuyên của các cấp ủy, tổ chức đảng, tổ chức chỉ huy, tổ chức quần chúng\n- Là trách nhiệm của mọi cán bộ, chiến sĩ; đảng viên và quần chúng trong Quân đội, trước hết là đội ngũ cấp ủy viên, cán bộ chủ trì các cấp"
+//   },
+//   {
+//     "id": 198,
+//     "question": "Quan điểm thứ hai trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
+//     "answer": "- Phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân phải đặt trong tổng thể các giải pháp xây dựng Quân đội vững mạnh về chính trị\n- Đảng bộ Quân đội vững mạnh về chính trị, tư tưởng, đạo đức, tổ chức và cán bộ; ngăn chặn, đẩy lùi các biểu hiện suy thoái, “tự diễn biến”, “tự chuyển hóa” , những hành vi tham nhũng, tiêu cực"
+//   },
+//   {
+//     "id": 199,
+//     "question": "Nhóm nhiệm vụ, giải pháp thứ nhất, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
+//     "answer": "Tăng cường công tác lãnh đạo tư tưởng, giáo dục chính trị, nâng cao nhận thức, trách nhiệm cho cán bộ, đảng viên và quần chúng tiếp tục phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân"
+//   },
+//   {
+//     "id": 200,
+//     "question": "Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương đề cập đến nội dung gì?",
+//     "answer": "Về phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân trong tình hình mới"
+//   },
+//   {
+//     "id": 201,
+//     "question": "Thông tư số 54/2022/TT-BQP ngày 19/7/2022 của Bộ Quốc phòng quy định về nội dung gì? Gồm có bao nhiêu chương, điều?",
+//     "answer": "- Quy định tổ chức dạy học các môn khoa học xã hội và nhân văn trong nhà trường Quâ đội\n- Gồm có 3 chương, 10 điều"
+//   },
+//   {
+//     "id": 202,
+//     "question": "Tỷ lệ khối kiến thức KHXH&NV trong chương trình nội dung đào tạo nhân viên chuyên môn kỹ thuật theo Thông tư số 54/2022/TT-BQP ngày 19/7/2022 của Bộ Quốc phòng được quy định như thế nào?",
+//     "answer": "- Trình độ cao đẳng: 16%\n- Trình độ trung cấp: 12%\n- Trình độ sơ cấp: 7%"
+//   },
+//   {
+//     "id": 203,
+//     "question": "Tổ chức xây dựng đơn vị vững mạnh toàn diện “Mẫu mực, tiêu biểu” theo Chỉ thị số 79/CT-BQP ngày 22/7/2022 của Bộ Quốc phòng gồm những tiêu chuẩn nào?",
+//     "answer": "- Vững mạnh về chính trị\n- Thực hiện nghiêm túc công tác tổ chức lực lượng; huấn luyện và đào tạo giỏi; duy trì nghiêm nền nếp chế độ sẵn sàng chiến đấu\n- Xây dựng chính quy, quản lý kỷ luật tốt và đẩy mạnh cải cách hành chính quân sự\n- Thực hiện tốt công tác hậu cần, tài chính, kế hoạch và đầu tư"
+//   },
+//   {
+//     "id": 204,
+//     "question": "Thông tư số 143/2023/TT-BQP ngày 27/12/2023 của Bộ Quốc phòng quy định về nội dung gì? Gồm bao nhiêu chương, điều?",
+//     "answer": "- Quy định về xử lý kỷ luật trong Quân đội nhân dân Việt Nam\n- Gồm có 5 chương, 59 điều"
+//   },
+//   {
+//     "id": 205,
+//     "question": "Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương đề cập đến nội dung gì?",
+//     "answer": "Về đẩy mạnh thực hiện Cuộc vận động “Phát huy truyền thống, cống hiến tài năng, xứng danh Bộ đội Cụ Hồ” thời kỳ mới"
+//   },
+//   {
+//     "id": 206,
+//     "question": "Chuẩn mực thứ nhất được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
+//     "answer": "Có bản lĩnh chính trị vững vàng, động cơ trong sáng, trách nhiệm cao"
+//   },
+//   {
+//     "id": 207,
+//     "question": "Chuẩn mực thứ hai được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
+//     "answer": "Có đạo đức, lối sống trong sạch lành mạnh"
+//   },
+//   {
+//     "id": 208,
+//     "question": "Chuẩn mực thứ ba được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
+//     "answer": "Có văn hóa, tri thức khoa học, trình độ quân sự, năng lực, phương pháp, tác phong công tác và sức khỏe tốt đáp ứng yêu cầu nhiệm vụ"
+//   },
+//   {
+//     "id": 209,
+//     "question": "Chuẩn mực thứ tư được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
+//     "answer": "Đẩy mạnh thực hành dân chủ, kỷ luật tự giác, nghiêm minh"
+//   },
+//   {
+//     "id": 210,
+//     "question": "Chuẩn mực thứ năm được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
+//     "answer": "Tích cực chăm lo xây dựng đoàn kết nội bộ tốt, tôn trọng, giúp đỡ, gắn bó máu thịt với nhân dân, có tinh thần quốc tế trong sáng"
+//   },
+//   {
+//     "id": 211,
+//     "question": "Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương đề cập đến nội dung gì?",
+//     "answer": "Về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong Quân đội"
+//   },
+//   {
+//     "id": 212,
+//     "question": "Quan điểm chỉ đạo thứ nhất trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong Quân đội là một trong các đột phá quan trọng hàng đầu, là mũi nhọn tiên phong góp phần xây dựng Quân đội cách mạng, chính quy, tinh nhuệ, hiện đại"
+//   },
+//   {
+//     "id": 213,
+//     "question": "Quan điểm chỉ đạo thứ năm trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Bảo đảm an ninh mạng, an ninh dữ liệu, an toàn thông tin của tổ chức và cá nhân là yêu cầu xuyên suốt, không thể tách rời trong quá trình phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
+//   },
+//   {
+//     "id": 214,
+//     "question": "Nhiệm vụ, giải pháp thứ nhất được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Nâng cao nhận thức, quyết tâm lãnh đạo, chỉ đạo tạo động lực mạnh mẽ trong toàn quân về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyến đổi số"
+//   },
+//   {
+//     "id": 215,
+//     "question": "Nhiệm vụ, giải pháp thứ hai được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Khẩn trương hoàn thiện hệ thống văn bản tạo cơ sở pháp lý, xoá bỏ rào cản đang cản trở sự phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
+//   },
+//   {
+//     "id": 216,
+//     "question": "Nhiệm vụ, giải pháp thứ ba được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Tăng cường đầu tư, hoàn thiện hạ tầng cho khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
+//   },
+//   {
+//     "id": 217,
+//     "question": "Nhiệm vụ, giải pháp thứ tư được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Phát triển, trọng dụng nhân lực chất lượng cao, nhân tài đáp ứng yêu cầu phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
+//   },
+//   {
+//     "id": 218,
+//     "question": "Nhiệm vụ, giải pháp thứ năm được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Đẩy mạnh ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong hoạt động của cơ quan, đon vị trong toàn quân; nâng cao hiệu quả, hiệu lực quản lý của chỉ huy các cấp trên các lĩnh vực quân sự, quốc phòng"
+//   },
+//   {
+//     "id": 219,
+//     "question": "Nhiệm vụ, giải pháp thứ sáu được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Thúc đẩy mạnh mẽ hoạt động khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong doanh nghiệp Quân đội"
+//   },
+//   {
+//     "id": 220,
+//     "question": "Nhiệm vụ, giải pháp thứ bảy được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
+//     "answer": "Tăng cường hợp tác quốc tế trong phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
+//   }
+// ]
 [
   {
     "id": 1,
-    "question": "Chủ nghĩa Mác - Lênin là gì?",
-    "answer": "- Là hệ thống những quan điểm và học thuyết khoa học của C. Mác, Ph.Ăngghen và sự phát triển của V.I.Lênin\n- Là sự kế thừa và phát triển những giá trị của lịch sử tư tưởng nhân loại, trên cơ sở thực tiễn của thời đại\n- Là khoa học về giải phóng giai cấp công nhân, giải phóng nhân dân lao động và giải phóng con người\n- Là thế giới quan và phương pháp luận phổ biến của nhận thức khoa học."
+    "question": "Ba bộ phận lý luận cấu thành chủ nghĩa Mác - Lênin là gì?",
+    "answer": "- Triết học Mác - Lênin\n- Kinh tế chính trị học Mác - Lênin\n- Chủ nghĩa xã hội khoa học"
   },
   {
     "id": 2,
-    "question": "Ba bộ phận lý luận cấu thành chủ nghĩa Mác - Lênin là gì?",
-    "answer": "- Triết học Mác - Lênin\n- Kinh tế chính trị học Mác - Lênin \n- Chủ nghĩa xã hội khoa học"
-  },
-  {
-    "id": 3,
     "question": "Triết học Mác - Lênin là gì?",
     "answer": "- Là hệ thống thế giới quan, phương pháp luận khoa học và cách mạng\n- Vũ khí tinh thần của giai cấp công nhân, nhân dân lao động trong nhận thức và cải tạo thế giới"
   },
   {
-    "id": 4,
-    "question": "Đối tượng nghiên cứu của Triết học Mác - Lênin là gì?",
-    "answer": "- Mối quan hệ giữa vật chất và ý thức trên lập trường duy vật biện chứng\n- Các quy luật vận động, phát triển chung nhất của tự nhiên, xã hội và tư duy"
-  },
-  {
-    "id": 5,
+    "id": 3,
     "question": "Đặc điểm của Triết học Mác - Lênin?",
-    "answer": "- Triết học Mác - Lênin có sự thống nhất chặt chẽ giữa tính đảng và tính khoa học\n- Triết học Mác - Lênin luôn gắn bó chặt chẽ giữa lý luận và thực tiễn\n- Triết học Mác - Lênin có tính sáng tạo"
+    "answer": "- Có sự thống nhất chặt chẽ giữa tính đảng và tính khoa học\n- Luôn gắn bó chặt chẽ giữa lý luận và thực tiễn\n- Có tính sáng tạo"
   },
   {
-    "id": 6,
-    "question": "Chức năng của Triết học Mác - Lênin?",
-    "answer": "- Chức năng nhận thức\n- Chức năng dự báo\n- Chức năng giáo dục\n- Chức năng thế giới quan\n- Chức năng phương pháp luận"
-  },
-  {
-    "id": 7,
-    "question": "Định nghĩa vật chất của Lênin",
-    "answer": "- Vật chất là một phạm trù triết học dùng để chỉ thực tại khách quan được đem lại cho con người trong cảm giác\n- Được cảm giác của chúng ta chép lại, chụp lại, phản ánh và tồn tại không lệ thuộc vào cảm giác"
-  },
-  {
-    "id": 8,
-    "question": "Các hình thức tồn tại của vật chất là gì?",
-    "answer": "- Vận động của vật chất\n- Không gian và thời gian"
-  },
-  {
-    "id": 9,
-    "question": "Nguồn gốc của ý thức?",
-    "answer": "- Nguồn gốc tự nhiên\n- Nguồn gốc xã hội"
-  },
-  {
-    "id": 10,
-    "question": "Ý thức là gì?",
-    "answer": "- Là sự phản ánh hiện thực khách quan vào trong bộ óc con người một cách năng động, sáng tạo\n- Là hình ảnh chủ quan của thế giới khách quan"
-  },
-  {
-    "id": 11,
-    "question": "Kết cấu của ý thức theo chiều ngang gồm những yếu tố nào?",
-    "answer": "- Tri thức\n- Tình cảm\n- Niềm tin\n- Lý trí\n- Ý chí"
-  },
-  {
-    "id": 12,
-    "question": "Kết cấu của ý thức theo chiều dọc gồm những yếu tố nào?",
-    "answer": "- Tự ý thức\n- Tiềm thức\n- Vô thức"
-  },
-  {
-    "id": 13,
+    "id": 4,
     "question": "Phép biện chứng duy vật bao gồm những nguyên lý cơ bản nào?",
     "answer": "- Nguyên lý về mối liên hệ phổ biến\n- Nguyên lý về sự phát triển"
   },
   {
-    "id": 14,
-    "question": "Tính chất của hai nguyên lý cơ bản của phép biện chứng duy vật là gì?",
-    "answer": "- Tính khách quan\n- Tính phổ biến\n- Tính đa dạng, phong phú"
-  },
-  {
-    "id": 15,
-    "question": "Phép biện chứng duy vật bao gồm những quy luật cơ bản nào?",
-    "answer": "- Quy luật chuyển hóa từ những thay đổi về lượng thành những thay đổi về chất và ngược lại\n- Quy luật thống nhất và đấu tranh của các mặt đối lập\n- Quy luật phủ định của phủ định"
-  },
-  {
-    "id": 16,
-    "question": "Sản xuất vật chất là gì?",
-    "answer": "- Là quá trình con người sử dụng công cụ lao động tác động vào tự nhiên, cải biến các dạng vật chất của giới tự nhiên\n- Để tạo ra của cải xã hội, nhằm thỏa mãn nhu cầu tồn tại và phát triển của con người"
-  },
-  {
-    "id": 17,
-    "question": "Phương thức sản xuất là gì?",
-    "answer": "Là cách thức con người sản xuất ra của cải vật chất ở những giai đoạn lịch sử nhất định"
-  },
-  {
-    "id": 18,
-    "question": "Lực lượng sản xuất là gì?",
-    "answer": "- Là năng lực thực tiễn cải biến giới tự nhiên của con người nhằm đáp ứng nhu cầu đời sống của mình\n- Là sự thống nhất hữu cơ giữa người lao động và tư liệu sản xuất, mà trước hết là công cụ lao động"
-  },
-  {
-    "id": 19,
-    "question": "Tư liệu sản xuất là gì?",
-    "answer": "Là tổng thể những yếu tố vật chất của quá trình lao động bao gồm đối tượng lao động và tư liệu lao động"
-  },
-  {
-    "id": 20,
-    "question": "Quan hệ sản xuất là gì?",
-    "answer": "Là quan hệ giữa người với người trong quá trình sản xuất ở những giai đoạn lịch sử nhất định"
-  },
-  {
-    "id": 21,
+    "id": 5,
     "question": "Nội dung quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng sản xuất?",
     "answer": "Lực lượng sản xuất và quan hệ sản xuất là hai mặt hợp thành của phương thức sản xuất, thống nhất biện chứng; trong đó, lực lượng sản xuất quyết định quan hệ sản xuất, quan hệ sản xuất tác động trở lại to lớn đối với lực lượng sản xuất"
   },
   {
-    "id": 22,
+    "id": 6,
     "question": "Cơ sở hạ tầng là gì?",
     "answer": "Cơ sở hạ tầng là toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế của một xã hội nhất định"
   },
   {
-    "id": 23,
+    "id": 7,
     "question": "Kiến trúc thượng tầng là gì?",
-    "answer": "- Là toàn bộ những quan điểm chính trị, pháp quyền, đạo đức, tôn giáo, nghệ thuật, triết học... cùng với các thiết chế xã hội tương ứng của nó như nhà nước, đảng phái, giáo hội, các đoàn thể xã hội...\n- Được hình thành, xây dựng trên những cơ sở hạ tầng nhất định"
+    "answer": "- Là toàn bộ những quan điểm chính trị, pháp quyền, đạo đức, tôn giáo, nghệ thuật, triết học... cùng với các thiết chế xã hội tương ứng\n- Được hình thành, xây dựng trên những cơ sở hạ tầng nhất định"
   },
   {
-    "id": 24,
+    "id": 8,
     "question": "Mối quan hệ giữa cơ sở hạ tầng và kiến trúc thượng tầng?",
-    "answer": "- Cơ sở hạ tầng và kiến trúc thượng tầng là hai mặt thống nhất biện chứng trong một hình thái kinh tế - xã hội nhất định\n- Trong sự tác động biện chứng của nó, cơ sở hạ tầng quyết định kiến trúc thượng tầng và kiến trúc thượng tầng có tác động to lớn, mạnh mẽ lại cơ sở hạ tầng"
+    "answer": "- Cơ sở hạ tầng và kiến trúc thượng tầng là hai mặt thống nhất biện chứng trong một hình thái kinh tế - xã hội nhất định\n- Cơ sở hạ tầng quyết định kiến trúc thượng tầng và kiến trúc thượng tầng tác động trở lại mạnh mẽ đối với cơ sở hạ tầng"
   },
   {
-    "id": 25,
+    "id": 9,
     "question": "Vai trò quyết định của cơ sở hạ tầng đối với kiến trúc thượng tầng được thể hiện như thế nào?",
-    "answer": "- Cơ sở hạ tầng quyết định sự ra đời của kiến trúc thượng tầng.\n- Cơ sở hạ tầng quyết định nội dung phản ánh của kiến trúc thượng tầng. \n- Cơ sở hạ tầng quyết định sự vận động và biến đổi của kiến trúc thượng tầng."
+    "answer": "- Cơ sở hạ tầng quyết định sự ra đời của kiến trúc thượng tầng\n- Cơ sở hạ tầng quyết định nội dung phản ánh của kiến trúc thượng tầng\n- Cơ sở hạ tầng quyết định sự vận động và biến đổi của kiến trúc thượng tầng"
   },
   {
-    "id": 26,
-    "question": "Các hình thái ý thức xã hội bao gồm những gì?",
-    "answer": "- Ý thức chính trị\n- Ý thức pháp quyền\n- Ý thức đạo đức\n- Ý thức thẩm mỹ\n- Ý thức tôn giáo"
+    "id": 10,
+    "question": "Kết cấu xã hội - giai cấp là gì?",
+    "answer": "Là tổng thể các giai cấp, tầng lớp và mối quan hệ giữa các giai cấp, tầng lớp tồn tại trong một xã hội cụ thể ở một giai đoạn lịch sử nhất định"
   },
   {
-    "id": 27,
-    "question": "Ý thức chính trị là gì?",
-    "answer": "- Là hình thái ý thức xã hội chỉ xuất hiện và tồn tại trong các xã hội có giai cấp và nhà nước\n- Nó phản ánh các quan hệ chính trị, kinh tế - xã hội giữa các giai cấp, các dân tộc và các quốc gia\n- Cũng như thái độ của các giai cấp đối với quyền lực nhà nước"
+    "id": 11,
+    "question": "Vai trò của đấu tranh giai cấp trong xã hội có đối kháng giai cấp?",
+    "answer": "Đấu tranh giai cấp là nguồn gốc, động lực phát triển quan trọng của xã hội có giai cấp"
   },
   {
-    "id": 28,
-    "question": "Ý thức pháp quyền là gì?",
-    "answer": "- Là toàn bộ các tư tưởng, quan điểm của một giai cấp về bản chất và vai trò của pháp luật\n- Về quyền và nghĩa vụ của nhà nước, các tổ chức xã hội và công dân\n- Về tính hợp pháp và không hợp pháp của hành vi con người trong xã hội"
+    "id": 12,
+    "question": "Vai trò của cá nhân lãnh tụ là gì?",
+    "answer": "- Là những người ưu tú đứng đầu phong trào quần chúng\n- Là người tiêu biểu về đạo đức, tài năng, có cống hiến to lớn được lịch sử ghi nhận"
   },
   {
-    "id": 29,
-    "question": "Ý thức đạo đức là gì?",
-    "answer": "- Là toàn bộ những quan niệm về thiện, ác, tốt, xấu, lương tâm, trách nhiệm, hạnh phúc, công bằng...\n- Và về những quy tắc đánh giá, điều chỉnh hành vi ứng xử giữa cá nhân với xã hội, giữa cá nhân với cá nhân trong xã hội"
+    "id": 13,
+    "question": "Tồn tại xã hội là gì?",
+    "answer": "Là toàn bộ điều kiện sinh hoạt vật chất và quan hệ vật chất xã hội ở những giai đoạn lịch sử nhất định"
   },
   {
-    "id": 30,
-    "question": "Ý thức thẩm mỹ là gì?",
-    "answer": "- Là sự nhận thức, đánh giá của con người đối với hiện thực trong cảm thụ và sáng tạo cái đẹp\n- Là sự phản ánh hiện thực khách quan bằng hình tượng trực tiếp, cụ thể, cảm tính hình thành cảm xúc về cái đẹp"
-  },
-  {
-    "id": 31,
-    "question": "Công nghiệp hóa, hiện đại hóa là gì?",
-    "answer": "- Là quá trình chuyển đổi căn bản, toàn diện các hoạt động sản xuất, kinh doanh, dịch vụ và quản lý kinh tế, xã hội từ sử dụng sức lao động thủ công là chính sang sử dụng một cách phổ biến sức lao động với công nghệ, phương tiện và phương pháp tiên tiến, hiện đại\n- Dựa trên sự phát triển của công nghiệp và tiến bộ khoa học công nghệ, tạo ra năng suất lao động xã hội cao"
-  },
-  {
-    "id": 32,
-    "question": "Sự cần thiết phải tiến hành công nghiệp hóa, hiện đại hóa?",
-    "answer": "- Từ yêu cầu xây dựng cơ sở vật chất, kỹ thuật cho chủ nghĩa xã hội\n- Từ yêu cầu xây dựng quan hệ sản xuất mới xã hội chủ nghĩa\n- Từ vai trò của công nghiệp hóa, hiện đại hóa"
-  },
-  {
-    "id": 33,
+    "id": 14,
     "question": "Nội dung công nghiệp hóa, hiện đại hóa trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam",
     "answer": "- Đổi mới, nâng cao trình độ kỹ thuật - công nghệ của nền kinh tế theo hướng hiện đại\n- Xây dựng cơ cấu kinh tế theo hướng hiện đại, hợp lý và hiệu quả"
   },
   {
-    "id": 34,
-    "question": "Giải pháp đẩy mạnh công nghiệp hóa, hiện đại hóa trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam",
-    "answer": "- Tăng cường sự lãnh đạo của Đảng, hiệu lực quản lý của Nhà nước, phát huy quyền làm chủ của nhân dân giữ vững sự ổn định về chính trị - xã hội\n- Huy động và sử dụng có hiệu quả các nguồn vốn\n- Phát triển nguồn nhân lực\n- Đổi mới và nâng cao trình độ khoa học, công nghệ\n- Mở rộng và nâng cao hiệu quả quan hệ kinh tế đối ngoại"
-  },
-  {
-    "id": 35,
-    "question": "Kinh tế thị trường là gì?",
-    "answer": "Là trình độ phát triển cao của kinh tế hàng hóa; trong đó, toàn bộ các yếu tố “đầu vào” và “đầu ra” của nền sản xuất đều thông qua thị trường"
-  },
-  {
-    "id": 36,
-    "question": "Các giai đoạn phát triển kinh tế thị trường?",
-    "answer": "- Kinh tế thị trường sơ khai\n- Kinh tế thị trường tự do\n- Kinh tế thị trường hiện đại"
-  },
-  {
-    "id": 37,
+    "id": 15,
     "question": "Đặc trưng của kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam?",
-    "answer": "- Nền kinh tế có mục đích là phát triển lực lượng sản xuất, xây dựng cơ sở vật chất, kỹ thuật cho chủ nghĩa xã hội vì mục tiêu “dân giàu, nước mạnh, dân chủ, công bằng, văn minh”\n- Nền kinh tế dựa trên nhiều hình thức sở hữu, nhiều thành phần kinh tế, trong đó kinh tế nhà nước giữ vai trò chủ đạo\n- Nền kinh tế vận hành theo cơ chế thị trường có sự quản lý của Nhà nước xã hội chủ nghĩa, do Đảng Cộng sản Việt Nam lãnh đạo\n- Nền kinh tế thực hiện nhiều hình thức phân phối thu nhập, trong đó phân phối theo lao động và hiệu quả kinh tế là chủ yếu\n- Nền kinh tế có tính hiện đại và hội nhập"
+    "answer": "- Mục đích: phát triển lực lượng sản xuất, xây dựng cơ sở vật chất kỹ thuật cho CNXH\n- Nhiều hình thức sở hữu, nhiều thành phần kinh tế, kinh tế nhà nước giữ vai trò chủ đạo\n- Vận hành theo cơ chế thị trường có quản lý của Nhà nước\n- Nhiều hình thức phân phối, lấy phân phối theo lao động và hiệu quả kinh tế làm chủ yếu\n- Có tính hiện đại và hội nhập"
   },
   {
-    "id": 38,
-    "question": "Để đẩy mạnh công nghiệp hoá, hiện đại hoá cần tạo ra nguồn vốn lớn. Ở nước ta hiện nay có thể huy động các nguồn vốn nào? Vai trò của các nguồn vốn đó là gì?",
-    "answer": "- Vốn trong nước và vốn ngoài nước.\n- Vốn trong nước là quyết định, vốn ngoài nước là rất quan trọng."
-  },
-  {
-    "id": 39,
+    "id": 16,
     "question": "Trong lịch sử thế giới, công nghiệp hóa đã được tiến hành theo những mô hình nào?",
-    "answer": "- Thứ nhất, mô hình công nghiệp hóa theo hướng thay thế nhập khẩu (hay gọi là mô hình công nghiệp hóa hướng nội)\n- Thứ hai, mô hình công nghiệp hóa theo hướng xuất khẩu (hay gọi là mô hình công nghiệp hóa hướng ngoại)"
+    "answer": "- Công nghiệp hóa hướng nội (thay thế nhập khẩu)\n- Công nghiệp hóa hướng ngoại (hướng xuất khẩu)"
   },
   {
-    "id": 40,
-    "question": "Trong thời kỳ quá độ lên chủ nghĩa xã hội ở nước ta phải thực hiện những nhiệm vụ kinh tế cơ bản nào?",
-    "answer": "- Phát triển lực lượng sản xuất, công nghiệp hoá, hiện đại hoá đất nước.\n- Xây dựng quan hệ sản xuất mới theo định hướng xã hội chủ nghĩa.\n- Mở rộng và nâng cao hiệu quả kinh tế đối ngoại."
-  },
-  {
-    "id": 41,
-    "question": "Để công nghiệp hoá, hiện đại hoá thành công cần có những tiền đề gì?",
-    "answer": "- Huy động và sử dụng vốn có hiệu quả.\n- Đào tạo nguồn nhân lực.\n- Phát triển khoa học và công nghệ.\n- Mở rộng quan hệ kinh tế đối ngoại.\n- Tăng cường sự lãnh đạo của Đảng và quản lý của nhà nước."
-  },
-  {
-    "id": 42,
-    "question": "Đại hội XI của Đảng xác định vai trò của thành phần kinh tế nhà nước và kinh tế tập thể như thế nào?",
-    "answer": "- Kinh tế nhà nước giữ vai trò chủ đạo. \n- Kinh tế nhà nước cùng với kinh tế tập thể ngày càng trở thành nền tảng vững chắc của nền kinh tế quốc dân."
-  },
-  {
-    "id": 43,
-    "question": "Nêu tên các nhóm quy luật chính trị xã hội của quá trình hình thành phát triển hình thái kinh tế xã hội cộng sản chủ nghĩa ?",
-    "answer": "- Nhóm 1: Quy luật về mối quan hệ biện chứng giữa lực lượng sản xuất và quan hệ sản xuất\n- Nhóm 2: Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng."
-  },
-  {
-    "id": 44,
-    "question": "Tại sao nói sự ra đời của sản xuất hàng hoá là quá trình lịch sử - tự nhiên?",
-    "answer": "Vì các điều kiện ra đời của sản xuất hàng hoá xuất hiện không do ý muốn chủ quan của con người."
-  },
-  {
-    "id": 45,
+    "id": 17,
     "question": "Tiêu chí nào là cơ bản nhất để phân biệt các thời đại kinh tế?",
     "answer": "Trình độ của công cụ sản xuất"
   },
   {
-    "id": 46,
-    "question": "Tiêu chí nào là cơ bản nhất để phân biệt các hình thái kinh tế - xã hội?",
-    "answer": "Quan hệ sản xuất"
-  },
-  {
-    "id": 47,
+    "id": 18,
     "question": "Tiêu chí nào là quan trọng nhất, tổng hợp nhất để đánh giá hiệu quả kinh tế?",
     "answer": "Năng suất lao động"
   },
   {
+    "id": 19,
+    "question": "Thế nào là tăng trưởng kinh tế bền vững?",
+    "answer": "Tăng trưởng cao, ổn định trong thời gian dài, gắn với bảo vệ môi trường và tiến bộ xã hội"
+  },
+  {
+    "id": 20,
+    "question": "Đặc điểm của thời kỳ quá độ lên chủ nghĩa xã hội trên lĩnh vực kinh tế là gì?",
+    "answer": "Sự tồn tại đan xen nhiều thành phần kinh tế, nhiều hình thức sở hữu và nhiều hình thức phân phối"
+  },
+  {
+    "id": 21,
+    "question": "Quan điểm của Mác - Ăngghen về phân kỳ hình thái kinh tế - xã hội cộng sản chủ nghĩa?",
+    "answer": "- Giai đoạn thấp: thời kỳ quá độ, còn mang dấu vết của xã hội tư bản\n- Giai đoạn cao: chủ nghĩa cộng sản hoàn chỉnh"
+  },
+  {
+    "id": 22,
+    "question": "Bản chất của nền dân chủ xã hội chủ nghĩa là gì?",
+    "answer": "- Toàn bộ quyền lực thuộc về nhân dân\n- Mang bản chất giai cấp công nhân, tính nhân dân rộng rãi và tính dân tộc sâu sắc\n- Do Đảng Cộng sản lãnh đạo\n- Được thực hiện trên mọi lĩnh vực: chính trị, kinh tế, văn hóa"
+  },
+  {
+    "id": 23,
+    "question": "Những mâu thuẫn cơ bản của thời đại hiện nay là gì?",
+    "answer": "- Mâu thuẫn giữa CNXH và CNTB\n- Mâu thuẫn giữa tư bản và lao động\n- Mâu thuẫn giữa các nước chậm phát triển với các nước phát triển\n- Mâu thuẫn trong nội bộ các nước TBCN"
+  },
+  {
+    "id": 24,
+    "question": "Những tổ chức tiền thân của Đảng Cộng sản Việt Nam?",
+    "answer": "- Hội Việt Nam Cách mạng Thanh niên\n- Tân Việt Cách mạng Đảng\n- Đông Dương Cộng sản Đảng\n- An Nam Cộng sản Đảng\n- Đông Dương Cộng sản Liên đoàn"
+  },
+  {
+    "id": 25,
+    "question": "Nguyên nhân thất bại của các phong trào yêu nước cuối thế kỷ XIX đầu thế kỷ XX?",
+    "answer": "- Thiếu đường lối chính trị đúng đắn\n- Thiếu tổ chức lãnh đạo chặt chẽ\n- Thiếu lực lượng cách mạng"
+  },
+  {
+    "id": 26,
+    "question": "Kể tên các văn kiện mang tính chất cương lĩnh của Đảng?",
+    "answer": "- Chính cương vắn tắt, Sách lược vắn tắt, Điều lệ vắn tắt\n- Luận cương Chính trị của Đảng Cộng sản Đông Dương\n- Chính cương của Đảng Lao động Việt Nam\n- Cương lĩnh 1991 và bổ sung 2011"
+  },
+  {
+    "id": 27,
+    "question": "Kể tên Đảng ta qua các thời kỳ?",
+    "answer": "- Đảng Cộng sản Việt Nam (1930)\n- Đảng Cộng sản Đông Dương (1930–1951)\n- Đảng Lao động Việt Nam (1951–1976)\n- Đảng Cộng sản Việt Nam (1976–nay)"
+  },
+  {
+    "id": 28,
+    "question": "Ý nghĩa của Lời kêu gọi toàn quốc kháng chiến?",
+    "answer": "- Khẳng định tính chính nghĩa của cuộc kháng chiến\n- Kêu gọi toàn dân đoàn kết chống thực dân Pháp\n- Khơi dậy tinh thần yêu nước, quyết tử cho Tổ quốc quyết sinh"
+  },
+  {
+    "id": 29,
+    "question": "Hai nhiệm vụ lớn của cách mạng nước ta thời kỳ 1954–1975?",
+    "answer": "- Miền Bắc: cách mạng XHCN, xây dựng căn cứ địa\n- Miền Nam: cách mạng dân tộc dân chủ, chống Mỹ, giải phóng miền Nam"
+  },
+  {
+    "id": 30,
+    "question": "Các chiến lược chiến tranh của Mỹ ở Việt Nam giai đoạn 1954–1975?",
+    "answer": "- Chiến tranh đơn phương\n- Chiến tranh đặc biệt\n- Chiến tranh cục bộ\n- Việt Nam hóa chiến tranh"
+  },
+  {
+    "id": 31,
+    "question": "Nội dung phong trào Ba sẵn sàng?",
+    "answer": "- Sẵn sàng chiến đấu và phục vụ chiến đấu\n- Sẵn sàng đi bất cứ nơi nào Tổ quốc cần\n- Sẵn sàng tòng quân, diệt Mỹ"
+  },
+  {
+    "id": 32,
+    "question": "Đại hội III của Đảng diễn ra ở đâu và khi nào?",
+    "answer": "- Họp tại Hà Nội từ 5/9 đến 10/9/1960\n- 525 đại biểu chính thức, 51 dự khuyết"
+  },
+  {
+    "id": 33,
+    "question": "Mục tiêu kế hoạch 5 năm lần thứ nhất (1961–1965)?",
+    "answer": "- Xây dựng bước đầu cơ sở vật chất kỹ thuật của CNXH\n- Thực hiện một bước công nghiệp hóa XHCN\n- Đưa miền Bắc tiến nhanh, tiến mạnh, tiến vững chắc lên CNXH"
+  },
+  {
+    "id": 34,
+    "question": "Tư tưởng Hồ Chí Minh là gì?",
+    "answer": "- Hệ thống quan điểm toàn diện về cách mạng Việt Nam\n- Kết quả vận dụng và phát triển chủ nghĩa Mác – Lênin\n- Kế thừa truyền thống dân tộc, tiếp thu tinh hoa nhân loại\n- Tài sản tinh thần vô giá của Đảng và dân tộc"
+  },
+  {
+    "id": 35,
+    "question": "Yêu cầu Hồ Chí Minh đặt ra trong mối quan hệ với cách mạng thế giới?",
+    "answer": "- Nắm chắc đặc điểm và xu thế thời đại\n- Đặt cách mạng Việt Nam trong tiến trình cách mạng thế giới"
+  },
+  {
+    "id": 36,
+    "question": "Những nhân tố bảo đảm thắng lợi của CNXH theo tư tưởng Hồ Chí Minh?",
+    "answer": "- Giữ vững vai trò lãnh đạo của Đảng\n- Nâng cao vai trò quản lý của Nhà nước\n- Phát huy tính chủ động của các tổ chức chính trị – xã hội\n- Xây dựng đội ngũ cán bộ đủ đức đủ tài"
+  },
+  {
+    "id": 37,
+    "question": "Những hoạt động của Hồ Chí Minh để tiến tới thành lập Đảng?",
+    "answer": "- Nghiên cứu lý luận, truyền bá chủ nghĩa Mác – Lênin\n- Đào tạo cán bộ\n- Thành lập Hội Việt Nam Cách mạng Thanh niên\n- Chuẩn bị và triệu tập Hội nghị thành lập Đảng"
+  },
+  {
+    "id": 38,
+    "question": "Mối quan hệ giữa cách mạng thuộc địa và cách mạng vô sản chính quốc theo Hồ Chí Minh?",
+    "answer": "Vận mệnh của giai cấp vô sản chính quốc gắn chặt với vận mệnh của nhân dân thuộc địa"
+  },
+  {
+    "id": 39,
+    "question": "Đảng ta vận dụng tinh thần chủ động của Hồ Chí Minh trong tình hình mới như thế nào?",
+    "answer": "Khơi dậy tinh thần và ý chí phát triển đất nước phồn vinh, hạnh phúc"
+  },
+  {
+    "id": 40,
+    "question": "Các di sản văn hóa phi vật thể ở đồng bằng Bắc Bộ được UNESCO công nhận?",
+    "answer": "- Hát Xoan (24/11/2011)\n- Hội Gióng (16/11/2010)\n- Ca trù (1/10/2009)\n- Dân ca Quan họ (30/9/2009)"
+  },
+  {
+    "id": 41,
+    "question": "Lệ Tam khôi là gì?",
+    "answer": "Ba ngôi vị cao nhất kỳ thi Đình: Trạng nguyên, Bảng nhãn, Thám hoa"
+  },
+  {
+    "id": 42,
+    "question": "Tiền giấy đầu tiên ở Việt Nam ra đời khi nào?",
+    "answer": "Tháng 4/1369 thời Hồ Quý Ly, tên gọi Thông bảo hội sao"
+  },
+  {
+    "id": 43,
+    "question": "Các thành phần kinh tế theo Đại hội XI?",
+    "answer": "- Kinh tế nhà nước\n- Kinh tế tập thể\n- Kinh tế tư nhân\n- Kinh tế có vốn đầu tư nước ngoài"
+  },
+  {
+    "id": 44,
+    "question": "Nghị quyết 43-NQ/TW (24/11/2023) đề cập vấn đề gì?",
+    "answer": "Phát huy đại đoàn kết toàn dân tộc, xây dựng đất nước phồn vinh hạnh phúc"
+  },
+  {
+    "id": 45,
+    "question": "Nghị quyết 45-NQ/TW (24/11/2023) đề cập vấn đề gì?",
+    "answer": "Xây dựng và phát huy vai trò đội ngũ trí thức đáp ứng yêu cầu phát triển nhanh và bền vững"
+  },
+  {
+    "id": 46,
+    "question": "Nghị quyết 19-NQ/TW (16/6/2022) đề cập vấn đề gì?",
+    "answer": "Về nông nghiệp, nông dân, nông thôn đến năm 2030, tầm nhìn 2045"
+  },
+  {
+    "id": 47,
+    "question": "Nghị quyết 20-NQ/TW (16/6/2022) đề cập vấn đề gì?",
+    "answer": "Tiếp tục đổi mới, phát triển và nâng cao hiệu quả kinh tế tập thể"
+  },
+  {
     "id": 48,
-    "question": "Tiêu chuẩn cơ bản để đánh giá tính đúng đắn của xã hội hoá sản xuất là gì?",
-    "answer": "Năng suất lao động và hiệu quả kinh tế tăng lên"
+    "question": "Nghị quyết 27-NQ/TW (09/11/2022) đề cập vấn đề gì?",
+    "answer": "Tiếp tục xây dựng và hoàn thiện Nhà nước pháp quyền XHCN Việt Nam"
   },
   {
     "id": 49,
-    "question": "Thế nào là tăng trưởng kinh tế bền vững?",
-    "answer": "Tốc độ tăng trưởng tương đối cao, ổn định trong một thời gian tương đối dài, gắn liền với bảo vệ môi trường và tiến bộ xã hội."
+    "question": "Nghị quyết 29-NQ/TW (17/11/2022) đề cập vấn đề gì?",
+    "answer": "Tiếp tục đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước đến 2030, tầm nhìn 2045"
   },
   {
     "id": 50,
-    "question": "Vì sao nói con người là nhân tố cơ bản nhất của tăng trưởng kinh tế bền vững?",
-    "answer": "Vì con người là nhân tố sáng tạo; con người có khả năng tạo ra và sử dụng hợp lý, có hiệu quả các nhân tố tăng trưởng kinh tế khác."
+    "question": "Kết luận 45-KL/TW (17/11/2022) đề cập vấn đề gì?",
+    "answer": "Định hướng Quy hoạch tổng thể quốc gia thời kỳ 2021–2030, tầm nhìn 2050"
   },
   {
     "id": 51,
-    "question": "Giai cấp công nhân là gì?",
-    "answer": "Là giai cấp những người lao động hoạt động sản xuất trong các ngành công nghiệp thuộc các trình độ kỹ thuật khác nhau, mà địa vị kinh tế - xã hội tùy thuộc vào chế độ xã hội đương thời"
+    "question": "Quy định 144-QĐ/TW (09/5/2024) có hai điểm mới gì?",
+    "answer": "- Xác định chuẩn mực đạo đức cách mạng và tiêu chí đánh giá\n- Phù hợp yêu cầu mới của sự nghiệp cách mạng"
   },
   {
     "id": 52,
-    "question": "Đặc điểm giai cấp công nhân Việt Nam được Đảng ta xác định tại Hội nghị lần thứ sáu của Ban Chấp hành Trung ương Đảng khóa X là gì?",
-    "answer": "Là một lượng xã hội to lớn, đang phát triển, bao gồm những người lao động chân tay và trí óc, làm công hưởng lương trong các loại hình sản xuất kinh doanh và dịch vụ công nghiệp, hoặc sản xuất kinh doanh và dịch vụ có tính chất công nghiệp"
+    "question": "Kết luận 21-KL/TW (25/10/2021) đề cập vấn đề gì?",
+    "answer": "Về xây dựng, chỉnh đốn Đảng và hệ thống chính trị; ngăn chặn suy thoái, tự diễn biến, tự chuyển hóa"
   },
   {
     "id": 53,
-    "question": "Giai cấp công nhân Việt Nam có sứ mệnh lịch sử như thế nào?",
-    "answer": "- Là giai cấp lãnh đạo cách mạng thông qua đội tiền phong là Đảng Cộng sản Việt Nam, giai cấp đại diện cho phương thức sản xuất tiên tiến\n- Giai cấp tiên phong trong sự nghiệp xây dựng chủ nghĩa xã hội, lực lượng đi đầu trong sự nghiệp công nghiệp hóa, hiện đại hóa đất nước vì mục tiêu dân giàu, nước mạnh, dân chủ, công bằng, văn minh\n- Lực lượng nòng cốt trong liên minh giai cấp công nhân với giai cấp nông dân và đội ngũ trí thức dưới sự lãnh đạo của Đảng"
+    "question": "Điều 2 Quy định 37-QĐ/TW: Điều đảng viên không được làm?",
+    "answer": "Không chấp hành nguyên tắc tổ chức Đảng; tự ứng cử, đề cử khi chưa được phép"
   },
   {
     "id": 54,
-    "question": "Phương hướng xây dựng giai cấp công nhân Việt Nam hiện nay là gì?",
-    "answer": "Xây dựng giai cấp công nhân hiện đại, lớn mạnh; nâng cao bản lĩnh chính trị, trình độ học vấn, chuyên môn, kỹ năng nghề nghiệp, tác phong công nghiệp, kỷ luật lao động thích ứng với cuộc Cách mạng công nghiệp lần thứ tư…"
+    "question": "Điều 4 Quy định 37-QĐ/TW: Điều đảng viên không được làm?",
+    "answer": "- Cung cấp hoặc làm lộ bí mật Đảng, Nhà nước\n- Tàng trữ, tuyên truyền tài liệu trái quan điểm Đảng"
   },
   {
     "id": 55,
-    "question": "Thời kỳ quá độ lên chủ nghĩa xã hội là gì?",
-    "answer": "Là thời kỳ cải biến cách mạng sâu sắc, toàn diện trên các lĩnh vực của đời sống xã hội, tạo ra những tiền đề vật chất và tinh thần, bảo đảm cho chủ nghĩa xã hội phát triển trên cơ sở của chính nó"
+    "question": "Điều 6 Quy định 37-QĐ/TW: Điều đảng viên không được làm?",
+    "answer": "- Tố cáo bịa đặt, đơn tố cáo giấu tên, gửi sai thẩm quyền\n- Trù dập người tố cáo, kích động người khác khiếu kiện"
   },
   {
     "id": 56,
-    "question": "Đặc điểm nổi bật của thời kỳ quá độ lên chủ nghĩa xã hội là gì?",
-    "answer": "Là sự cùng tồn tại, đan xen, đấu tranh giữa những nhân tố của xã hội mới và những “dấu vết”, “tàn dư” của xã hội cũ trên mọi lĩnh vực của đời sống xã hội"
+    "question": "Điều 8 Quy định 37-QĐ/TW: Điều đảng viên không được làm?",
+    "answer": "- Tổ chức hoặc tham gia bè phái gây mất đoàn kết\n- Lợi dụng góp ý để đả kích tổ chức, cá nhân"
   },
   {
     "id": 57,
-    "question": "Đặc điểm của thời kỳ quá độ lên chủ nghĩa xã hội trên lĩnh vực kinh tế là gì?",
-    "answer": "Đó là sự tồn tại đan xen nhiều thành phần kinh tế, nhiều hình thức sở hữu và nhiều hình thức phân phối…"
+    "question": "Điều 10 Quy định 37-QĐ/TW: Điều đảng viên không được làm?",
+    "answer": "- Ban hành văn bản trái luật\n- Thực hiện sai quy định trong quản lý tài sản, tài chính"
   },
   {
     "id": 58,
-    "question": "Đặc điểm của thời kỳ quá độ lên chủ nghĩa xã hội trên lĩnh vực chính trị - xã hội là gì?",
-    "answer": "Đó là sự tồn tại của các giai cấp, tầng lớp xã hội khác nhau với lợi ích cơ bản khác nhau, thậm chí đối lập nhau, vừa liên minh, hợp tác, vừa đấu tranh chuyển hóa lẫn nhau…"
+    "question": "Kết luận 01-KL/TW (18/5/2021) đề cập nội dung gì?",
+    "answer": "Tiếp tục thực hiện Chỉ thị 05-CT/TW về học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh"
   },
   {
     "id": 59,
-    "question": "Đặc điểm của thời kỳ quá độ lên chủ nghĩa xã hội trên lĩnh vực chính trị - xã hội là gì?",
-    "answer": "Đó là sự tồn tại đan xen nhiều loại hình tư tưởng, văn hóa, tinh thần khác nhau, thậm chí đối lập, đấu tranh với nhau…"
+    "question": "Nghị quyết 57-NQ/TW (22/12/2024) đề cập vấn đề gì?",
+    "answer": "Đột phá về khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia"
   },
   {
     "id": 60,
-    "question": "Hệ tư tưởng xã hội chủ nghĩa là gì?",
-    "answer": "- Là hệ tư tưởng của giai cấp công nhân, được thể hiện trong hệ thống lý luận của chủ nghĩa Mác - Lênin, mang bản chất cách mạng và khoa học.\n- Là hệ tư tưởng tiên tiến nhất mà Đảng Cộng sản lấy đó làm nền tảng tư tưởng và kim chỉ nam cho hành động của mình..."
-  },
-  {
-    "id": 61,
-    "question": "Quan điểm của Mác - Ăng ghen về phân kỳ hình thái kinh tế - xã hội Cộng sản chủ nghĩa?",
-    "answer": "- Giai đoạn thấp (hay giai đoạn đầu): Đây là thời kỳ quá độ chính trị, thời kỳ cải biến cách mạng từ chủ nghĩa tư bản lên chủ nghĩa cộng sản, vẫn còn mang những dấu vết của xã hội tư bản.\n- Giai đoạn cao của hình thái kinh tế-xã hội cộng sản chủ nghĩa: Là chủ nghĩa cộng sản. Chỉ đến giai đoạn này những nguyên tắc của chủ nghĩa cộng sản mới được thực hiện hoàn toàn."
-  },
-  {
-    "id": 62,
-    "question": "Sứ mệnh lịch sử của giai cấp công nhân?",
-    "answer": "- Xóa bỏ chế độ tư bản chủ nghĩa.\n- Xóa bỏ chế độ người bóc lột người.\n- Giải phóng giai cấp công nhân, nhân dân lao động và toàn thể nhân loại khỏi sự áp bức, bóc lột, nghèo làn lạc hậu.\n- Xây dựng xã hội cộng sản chủ nghĩa văn minh."
-  },
-  {
-    "id": 63,
-    "question": "Vì sao trong xã hội xã hội chủ nghĩa, nguyên tắc phân phối theo lao động là nguyên tắc cơ bản nhất?",
-    "answer": "- Nguyên tắc này biểu hiện kết quả mà người lao động cống hiến cho xã hội “làm nhiều hưởng nhiều, làm ít hưởng ít”.\n- Nguyên tắc này phù hợp với trình độ phát triển của lực lượng sản xuất ở giai đoạn thấp của Hình thái kinh tế - xã hội Cộng sản chủ nghĩa."
-  },
-  {
-    "id": 64,
-    "question": "Để thực hiện được sứ mệnh lich sử của mình, giai cấp công nhân phải làm gì?",
-    "answer": "- Thông qua Đảng cộng sản tập hợp và lãnh đạo nhân dân lao động tiến hành cách mạng xã hội chủ nghĩa giành, giữ vững chính quyền.\n- Tiến hành cải tạo xã hội cũ, xây dựng và bảo vệ vững chắc Tổ quốc xã hội chủ nghĩa; thực hiện nhiệm vụ quốc tế cao cả của giai cấp công nhân."
-  },
-  {
-    "id": 65,
-    "question": "Bản chất của nền dân chủ xã hội chủ nghĩa là gì?",
-    "answer": "- Là một chế độ xã hội trong đó toàn bộ quyền lực thuộc về nhân dân.\n- Là nên dân chủ mang bản chất giai cấp công nhân, tính nhân dân rộng rãi và tính dân tộc sâu sắc.\n- Do Đảng cộng sản lãnh đạo.\n- Dân chủ xã hội chủ nghĩa được thực hiện toàn diện trên mọi lĩnh vực của của đời sống xã hội: Về chính trị, về kinh tế và về văn hóa."
-  },
-  {
-    "id": 66,
-    "question": "Thời đại hiện nay là gì?",
-    "answer": "- Là thời đại quá độ từ CNTB lên CNXH, CNCS trên phạm vi toàn thế giới, được mở đầu bằng thắng lợi của cuộc Cách mạng tháng mười Nga năm 1917 và kết thúc khi xây dựng thành công CNXH\n- Là thời đại đấu tranh cho hòa bình, độc lập dân tộc, dân chủ và CNXH gắn liền với cuộc cách mạng khoa học, công nghệ hiện đại"
-  },
-  {
-    "id": 67,
-    "question": "Những giai đoạn chính của thời đại hiện nay là gì?",
-    "answer": "- Giai đoạn 1: Từ cuộc Cách mạng tháng mười Nga năm 1917 đến kết thúc chiến tranh thế giới lần thứ hai năm 1945\n- Giai đoạn 2: Từ năm 1946 đến giữa thập niên 70 của thế kỷ XX\n- Giai đoạn 3: Từ cuối thập niên 70 đến đầu thập niên 90 của thế kỷ XX\n- Giai đoạn 4: Từ giữa thập niên 90 của thế kỷ XX đến nay"
-  },
-  {
-    "id": 68,
-    "question": "Tính chất của thời đại hiện nay là gì?",
-    "answer": "Là quá độ từ CNTB lên CNXH; đang diễn ra cuộc đấu tranh gay go, quyết liệt giữa CNXH và CNTB trên phạm vi toàn thế giới"
-  },
-  {
-    "id": 69,
-    "question": "Những mâu thuẫn cơ bản của thời đại hiện nay là gì?",
-    "answer": "- Mâu thuẫn giữa CNXH và CNTB\n- Mâu thuẫn giữa tư bản và lao động\n- Mâu thuẫn giữa các nước chậm phát triển, đang phát triển với các nước phát triển, các nước lớn\n- Mâu thuẫn giữa các nước TBCN, các tập đoàn tư bản, các trung tâm kinh tế TBCN"
-  },
-  {
-    "id": 70,
-    "question": "Các xu thế vận động chủ đạo của thời đại trong giai đoạn hiện nay là gì?",
-    "answer": "- Hòa bình, hợp tác và phát triển\n- Xu thế toàn cầu hóa và hội nhập quốc tế\n- Xu thế hợp tác và đấu tranh, liên kết và cạnh tranh\n- Xu thế các dân tộc nâng cao ý thức độc lập, tự chủ, tự lực, tự cường"
-  },
-  {
-    "id": 71,
-    "question": "Hành trang tư tưởng của Nguyễn Ái Quốc khi ra đi tìm đường cứu nước?",
-    "answer": "- Lòng yêu nước nồng nàn, chí căm thù giặc sâu sắc.\n- Vốn học vấn uyên thâm, năng lực trí tuệ và nhãn quan chính trị nhạy bén, sắc sảo.\n- Khát vọng cháy bỏng tìm ra con đường đúng đắn để cứu nước, cứu dân thoát khỏi gông cùm nô lệ."
-  },
-  {
-    "id": 72,
-    "question": "Những tổ chức tiền thân của Đảng Cộng sản Việt Nam?",
-    "answer": "- Hội Việt Nam Cách mạng Thanh niên\n- Tân Việt Cách mạng Đảng (Đảng Tân Việt)\n- Đông Dương Cộng sản Đảng\n- An Nam Cộng sản Đảng\n- Đông Dương Cộng sản Liên đoàn"
-  },
-  {
-    "id": 73,
-    "question": "Nguyên nhân thất bại của các phong trào yêu nước chống thực dân Pháp xâm lược cuối thế kỷ XIX đầu thế kỷ XX?",
-    "answer": "- Thiếu một đường lối chính trị đúng đắn\n- Thiếu một tổ chức cách mạng lãnh đạo chặt chẽ\n- Thiếu lực lượng cách mạng"
-  },
-  {
-    "id": 74,
-    "question": "Tư tưởng cốt lõi của Cương lĩnh đầu tiên?",
-    "answer": "Giải quyết đúng đắn, sáng tạo mối quan hệ giữa vấn đề dân tộc và giai cấp, độc lập dân tộc và chủ nghĩa xã hội, dân tộc và dân chủ, dân tộc và quốc tế trên lập trường giai cấp công nhân."
-  },
-  {
-    "id": 75,
-    "question": "Kể tên các văn kiện mang tính chất cương lĩnh của Đảng?",
-    "answer": "- Chính cương vắn tắt, Sách lược vắn tắt, Điều lệ vắn tắt\n- Luận cương Chính trị của Đảng Cộng sản Đông Dương\n- Chính cương của Đảng Lao động Việt Nam\n- Cương lĩnh xây dựng đất nước trong thời kỳ qúa độ lên CNXH được thông qua tại Đại hội VII (6/1991) và được bổ sung, phát triển năm 2011 (Đại hội XI, 01/2011)"
-  },
-  {
-    "id": 76,
-    "question": "Kể tên Đảng ta qua các thời kỳ lịch sử của cách mạng Việt Nam?",
-    "answer": "- Đảng Cộng sản Việt Nam (02/1930 - 10/1930).\n- Đảng Cộng sản Đông Dương (10/1930 - 02/1951).\n- Đảng Lao động Việt Nam (02/1951 - 12/1976).\n- Đảng Cộng sản Việt Nam (12/1976 - nay)."
-  },
-  {
-    "id": 77,
-    "question": "Những hoạt động của Nguyễn Ái Quốc ở Quảng Châu năm 1925?",
-    "answer": "- Lập ra Hội Việt Nam cách mạng thanh niên\n- Ra tờ báo Thanh niên\n- Mở các lớp huấn luyện cán bộ đầu tiên của cách mạng Việt Nam"
-  },
-  {
-    "id": 78,
-    "question": "Cương lĩnh chính trị đầu tiên của Đảng Cộng sản Việt Nam?",
-    "answer": "Chính cương vắn tắt, Sách lược vắn tắt của Đảng được thông qua tại Hội nghị thành lập Đảng xác định những vấn đề cơ bản về chiến lược và sách lược của cách mạng Việt Nam"
-  },
-  {
-    "id": 79,
-    "question": "Nội dung Chỉ thị Nhật - Pháp bắn nhau và hành động của chúng ta (12/3/1945) là gì?",
-    "answer": "Chỉ thị nhận định tình hình sau khi Nhật lật đổ Pháp ở Đông Dương; xác định kẻ thù chính là phát xít Nhật, nhiệm vụ của Đảng là phát động và lãnh đạo cao trào kháng Nhật cứu nước; dự kiến thời cơ khởi nghĩa…"
-  },
-  {
-    "id": 80,
-    "question": "Ý nghĩa của Chỉ thị Nhật - Pháp bắn nhau và hành động của chúng ta (12/3/1945) là gì?",
-    "answer": "Chỉ thị chứng tỏ sự nhạy bén, lãnh đạo sáng suốt, kiên quyết, kịp thời của Đảng ta. Đó là kim chỉ nam cho toàn Đảng, toàn dân ta trong cao trào chống Nhật, trực tiếp dẫn tới thắng lợi cách mạng tháng Tám."
-  },
-  {
-    "id": 81,
-    "question": "Tại sao sau khi giành được chính quyền, Đảng Cộng sản Đông Dương lại tuyên bố tự giải tán vào ngày 11/11/1945?",
-    "answer": "Trước nguy cơ của giặc ngoại xâm và tránh mũi nhọn tiến công của kẻ thù, ngày 11/11/1945 Đảng ta đã tuyên bố tự giải tán, thực chất là rút vào hoạt động bí mật để làm mất mục tiêu chống phá của kẻ thù."
-  },
-  {
-    "id": 82,
-    "question": "Ý nghĩa của “Lời kêu gọi toàn quốc kháng chiến” của Chủ tịch Hồ Chí Minh là gì?",
-    "answer": "- Chỉ rõ nguyên nhân chính nghĩa phải tiến hành cuộc kháng chiến toàn quốc; khẳng định quyết tâm kháng chiến; kêu gọi toàn dân đoàn kết, dùng mọi vũ khí chống quân thù; kháng chiến nhất định thắng lợi.\n- Đây là lời hịch cứu quốc khơi dậy lòng tự hào về truyền thống anh hùng bất khuất của dân tộc quyết chiến đấu, quyết tử cho tổ quốc quyết sinh."
-  },
-  {
-    "id": 83,
-    "question": "Hai nhiệm vụ lớn của cách mạng nước ta thời kỳ 1954-1975?",
-    "answer": "- Tiến hành cách mạng xã hội chủ nghĩa ở miền Bắc, xây dựng miền Bắc thành căn cứ địa vững chắc của cả nước\n- Tiến hành cách mạng dân tộc dân chủ nhân dân ở miền Nam, chống đế quốc Mỹ xâm lược và tay sai, giải phóng miền Nam thống nhất đất nước"
-  },
-  {
-    "id": 84,
-    "question": "Các chiến lược chiến tranh của Mỹ đã sử dụng trong cuộc chiến tranh tại Việt Nam giai đoạn 1954-1975 là gì?",
-    "answer": "- Chiến tranh đơn phương \n- Chiến tranh đặc biệt\n- Chiến tranh cục bộ\n- Việt Nam hoá chiến tranh"
-  },
-  {
-    "id": 85,
-    "question": "Nội dung cơ bản phong trào ba sẵn sàng trong kháng chiến chống Mỹ, cứu nước do Đoàn Thanh niên phát động là gì?",
-    "answer": "- Sẵn sàng chiến đấu và phục vụ chiến đấu\n- Sẵn sàng đi bất cứ nơi nào và làm bất cứ việc gì mà Tổ quốc cần\n- Sẵn sàng tòng quân, lên đường diệt Mỹ"
-  },
-  {
-    "id": 86,
-    "question": "Chủ tịch Hồ Chí Minh ra lời kêu gọi đồng bào và cán bộ, chiến sĩ cả nước vào ngày 22/7/1954?",
-    "answer": "Trung Nam Bắc đều là bờ cõi của ta, nước ta nhất định sẽ thống nhất, đồng bào cả nước nhất định được giải phóng"
-  },
-  {
-    "id": 87,
-    "question": "Nội dung bài thơ chúc Tết của Chủ tịch Hồ Chí Minh vào năm 1969 là gì?",
-    "answer": "- Vì độc lập, vì tự do\n- Đánh cho Mỹ cút, đánh cho nguỵ nhào\n- Tiến lên chiến sĩ đồng bào\n- Bắc - Nam sum họp Xuân nào vui hơn"
-  },
-  {
-    "id": 88,
-    "question": "Năm 1954, Hội nghị Giơnevơ về Đông Dương họp từ ngày nào đến ngày nào? Có bao nhiêu phiên họp mở rộng và bao nhiêu phiên họp cấp trưởng đoàn?",
-    "answer": "Hội nghị Giơnevơ bắt đầu họp từ ngày 08/5/1954 và kết thúc ngày 21/7/1954, trải qua 75 ngày thương lượng, có tất cả 8 phiên họp mở rộng và 23 phiên họp cấp trưởng đoàn."
-  },
-  {
-    "id": 89,
-    "question": "Đại hội đại biểu toàn quốc lần thứ III của Đảng diễn ra ở đâu? Vào ngày, tháng, năm nào? có bao nhiêu đại biểu chính thức và dự khuyết tham dự?",
-    "answer": "- Đại hội đại biểu toàn quốc lần thứ III của Đảng họp tại Thủ đô Hà Nội, từ ngày 05 đến 10/9/1960. \n- Tham dự có 525 đại biểu chính thức và 51 đại biểu dự khuyết, thay mặt cho hơn 50 vạn đảng viên trong cả nước"
-  },
-  {
-    "id": 90,
-    "question": "Đại hội đại biểu toàn quốc lần thứ III của Đảng đã bầu Ban Chấp hành Trung ương mới gồm bao nhiêu ủy viên chính thức và bao nhiêu dự khuyết? Ban Chấp hành Trung ương bầu Bộ Chính trị gồm bao nhiêu ủy viên chính thức và bao nhiêu dự khuyết?",
-    "answer": "- Đại hội đã bầu Ban Chấp hành Trung ương mới gồm 47 ủy viên chính thức và 31 ủy viên dự khuyết\n- Ban Chấp hành Trung ương bầu Bộ Chính trị gồm 11 ủy viên chính thức và 02 ủy viên dự khuyết"
-  },
-  {
-    "id": 91,
-    "question": "Về mục tiêu chiến lược chung được Đại hội đại biểu toàn quốc lần thứ III của Đảng xác định là gì?",
-    "answer": "Đại hội cho rằng, cách mạng ở miền Bắc và cách mạng ở miền Nam thuộc hai chiến lược khác nhau, có mục tiêu cụ thể riêng, song trước mắt đều hướng vào mục tiêu chung là giải phóng miền Nam, hòa bình, thống nhất đất nước"
-  },
-  {
-    "id": 92,
-    "question": "Mục tiêu của kế hoạch 5 năm lần thứ nhất (1961-1965) ở miền Bắc được Đảng ta xác định là gì?",
-    "answer": "- Phấn đấu xây dựng bước đầu cơ sở vật chất kỹ thuật của chủ nghĩa xã hội\n- Thực hiện một bước công nghiệp hóa xã hội chủ nghĩa và hoàn thành công cuộc cải tạo xã hội chủ nghĩa\n- Tiếp tục đưa miền Bắc tiến nhanh, tiến mạnh, tiến vững chắc lên chủ nghĩa xã hội"
-  },
-  {
-    "id": 93,
-    "question": "Tháng 10/1954 tại căn cứ U Minh Hạ, Hội nghị lập lại Xứ ủy Nam Bộ do đồng chí Lê Duẩn chủ trì đã nghiên cứu các nghị quyết của Trung ương và Bộ Chính trị về nhiệm vụ trong tình hình mới. Hội nghị nhận định tình hình lúc đó như thế nào?",
-    "answer": "Hội nghị nhận định tình hình lúc đó có hai khả năng: Có thể Mỹ - Diệm buộc phải thi hành Hiệp định Giơnevơ và cũng có thể Mỹ - Diệm không thi hành hiệp định. Cách mạng miền Nam cần phải có kế hoạch ứng phó với cả hai tình huống"
-  },
-  {
-    "id": 94,
-    "question": "Tháng 12/1956, Hội nghị Xứ ủy Nam Bộ đề ra chủ trương lãnh đạo và chỉ đạo các địa phương ở Nam Bộ như thế nào?",
-    "answer": "Tích cực tổ chức vũ trang tuyên truyền và vũ trang tự vệ để hỗ trợ cho đấu tranh chính trị của quần chúng, đồng thời chuẩn bị cho đấu tranh vũ trang ở hình thức cao hơn"
-  },
-  {
-    "id": 95,
-    "question": "Thực hiện Nghị quyết Hội nghị lần thứ 15, Ban Chấp hành Trung ương (khóa II), các Đảng bộ Nam Bộ và Liên khu V đã làm gì?",
-    "answer": "Đã coi trọng việc đưa Nghị quyết xuống tận cơ sở và quần chúng cách mạng, làm dấy lên phong trào “Đồng khởi” trong toàn miền Nam"
-  },
-  {
-    "id": 96,
-    "question": "Tháng 9/1961, Bộ Chính trị thông qua đề án gì?",
-    "answer": "Bộ Chính trị thông qua đề án tăng cường cho miền Nam từ 3 đến 4 vạn cán bộ, chiến sĩ đã được huấn luyện chính quy trên miền Bắc; tăng cường lực lượng, phương tiện cơ giới cho Đoàn vận tải quân sự 559"
-  },
-  {
-    "id": 97,
-    "question": "Tháng 2/1962, Mặt trận dân tộc giải phóng miền Nam họp Đại hội lần thứ nhất xác định và quyết định những gì?",
-    "answer": "Xác định rõ nhiệm vụ chung của Mặt trận và công bố chủ trương cứu nước khẩn cấp. Đại hội quyết định thống nhất các lực lượng vũ trang miền Nam thành Quân giải phóng miền Nam Việt Nam"
-  },
-  {
-    "id": 98,
-    "question": "Trước âm mưu và thủ đoạn chiến tranh mới của đế quốc Mỹ, Ban Chấp hành Trung ương Đảng triệu tập Hội nghị lần thứ 11 (3/1965), quyết định nội dung gì?",
-    "answer": "Chuyển toàn bộ hoạt động của miền Bắc từ thời bình sang thời chiến, tiếp tục sự nghiệp xây dựng chủ nghĩa xã hội trong điều kiện chiến tranh"
-  },
-  {
-    "id": 99,
-    "question": "Tháng 01/1970, Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 18, khóa III họp và chỉ rõ nhiệm vụ cơ bản của cách mạng miền Bắc là gì?",
-    "answer": "Tranh thủ những thuận lợi mới trong hoàn cảnh không có chiến tranh phá hoại, khắc phục hậu quả chiến tranh, tăng cường lực lượng cho cách mạng miền Nam…"
-  },
-  {
-    "id": 100,
-    "question": "Nghị quyết Hội nghị lần thứ 21, Ban Chấp hành Trung ương Đảng, khóa III (13/10/1973) xác định nội dung gì?",
-    "answer": "Miền Bắc một mặt phải tranh thủ những điều kiện thuận lợi hiện có, ra sức khôi phục và phát triển nền kinh tế quốc dân; đồng thời, phải tiếp tục làm tròn nhiệm vụ hậu phương lớn đối với cách mạng miền Nam và tích cực đấu tranh để Hiệp định Pari về Việt Nam được thi hành nghiêm chỉnh"
-  },
-  {
-    "id": 101,
-    "question": "Tư tưởng Hồ Chí Minh là gì?",
-    "answer": "- Là một hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam\n- Kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta\n- Kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại\n- Là tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc ta, mãi mãi soi đường cho sự nghiệp cách mạng của nhân dân ta giành thắng lợi"
-  },
-  {
-    "id": 102,
-    "question": "Nguồn gốc tư tưởng Hồ Chí Minh bao gồm?",
-    "answer": "- Nguồn gốc tư tưởng, lý luận\n- Nguồn gốc thực tiễn\n- Nhân tố chủ quan Hồ Chí Minh"
-  },
-  {
-    "id": 103,
-    "question": "Nêu nguồn gốc tư tưởng Hồ Chí Minh được hình thành từ tư tưởng - lý luận?",
-    "answer": "- Giá trị văn hóa truyền thống Việt Nam\n- Tinh hoa văn hóa nhân loại\n- Chủ nghĩa Mác - Lênin"
-  },
-  {
-    "id": 104,
-    "question": "Nguồn gốc thực tiễn của tư tưởng Hồ Chí Minh được hình thành từ những yếu tố nào?",
-    "answer": "- Thực tiễn cách mạng thế giới\n- Thực tiễn cách mạng Việt Nam\n- Thực tiễn hoạt động cách mạng của Hồ Chí Minh"
-  },
-  {
-    "id": 105,
-    "question": "Các giai đoạn hình thành và phát triển tư tưởng Hồ Chí Minh?",
-    "answer": "- Giai đoạn hình thành tư tưởng yêu nước, thương dân và chí hướng hoạt động cách mạng (1890-1911)\n- Giai đoạn tìm tòi xác định con đường cách mạng Việt Nam (1911-1920)\n- Giai đoạn hình thành cơ bản tư tưởng về con đường cách mạng Việt Nam (1921-1930)\n- Giai đoạn Hồ Chí Minh vượt qua thử thách, kiên trì với con đường cách mạng Việt Nam (1930-1941)\n- Giai đoạn phát triển và hoàn thiện tư tưởng Hồ Chí Minh (1941-1969)"
-  },
-  {
-    "id": 106,
-    "question": "Vấn đề dân tộc trong tư tưởng Hồ Chí Minh thực chất là gì?",
-    "answer": "Là việc đấu tranh giải phóng các dân tộc thuộc địa khỏi sự thống trị của chủ nghĩa thực dân, giành độc lập dân tộc, thực hiện quyền dân tộc tự quyết"
-  },
-  {
-    "id": 107,
-    "question": "Trong Chánh cương vắn tắt và Sách lược vắn tắt của Đảng do Hồ Chí Minh soạn thảo (1930) đã khẳng định cách mạng Việt Nam phải trải qua hai giai đoạn, đó là những giai đoạn nào?",
-    "answer": "Làm tư sản dân quyền cách mạng và thổ địa cách mạng (tức là cách mạng dân tộc dân chủ) để đi tới xã hội cộng sản (tức là cách mạng xã hội chủ nghĩa)"
-  },
-  {
-    "id": 108,
-    "question": "Quan niệm của Hồ Chí Minh về những đặc trưng bản chất của chủ nghĩa xã hội?",
-    "answer": "- CNXH là một chế độ do nhân dân làm chủ\n- CNXH có nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về các tư liệu sản xuất chủ yếu\n- CNXH là một xã hội phát triển cao về văn hóa, đạo đức\n- CNXH là một xã hội công bằng và hợp lý\n- CNXH là công trình tập thể của nhân dân, do nhân dân tự xây dựng, dưới sự lãnh đạo của Đảng"
-  },
-  {
-    "id": 109,
-    "question": "Theo Hồ Chí Minh, mục tiêu chung của chủ nghĩa xã hội là gì?",
-    "answer": "Không ngừng nâng cao đời sống vật chất và tinh thần của nhân dân, trước hết là nhân dân lao động"
-  },
-  {
-    "id": 110,
-    "question": "Phương pháp, cách thức tiến hành xây dựng CNXH ở Việt Nam theo Hồ Chí Minh là gì?",
-    "answer": "- Nêu cao tinh thần độc lập, tự chủ, sáng tạo, chống chủ nghĩa giáo điều\n- Kết hợp cải tạo với xây dựng, trong đó lấy xây dựng là chủ yếu…\n- Kết hợp chặt chẽ giữa hai nhiệm vụ chiến lược của cách mạng Việt Nam\n- Phải thực hiện kế hoạch hóa một cách dân chủ…\n- Đẩy mạnh tăng gia sản xuất, thực hành tiết kiệm"
-  },
-  {
-    "id": 111,
-    "question": "Mục đích của đại đoàn kết dân tộc trong tư tưởng Hồ Chí Minh là gì?",
-    "answer": "Là huy động và tập hợp mọi lực lượng, phát huy vai trò của tất cả các lực lượng cách mạng tạo thành sức mạnh to lớn để thực hiện mục tiêu chiến lược của cách mạng Việt Nam"
-  },
-  {
-    "id": 112,
-    "question": "Đại đoàn kết theo Hồ Chí Minh tức là gì?",
-    "answer": "Đại đoàn kết tức là trước hết phải đoàn kết đại đa số nhân dân, mà đại đa số nhân dân ta là công nhân, nông dân và các tầng lớp nhân dân lao động khác"
-  },
-  {
-    "id": 113,
-    "question": "Năm 1923, khi còn đang ở nước ngoài, trong một bức thư gửi các bạn cùng hoạt động ở Pháp, Hồ Chí Minh đã viết gì?",
-    "answer": "Đối với tôi, câu trả lời đã rõ ràng: Trở về nước, đi vào quần chúng, thức tỉnh họ, tổ chức họ, đoàn kết họ, huấn luyện họ, đưa họ ra đấu tranh giành tự do độc lập"
-  },
-  {
-    "id": 114,
-    "question": "Ngày 03/3/1951, trong Lời kết thúc buổi ra mắt Đảng Lao động Việt Nam, Hồ Chí Minh đã thay mặt Đảng tuyên bố trước quốc dân đồng bào nội dung gì?",
-    "answer": "Mục đích của Đảng Lao động Việt Nam có thể gồm trong 8 chữ là: Đoàn kết toàn dân, phụng sự Tổ quốc"
-  },
-  {
-    "id": 115,
-    "question": "Sức mạnh dân tộc là gì?",
-    "answer": "Là sức mạnh của chủ nghĩa yêu nước chân chính, tinh thần đoàn kết, ý chí đấu tranh anh dũng, kiên cường cho độc lập, tự do của dân tộc; đó là ý thức tự lực tự cường của nhân dân ta"
-  },
-  {
-    "id": 116,
-    "question": "Sức mạnh thời đại là gì?",
-    "answer": "Là sức mạnh của giai cấp vô sản, của cách mạng vô sản, là lý luận và phương pháp luận khoa học của chủ nghĩa Mác - Lênin, là sự phát triển của cách mạng khoa học công nghệ"
-  },
-  {
-    "id": 117,
-    "question": "Quan niệm của Hồ Chí Minh về kết hợp sức mạnh dân tộc với sức mạnh thời đại?",
-    "answer": "Là kết hợp chủ nghĩa yêu nước chân chính với chủ nghĩa quốc tế vô sản, là xây dựng khối liên minh chiến đấu giữa vô sản ở chính quốc với lao động ở thuộc địa để cùng một lúc tiến công chủ nghĩa đế quốc ở cả hai đầu"
-  },
-  {
-    "id": 118,
-    "question": "Trong mối quan hệ với cách mạng thế giới để chống lại kẻ thù chung, Hồ Chí Minh đã đặt ra một số yêu cầu trong lãnh đạo, chỉ đạo cách mạng Việt Nam như thế nào?",
-    "answer": "- Đảng Cộng sản, cán bộ, đảng viên của Đảng muốn hoàn thành nhiệm vụ cách mạng cần nắm chắc đặc điểm và xu thế phát triển của thời đại\n- Phải đặt cách mạng Việt Nam trong tiến trình chung của cách mạng thế giới"
-  },
-  {
-    "id": 119,
-    "question": "Tổng kết thực tiễn 30 năm hoạt động của Đảng (1960), Hồ Chí Minh đã viết nội dung gì?",
-    "answer": "Đảng ta vĩ đại, vì ngoài lợi ích của giai cấp, của nhân dân, của dân tộc, Đảng ta không có lợi ích gì khác"
-  },
-  {
-    "id": 120,
-    "question": "Nhận thức đúng vị trí, vai trò to lớn của lý luận đối với đảng cách mạng, trong tác phẩm “Đường Kách mệnh” (1927), Hồ Chí Minh đã chỉ rõ nội dung gì?",
-    "answer": "Đảng phải có chủ nghĩa làm cốt, trong đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy. Đảng mà không có chủ nghĩa cũng như người không có trí khôn, tàu không có bàn chỉ nam"
-  },
-  {
-    "id": 121,
-    "question": "Trong bài phát biểu tại cuộc họp đầu tiên của ủy ban nghiên cứu kế hoạch kiến quốc (10/1/1946), Hồ Chí Minh lưu ý cần phải thực hiện ngay những việc gì?",
-    "answer": "- Làm cho dân có ăn\n- Làm cho dân có mặc\n- Làm cho dân có chỗ ở \n- Làm cho dân được học hành"
-  },
-  {
-    "id": 122,
-    "question": "Trong tư tưởng Hồ Chí Minh sức mạnh dân tộc bao gồm những yếu tố chủ yếu nào?",
-    "answer": "- Chủ nghĩa yêu nước\n- Tinh thần đoàn kết\n- Ý chí đấu tranh anh hùng, bất khuất cho độc lập tự do\n- Ý thức tự lực, tự cường"
-  },
-  {
-    "id": 123,
-    "question": "Nêu những nhân tố bảo đảm thắng lợi của chủ nghĩa xã hội ở Việt Nam theo tư tưởng Hồ Chí Minh?",
-    "answer": "- Giữ vững và tăng cường vai trò lãnh đạo của Đảng\n- Nâng cao vai trò quản lý của Nhà nước\n- Phát huy tính tích cực, chủ động của các tổ chức chính trị - xã hội\n- Xây dựng đội ngũ cán bộ có đủ đức và tài đáp ứng yêu cầu của cách mạng"
-  },
-  {
-    "id": 124,
-    "question": "Đồng chí cho biết những hoạt động chủ yếu của Hồ Chí Minh để tiến tới thành lập Đảng Cộng sản Việt Nam?",
-    "answer": "- Nghiên cứu lý luận, tổng kết thực tiễn, truyền bá chủ nghĩa Mác-Lênin vào Việt Nam\n- Mở lớp đào tạo cán bộ nòng cốt cho cách mạng\n- Thành lập Hội Việt Nam cách mạng thanh niên để tuyên truyền chủ nghĩa Mác-Lênin và lãnh đạo phong trào công nhân\n- Chuẩn bị, triệu tập và chủ trì Hội nghị thành lập Đảng"
-  },
-  {
-    "id": 125,
-    "question": "Trong thư gửi Quân đội quốc gia Việt Nam nhân kỷ niệm Quốc khánh lần thứ II (ngày 02/9/1947), Hồ Chí Minh chỉ ra 3 yêu cầu đối với các cấp chỉ huy phải làm. Đồng chí cho biết đó là những yêu cầu gì?",
-    "answer": "- Biết rõ bộ đội, chăm nom bộ đội.\n- Mỗi một cái mệnh lệnh đưa ra, thì cần phải mau chóng và chuyển khắp đến từng đội viên và phải thi hành triệt để. \n- Mỗi người chỉ huy về quân sự cũng như về chính trị, phải làm kiểu mẫu. Phải giữ đúng đạo đức của quân nhân."
-  },
-  {
-    "id": 126,
-    "question": "Đồng chí hãy nêu những nguyên tắc xây dựng Đảng Cộng sản Việt Nam theo tư tưởng Hồ Chí Minh?",
-    "answer": "- Tập trung dân chủ\n- Tập thể lãnh đạo, cá nhân phụ trách\n- Tự phê bình và phê bình\n- Kỷ luật tự giác và nghiêm minh\n- Đoàn kết thống nhất trong Đảng"
-  },
-  {
-    "id": 127,
-    "question": "Trong bài phát biểu tại Hội nghị Tuyên giáo Miền núi (8/1963), Hồ Chí Minh chỉ rõ mục tiêu của công tác tuyên truyền là gì?",
-    "answer": "Một là, đoàn kết\nHai là, xây dựng chủ nghĩa xã hội\nBa là, đấu tranh thống nhất nước nhà"
-  },
-  {
-    "id": 128,
-    "question": "Tác phẩm “Cần, kiệm, liêm, chính” của Hồ Chí Minh được đăng trên báo Cứu quốc bao gồm những bài báo nào, thời gian đăng các bài báo đó?",
-    "answer": "- Thế nào là Cần (30-5-1949)\n- Thế nào là Kiệm (31-5-1949)\n- Thế nào là Liêm (1-6-1949)\n- Thế nào là Chính (2-6-1949)"
-  },
-  {
-    "id": 129,
-    "question": "Năm 1946, Hồ Chí Minh gửi thư cho các cháu thiếu nhi và khuyên các cháu thiếu nhi phải làm gì?",
-    "answer": "- Phải siêng học\n- Phải giữ sạch sẽ\n- Phải giữ kỷ luật\n- Phải làm theo đời sống mới\n- Phải thương yêu giúp đỡ cha mẹ anh em"
-  },
-  {
-    "id": 130,
-    "question": "Theo Hồ Chí Minh bản chất giai cấp công nhân của Nhà nước ta được thể hiện như thế nào?",
-    "answer": "- Nhà nước do Đảng của giai cấp công nhân lãnh đạo\n- Định hướng đưa đất nước đi lên chủ nghĩa xã hội\n- Nhà nước tổ chức hoạt động theo nguyên tắc tập trung dân chủ"
-  },
-  {
-    "id": 131,
-    "question": "Ở Việt Nam hiện nay có những di tích nào được UNESCO công nhận là Di sản văn hóa thế giới? Vào những năm nào?",
-    "answer": "- Quần thể di tích Cố đô Huế, năm 1993\n- Phố Cổ Hội An, năm 1999\n- Thánh địa Mỹ Sơn, năm 1999\n- Khu trung tâm Hoàng thành Thăng Long, năm 2010\n- Thành nhà Hồ, năm 2011"
-  },
-  {
-    "id": 132,
-    "question": "Ở đồng bằng Bắc bộ Việt Nam có những di sản văn hóa phi vật thể nào được UNESCO công nhận là Di sản thế giới? Vào những năm nào?",
-    "answer": "- Hát xoan, được công nhận ngày 24/11/2011\n- Hội Gióng tại đền Sóc và đền Phù Đổng, Hà Nội, được công nhận ngày 16/11/2010\n- Ca trù, được công nhận ngày 01/10/2009\n- Dân ca Quan họ, được công nhận ngày 30/9/2009"
-  },
-  {
-    "id": 133,
-    "question": "Ở Việt Nam hiện nay có những di tích nào được UNESCO công nhận là Di sản thiên nhiên thế giới? Vào những năm nào?",
-    "answer": "- Vịnh Hạ Long, (năm 1994; 2000; 2011)\n- Vườn Quốc gia Phong Nha - Kẻ Bàng, năm 2003"
-  },
-  {
-    "id": 134,
-    "question": "Trong chế độ khoa cử Việt Nam thời phong kiến có đặt “Lệ Tam khôi”. Vậy “Lệ Tam khôi” là gì?",
-    "answer": "Lệ Tam khôi là ba ngôi vị cao nhất trong kỳ thi Đình, theo thứ tự: Trạng nguyên, Bảng nhãn, Thám hoa"
-  },
-  {
-    "id": 135,
-    "question": "Thế nào là “Cục bách tác”? Thời gian, mục đích thành lập?",
-    "answer": "- Cục bách tác là một hình thức tổ chức sản xuất thủ công nghiệp - xưởng thủ công do nhà nước phong kiến lập ra. Cục bách tác có thời Đinh - Tiền Lê, Lý - Trần.\n- Mục đích: Tập trung các thợ giỏi trong nước nhằm chuyên lo việc đúc tiền, rèn đúc vũ khí, đóng các loại thuyền chiến phục vụ quân đội, may mũ, áo cho vua quan, địa chủ, góp phần xây dựng các cung điện, dinh thự..."
-  },
-  {
-    "id": 136,
-    "question": "Tiền giấy đầu tiên ở Việt Nam ra đời vào thời kỳ nào? Có tên là gì?",
-    "answer": "Việt Nam có đồng tiền giấy đầu tiên vào tháng 4/1369 do Hồ Quý Ly tổ chức phát hành, có tên gọi là Thông bảo hội sao"
-  },
-  {
-    "id": 137,
-    "question": "Kể tên hai hội nghị lớn họp bàn kế sách đánh giặc giữ nước trong cuộc kháng chiến chống quân xâm lược Nguyên - Mông thời Trần?",
-    "answer": "- Hội nghị Bình Than (tháng 11 - 1282): Là hội nghị của các vương hầu quý tộc thời Trần để bàn kế đánh giặc\n- Hội nghị Diên Hồng (tháng Giêng năm 1285): Khi quân Mông - Nguyên xâm lược lần 2, vua Trần đã triệu tập các vị bô lão có uy tín trong nước để hỏi kế đánh giặc. Hội nghị đã thể hiện quyết tâm đánh thắng quân Mông - Nguyên xâm lược với lời thề “Quyết đánh”"
-  },
-  {
-    "id": 138,
-    "question": "Hai nhà toán học của Việt Nam thời phong kiến là ai? Kể tên tác phẩm tiêu biểu của hai ông?",
-    "answer": "- Lương Thế Vinh với tác phẩm Dư thành toán pháp\n- Vũ Hữu với tác phẩm Lập thành toán pháp"
-  },
-  {
-    "id": 139,
-    "question": "\"\"Tháp Bút\"\" được xây dựng khi nào? Ở đâu? Trên tháp có đề chữ gì?",
-    "answer": "- Xây năm 1865\n- Thuộc thời Nguyễn\n- Ở trước cổng cầu Thê Húc vào đền Ngọc Sơn, bên hồ Hoàn Kiếm. Trên có đề 3 chữ \"\"Tả Thanh Thiên\"\" (Viết lên trời xanh)"
-  },
-  {
-    "id": 140,
-    "question": "Nêu các thành phần kinh tế do Đại hội XI của Đảng xác định?",
-    "answer": "- Kinh tế nhà nước \n- Kinh tế tập thể\n- Kinh tế tư nhân\n- Kinh tế có vốn đầu tư nước ngoài"
-  },
-  {
-    "id": 141,
-    "question": "Nghị quyết số 42-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề đến về vấn đề gì?",
-    "answer": "Về tiếp tục đổi mới, nâng cao chất lượng chính sách xã hội, đáp ứng yêu cầu sự nghiệp xây dựng và bảo vệ Tổ quốc trong giai đoạn mới"
-  },
-  {
-    "id": 142,
-    "question": "Nghị quyết số 43-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề cập về vấn đề gì?",
-    "answer": "Về tiếp tục phát huy truyền thống, sức mạnh đại đoàn kết toàn dân tộc, xây dựng đất nước ta ngày càng phồn vinh, hạnh phúc"
-  },
-  {
-    "id": 143,
-    "question": "Nghị quyết số 44-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề cập về vấn đề gì?",
-    "answer": "Về Chiến lược bảo vệ Tổ quốc trong tình hình mới"
-  },
-  {
-    "id": 144,
-    "question": "Nghị quyết số 45-NQ/TW ngày 24/11/2023 của Ban Chấp hành Trung ương Đảng khóa XIII đề cập về vấn đề gì?",
-    "answer": "Về tiếp tục xây dựng và phát huy vai trò của đội ngũ trí thức đáp ứng yêu cầu phát triển đất nước nhanh và bền vững trong giai đoạn mới"
-  },
-  {
-    "id": 145,
-    "question": "Nghị quyết số 18-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về tiếp tục đổi mới, hoàn thiện thể chế, chính sách, nâng cao hiệu lực, hiệu quả quản lý và sử dụng đất, tạo động lực đưa nước ta trở thành nước phát triển có thu nhập cao"
-  },
-  {
-    "id": 146,
-    "question": "Nghị quyết số 19-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về nông nghiệp, nông dân, nông thôn đến năm 2030, tầm nhìn đến năm 2045"
-  },
-  {
-    "id": 147,
-    "question": "Nghị quyết số 20-NQ/TW ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về tiếp tục đổi mới, phát triển và nâng cao hiệu quả kinh tế tập thể trong giai đoạn mới"
-  },
-  {
-    "id": 148,
-    "question": "Nghị quyết số 21-NQ/TW, ngày 16/6/2022, Hội nghị Trung ương 5 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về tăng cường củng cố, xây dựng tổ chức cơ sở đảng và nâng cao chất lượng đội ngũ đảng viên trong giai đoạn mới"
-  },
-  {
-    "id": 149,
-    "question": "Nghị quyết số 27-NQ/TW ngày 09/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về tiếp tục xây dựng và hoàn thiện Nhà nước pháp quyền xã hội chủ nghĩa Việt Nam trong giai đoạn mới"
-  },
-  {
-    "id": 150,
-    "question": "Nghị quyết số 28-NQ/TW ngày 17/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về tiếp tục đổi mới phương thức lãnh đạo, cầm quyền của Đảng đối với hệ thống chính trị trong giai đoạn mới"
-  },
-  {
-    "id": 151,
-    "question": "Nghị quyết số 29-NQ/TW ngày 17/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về tiếp tục đẩy mạnh công nghiệp hoá, hiện đại hoá đất nước đến năm 2030, tầm nhìn đến năm 2045"
-  },
-  {
-    "id": 152,
-    "question": "Kết luận số 45-KL/TW ngày 17/11/2022, Hội nghị Trung ương 6 khoá XIII đề cập về vấn đề gì?",
-    "answer": "Về định hướng Quy hoạch tổng thể quốc gia thời kỳ 2021 - 2030, tầm nhìn đến năm 2050"
-  },
-  {
-    "id": 153,
-    "question": "Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị có tiêu đề là gì?",
-    "answer": "Quy định chuẩn mực đạo đức cách mạng của cán bộ, đảng viên trong giai đoạn mới"
-  },
-  {
-    "id": 154,
-    "question": "Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị thể hiện 2 điểm mới, 2 điểm mới đó là gì?",
-    "answer": "Một là,  xác định các chuẩn mực đạo đức cách mạng cùng các tiêu chí đánh giá việc thực hiện chuẩn mực \nHai là,  phù hợp với giai đoạn mới của sự nghiệp cách mạng nước ta"
-  },
-  {
-    "id": 155,
-    "question": "Điều 1, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
-    "answer": "Yêu nước, tôn trọng Nhân dân, tuyệt đối trung thành với Đảng, với Tổ quốc"
-  },
-  {
-    "id": 156,
-    "question": "Điều 2, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
-    "answer": "Bản lĩnh, đổi mới, sáng tạo, hội nhập"
-  },
-  {
-    "id": 157,
-    "question": "Điều 3, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
-    "answer": "Cần, kiệm, liêm, chính, chí công vô tư"
-  },
-  {
-    "id": 158,
-    "question": "Điều 4, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
-    "answer": "Đoàn kết, kỷ cương, tình thương, trách nhiệm"
-  },
-  {
-    "id": 159,
-    "question": "Điều 5, Quy định số 144-QĐ/TW ngày 09/5/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
-    "answer": "Gương mẫu, khiêm tốn, tu dưỡng rèn luyện, học tập suốt đời"
-  },
-  {
-    "id": 160,
-    "question": "Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
-    "answer": "Về đẩy mạnh xây dựng, chỉnh đốn đảng và hệ thống chính trị; kiên quyết ngăn chặn, đẩy lùi, xử lý nghiêm cán bộ, đảng viên suy thoái về tư tưởng chính trị, đạo đức, lối sống, biểu hiện \"\"tự diễn biến”, \"\"tự chuyển hóa”"
-  },
-  {
-    "id": 161,
-    "question": "Nhiệm vụ và giải pháp 1, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
-    "answer": "Tiếp tục đổi mới, nâng cao chất lượng công tác chính trị, tư tưởng, tự phê bình và phê bình"
-  },
-  {
-    "id": 162,
-    "question": "Nhiệm vụ và giải pháp 2, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
-    "answer": "Tập trung xây dựng đội ngũ cán bộ các cấp, nhất là cấp chiến lược và người đứng đầu gắn với đổi mới, sắp xếp tổ chức bộ máy của hệ thống chính trị tinh gọn, hoạt động hiệu lực, hiệu quả"
-  },
-  {
-    "id": 163,
-    "question": "Nhiệm vụ và giải pháp 4, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
-    "answer": "Tăng cường công tác kiểm tra, giám sát, kỷ luật đảng; kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, tiêu cực; xử lý nghiêm cán bộ, đảng viên vi phạm"
-  },
-  {
-    "id": 164,
-    "question": "Nhiệm vụ và giải pháp 5, Kết luận số 21-KL/TW ngày 25/10/2021 của Hội nghị Trung ương 4, khóa XIII đề cập đến vấn đề gì?",
-    "answer": "Phát huy vai trò, trách nhiệm của các cơ quan dân cử, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị - xã hội; thực sự dựa vào nhân dân để xây dựng, chỉnh đốn Đảng và hệ thống chính trị trong sạch, vững mạnh"
-  },
-  {
-    "id": 165,
-    "question": "Đồng chí hãy trình bày Điều 1, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Nói, viết, làm trái hoặc không thực hiện Cương lĩnh chính trị, Điều lệ Đảng, nghị quyết, chỉ thị, kết luận, quy định, quy chế, quyết định của Đảng; làm những việc mà pháp luật không cho phép"
-  },
-  {
-    "id": 166,
-    "question": "Đồng chí hãy trình bày Điều 2, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Không chấp hành các nguyên tắc tổ chức và hoạt động của Đảng; tự ứng cử, nhận đề cử và đề cử các chức danh của tổ chức nhà nước, Mặt trận Tổ quốc, các tổ chức chính trị - xã hội, các tổ chức quần chúng được Đảng, Nhà nước giao nhiệm vụ khi chưa được tổ chức đảng có thẩm quyền cho phép"
-  },
-  {
-    "id": 167,
-    "question": "Đồng chí hãy trình bày Điều 3, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Phản bác, phủ nhận, xuyên tạc chủ nghĩa Mác-Lênin, tư tưởng Hồ Chí Minh; không thực hiện trách nhiệm nêu gương\n- Chủ nghĩa cá nhân, cơ hội, vụ lợi; “tư duy nhiệm kỳ”, đoàn kết xuôi chiều, dân chủ hình thức, thấy đúng không bảo vệ, thấy sai không đấu tranh; độc đoán, chuyên quyền, quan liêu, xa rời quần chúng"
-  },
-  {
-    "id": 168,
-    "question": "Đồng chí hãy trình bày Điều 4, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Cung cấp, để lộ, làm mất hoặc viết bài, đăng những thông tin, tài liệu bí mật của Đảng và Nhà nước hoặc những việc chưa được phép công bố\n- Tàng trữ, tuyên truyền, tán phát hoặc xúi giục người khác tuyên truyền, tán phát thông tin, tài liệu dưới mọi hình thức để truyền bá những thông tin, quan điểm trái với chủ trương, đường lối của Đảng, chính sách, pháp luật của Nhà nước"
-  },
-  {
-    "id": 169,
-    "question": "Đồng chí hãy trình bày Điều 5, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Viết bài hoặc cung cấp tài liệu cho người khác viết, nói, cho đăng tải tin, bài sai sự thật, không đăng tải ý kiến phản hồi, cải chính theo quy định\n- Sáng tác, sản xuất, tàng trữ, tán phát các tác phẩm, công trình văn học, nghệ thuật không lành mạnh, trái thuần phong mỹ tục Việt Nam, mang tính kích động gây ảnh hưởng xấu trong xã hội; tán phát bài viết, bài nói, phỏng vấn, hồi ký, phim, ảnh không đúng quy định"
-  },
-  {
-    "id": 170,
-    "question": "Đồng chí hãy trình bày Điều 6, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Tố cáo có nội dung mang tính bịa đặt; cùng người khác viết, ký tên trong đơn tố cáo; viết đơn tố cáo giấu tên, mạo tên. Gửi hoặc tán phát đơn khiếu nại, tố cáo dưới mọi hình thức đến nơi không có thẩm quyền giải quyết\n- Đe doạ, trù dập, trả thù người khiếu nại, tố cáo; không thực hiện các quy định của Đảng và pháp luật về bảo vệ người tố cáo, phê bình, góp ý; kích động, xúi giục, mua chuộc, cưỡng ép người khác khiếu nại, tố cáo"
-  },
-  {
-    "id": 171,
-    "question": "Đồng chí hãy trình bày Điều 7, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Tổ chức, tham gia các tổ chức, hội trái quy định của Đảng, pháp luật của Nhà nước; biểu tình, tụ tập đông người gây mất trật tự, an ninh"
-  },
-  {
-    "id": 172,
-    "question": "Đồng chí hãy trình bày Điều 8, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Tổ chức, xúi giục, tham gia các hoạt động bè phái, cục bộ gây mất đoàn kết nội bộ\n- Lợi dụng việc phản ánh, góp ý kiến đối với Đảng, Nhà nước để đả kích, vu cáo, xúc phạm, nhận xét, đánh giá tùy tiện đối với tổ chức, cá nhân"
-  },
-  {
-    "id": 173,
-    "question": "Đồng chí hãy trình bày Điều 9, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Báo cáo, lập hồ sơ, kê khai lý lịch, kê khai tài sản, thu nhập không trung thực\n- Sử dụng văn bằng, chứng chỉ, chứng nhận giả, không hợp pháp; nhập quốc tịch, chuyển tiền, tài sản ra nước ngoài, mở tài khoản và mua bán tài sản ở nước ngoài trái quy định"
-  },
-  {
-    "id": 174,
-    "question": "Đồng chí hãy trình bày Điều 10, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Chủ trì, tham mưu ban hành văn bản có nội dung trái quy định của Đảng, pháp luật của Nhà nước\n- Thực hiện không đúng quy định trong quản lý đầu tư, xây dựng, sử dụng nhà, đất, tài nguyên, tài chính, tài sản của Đảng, Nhà nước"
-  },
-  {
-    "id": 175,
-    "question": "Đồng chí hãy trình bày Điều 14, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "- Tham ô, đưa, nhận, môi giới hối lộ hoặc lợi dụng vị trí công tác để môi giới, hối lộ dưới mọi hình thức\n- Tổ chức, tham gia hoặc tạo điều kiện thực hiện hoạt động rửa tiền, đi vay, cho vay trái quy định của pháp luật"
-  },
-  {
-    "id": 176,
-    "question": "Đồng chí hãy trình bày Điều 15, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Tặng, nhận quà dưới mọi hình thức để tác động đến tổ chức, người có trách nhiệm dẫn đến việc quyết định sai, có lợi riêng cho bản thân hoặc cá nhân, tổ chức, cơ quan, doanh nghiệp"
-  },
-  {
-    "id": 177,
-    "question": "Đồng chí hãy trình bày Điều 16, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Không thực hành tiết kiệm, để xảy ra thất thoát, lãng phí trong việc quản lý, sử dụng tài chính, tài sản công; mua sắm, quản lý, sử dụng tài sản công trái quy định"
-  },
-  {
-    "id": 178,
-    "question": "Đồng chí hãy trình bày Điều 19, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Mê tín, hoạt động mê tín; ủng hộ hoặc tham gia các tôn giáo bất hợp pháp hoặc lợi dụng các hoạt động tôn giáo, tín ngưỡng để trục lợi"
-  },
-  {
-    "id": 179,
-    "question": "Đồng chí hãy trình bày Điều 17, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Can thiệp, tác động để vợ (chồng), con, bố, mẹ, anh, chị, em ruột mình, bên vợ (chồng), bản thân và người khác đi du lịch, học tập, chữa bệnh bằng nguồn tài trợ của các tổ chức, cá nhân có liên quan đến ngành, lĩnh vực theo dõi, quản lý"
-  },
-  {
-    "id": 180,
-    "question": "Đồng chí hãy trình bày Điều 12, Quy định số 37-QĐ/TW ngày 25/10/2021 của Ban Chấp hành Trung ương về những điều đảng viên không được làm?",
-    "answer": "Có hành vi chạy chức, chạy quyền, bao che, tiếp tay, can thiệp, tác động dưới mọi hình thức đến tổ chức, cá nhân để bản thân hoặc người khác được tiếp nhận, tuyển dụng, quy hoạch, luân chuyển, bổ nhiệm, đề cử, ứng cử, khen thưởng, phong tặng danh hiệu, đi học, đi nước ngoài, thực hiện chế độ, chính sách cán bộ trái quy định"
-  },
-  {
-    "id": 181,
-    "question": "Kết luận số 01-KL/TW ngày 18/5/2021 của Bộ Chính trị đề cập nội dung gì?",
-    "answer": "Về tiếp tục thực hiện Chỉ thị số 05-CT/TW của Bộ Chính trị \"\"về đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh\"\""
-  },
-  {
-    "id": 182,
-    "question": "Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị đề cập đến vấn đề gì?",
-    "answer": "Về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia"
-  },
-  {
-    "id": 183,
-    "question": "Nghị quyết số 59-NQ/TW ngày 24/1/2025 của Bộ Chính trị đề cập đến vấn đề gì?",
+    "question": "Nghị quyết 59-NQ/TW (24/01/2025) đề cập vấn đề gì?",
     "answer": "Về hội nhập quốc tế trong tình hình mới"
   },
   {
-    "id": 184,
-    "question": "Nghị quyết số 66-NQ/TW ngày 04/5/2025 của Bộ Chính trị đề cập đến vấn đề gì?",
-    "answer": "Về đổi mới công tác xây dựng và thi hành pháp luật đáp ứng yêu cầu phát triển đất nước trong kỷ nguyên mới"
+    "id": 61,
+    "question": "Nghị quyết 66-NQ/TW (04/5/2025) đề cập vấn đề gì?",
+    "answer": "Về đổi mới công tác xây dựng và thi hành pháp luật"
   },
   {
-    "id": 185,
-    "question": "Nghị quyết số 68-NQ/TW ngày 04/5/2025 của Bộ Chính trị đề cập đến vấn đề gì?",
+    "id": 62,
+    "question": "Nghị quyết 68-NQ/TW (04/5/2025) đề cập vấn đề gì?",
     "answer": "Về phát triển kinh tế tư nhân"
   },
   {
-    "id": 186,
-    "question": "Quan điểm chỉ đạo thứ nhất trong Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị là gì?",
-    "answer": "Phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia là đột phá quan trọng hàng đầu, là động lực chính để phát triển nhanh lực lượng sản xuất hiện đại, hoàn thiện quan hệ sản xuất, đổi mới phương thức quản trị quốc gia, phát triển kinh tế - xã hội, ngăn chặn nguy cơ tụt hậu, đưa đất nước phát triển bứt phá, giàu mạnh trong kỷ nguyên mới"
+    "id": 63,
+    "question": "Quan điểm chỉ đạo thứ nhất của Nghị quyết 57-NQ/TW là gì?",
+    "answer": "Xem khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số là đột phá hàng đầu"
   },
   {
-    "id": 187,
-    "question": "Quan điểm chỉ đạo thứ năm trong Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị là gì?",
-    "answer": "Bảo đảm chủ quyền quốc gia trên không gian mạng; bảo đảm an ninh mạng, an ninh dữ liệu, an toàn thông tin của tổ chức và cá nhân là yêu cầu xuyên suốt, không thể tách rời trong quá trình phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia"
+    "id": 64,
+    "question": "Bộ tứ nghị quyết quan trọng giúp Việt Nam 'cất cánh' từ năm 2025 gồm những nghị quyết nào?",
+    "answer": "57-NQ/TW (2024), 59-NQ/TW (2025), 66-NQ/TW (2025), 68-NQ/TW (2025)"
   },
   {
-    "id": 188,
-    "question": "Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương đề cập đến vấn đề gì?",
-    "answer": "Về đổi mới công tác giáo dục và đào tạo đáp ứng yêu cầu nhiệm vụ xây dựng Quân đội trong tình hình mới"
+    "id": 65,
+    "question": "Kết luận 91-KL/TW (12/8/2024) đề cập vấn đề gì?",
+    "answer": "Tiếp tục thực hiện Nghị quyết 29-NQ/TW về đổi mới giáo dục"
   },
   {
-    "id": 189,
-    "question": "Đồng chí trình bày nhiệm vụ, giải pháp 1, Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương?",
-    "answer": "Tăng cường sự lãnh đạo, chỉ đạo của cấp ủy, chỉ huy các cấp đối với đổi mới, nâng cao chất lượng giáo dục và đào tạo"
+    "id": 66,
+    "question": "Nhiệm vụ 2 của Kết luận 91-KL/TW yêu cầu chú trọng nội dung gì?",
+    "answer": "- Xây dựng Luật nhà giáo\n- Luật học tập suốt đời\n- Chiến lược phát triển giáo dục\n- Đổi mới quản lý và quản trị nhà trường"
   },
   {
-    "id": 190,
-    "question": "Đồng chí trình bày nhiệm vụ, giải pháp 2, Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương?",
-    "answer": "Xây dựng, hoàn thiện và thực hiện tốt cơ chế, chính sách đáp ứng yêu cầu đổi mới công tác giáo dục và đào tạo"
+    "id": 67,
+    "question": "Đặc trưng 5 của Nghị quyết 847-NQ/QUTW là gì?",
+    "answer": "- Xây dựng đoàn kết nội bộ, thương yêu đồng chí đồng đội\n- Gắn bó máu thịt với nhân dân\n- Tăng cường đoàn kết quốc tế"
   },
   {
-    "id": 191,
-    "question": "Quan điểm chỉ đạo thứ tư được xác định trong Nghị quyết số 1657-NQ/QUTW ngày 20/12/2024 của Quân ủy Trung ương là gì?",
-    "answer": "- Ứng dụng nhanh, hiệu quả thành tựu khoa học công nghệ trong đổi mới giáo dục và đào tạo\n- Gắn nghiên cứu khoa học với nâng cao chất lượng giáo dục và đào tạo, với thực tiễn\n- Chủ động, tích cực hội nhập quốc tế để phát triển giáo dục và đào tạo đáp ứng yêu cầu nhiệm vụ xây dựng Quân đội hiện đại"
+    "id": 68,
+    "question": "Biểu hiện chủ nghĩa cá nhân thứ bảy trong Nghị quyết 847-NQ/QUTW?",
+    "answer": "- Cục bộ, bè phái, lợi ích nhóm\n- Xúi giục hoặc ép người khác làm việc trái pháp luật"
   },
   {
-    "id": 192,
-    "question": "Đồng chí trình bày đặc trưng 1, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương?",
-    "answer": "- Tuyệt đối trung thành với Tổ quốc, với Đảng, Nhà nước và nhân dân. Kiên định lập trường chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh, mục tiêu độc lập dân tộc và chủ nghĩa xã hội\n- Có ý chí quyết tâm chiến đấu cao, chấp nhận hy sinh, vượt qua khó khăn, gian khổ, sẵn sàng nhận và hoàn thành xuất sắc mọi nhiệm vụ được giao"
+    "id": 69,
+    "question": "“Một Quân đội văn hay võ giỏi, là một Quân đội vô địch” được viết ở đâu?",
+    "answer": "Trong Thư gửi bộ đội Khu II và Khu III về thành tích xóa mù chữ, ngày 24/02/1948"
   },
   {
-    "id": 193,
-    "question": "Đồng chí trình bày đặc trưng 2, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương?",
-    "answer": "- Có đạo đức cách mạng trong sáng, lối sống trung thực, khiêm tốn, giản dị, chân thành, lạc quan\n- Nói đi đôi với làm, luôn đặt lợi ích của tập thể lên trên lợi ích của cá nhân; không thỏa mãn với thành tích, không chùn bước trước khó khăn, hiểm nguy"
-  },
-  {
-    "id": 194,
-    "question": "Đồng chí trình bày đặc trưng 3, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương?",
-    "answer": "- Tích cực huấn luyện, học tập, nghiên cứu nâng cao trình độ mọi mặt và kiến thức chuyên môn\n- Có phương pháp, tác phong công tác khoa học, nghiêm túc, trách nhiệm cao\n- Gương mẫu trong công tác, sinh hoạt\n- Kiên quyết đấu tranh với các biểu hiện suy thoái, tham nhũng, lãng phí, tiêu cực"
-  },
-  {
-    "id": 195,
-    "question": "Biểu hiện của chủ nghĩa cá nhân thứ nhất trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
-    "answer": "Không quan tâm đến lợi ích chung, làm việc gì cũng chỉ mưu cầu cho lợi ích cá nhân; sống ích kỷ, thực dụng, cơ hội, vụ lợi; ganh ghét, đố kị, so bì, tị nạnh, không muốn người khác hơn mình"
-  },
-  {
-    "id": 196,
-    "question": "Biểu hiện của chủ nghĩa cá nhân thứ sáu trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
-    "answer": "- Lợi dụng chức vụ, quyền hạn để tham ô, nhận hối lộ hoặc để người thân lợi dụng chức vụ, quyền hạn của mình trục lợi\n- Cố ý làm trái các quy chế, quy định, dung túng, bao che, tiếp tay cho tham nhũng, lãng phí, tiêu cực; kê khai tài sản, thu nhập không trung thực"
-  },
-  {
-    "id": 197,
-    "question": "Quan điểm thứ nhất trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
-    "answer": "- Phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân là nhiệm vụ chính trị quan trọng, vừa cấp bách, vừa thường xuyên của các cấp ủy, tổ chức đảng, tổ chức chỉ huy, tổ chức quần chúng\n- Là trách nhiệm của mọi cán bộ, chiến sĩ; đảng viên và quần chúng trong Quân đội, trước hết là đội ngũ cấp ủy viên, cán bộ chủ trì các cấp"
-  },
-  {
-    "id": 198,
-    "question": "Quan điểm thứ hai trong Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
-    "answer": "- Phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân phải đặt trong tổng thể các giải pháp xây dựng Quân đội vững mạnh về chính trị\n- Đảng bộ Quân đội vững mạnh về chính trị, tư tưởng, đạo đức, tổ chức và cán bộ; ngăn chặn, đẩy lùi các biểu hiện suy thoái, “tự diễn biến”, “tự chuyển hóa” , những hành vi tham nhũng, tiêu cực"
-  },
-  {
-    "id": 199,
-    "question": "Nhóm nhiệm vụ, giải pháp thứ nhất, Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương là gì?",
-    "answer": "Tăng cường công tác lãnh đạo tư tưởng, giáo dục chính trị, nâng cao nhận thức, trách nhiệm cho cán bộ, đảng viên và quần chúng tiếp tục phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân"
-  },
-  {
-    "id": 200,
-    "question": "Nghị quyết số 847-NQ/QUTW ngày 28/12/2021 của Quân ủy Trung ương đề cập đến nội dung gì?",
-    "answer": "Về phát huy phẩm chất “Bộ đội Cụ Hồ”, kiên quyết chống chủ nghĩa cá nhân trong tình hình mới"
-  },
-  {
-    "id": 201,
-    "question": "Thông tư số 54/2022/TT-BQP ngày 19/7/2022 của Bộ Quốc phòng quy định về nội dung gì? Gồm có bao nhiêu chương, điều?",
-    "answer": "- Quy định tổ chức dạy học các môn khoa học xã hội và nhân văn trong nhà trường Quâ đội\n- Gồm có 3 chương, 10 điều"
-  },
-  {
-    "id": 202,
-    "question": "Tỷ lệ khối kiến thức KHXH&NV trong chương trình nội dung đào tạo nhân viên chuyên môn kỹ thuật theo Thông tư số 54/2022/TT-BQP ngày 19/7/2022 của Bộ Quốc phòng được quy định như thế nào?",
-    "answer": "- Trình độ cao đẳng: 16%\n- Trình độ trung cấp: 12%\n- Trình độ sơ cấp: 7%"
-  },
-  {
-    "id": 203,
-    "question": "Tổ chức xây dựng đơn vị vững mạnh toàn diện “Mẫu mực, tiêu biểu” theo Chỉ thị số 79/CT-BQP ngày 22/7/2022 của Bộ Quốc phòng gồm những tiêu chuẩn nào?",
-    "answer": "- Vững mạnh về chính trị\n- Thực hiện nghiêm túc công tác tổ chức lực lượng; huấn luyện và đào tạo giỏi; duy trì nghiêm nền nếp chế độ sẵn sàng chiến đấu\n- Xây dựng chính quy, quản lý kỷ luật tốt và đẩy mạnh cải cách hành chính quân sự\n- Thực hiện tốt công tác hậu cần, tài chính, kế hoạch và đầu tư"
-  },
-  {
-    "id": 204,
-    "question": "Thông tư số 143/2023/TT-BQP ngày 27/12/2023 của Bộ Quốc phòng quy định về nội dung gì? Gồm bao nhiêu chương, điều?",
-    "answer": "- Quy định về xử lý kỷ luật trong Quân đội nhân dân Việt Nam\n- Gồm có 5 chương, 59 điều"
-  },
-  {
-    "id": 205,
-    "question": "Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương đề cập đến nội dung gì?",
-    "answer": "Về đẩy mạnh thực hiện Cuộc vận động “Phát huy truyền thống, cống hiến tài năng, xứng danh Bộ đội Cụ Hồ” thời kỳ mới"
-  },
-  {
-    "id": 206,
-    "question": "Chuẩn mực thứ nhất được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
-    "answer": "Có bản lĩnh chính trị vững vàng, động cơ trong sáng, trách nhiệm cao"
-  },
-  {
-    "id": 207,
-    "question": "Chuẩn mực thứ hai được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
-    "answer": "Có đạo đức, lối sống trong sạch lành mạnh"
-  },
-  {
-    "id": 208,
-    "question": "Chuẩn mực thứ ba được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
-    "answer": "Có văn hóa, tri thức khoa học, trình độ quân sự, năng lực, phương pháp, tác phong công tác và sức khỏe tốt đáp ứng yêu cầu nhiệm vụ"
-  },
-  {
-    "id": 209,
-    "question": "Chuẩn mực thứ tư được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
-    "answer": "Đẩy mạnh thực hành dân chủ, kỷ luật tự giác, nghiêm minh"
-  },
-  {
-    "id": 210,
-    "question": "Chuẩn mực thứ năm được xác định trong Chỉ thị số 855-CT/QUTW ngày 12/8/2019 của Thường vụ Quân ủy Trung ương là gì?",
-    "answer": "Tích cực chăm lo xây dựng đoàn kết nội bộ tốt, tôn trọng, giúp đỡ, gắn bó máu thịt với nhân dân, có tinh thần quốc tế trong sáng"
-  },
-  {
-    "id": 211,
-    "question": "Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương đề cập đến nội dung gì?",
-    "answer": "Về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong Quân đội"
-  },
-  {
-    "id": 212,
-    "question": "Quan điểm chỉ đạo thứ nhất trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong Quân đội là một trong các đột phá quan trọng hàng đầu, là mũi nhọn tiên phong góp phần xây dựng Quân đội cách mạng, chính quy, tinh nhuệ, hiện đại"
-  },
-  {
-    "id": 213,
-    "question": "Quan điểm chỉ đạo thứ năm trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Bảo đảm an ninh mạng, an ninh dữ liệu, an toàn thông tin của tổ chức và cá nhân là yêu cầu xuyên suốt, không thể tách rời trong quá trình phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
-  },
-  {
-    "id": 214,
-    "question": "Nhiệm vụ, giải pháp thứ nhất được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Nâng cao nhận thức, quyết tâm lãnh đạo, chỉ đạo tạo động lực mạnh mẽ trong toàn quân về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyến đổi số"
-  },
-  {
-    "id": 215,
-    "question": "Nhiệm vụ, giải pháp thứ hai được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Khẩn trương hoàn thiện hệ thống văn bản tạo cơ sở pháp lý, xoá bỏ rào cản đang cản trở sự phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
-  },
-  {
-    "id": 216,
-    "question": "Nhiệm vụ, giải pháp thứ ba được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Tăng cường đầu tư, hoàn thiện hạ tầng cho khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
-  },
-  {
-    "id": 217,
-    "question": "Nhiệm vụ, giải pháp thứ tư được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Phát triển, trọng dụng nhân lực chất lượng cao, nhân tài đáp ứng yêu cầu phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
-  },
-  {
-    "id": 218,
-    "question": "Nhiệm vụ, giải pháp thứ năm được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Đẩy mạnh ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong hoạt động của cơ quan, đon vị trong toàn quân; nâng cao hiệu quả, hiệu lực quản lý của chỉ huy các cấp trên các lĩnh vực quân sự, quốc phòng"
-  },
-  {
-    "id": 219,
-    "question": "Nhiệm vụ, giải pháp thứ sáu được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Thúc đẩy mạnh mẽ hoạt động khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số trong doanh nghiệp Quân đội"
-  },
-  {
-    "id": 220,
-    "question": "Nhiệm vụ, giải pháp thứ bảy được xác định trong Nghị quyết số 3488-NQ/QUTW ngày 29/01/2025 của Quân ủy Trung ương là gì?",
-    "answer": "Tăng cường hợp tác quốc tế trong phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số"
+    "id": 70,
+    "question": "“Quân đội ta là Quân đội nhân dân…” là lời căn dặn của Hồ Chí Minh tại sự kiện nào?",
+    "answer": "Phiên bế mạc Hội nghị Bộ Chính trị ngày 25/02/1960"
   }
 ]
