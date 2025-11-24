@@ -171,9 +171,9 @@
       id="qInput"
       type="number"
       min="1"
-      max="90"
+      max="35"
       class="form-control"
-      placeholder="Nhập số (1–90) và nhấn Enter để load câu"
+      placeholder="Nhập số (1–35) và nhấn Enter để load câu"
     />
   </div>
 
@@ -226,7 +226,7 @@
 </div>
 
 <script>
-    const TOTAL_PICK = 90; // giữ nguyên bộ câu hỏi đang load (QUESTION_DB)
+    const TOTAL_PICK = 35; // giữ nguyên bộ câu hỏi đang load (QUESTION_DB)
     const TIME_LIMIT = 15.0;
 
     let QUESTION_DB = JSON.parse('<%- JSON.stringify(multipleData).replace(/\\/g, "\\\\").replace(/'/g, "\\'") %>');
